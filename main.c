@@ -26,8 +26,8 @@ void main (){
         }else{
             transEn = 0;
         }
-        writeFrequency(frequency);
-        __delay_ms(10);
+        //writeFrequency(frequency);
+        vumeter(ADRESH);
     }
 }
 //Subrrutina de configuracion 
@@ -49,7 +49,7 @@ void config(){
     T0CON   = 0b10000000;
     //Configuracion del ADC
     ADCON0  = 0b11000001;
-    ADCON1  = 0b01001110;
+    ADCON1  = 0b01001101;
     //Inicializacion del LCD
     initLCD();
     //Inicializacion de procesos 
@@ -68,7 +68,7 @@ void __interrupt() inter (){
         TMR1L   = prTmr1L;
         cntTmr1++;
         time();
-        if(cntTmr1 == 3){     //cada 400ms
+        if(cntTmr1 == 10){     //cada 400ms
             cntTmr1 = 0;
             updateLCD();        //actualiza los valores en el display
         }
@@ -78,7 +78,7 @@ void __interrupt() inter (){
     if(INTCONbits.TMR0IF == 1){
         TMR0H   = prTmr0H;
         TMR0L   = prTmr0L;
-        vumeter(ADRESH);    //muestra el valor de entrada en el vumetro
+       // vumeter(ADRESH);    //muestra el valor de entrada en el vumetro
         ADCON0bits.GO = 1;
         INTCONbits.TMR0IF = 0;
     }
@@ -88,17 +88,26 @@ void __interrupt() inter (){
 }
 //Muestreo del vumetro
 void vumeter (unsigned char vumLevel){
-    unsigned char level = 0;
     //Convierte el valor de 0 - 255 a una escala 0 - 8
-    if      (vumLevel >= 200) level = 8;
-    else if (vumLevel >= 125) level = 7;
-    else if (vumLevel >= 75) level = 6;
-    else if (vumLevel >= 60) level = 5;
-    else if (vumLevel >= 45) level = 4;
-    else if (vumLevel >= 15) level = 3;
-    else if (vumLevel >= 5) level = 2;
-    else if (vumLevel >= 1) level = 1; 
-
+//    if      (vumLevel >= 200) level = 8;
+//    else if (vumLevel >= 125) level = 7;
+//    else if (vumLevel >= 75) level = 6;
+//    else if (vumLevel >= 60) level = 5;
+//    else if (vumLevel >= 45) level = 4;
+//    else if (vumLevel >= 15) level = 3;
+//    else if (vumLevel >= 5) level = 2;
+//    else if (vumLevel >= 1) level = 1; 
+    
+//    vumLevel *= 2;
+    if      (vumLevel >= 128) level = 8;
+    else if (vumLevel >= 64) level = 7;
+    else if (vumLevel >= 32) level = 6;
+    else if (vumLevel >= 16) level = 5;
+    else if (vumLevel >= 8) level = 4;
+    else if (vumLevel >= 4) level = 3;
+    else if (vumLevel >= 2) level = 2;
+    else if (vumLevel >= 1) level = 1;
+    
     vum = 0x0100 >> level;
     return;
 }

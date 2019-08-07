@@ -4114,6 +4114,8 @@ unsigned char hundredMiliSeconds = 0;
 unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
 
+unsigned char level;
+
 char lineOne[17];
 char lineTwo[17];
 
@@ -4148,8 +4150,8 @@ void main (){
         }else{
             PORTAbits.RA5 = 0;
         }
-        writeFrequency(frequency);
-        _delay((unsigned long)((10)*(12000000/4000.0)));
+
+        vumeter(ADRESH);
     }
 }
 
@@ -4171,7 +4173,7 @@ void config(){
     T0CON = 0b10000000;
 
     ADCON0 = 0b11000001;
-    ADCON1 = 0b01001110;
+    ADCON1 = 0b01001101;
 
     initLCD();
 
@@ -4190,7 +4192,7 @@ void __attribute__((picinterrupt(("")))) inter (){
         TMR1L = prTmr1L;
         cntTmr1++;
         time();
-        if(cntTmr1 == 3){
+        if(cntTmr1 == 10){
             cntTmr1 = 0;
             updateLCD();
         }
@@ -4200,7 +4202,7 @@ void __attribute__((picinterrupt(("")))) inter (){
     if(INTCONbits.TMR0IF == 1){
         TMR0H = prTmr0H;
         TMR0L = prTmr0L;
-        vumeter(ADRESH);
+
         ADCON0bits.GO = 1;
         INTCONbits.TMR0IF = 0;
     }
@@ -4210,15 +4212,14 @@ void __attribute__((picinterrupt(("")))) inter (){
 }
 
 void vumeter (unsigned char vumLevel){
-    unsigned char level = 0;
-
-    if (vumLevel >= 200) level = 8;
-    else if (vumLevel >= 125) level = 7;
-    else if (vumLevel >= 75) level = 6;
-    else if (vumLevel >= 60) level = 5;
-    else if (vumLevel >= 45) level = 4;
-    else if (vumLevel >= 15) level = 3;
-    else if (vumLevel >= 5) level = 2;
+# 102 "main.c"
+    if (vumLevel >= 128) level = 8;
+    else if (vumLevel >= 64) level = 7;
+    else if (vumLevel >= 32) level = 6;
+    else if (vumLevel >= 16) level = 5;
+    else if (vumLevel >= 8) level = 4;
+    else if (vumLevel >= 4) level = 3;
+    else if (vumLevel >= 2) level = 2;
     else if (vumLevel >= 1) level = 1;
 
     PORTB = 0x0100 >> level;

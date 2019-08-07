@@ -160,6 +160,8 @@ unsigned char hundredMiliSeconds = 0;// Decimas de funcionamiento
 unsigned char functionalStat = 0;    // Estado de funcionamiento (bloqueado o no)
 unsigned char stereoEnable = 1;      // Funcion de codificacion estereo
 
+unsigned char level;
+
 char lineOne[17];
 char lineTwo[17];
 

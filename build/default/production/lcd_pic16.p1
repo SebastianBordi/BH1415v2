@@ -578,31 +578,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 1 `i `uc
 ]
 "163
-[; ;./hardware.h: 163: char lineOne[17];
+[; ;./hardware.h: 163: unsigned char level;
+[v _level `uc ~T0 @X0 1 e ]
+"165
+[; ;./hardware.h: 165: char lineOne[17];
 [v _lineOne `uc ~T0 @X0 -> 17 `i e ]
-"164
-[; ;./hardware.h: 164: char lineTwo[17];
+"166
+[; ;./hardware.h: 166: char lineTwo[17];
 [v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
-"167
-[; ;./hardware.h: 167: const char FINAL_MONTH = 6;
+"169
+[; ;./hardware.h: 169: const char FINAL_MONTH = 6;
 [v _FINAL_MONTH `Cuc ~T0 @X0 1 e ]
 [i _FINAL_MONTH
 -> -> 6 `i `uc
 ]
-"168
-[; ;./hardware.h: 168: const char FINAL_DAY = 13;
+"170
+[; ;./hardware.h: 170: const char FINAL_DAY = 13;
 [v _FINAL_DAY `Cuc ~T0 @X0 1 e ]
 [i _FINAL_DAY
 -> -> 13 `i `uc
 ]
-"169
-[; ;./hardware.h: 169: const char BLOCKED = 0;
+"171
+[; ;./hardware.h: 171: const char BLOCKED = 0;
 [v _BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _BLOCKED
 -> -> 0 `i `uc
 ]
-"170
-[; ;./hardware.h: 170: const char UN_BLOCKED = 1;
+"172
+[; ;./hardware.h: 172: const char UN_BLOCKED = 1;
 [v _UN_BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _UN_BLOCKED
 -> -> 1 `i `uc

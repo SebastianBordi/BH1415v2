@@ -4114,6 +4114,8 @@ unsigned char hundredMiliSeconds = 0;
 unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
 
+unsigned char level;
+
 char lineOne[17];
 char lineTwo[17];
 
