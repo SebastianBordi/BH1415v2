@@ -1,0 +1,1813 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production/BH1415v2.production.o
+cinit CODE 0 220A 220A 68 1
+text0 CODE 0 1AD4 1AD4 F4 1
+text1 CODE 0 102A 102A 1B0 1
+text2 CODE 0 1BC8 1BC8 C6 1
+text3 CODE 0 2A0C 2A0C 1C 1
+text4 CODE 0 23EA 23EA 56 1
+text5 CODE 0 2272 2272 60 1
+text6 CODE 0 64C 64C 286 1
+text7 CODE 0 B52 B52 26C 1
+text8 CODE 0 1C8E 1C8E AE 1
+text9 CODE 0 28B8 28B8 36 1
+text10 CODE 0 25BE 25BE 46 1
+text11 CODE 0 1D3C 1D3C AE 1
+text12 CODE 0 2A92 2A92 6 1
+text13 CODE 0 2756 2756 3E 1
+text14 CODE 0 1764 1764 13A 1
+text15 CODE 0 14AA 14AA 15E 1
+text16 CODE 0 11DA 11DA 16A 1
+text17 CODE 0 2604 2604 46 1
+text18 CODE 0 280E 280E 3A 1
+text19 CODE 0 204A 204A 76 1
+text20 CODE 0 2920 2920 2E 1
+text21 CODE 0 2392 2392 58 1
+text22 CODE 0 294E 294E 2C 1
+text23 CODE 0 21A0 21A0 6A 1
+text24 CODE 0 2A5C 2A5C 16 1
+text25 CODE 0 2794 2794 3E 1
+text26 CODE 0 24E2 24E2 4A 1
+text27 CODE 0 29D0 29D0 1E 1
+text28 CODE 0 19D6 19D6 FE 1
+text29 CODE 0 2576 2576 48 1
+text30 CODE 0 252C 252C 4A 1
+text31 CODE 0 2A72 2A72 10 1
+text32 CODE 0 2A28 2A28 1C 1
+text33 CODE 0 29EE 29EE 1E 1
+text35 CODE 0 1F40 1F40 90 1
+text36 CODE 0 1FD0 1FD0 7A 1
+text37 CODE 0 2440 2440 52 1
+text38 CODE 0 22D2 22D2 60 1
+text39 CODE 0 8D2 8D2 280 1
+text40 CODE 0 DBE DBE 26C 1
+text41 CODE 0 1E96 1E96 AA 1
+text42 CODE 0 28EE 28EE 32 1
+text43 CODE 0 26D2 26D2 42 1
+text44 CODE 0 1DEA 1DEA AC 1
+text45 CODE 0 2A98 2A98 6 1
+text46 CODE 0 27D2 27D2 3C 1
+text47 CODE 0 189E 189E 138 1
+text48 CODE 0 1608 1608 15C 1
+text49 CODE 0 1344 1344 166 1
+text50 CODE 0 264A 264A 44 1
+text51 CODE 0 2848 2848 38 1
+text52 CODE 0 29A6 29A6 2A 1
+text53 CODE 0 268E 268E 44 1
+text54 CODE 0 2880 2880 38 1
+text55 CODE 0 2A44 2A44 18 1
+text56 CODE 0 2714 2714 42 1
+text57 CODE 0 2A82 2A82 10 1
+text58 CODE 0 2492 2492 50 1
+text59 CODE 0 2332 2332 60 1
+text60 CODE 0 2132 2132 6E 1
+text61 CODE 0 20C0 20C0 72 1
+text62 CODE 0 297A 297A 2C 1
+idataCOMRAM CODE 0 2AA3 2AA3 4 1
+cstackCOMRAM COMRAM 1 1 1 79 1
+cstackBANK0 BANK0 1 80 80 6E 1
+temp COMRAM 1 7F 7F 1 1
+bssBANK0 BANK0 1 EE EE D 1
+bssBANK1 BANK1 1 100 100 42 1
+intcode CODE 0 8 8 9E 1
+smallconst SMALLCONST 0 600 600 4C 1
+idataBANK0 CODE 0 2A9E 2A9E 5 1
+eeprom_data EEDATA 0 F00000 F00000 28 1
+dataBANK0 BANK0 1 FB FB 5 1
+dataCOMRAM COMRAM 1 7A 7A 4 1
+bssCOMRAM COMRAM 1 7E 7E 1 1
+$/tmp/xcXmURcnO.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 A6 A6 4 1
+text CODE 0 2AA8 2AA8 2 1
+reset_vec CODE 0 0 0 6 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 142-5FF 1
+SFR F80-FFF 1
+BANK1 142-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+CONST 6-7 1
+CONST AA-5FF 1
+CONST 2AA7-2AA7 1
+CONST 2AAA-7FFF 1
+STACK 142-5FF 1
+SMALLCONST 2AA7-2AA7 1
+SMALLCONST 2AAA-7FFF 1
+CODE 6-7 1
+CODE AA-5FF 1
+CODE 2AA7-2AA7 1
+CODE 2AAA-7FFF 1
+BIGRAM 142-5FF 1
+EEDATA F00028-F000FF 1
+MEDIUMCONST 2AA7-2AA7 1
+MEDIUMCONST 2AAA-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production/BH1415v2.production.o
+8 intcode CODE >508:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+8 intcode CODE >62:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+34 intcode CODE >64:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+36 intcode CODE >66:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+3A intcode CODE >67:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+3E intcode CODE >68:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+42 intcode CODE >69:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+44 intcode CODE >70:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+48 intcode CODE >71:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+50 intcode CODE >72:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+54 intcode CODE >73:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+58 intcode CODE >75:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+5C intcode CODE >78:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+62 intcode CODE >79:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+66 intcode CODE >80:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+6A intcode CODE >81:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+70 intcode CODE >82:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+72 intcode CODE >83:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+74 intcode CODE >86:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+78 intcode CODE >88:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+297A text62 CODE >15:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+297E text62 CODE >16:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2982 text62 CODE >17:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2986 text62 CODE >19:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2988 text62 CODE >20:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+298A text62 CODE >21:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+298C text62 CODE >23:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+298E text62 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2992 text62 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2996 text62 CODE >26:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2998 text62 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+299A text62 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+299E text62 CODE >31:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+29A2 text62 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+29A4 text62 CODE >31:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20C0 text61 CODE >46:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20C4 text61 CODE >47:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20C8 text61 CODE >48:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20CE text61 CODE >49:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20DE text61 CODE >50:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20F2 text61 CODE >51:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20FE text61 CODE >52:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+210A text61 CODE >53:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2116 text61 CODE >54:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2122 text61 CODE >55:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+212E text61 CODE >57:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2132 text60 CODE >106:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2134 text60 CODE >107:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2138 text60 CODE >108:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+213E text60 CODE >109:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2142 text60 CODE >110:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2144 text60 CODE >111:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+214A text60 CODE >112:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+214E text60 CODE >113:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2150 text60 CODE >114:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2156 text60 CODE >115:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+215E text60 CODE >116:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2162 text60 CODE >117:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2164 text60 CODE >118:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+216A text60 CODE >119:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+216E text60 CODE >120:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2170 text60 CODE >121:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2176 text60 CODE >122:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+217A text60 CODE >123:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+217C text60 CODE >125:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+218E text60 CODE >169:/home/sebastian/Escritorio/BH1415/BH1415v2/hardware.h
+2192 text60 CODE >170:/home/sebastian/Escritorio/BH1415/BH1415v2/hardware.h
+219A text60 CODE >134:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2332 text59 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2334 text59 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+233C text59 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2344 text59 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2348 text59 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+234A text59 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2352 text59 CODE >18:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2354 text59 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+235C text59 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2362 text59 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+236E text59 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2376 text59 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2378 text59 CODE >26:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2380 text59 CODE >27:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2384 text59 CODE >28:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2386 text59 CODE >29:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+238E text59 CODE >30:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwdiv.c
+2492 text58 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+2494 text58 CODE >12:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+249C text58 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24A0 text58 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24A2 text58 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24AA text58 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24AC text58 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24B4 text58 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24C0 text58 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24C8 text58 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24D0 text58 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24D4 text58 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24D6 text58 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+24DE text58 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/lwmod.c
+2A82 text57 CODE >22:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A84 text57 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A8E text57 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2714 text56 CODE >110:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2718 text56 CODE >125:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+271C text56 CODE >126:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2720 text56 CODE >127:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2726 text56 CODE >133:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2728 text56 CODE >134:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+272A text56 CODE >135:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+272E text56 CODE >136:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2730 text56 CODE >137:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2734 text56 CODE >138:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2736 text56 CODE >140:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+273A text56 CODE >141:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2742 text56 CODE >146:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2746 text56 CODE >147:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2748 text56 CODE >148:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+274C text56 CODE >149:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+274E text56 CODE >151:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2752 text56 CODE >157:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A44 text55 CODE >451:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A46 text55 CODE >504:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A56 text55 CODE >505:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A58 text55 CODE >508:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2880 text54 CODE >419:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2882 text54 CODE >421:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2884 text54 CODE >423:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2890 text54 CODE >424:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+289E text54 CODE >425:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+28A2 text54 CODE >421:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+28B0 text54 CODE >428:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+28B4 text54 CODE >421:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+28B6 text54 CODE >428:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+268E text53 CODE >217:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2692 text53 CODE >232:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2696 text53 CODE >233:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+269A text53 CODE >234:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26A2 text53 CODE >240:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26A4 text53 CODE >241:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26A6 text53 CODE >242:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26AA text53 CODE >243:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26AC text53 CODE >244:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26B0 text53 CODE >245:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26B2 text53 CODE >247:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26B6 text53 CODE >248:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26BE text53 CODE >253:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26C2 text53 CODE >254:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26C4 text53 CODE >255:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26C8 text53 CODE >256:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26CA text53 CODE >258:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+26CE text53 CODE >264:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+29A6 text52 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+29A8 text52 CODE >37:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+29B4 text52 CODE >38:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+29BC text52 CODE >39:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+29C4 text52 CODE >52:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+29CC text52 CODE >53:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+2848 text51 CODE >5:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isdigit.c
+284A text51 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isdigit.c
+287C text51 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isdigit.c
+264A text50 CODE >5:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isspace.c
+264C text50 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isspace.c
+268A text50 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isspace.c
+1344 text49 CODE >4:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1346 text49 CODE >6:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1356 text49 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+13BC text49 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+13C6 text49 CODE >10:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+13CC text49 CODE >11:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+13FA text49 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1432 text49 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1478 text49 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+14A4 text49 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1608 text48 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+160A text48 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+160E text48 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1612 text48 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1632 text48 CODE >18:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1636 text48 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+163C text48 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+165C text48 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1660 text48 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+166E text48 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1682 text48 CODE >26:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1686 text48 CODE >27:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1688 text48 CODE >28:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+169C text48 CODE >29:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+169E text48 CODE >27:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+16A6 text48 CODE >32:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+16B8 text48 CODE >33:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+16DC text48 CODE >34:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+16FC text48 CODE >35:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+16FE text48 CODE >37:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1712 text48 CODE >38:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1716 text48 CODE >40:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+171E text48 CODE >41:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+173E text48 CODE >42:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1760 text48 CODE >43:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+189E text47 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18A0 text47 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18A4 text47 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18A8 text47 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18C8 text47 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18CC text47 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18D2 text47 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+18F2 text47 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1908 text47 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+190C text47 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+190E text47 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1922 text47 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1924 text47 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+192C text47 CODE >28:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1950 text47 CODE >29:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1970 text47 CODE >30:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1984 text47 CODE >31:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1988 text47 CODE >33:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1990 text47 CODE >34:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+19B0 text47 CODE >35:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+19D2 text47 CODE >36:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+27D2 text46 CODE >1:/opt/microchip/xc8/v2.05/pic/sources/c99/common/abs.c
+27D4 text46 CODE >3:/opt/microchip/xc8/v2.05/pic/sources/c99/common/abs.c
+2808 text46 CODE >4:/opt/microchip/xc8/v2.05/pic/sources/c99/common/abs.c
+2A98 text45 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/putch.c
+2A9A text45 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/putch.c
+1DEA text44 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1DEC text44 CODE >12:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1DFE text44 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1E04 text44 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1E06 text44 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1E4A text44 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1E7E text44 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1E90 text44 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+26D2 text43 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+26D4 text43 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+26DC text43 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+26DE text43 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+26F2 text43 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+26F6 text43 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+270C text43 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+2710 text43 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+2712 text43 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+28EE text42 CODE >12:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28F0 text42 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28F8 text42 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28FA text42 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+2900 text42 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+2910 text42 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+291C text42 CODE >26:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+1E96 text41 CODE >72:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1E98 text41 CODE >77:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1E9E text41 CODE >78:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1EB2 text41 CODE >82:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1ECE text41 CODE >83:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1ED6 text41 CODE >84:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1ED8 text41 CODE >85:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1EEE text41 CODE >86:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1EF2 text41 CODE >84:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1F08 text41 CODE >90:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1F0E text41 CODE >91:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1F22 text41 CODE >94:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1F3C text41 CODE >95:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+DBE text40 CODE >274:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+DC0 text40 CODE >280:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+DE0 text40 CODE >281:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+DF2 text40 CODE >282:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+DFA text40 CODE >283:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E1A text40 CODE >287:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E20 text40 CODE >288:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E22 text40 CODE >290:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E48 text40 CODE >291:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E50 text40 CODE >292:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E5E text40 CODE >293:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E64 text40 CODE >297:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E6E text40 CODE >298:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E74 text40 CODE >299:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E76 text40 CODE >300:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+E7E text40 CODE >301:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+F00 text40 CODE >302:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+F06 text40 CODE >303:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+F0C text40 CODE >304:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+F70 text40 CODE >299:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+FBA text40 CODE >308:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+FCA text40 CODE >309:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+FD0 text40 CODE >310:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+FFC text40 CODE >314:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1026 text40 CODE >315:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+8D2 text39 CODE >670:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+8D4 text39 CODE >680:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+8F0 text39 CODE >681:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+8FE text39 CODE >683:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+910 text39 CODE >684:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+914 text39 CODE >723:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+930 text39 CODE >724:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+93E text39 CODE >725:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+966 text39 CODE >726:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+96A text39 CODE >727:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+96C text39 CODE >728:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+976 text39 CODE >731:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+994 text39 CODE >732:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+996 text39 CODE >733:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+9A6 text39 CODE >732:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+9F6 text39 CODE >825:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+A30 text39 CODE >827:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+A3E text39 CODE >828:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+A78 text39 CODE >830:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+AAE text39 CODE >1350:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+ACC text39 CODE >1351:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+ADA text39 CODE >1352:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+AEE text39 CODE >1353:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+AF8 text39 CODE >1357:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B08 text39 CODE >1358:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B14 text39 CODE >1362:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B3C text39 CODE >1363:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B4C text39 CODE >1365:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22D2 text38 CODE >1368:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22D4 text38 CODE >1373:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22DC text38 CODE >1374:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22E6 text38 CODE >1375:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22E8 text38 CODE >1376:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2310 text38 CODE >1375:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2326 text38 CODE >1378:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+232E text38 CODE >1382:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2440 text37 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+2442 text37 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+244A text37 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+2452 text37 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+245A text37 CODE >18:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+2462 text37 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+247E text37 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+248E text37 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+1FD0 text36 CODE >14:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+1FD2 text36 CODE >15:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+1FEA text36 CODE >16:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2002 text36 CODE >17:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2022 text36 CODE >19:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2028 text36 CODE >20:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2034 text36 CODE >21:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+203A text36 CODE >22:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2046 text36 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+1F40 text35 CODE >90:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F44 text35 CODE >91:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F48 text35 CODE >93:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F52 text35 CODE >94:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F5E text35 CODE >95:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F6A text35 CODE >96:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F76 text35 CODE >97:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F82 text35 CODE >98:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F8E text35 CODE >99:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1F9A text35 CODE >100:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1FAA text35 CODE >102:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1FCC text35 CODE >104:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+29EE text33 CODE >451:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+29F0 text33 CODE >504:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A06 text33 CODE >505:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A08 text33 CODE >508:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A28 text32 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A2A text32 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A40 text32 CODE >30:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A72 text31 CODE >22:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A74 text31 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2A7E text31 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+252C text30 CODE >217:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2532 text30 CODE >232:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2536 text30 CODE >233:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+253A text30 CODE >234:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2544 text30 CODE >240:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2546 text30 CODE >241:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2548 text30 CODE >242:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+254C text30 CODE >243:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+254E text30 CODE >244:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2552 text30 CODE >245:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2554 text30 CODE >247:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2558 text30 CODE >248:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2562 text30 CODE >253:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2566 text30 CODE >254:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2568 text30 CODE >255:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+256C text30 CODE >256:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+256E text30 CODE >258:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2572 text30 CODE >264:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2576 text29 CODE >164:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+257C text29 CODE >178:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2580 text29 CODE >179:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2584 text29 CODE >180:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+258C text29 CODE >186:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+258E text29 CODE >187:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2590 text29 CODE >188:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2594 text29 CODE >189:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+2596 text29 CODE >190:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+259A text29 CODE >191:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+259C text29 CODE >193:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25A0 text29 CODE >194:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25AA text29 CODE >199:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25AE text29 CODE >200:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25B0 text29 CODE >201:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25B4 text29 CODE >202:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25B6 text29 CODE >204:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+25BA text29 CODE >210:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19D6 text28 CODE >40:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19DC text28 CODE >47:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19E0 text28 CODE >48:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19E4 text28 CODE >54:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19E6 text28 CODE >55:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19E8 text28 CODE >56:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19EA text28 CODE >57:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19EC text28 CODE >58:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19EE text28 CODE >59:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19F0 text28 CODE >62:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19F4 text28 CODE >64:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+19FA text28 CODE >65:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A10 text28 CODE >67:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A16 text28 CODE >68:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A2C text28 CODE >71:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A32 text28 CODE >72:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A40 text28 CODE >77:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A4A text28 CODE >78:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A52 text28 CODE >81:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A5E text28 CODE >82:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A64 text28 CODE >83:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A70 text28 CODE >84:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A76 text28 CODE >87:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A82 text28 CODE >88:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A88 text28 CODE >91:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A94 text28 CODE >92:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1A9A text28 CODE >94:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1AA6 text28 CODE >95:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1AAC text28 CODE >97:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1AB8 text28 CODE >98:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1ABE text28 CODE >100:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1ACA text28 CODE >101:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+1AD0 text28 CODE >103:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+29D0 text27 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+29D6 text27 CODE >26:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+29E2 text27 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+29EA text27 CODE >28:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+24E2 text26 CODE >5:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+24E4 text26 CODE >6:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+24EA text26 CODE >7:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2506 text26 CODE >8:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+250C text26 CODE >9:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2512 text26 CODE >10:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2528 text26 CODE >12:/home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
+2794 text25 CODE >34:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2796 text25 CODE >36:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+279A text25 CODE >38:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+279E text25 CODE >39:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27A2 text25 CODE >41:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27A6 text25 CODE >42:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27AA text25 CODE >43:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27AC text25 CODE >44:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27B0 text25 CODE >45:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27B4 text25 CODE >47:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27B8 text25 CODE >49:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27BC text25 CODE >51:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27C0 text25 CODE >52:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27C4 text25 CODE >54:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27C8 text25 CODE >56:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27CA text25 CODE >57:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27CC text25 CODE >58:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+27CE text25 CODE >60:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2A5C text24 CODE >7:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2A62 text24 CODE >8:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2A66 text24 CODE >9:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2A68 text24 CODE >10:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2A6A text24 CODE >11:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2A6C text24 CODE >12:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2A6E text24 CODE >13:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21A0 text23 CODE >33:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21A2 text23 CODE >34:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21AC text23 CODE >35:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21B6 text23 CODE >36:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21BE text23 CODE >37:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21D4 text23 CODE >38:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21DE text23 CODE >39:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21E8 text23 CODE >40:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21F2 text23 CODE >41:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+21FC text23 CODE >42:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2206 text23 CODE >44:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+294E text22 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+2950 text22 CODE >37:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+295E text22 CODE >38:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+2966 text22 CODE >39:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+296E text22 CODE >52:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+2976 text22 CODE >53:/opt/microchip/xc8/v2.05/pic/sources/c99/common/Umul16.c
+2392 text21 CODE >136:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2394 text21 CODE >137:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23B2 text21 CODE >138:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23B8 text21 CODE >139:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23BA text21 CODE >140:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23C2 text21 CODE >141:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23C4 text21 CODE >142:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23CC text21 CODE >143:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+23E6 text21 CODE >145:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+2920 text20 CODE >15:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2926 text20 CODE >16:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+292A text20 CODE >17:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+292E text20 CODE >19:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2930 text20 CODE >20:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2932 text20 CODE >21:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2934 text20 CODE >23:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2936 text20 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+293A text20 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+293E text20 CODE >26:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2940 text20 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2942 text20 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2946 text20 CODE >31:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+294A text20 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+294C text20 CODE >31:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+204A text19 CODE >46:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2050 text19 CODE >47:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2054 text19 CODE >48:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+205A text19 CODE >49:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+206A text19 CODE >50:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2080 text19 CODE >51:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+208C text19 CODE >52:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+2098 text19 CODE >53:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20A4 text19 CODE >54:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20B0 text19 CODE >55:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+20BC text19 CODE >57:/home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+280E text18 CODE >5:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isdigit.c
+2810 text18 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isdigit.c
+2844 text18 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isdigit.c
+2604 text17 CODE >5:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isspace.c
+2606 text17 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isspace.c
+2646 text17 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/isspace.c
+11DA text16 CODE >4:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+11DC text16 CODE >6:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+11EE text16 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1254 text16 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+125E text16 CODE >10:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1264 text16 CODE >11:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1292 text16 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+12CC text16 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+1312 text16 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+133E text16 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/atoi.c
+14AA text15 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+14AC text15 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+14B2 text15 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+14B6 text15 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+14D6 text15 CODE >18:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+14DA text15 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+14E0 text15 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1500 text15 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1504 text15 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1512 text15 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1526 text15 CODE >26:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+152A text15 CODE >27:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+152C text15 CODE >28:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1540 text15 CODE >29:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1542 text15 CODE >27:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+154A text15 CODE >32:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+155C text15 CODE >33:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1580 text15 CODE >34:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+15A0 text15 CODE >35:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+15A2 text15 CODE >37:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+15B6 text15 CODE >38:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+15BA text15 CODE >40:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+15C2 text15 CODE >41:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+15E2 text15 CODE >42:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1604 text15 CODE >43:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aodiv.c
+1764 text14 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1766 text14 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+176C text14 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1770 text14 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1790 text14 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1794 text14 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+179A text14 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17BA text14 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17D0 text14 CODE >22:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17D4 text14 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17D6 text14 CODE >24:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17EA text14 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17EC text14 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+17F4 text14 CODE >28:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1818 text14 CODE >29:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1838 text14 CODE >30:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+184C text14 CODE >31:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1850 text14 CODE >33:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1858 text14 CODE >34:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+1878 text14 CODE >35:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+189A text14 CODE >36:/opt/microchip/xc8/v2.05/pic/sources/c99/common/aomod.c
+2756 text13 CODE >1:/opt/microchip/xc8/v2.05/pic/sources/c99/common/abs.c
+2758 text13 CODE >3:/opt/microchip/xc8/v2.05/pic/sources/c99/common/abs.c
+278E text13 CODE >4:/opt/microchip/xc8/v2.05/pic/sources/c99/common/abs.c
+2A92 text12 CODE >7:/opt/microchip/xc8/v2.05/pic/sources/c99/common/putch.c
+2A94 text12 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/putch.c
+1D3C text11 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1D3E text11 CODE >12:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1D52 text11 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1D58 text11 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1D5A text11 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1D9E text11 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1DD2 text11 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+1DE4 text11 CODE >21:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputc.c
+25BE text10 CODE >8:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+25C0 text10 CODE >13:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+25CA text10 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+25CC text10 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+25E0 text10 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+25E6 text10 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+25FC text10 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+2600 text10 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+2602 text10 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_fputs.c
+28B8 text9 CODE >12:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28BA text9 CODE >14:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28C2 text9 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28C4 text9 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28CC text9 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28DC text9 CODE >25:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+28EA text9 CODE >26:/opt/microchip/xc8/v2.05/pic/sources/c99/common/strlen.c
+1C8E text8 CODE >72:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1C90 text8 CODE >77:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1C96 text8 CODE >78:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1CAA text8 CODE >82:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1CC8 text8 CODE >83:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1CD0 text8 CODE >84:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1CD2 text8 CODE >85:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1CE8 text8 CODE >86:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1CEE text8 CODE >84:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1D04 text8 CODE >90:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1D08 text8 CODE >91:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1D1C text8 CODE >94:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+1D38 text8 CODE >95:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B52 text7 CODE >274:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B54 text7 CODE >280:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B74 text7 CODE >281:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B88 text7 CODE >282:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+B90 text7 CODE >283:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BB0 text7 CODE >287:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BB4 text7 CODE >288:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BB6 text7 CODE >290:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BDC text7 CODE >291:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BE4 text7 CODE >292:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BF2 text7 CODE >293:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+BF8 text7 CODE >297:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+C02 text7 CODE >298:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+C08 text7 CODE >299:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+C0A text7 CODE >300:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+C12 text7 CODE >301:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+C96 text7 CODE >302:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+C9C text7 CODE >303:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+CA2 text7 CODE >304:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+D06 text7 CODE >299:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+D50 text7 CODE >308:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+D5E text7 CODE >309:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+D64 text7 CODE >310:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+D90 text7 CODE >314:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+DBA text7 CODE >315:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+64C text6 CODE >670:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+64E text6 CODE >680:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+66A text6 CODE >681:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+678 text6 CODE >683:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+68A text6 CODE >684:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+68E text6 CODE >723:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+6AA text6 CODE >724:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+6B8 text6 CODE >725:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+6E0 text6 CODE >726:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+6E4 text6 CODE >727:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+6E6 text6 CODE >728:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+6F0 text6 CODE >731:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+70E text6 CODE >732:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+710 text6 CODE >733:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+720 text6 CODE >732:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+772 text6 CODE >825:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+7AC text6 CODE >827:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+7BA text6 CODE >828:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+7F4 text6 CODE >830:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+82A text6 CODE >1350:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+848 text6 CODE >1351:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+856 text6 CODE >1352:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+86A text6 CODE >1353:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+876 text6 CODE >1357:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+886 text6 CODE >1358:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+892 text6 CODE >1362:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+8BC text6 CODE >1363:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+8CC text6 CODE >1365:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2272 text5 CODE >1368:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2274 text5 CODE >1373:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+227C text5 CODE >1374:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2286 text5 CODE >1375:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+2288 text5 CODE >1376:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22B0 text5 CODE >1375:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22C6 text5 CODE >1378:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+22CE text5 CODE >1382:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
+23EA text4 CODE >9:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+23EC text4 CODE >15:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+23F6 text4 CODE >16:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+23FE text4 CODE >17:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+2406 text4 CODE >18:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+240E text4 CODE >19:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+242A text4 CODE >20:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+243C text4 CODE >23:/opt/microchip/xc8/v2.05/pic/sources/c99/common/nf_sprintf.c
+2A0C text3 CODE >6:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+2A0E text3 CODE >8:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+2A1C text3 CODE >12:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+2A24 text3 CODE >13:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1BC8 text2 CODE >15:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1BCA text2 CODE >20:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1BDE text2 CODE >22:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1BE0 text2 CODE >23:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1BF6 text2 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1BFC text2 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C26 text2 CODE >26:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C2E text2 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C30 text2 CODE >28:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C34 text2 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C36 text2 CODE >31:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C4E text2 CODE >32:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C50 text2 CODE >33:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C66 text2 CODE >34:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C68 text2 CODE >35:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C72 text2 CODE >36:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C88 text2 CODE >37:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+1C8A text2 CODE >39:/home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+102A text1 CODE >147:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+102C text1 CODE >148:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1042 text1 CODE >149:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1050 text1 CODE >150:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1058 text1 CODE >153:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+105C text1 CODE >154:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+106E text1 CODE >155:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1084 text1 CODE >156:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1092 text1 CODE >157:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10B0 text1 CODE >158:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10B2 text1 CODE >159:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10C6 text1 CODE >160:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10DC text1 CODE >161:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10EA text1 CODE >158:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10F2 text1 CODE >165:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+10F6 text1 CODE >166:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+110A text1 CODE >167:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1120 text1 CODE >168:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+112E text1 CODE >169:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+114C text1 CODE >170:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+114E text1 CODE >171:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1164 text1 CODE >172:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+117A text1 CODE >173:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1188 text1 CODE >170:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1190 text1 CODE >177:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1194 text1 CODE >178:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+11B2 text1 CODE >179:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+11B6 text1 CODE >180:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+11BC text1 CODE >181:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+11CA text1 CODE >186:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+11D6 text1 CODE >188:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1AD4 text0 CODE >5:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1AD6 text0 CODE >6:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1ADC text0 CODE >7:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1ADE text0 CODE >8:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1AFA text0 CODE >9:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1AFE text0 CODE >10:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B02 text0 CODE >11:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B10 text0 CODE >12:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B14 text0 CODE >13:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B28 text0 CODE >14:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B2E text0 CODE >16:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B3E text0 CODE >18:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B56 text0 CODE >19:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B74 text0 CODE >20:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B7E text0 CODE >22:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B92 text0 CODE >24:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B9C text0 CODE >25:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1B9E text0 CODE >26:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1BA2 text0 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1BA4 text0 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+1BB2 text0 CODE >30:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+220A cinit CODE >1775:/tmp/xcXkXih9m
+220A cinit CODE >1777:/tmp/xcXkXih9m
+220A cinit CODE >1780:/tmp/xcXkXih9m
+220A cinit CODE >1885:/tmp/xcXkXih9m
+220C cinit CODE >1886:/tmp/xcXkXih9m
+220E cinit CODE >1887:/tmp/xcXkXih9m
+2210 cinit CODE >1888:/tmp/xcXkXih9m
+2212 cinit CODE >1889:/tmp/xcXkXih9m
+2214 cinit CODE >1890:/tmp/xcXkXih9m
+2216 cinit CODE >1891:/tmp/xcXkXih9m
+221A cinit CODE >1892:/tmp/xcXkXih9m
+221E cinit CODE >1893:/tmp/xcXkXih9m
+221E cinit CODE >1894:/tmp/xcXkXih9m
+2220 cinit CODE >1895:/tmp/xcXkXih9m
+2224 cinit CODE >1896:/tmp/xcXkXih9m
+2226 cinit CODE >1897:/tmp/xcXkXih9m
+2228 cinit CODE >1898:/tmp/xcXkXih9m
+222A cinit CODE >1902:/tmp/xcXkXih9m
+222C cinit CODE >1903:/tmp/xcXkXih9m
+222E cinit CODE >1904:/tmp/xcXkXih9m
+2230 cinit CODE >1905:/tmp/xcXkXih9m
+2232 cinit CODE >1906:/tmp/xcXkXih9m
+2234 cinit CODE >1907:/tmp/xcXkXih9m
+2236 cinit CODE >1908:/tmp/xcXkXih9m
+223A cinit CODE >1909:/tmp/xcXkXih9m
+223E cinit CODE >1910:/tmp/xcXkXih9m
+223E cinit CODE >1911:/tmp/xcXkXih9m
+2240 cinit CODE >1912:/tmp/xcXkXih9m
+2244 cinit CODE >1913:/tmp/xcXkXih9m
+2246 cinit CODE >1914:/tmp/xcXkXih9m
+2248 cinit CODE >1915:/tmp/xcXkXih9m
+224A cinit CODE >1919:/tmp/xcXkXih9m
+224E cinit CODE >1920:/tmp/xcXkXih9m
+2250 cinit CODE >1921:/tmp/xcXkXih9m
+2250 cinit CODE >1922:/tmp/xcXkXih9m
+2252 cinit CODE >1923:/tmp/xcXkXih9m
+2254 cinit CODE >1924:/tmp/xcXkXih9m
+2256 cinit CODE >1927:/tmp/xcXkXih9m
+225A cinit CODE >1928:/tmp/xcXkXih9m
+225C cinit CODE >1929:/tmp/xcXkXih9m
+225C cinit CODE >1930:/tmp/xcXkXih9m
+225E cinit CODE >1931:/tmp/xcXkXih9m
+2260 cinit CODE >1932:/tmp/xcXkXih9m
+2262 cinit CODE >1935:/tmp/xcXkXih9m
+2264 cinit CODE >1941:/tmp/xcXkXih9m
+2264 cinit CODE >1943:/tmp/xcXkXih9m
+2266 cinit CODE >1944:/tmp/xcXkXih9m
+2268 cinit CODE >1946:/tmp/xcXkXih9m
+226A cinit CODE >1947:/tmp/xcXkXih9m
+226C cinit CODE >1948:/tmp/xcXkXih9m
+226E cinit CODE >1949:/tmp/xcXkXih9m
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+i2_abs 27D2 0 CODE 0 text46 dist/default/production/BH1415v2.production.o
+i2_pad 1E96 0 CODE 0 text41 dist/default/production/BH1415v2.production.o
+WriteCmdXLCD@cmd 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+___lwmod@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production/BH1415v2.production.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/BH1415v2.production.o
+__Hspace_0 F00028 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hspace_1 142 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_stereoEnable FB 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
+__HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production/BH1415v2.production.o
+i2_vfpfcnvrt$1042 52 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2dtoa@fp 1C 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+setData@full 84 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production/BH1415v2.production.o
+i2___aomod@counter 11 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of_SendCMDLCD 29EE 0 CODE 0 text27 dist/default/production/BH1415v2.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXmURcnO.o
+SendCMDLCD@CMD 81 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Heeprom_data F00028 0 EEDATA 0 eeprom_data dist/default/production/BH1415v2.production.o
+i2___aodiv@quotient 13 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_T1CONbits FCD 0 ABS 0 - dist/default/production/BH1415v2.production.o
+?i2_vfpfcnvrt 40 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?_abs 92 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+?_pad 90 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+main@i ED 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+?_vfprintf D3 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2___aomod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lsmallconst 600 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+_PIE1 F9D 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___sp 0 0 STACK 2 stack /tmp/xcXmURcnO.o
+_atoi 11DA 0 CODE 0 text16 dist/default/production/BH1415v2.production.o
+_beep 2392 0 CODE 0 text21 dist/default/production/BH1415v2.production.o
+_days FE 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
+_dbuf 100 0 BANK1 1 bssBANK1 dist/default/production/BH1415v2.production.o
+_dtoa B52 0 CODE 0 text7 dist/default/production/BH1415v2.production.o
+_main 1AD4 0 CODE 0 text0 dist/default/production/BH1415v2.production.o
+_nout EE 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+_prec F2 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+_time 2132 0 CODE 0 text60 dist/default/production/BH1415v2.production.o
+abs@a 92 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2atoi@neg E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+btemp 7F 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+pad@i 97 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+pad@p 94 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+pad@w 99 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__CFG_CCP2MUX$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+start A6 0 CODE 0 init /tmp/xcXmURcnO.o
+i2sprintf@ap 66 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+___aomod@counter 90 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__size_of___aodiv 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of___aomod 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_atoi 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_beep 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_dtoa 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_main 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_time 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of___lwdiv 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of___lwmod 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2_atoi 1344 0 CODE 0 text49 dist/default/production/BH1415v2.production.o
+i2_dtoa DBE 0 CODE 0 text40 dist/default/production/BH1415v2.production.o
+i2abs@a 13 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/BH1415v2.production.o
+i2pad@i 18 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2pad@p 15 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2pad@w 1A 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+pad@fp 90 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_getData 21A0 0 CODE 0 text23 dist/default/production/BH1415v2.production.o
+?___wmul 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__size_ofi2_DelayFor18TCY 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+?_codFreq 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production/BH1415v2.production.o
+__size_ofi2_vfpfcnvrt 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hpowerup A6 0 CODE 0 powerup dist/default/production/BH1415v2.production.o
+__end_of_vfpfcnvrt 8D2 0 CODE 0 text6 dist/default/production/BH1415v2.production.o
+ttemp5 80 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+ttemp6 83 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+ttemp7 87 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__accesstop 80 0 ABS 0 - /tmp/xcXmURcnO.o
+intlevel0 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
+intlevel1 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
+intlevel2 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
+intlevel3 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_setData 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/BH1415v2.production.o
+wtemp8 80 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_writeEEPROM 2920 0 CODE 0 text20 dist/default/production/BH1415v2.production.o
+i2sprintf@fmt 5E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production/BH1415v2.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production/BH1415v2.production.o
+_vfpfcnvrt 64C 0 CODE 0 text6 dist/default/production/BH1415v2.production.o
+codFreq@f 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+dtoa@fp 9B 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__size_ofi2_atoi 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_ofi2_dtoa 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__pidataCOMRAM 2AA3 0 CODE 0 idataCOMRAM dist/default/production/BH1415v2.production.o
+__CFG_WDTPS$128 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2_SetDDRamAddr 268E 0 CODE 0 text53 dist/default/production/BH1415v2.production.o
+__size_of_vumeter 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___wmul@multiplicand 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2___aomod@sign 12 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_ADCON0 FC2 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_ADCON1 FC1 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_ADRESH FC4 0 ABS 0 - dist/default/production/BH1415v2.production.o
+updateLCD@decim 6F 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2___wmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+updateLCD@integ 6E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXmURcnO.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXmURcnO.o
+__size_ofi2___wmul 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/BH1415v2.production.o
+_EECON1bits FA6 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_initLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/BH1415v2.production.o
+__end_of___wmul 297A 0 CODE 0 text22 dist/default/production/BH1415v2.production.o
+__size_of_writeFrequency 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_BusyXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_EECON2 FA7 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_EEDATA FA8 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/BH1415v2.production.o
+_hundredMiliSeconds F9 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+__end_of_updateLCD 204A 0 CODE 0 text36 dist/default/production/BH1415v2.production.o
+__size_of_sprintf 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/BH1415v2.production.o
+i2___aodiv@sign 12 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_atoi$1499 8F 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_atoi$1500 93 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_atoi$1501 91 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hintcodelo A6 0 CODE 0 intcodelo dist/default/production/BH1415v2.production.o
+__size_of_updateLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___lwmod@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_ofi2_BusyXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_of___aodiv 1608 0 CODE 0 text15 dist/default/production/BH1415v2.production.o
+__end_of___aomod 189E 0 CODE 0 text14 dist/default/production/BH1415v2.production.o
+i2writeEEPROM@data 2 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of___lwdiv 2392 0 CODE 0 text59 dist/default/production/BH1415v2.production.o
+__end_of___lwmod 24E2 0 CODE 0 text58 dist/default/production/BH1415v2.production.o
+__size_of_isdigit 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2vfprintf@fmt 56 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2_vfprintf 22D2 0 CODE 0 text38 dist/default/production/BH1415v2.production.o
+__end_of_config 27D2 0 CODE 0 text25 dist/default/production/BH1415v2.production.o
+__size_of_isspace 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___aodiv@quotient 92 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_INTCON FF2 0 ABS 0 - dist/default/production/BH1415v2.production.o
+?_strlen 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2___aomod@divisor 9 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?i2___aodiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?i2___aomod 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+___aomod@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2vfpfcnvrt@ap 44 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2vfpfcnvrt@fp 40 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2vfpfcnvrt@ll 4A 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_fputc 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_fputs 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_inter 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+writeEEPROM@data 81 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__size_of_putch 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_updateLCD 1FD0 0 CODE 0 text36 dist/default/production/BH1415v2.production.o
+__end_ofi2_SetDDRamAddr 26D2 0 CODE 0 text53 dist/default/production/BH1415v2.production.o
+i2vfpfcnvrt@fmt 42 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_WriteDataXLCD 2714 0 CODE 0 text56 dist/default/production/BH1415v2.production.o
+___lwmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lintcodelo A6 0 CODE 0 intcodelo dist/default/production/BH1415v2.production.o
+___aomod@divisor 88 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+OpenXLCD@lcdtype 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_DelayFor18TCY 2A72 0 CODE 0 text31 dist/default/production/BH1415v2.production.o
+i2_fputc 1DEA 0 CODE 0 text44 dist/default/production/BH1415v2.production.o
+i2_fputs 26D2 0 CODE 0 text43 dist/default/production/BH1415v2.production.o
+start_initialization 220A 0 CODE 0 cinit dist/default/production/BH1415v2.production.o
+i2_putch 2A98 0 CODE 0 text45 dist/default/production/BH1415v2.production.o
+_OSCCON FD3 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/BH1415v2.production.o
+i2___wmul 29A6 0 CODE 0 text52 dist/default/production/BH1415v2.production.o
+__end_of_setData 20C0 0 CODE 0 text19 dist/default/production/BH1415v2.production.o
+_TRISDbits F95 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2atoi@n 15 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2atoi@s 8 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_SendCMDLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_BusyXLCD 29EE 0 CODE 0 text33 dist/default/production/BH1415v2.production.o
+writeFrequency@f 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+writeFrequency@i 8B 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+writeFrequency@r 89 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+vumeter@vumLevel 5 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_ofi2___wmul 29D0 0 CODE 0 text52 dist/default/production/BH1415v2.production.o
+__end_of_BLOCKED 605 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+__pcstackBANK0 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2dtoa@d 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2dtoa@i 3E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2dtoa@n 36 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2dtoa@p 30 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2dtoa@s 34 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2dtoa@w 32 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2sprintf@f 68 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2sprintf@s 5C 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_ofi2_abs 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_ofi2_pad 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2isdigit@c 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of_vumeter 1FD0 0 CODE 0 text35 dist/default/production/BH1415v2.production.o
+__end_of_BusyXLCD 2A0C 0 CODE 0 text33 dist/default/production/BH1415v2.production.o
+writeFrequency@buffer 87 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__cntErrataNOP_/tmp/xcXmURcnO.o 1 0 ABS 0 - /tmp/xcXmURcnO.o
+__size_ofi2_strlen 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_ofi2_vfprintf 2332 0 CODE 0 text38 dist/default/production/BH1415v2.production.o
+fputc@fp 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+fputs@fp 8B 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_of_initLCD 252C 0 CODE 0 text26 dist/default/production/BH1415v2.production.o
+i2vfprintf@ap 58 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2vfprintf@fp 54 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_readEEPROM 2A5C 0 CODE 0 text24 dist/default/production/BH1415v2.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production/BH1415v2.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production/BH1415v2.production.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/production/BH1415v2.production.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/production/BH1415v2.production.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/production/BH1415v2.production.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/production/BH1415v2.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production/BH1415v2.production.o
+__Hconst 0 0 CONST 0 const dist/default/production/BH1415v2.production.o
+__end_of_strlen 28EE 0 CODE 0 text9 dist/default/production/BH1415v2.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production/BH1415v2.production.o
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production/BH1415v2.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production/BH1415v2.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production/BH1415v2.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production/BH1415v2.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production/BH1415v2.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production/BH1415v2.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production/BH1415v2.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production/BH1415v2.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production/BH1415v2.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production/BH1415v2.production.o
+__Htext5 0 0 ABS 0 text5 dist/default/production/BH1415v2.production.o
+__Htext6 0 0 ABS 0 text6 dist/default/production/BH1415v2.production.o
+__Htext7 0 0 ABS 0 text7 dist/default/production/BH1415v2.production.o
+__Htext8 0 0 ABS 0 text8 dist/default/production/BH1415v2.production.o
+__Htext9 0 0 ABS 0 text9 dist/default/production/BH1415v2.production.o
+___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_codFreq 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/BH1415v2.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production/BH1415v2.production.o
+__smallconst 600 0 SMALLCONST 0 smallconst /tmp/xcXmURcnO.o
+__end_of_sprintf 2440 0 CODE 0 text4 dist/default/production/BH1415v2.production.o
+__Hcomram 0 0 ABS 0 comram dist/default/production/BH1415v2.production.o
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production/BH1415v2.production.o
+beep@ms 86 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2_vfpfcnvrt 8D2 0 CODE 0 text39 dist/default/production/BH1415v2.production.o
+i2___aodiv@counter 11 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__cntErrataNOP_dist/default/production/BH1415v2.production.o 162 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production/BH1415v2.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production/BH1415v2.production.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/production/BH1415v2.production.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/production/BH1415v2.production.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/production/BH1415v2.production.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/production/BH1415v2.production.o
+__end_of_isdigit 2848 0 CODE 0 text18 dist/default/production/BH1415v2.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production/BH1415v2.production.o
+__Lconst 0 0 CONST 0 const dist/default/production/BH1415v2.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production/BH1415v2.production.o
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production/BH1415v2.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production/BH1415v2.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production/BH1415v2.production.o
+__end_of_isspace 264A 0 CODE 0 text17 dist/default/production/BH1415v2.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production/BH1415v2.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production/BH1415v2.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production/BH1415v2.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production/BH1415v2.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production/BH1415v2.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production/BH1415v2.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production/BH1415v2.production.o
+__Ltext5 0 0 ABS 0 text5 dist/default/production/BH1415v2.production.o
+__Ltext6 0 0 ABS 0 text6 dist/default/production/BH1415v2.production.o
+__Ltext7 0 0 ABS 0 text7 dist/default/production/BH1415v2.production.o
+__Ltext8 0 0 ABS 0 text8 dist/default/production/BH1415v2.production.o
+__Ltext9 0 0 ABS 0 text9 dist/default/production/BH1415v2.production.o
+writeEEPROM@address 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production/BH1415v2.production.o
+?i2_sprintf 5C 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2___wmul@product 5 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2pad@buf 13 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production/BH1415v2.production.o
+_PORTAbits F80 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_PORTCbits F82 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_PORTDbits F83 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_PORTEbits F84 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_INTCONbits FF2 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_SetDDRamAddr 252C 0 CODE 0 text30 dist/default/production/BH1415v2.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production/BH1415v2.production.o
+__Hdata 0 0 ABS 0 data dist/default/production/BH1415v2.production.o
+__Hinit AA 0 CODE 0 init dist/default/production/BH1415v2.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production/BH1415v2.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production/BH1415v2.production.o
+__Htemp 80 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+__Htext 0 0 ABS 0 text dist/default/production/BH1415v2.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production/BH1415v2.production.o
+__Ldata 0 0 ABS 0 data dist/default/production/BH1415v2.production.o
+__Linit A6 0 CODE 0 init dist/default/production/BH1415v2.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production/BH1415v2.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production/BH1415v2.production.o
+__Ltemp 7F 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+__Ltext 0 0 ABS 0 text dist/default/production/BH1415v2.production.o
+i2pad@fp 11 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?i2_isdigit 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+___aodiv@counter 90 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+___wmul 294E 0 CODE 0 text22 dist/default/production/BH1415v2.production.o
+___aomod@sign 91 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+?i2_isspace 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/BH1415v2.production.o
+int$flags 7F 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/BH1415v2.production.o
+isspace@c 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hintret 0 0 ABS 0 intret dist/default/production/BH1415v2.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production/BH1415v2.production.o
+__S0 F00028 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__S1 142 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__S2 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_abs 2756 0 CODE 0 text13 dist/default/production/BH1415v2.production.o
+_pad 1C8E 0 CODE 0 text8 dist/default/production/BH1415v2.production.o
+i2___aodiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2vfprintf@cfmt 5A 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_WriteDataXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2_atoi$1499 10 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2_atoi$1500 14 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2_atoi$1501 12 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_DelayFor18TCY 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2_strlen 28EE 0 CODE 0 text42 dist/default/production/BH1415v2.production.o
+_config 2794 0 CODE 0 text25 dist/default/production/BH1415v2.production.o
+putsXLCD@buffer 2 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/BH1415v2.production.o
+___aodiv@sign 91 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2fputc@fp 3 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2fputs@fp C 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/BH1415v2.production.o
+__size_of_getData 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/BH1415v2.production.o
+i2setData@full 5 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+sprintf@fmt DD 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_of_readEEPROM 2A72 0 CODE 0 text24 dist/default/production/BH1415v2.production.o
+_dtoa$1027 AD 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_vfpfcnvrt$1042 D1 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_ofi2_strlen 2920 0 CODE 0 text42 dist/default/production/BH1415v2.production.o
+__end_of_abs 2794 0 CODE 0 text13 dist/default/production/BH1415v2.production.o
+__end_of_pad 1D3C 0 CODE 0 text8 dist/default/production/BH1415v2.production.o
+__end_of_writeEEPROM 294E 0 CODE 0 text20 dist/default/production/BH1415v2.production.o
+__Lintentry 0 0 ABS 0 intentry dist/default/production/BH1415v2.production.o
+SetDDRamAddr@DDaddr 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hramtop 600 0 RAM 0 ramtop dist/default/production/BH1415v2.production.o
+__size_of_SetDDRamAddr 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+strlen@a 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+strlen@s 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production/BH1415v2.production.o
+readEEPROM@address 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__pdataBANK0 FB 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
+__activetblptr 2 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production/BH1415v2.production.o
+i2_isspace$1517 7 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_of___wmul 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/BH1415v2.production.o
+__LbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production/BH1415v2.production.o
+__end_of_WriteDataXLCD 2756 0 CODE 0 text56 dist/default/production/BH1415v2.production.o
+i2setData@data0 3 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2setData@data1 4 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Htext10 0 0 ABS 0 text10 dist/default/production/BH1415v2.production.o
+__Htext11 0 0 ABS 0 text11 dist/default/production/BH1415v2.production.o
+__Htext12 0 0 ABS 0 text12 dist/default/production/BH1415v2.production.o
+__Htext13 0 0 ABS 0 text13 dist/default/production/BH1415v2.production.o
+__Htext14 0 0 ABS 0 text14 dist/default/production/BH1415v2.production.o
+__Htext15 0 0 ABS 0 text15 dist/default/production/BH1415v2.production.o
+__Htext16 0 0 ABS 0 text16 dist/default/production/BH1415v2.production.o
+__Htext17 0 0 ABS 0 text17 dist/default/production/BH1415v2.production.o
+__Htext18 0 0 ABS 0 text18 dist/default/production/BH1415v2.production.o
+__Htext19 0 0 ABS 0 text19 dist/default/production/BH1415v2.production.o
+__Htext20 0 0 ABS 0 text20 dist/default/production/BH1415v2.production.o
+__Htext21 0 0 ABS 0 text21 dist/default/production/BH1415v2.production.o
+__Htext22 0 0 ABS 0 text22 dist/default/production/BH1415v2.production.o
+__Htext23 0 0 ABS 0 text23 dist/default/production/BH1415v2.production.o
+__Htext24 0 0 ABS 0 text24 dist/default/production/BH1415v2.production.o
+__Htext25 0 0 ABS 0 text25 dist/default/production/BH1415v2.production.o
+__Htext26 0 0 ABS 0 text26 dist/default/production/BH1415v2.production.o
+__Htext27 0 0 ABS 0 text27 dist/default/production/BH1415v2.production.o
+__Htext28 0 0 ABS 0 text28 dist/default/production/BH1415v2.production.o
+__Htext29 0 0 ABS 0 text29 dist/default/production/BH1415v2.production.o
+__Htext30 0 0 ABS 0 text30 dist/default/production/BH1415v2.production.o
+__Htext31 0 0 ABS 0 text31 dist/default/production/BH1415v2.production.o
+__Htext32 0 0 ABS 0 text32 dist/default/production/BH1415v2.production.o
+__Htext33 0 0 ABS 0 text33 dist/default/production/BH1415v2.production.o
+__Htext35 0 0 ABS 0 text35 dist/default/production/BH1415v2.production.o
+__Htext36 0 0 ABS 0 text36 dist/default/production/BH1415v2.production.o
+__Htext37 0 0 ABS 0 text37 dist/default/production/BH1415v2.production.o
+__Htext38 0 0 ABS 0 text38 dist/default/production/BH1415v2.production.o
+__Htext39 0 0 ABS 0 text39 dist/default/production/BH1415v2.production.o
+__Htext40 0 0 ABS 0 text40 dist/default/production/BH1415v2.production.o
+__Htext41 0 0 ABS 0 text41 dist/default/production/BH1415v2.production.o
+__Htext42 0 0 ABS 0 text42 dist/default/production/BH1415v2.production.o
+__Htext43 0 0 ABS 0 text43 dist/default/production/BH1415v2.production.o
+__Htext44 0 0 ABS 0 text44 dist/default/production/BH1415v2.production.o
+__Htext45 0 0 ABS 0 text45 dist/default/production/BH1415v2.production.o
+__Htext46 0 0 ABS 0 text46 dist/default/production/BH1415v2.production.o
+__Htext47 0 0 ABS 0 text47 dist/default/production/BH1415v2.production.o
+__Htext48 0 0 ABS 0 text48 dist/default/production/BH1415v2.production.o
+__Htext49 0 0 ABS 0 text49 dist/default/production/BH1415v2.production.o
+__Htext50 0 0 ABS 0 text50 dist/default/production/BH1415v2.production.o
+__Htext51 0 0 ABS 0 text51 dist/default/production/BH1415v2.production.o
+__Htext52 0 0 ABS 0 text52 dist/default/production/BH1415v2.production.o
+__Htext53 0 0 ABS 0 text53 dist/default/production/BH1415v2.production.o
+__Htext54 0 0 ABS 0 text54 dist/default/production/BH1415v2.production.o
+__Htext55 0 0 ABS 0 text55 dist/default/production/BH1415v2.production.o
+__Htext56 0 0 ABS 0 text56 dist/default/production/BH1415v2.production.o
+__Htext57 0 0 ABS 0 text57 dist/default/production/BH1415v2.production.o
+__Htext58 0 0 ABS 0 text58 dist/default/production/BH1415v2.production.o
+__Htext59 0 0 ABS 0 text59 dist/default/production/BH1415v2.production.o
+__Htext60 0 0 ABS 0 text60 dist/default/production/BH1415v2.production.o
+__Htext61 0 0 ABS 0 text61 dist/default/production/BH1415v2.production.o
+__Htext62 0 0 ABS 0 text62 dist/default/production/BH1415v2.production.o
+?i2___wmul 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_of_OpenXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+vfpfcnvrt@fmt C1 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_of_DelayFor18TCY 2A82 0 CODE 0 text31 dist/default/production/BH1415v2.production.o
+i2fputc@c 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2fputs@c E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2fputs@i F 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2fputs@s A 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of_codFreq 2A28 0 CODE 0 text3 dist/default/production/BH1415v2.production.o
+WriteDataXLCD@data 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+pad@buf 92 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_months FF 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
+__ptext10 25BE 0 CODE 0 text10 dist/default/production/BH1415v2.production.o
+__ptext11 1D3C 0 CODE 0 text11 dist/default/production/BH1415v2.production.o
+__ptext12 2A92 0 CODE 0 text12 dist/default/production/BH1415v2.production.o
+__ptext13 2756 0 CODE 0 text13 dist/default/production/BH1415v2.production.o
+__ptext14 1764 0 CODE 0 text14 dist/default/production/BH1415v2.production.o
+__ptext15 14AA 0 CODE 0 text15 dist/default/production/BH1415v2.production.o
+__ptext16 11DA 0 CODE 0 text16 dist/default/production/BH1415v2.production.o
+__ptext17 2604 0 CODE 0 text17 dist/default/production/BH1415v2.production.o
+__ptext18 280E 0 CODE 0 text18 dist/default/production/BH1415v2.production.o
+__ptext19 204A 0 CODE 0 text19 dist/default/production/BH1415v2.production.o
+__ptext20 2920 0 CODE 0 text20 dist/default/production/BH1415v2.production.o
+__ptext21 2392 0 CODE 0 text21 dist/default/production/BH1415v2.production.o
+__ptext22 294E 0 CODE 0 text22 dist/default/production/BH1415v2.production.o
+__ptext23 21A0 0 CODE 0 text23 dist/default/production/BH1415v2.production.o
+__ptext24 2A5C 0 CODE 0 text24 dist/default/production/BH1415v2.production.o
+__ptext25 2794 0 CODE 0 text25 dist/default/production/BH1415v2.production.o
+__ptext26 24E2 0 CODE 0 text26 dist/default/production/BH1415v2.production.o
+__ptext27 29D0 0 CODE 0 text27 dist/default/production/BH1415v2.production.o
+__ptext28 19D6 0 CODE 0 text28 dist/default/production/BH1415v2.production.o
+__ptext29 2576 0 CODE 0 text29 dist/default/production/BH1415v2.production.o
+__ptext30 252C 0 CODE 0 text30 dist/default/production/BH1415v2.production.o
+__ptext31 2A72 0 CODE 0 text31 dist/default/production/BH1415v2.production.o
+__ptext32 2A28 0 CODE 0 text32 dist/default/production/BH1415v2.production.o
+__ptext33 29EE 0 CODE 0 text33 dist/default/production/BH1415v2.production.o
+__ptext35 1F40 0 CODE 0 text35 dist/default/production/BH1415v2.production.o
+__ptext36 1FD0 0 CODE 0 text36 dist/default/production/BH1415v2.production.o
+__ptext37 2440 0 CODE 0 text37 dist/default/production/BH1415v2.production.o
+__ptext38 22D2 0 CODE 0 text38 dist/default/production/BH1415v2.production.o
+__ptext39 8D2 0 CODE 0 text39 dist/default/production/BH1415v2.production.o
+__ptext40 DBE 0 CODE 0 text40 dist/default/production/BH1415v2.production.o
+__ptext41 1E96 0 CODE 0 text41 dist/default/production/BH1415v2.production.o
+__ptext42 28EE 0 CODE 0 text42 dist/default/production/BH1415v2.production.o
+__ptext43 26D2 0 CODE 0 text43 dist/default/production/BH1415v2.production.o
+__ptext44 1DEA 0 CODE 0 text44 dist/default/production/BH1415v2.production.o
+__ptext45 2A98 0 CODE 0 text45 dist/default/production/BH1415v2.production.o
+__ptext46 27D2 0 CODE 0 text46 dist/default/production/BH1415v2.production.o
+__ptext47 189E 0 CODE 0 text47 dist/default/production/BH1415v2.production.o
+__ptext48 1608 0 CODE 0 text48 dist/default/production/BH1415v2.production.o
+__ptext49 1344 0 CODE 0 text49 dist/default/production/BH1415v2.production.o
+__ptext50 264A 0 CODE 0 text50 dist/default/production/BH1415v2.production.o
+__ptext51 2848 0 CODE 0 text51 dist/default/production/BH1415v2.production.o
+__ptext52 29A6 0 CODE 0 text52 dist/default/production/BH1415v2.production.o
+__ptext53 268E 0 CODE 0 text53 dist/default/production/BH1415v2.production.o
+__ptext54 2880 0 CODE 0 text54 dist/default/production/BH1415v2.production.o
+__ptext55 2A44 0 CODE 0 text55 dist/default/production/BH1415v2.production.o
+__ptext56 2714 0 CODE 0 text56 dist/default/production/BH1415v2.production.o
+__ptext57 2A82 0 CODE 0 text57 dist/default/production/BH1415v2.production.o
+__ptext58 2492 0 CODE 0 text58 dist/default/production/BH1415v2.production.o
+__ptext59 2332 0 CODE 0 text59 dist/default/production/BH1415v2.production.o
+__ptext60 2132 0 CODE 0 text60 dist/default/production/BH1415v2.production.o
+__ptext61 20C0 0 CODE 0 text61 dist/default/production/BH1415v2.production.o
+__ptext62 297A 0 CODE 0 text62 dist/default/production/BH1415v2.production.o
+__end_of_UN_BLOCKED 604 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+__CFG_OSCS$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___aodiv 14AA 0 CODE 0 text15 dist/default/production/BH1415v2.production.o
+___aomod 1764 0 CODE 0 text14 dist/default/production/BH1415v2.production.o
+__size_of_config 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+___lwdiv 2332 0 CODE 0 text59 dist/default/production/BH1415v2.production.o
+___lwmod 2492 0 CODE 0 text58 dist/default/production/BH1415v2.production.o
+_lineOne 131 0 BANK1 1 bssBANK1 dist/default/production/BH1415v2.production.o
+_lineTwo 120 0 BANK1 1 bssBANK1 dist/default/production/BH1415v2.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/BH1415v2.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production/BH1415v2.production.o
+__CFG_BOR$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_BORV$20 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_of_SetDDRamAddr 2576 0 CODE 0 text30 dist/default/production/BH1415v2.production.o
+?_atoi 87 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+?_dtoa 9B 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production/BH1415v2.production.o
+__Lconfig 300000 0 CONFIG 0 config dist/default/production/BH1415v2.production.o
+___wmul@multiplier 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+vumeter@level 4 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production/BH1415v2.production.o
+___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2_writeEEPROM 297A 0 CODE 0 text62 dist/default/production/BH1415v2.production.o
+_strlen 28B8 0 CODE 0 text9 dist/default/production/BH1415v2.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production/BH1415v2.production.o
+_writeFrequency 1BC8 0 CODE 0 text2 dist/default/production/BH1415v2.production.o
+__size_of_vfprintf 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+stackhi 5FF 0 ABS 0 - /tmp/xcXmURcnO.o
+stacklo 142 0 ABS 0 - /tmp/xcXmURcnO.o
+?i2_atoi 8 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?i2_dtoa 1C 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2___aodiv@divisor 9 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lintcode 8 0 CODE 0 intcode dist/default/production/BH1415v2.production.o
+__size_of_putsXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_seconds FA 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+__Lintret 0 0 ABS 0 intret dist/default/production/BH1415v2.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production/BH1415v2.production.o
+_setData 204A 0 CODE 0 text19 dist/default/production/BH1415v2.production.o
+_ADCON0bits FC2 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_ofi2___aodiv 1764 0 CODE 0 text48 dist/default/production/BH1415v2.production.o
+__end_ofi2___aomod 19D6 0 CODE 0 text47 dist/default/production/BH1415v2.production.o
+i2strlen@a 3 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2strlen@s 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?_vfpfcnvrt BF 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_ofi2_vfprintf 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_ofi2___aodiv 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_ofi2___aomod 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__pbssCOMRAM 7E 0 COMRAM 1 bssCOMRAM dist/default/production/BH1415v2.production.o
+_OpenXLCD 19D6 0 CODE 0 text28 dist/default/production/BH1415v2.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2___wmul@multiplicand 3 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_PIR1bits F9E 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_PIR2bits FA1 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_of_getData 220A 0 CODE 0 text23 dist/default/production/BH1415v2.production.o
+___aodiv@divisor 88 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_functionalStat F8 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+___aodiv@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_WriteCmdXLCD 2576 0 CODE 0 text29 dist/default/production/BH1415v2.production.o
+end_of_initialization 2264 0 CODE 0 cinit dist/default/production/BH1415v2.production.o
+getData@aux0 83 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+getData@aux1 84 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+?i2_vfprintf 54 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__size_ofi2_SetDDRamAddr 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/BH1415v2.production.o
+__Hintentry 0 0 ABS 0 intentry dist/default/production/BH1415v2.production.o
+_vumeter 1F40 0 CODE 0 text35 dist/default/production/BH1415v2.production.o
+i2writeEEPROM@address 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of_OpenXLCD 1AD4 0 CODE 0 text28 dist/default/production/BH1415v2.production.o
+fputc@c 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+fputs@c 8D 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+fputs@i 8E 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+fputs@s 89 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__CFG_OSC$HS 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+?___aodiv 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+?___aomod 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+___lwdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?___lwdiv 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?___lwmod 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of_FINAL_MONTH 603 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+vfprintf@fmt D5 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2___aodiv 1608 0 CODE 0 text48 dist/default/production/BH1415v2.production.o
+i2___aomod 189E 0 CODE 0 text47 dist/default/production/BH1415v2.production.o
+__Hreset_vec 6 0 CODE 0 reset_vec dist/default/production/BH1415v2.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/production/BH1415v2.production.o
+__HbssBANK1 0 0 ABS 0 bssBANK1 dist/default/production/BH1415v2.production.o
+_initLCD 24E2 0 CODE 0 text26 dist/default/production/BH1415v2.production.o
+_frequency F6 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+__Lramtop 600 0 RAM 0 ramtop dist/default/production/BH1415v2.production.o
+__size_ofi2_fputc 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_ofi2_fputs 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_strlen 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_ofi2_setData 2132 0 CODE 0 text61 dist/default/production/BH1415v2.production.o
+__size_ofi2_putch 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production/BH1415v2.production.o
+__pcinit 220A 0 CODE 0 cinit dist/default/production/BH1415v2.production.o
+?i2_strlen 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+vfpfcnvrt@ap C3 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+vfpfcnvrt@fp BF 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+vfpfcnvrt@ll C9 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__ptext0 1AD4 0 CODE 0 text0 dist/default/production/BH1415v2.production.o
+__ptext1 102A 0 CODE 0 text1 dist/default/production/BH1415v2.production.o
+__ptext2 1BC8 0 CODE 0 text2 dist/default/production/BH1415v2.production.o
+__ptext3 2A0C 0 CODE 0 text3 dist/default/production/BH1415v2.production.o
+__ptext4 23EA 0 CODE 0 text4 dist/default/production/BH1415v2.production.o
+__ptext5 2272 0 CODE 0 text5 dist/default/production/BH1415v2.production.o
+__ptext6 64C 0 CODE 0 text6 dist/default/production/BH1415v2.production.o
+__ptext7 B52 0 CODE 0 text7 dist/default/production/BH1415v2.production.o
+__ptext8 1C8E 0 CODE 0 text8 dist/default/production/BH1415v2.production.o
+__ptext9 28B8 0 CODE 0 text9 dist/default/production/BH1415v2.production.o
+__size_ofi2_setData 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production/BH1415v2.production.o
+vfprintf@ap D7 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+vfprintf@fp D3 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__CFG_STVR$ON 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+vfprintf@cfmt D9 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Ltext10 0 0 ABS 0 text10 dist/default/production/BH1415v2.production.o
+__Ltext11 0 0 ABS 0 text11 dist/default/production/BH1415v2.production.o
+__Ltext12 0 0 ABS 0 text12 dist/default/production/BH1415v2.production.o
+__Ltext13 0 0 ABS 0 text13 dist/default/production/BH1415v2.production.o
+__Ltext14 0 0 ABS 0 text14 dist/default/production/BH1415v2.production.o
+__Ltext15 0 0 ABS 0 text15 dist/default/production/BH1415v2.production.o
+__Ltext16 0 0 ABS 0 text16 dist/default/production/BH1415v2.production.o
+__Ltext17 0 0 ABS 0 text17 dist/default/production/BH1415v2.production.o
+__Ltext18 0 0 ABS 0 text18 dist/default/production/BH1415v2.production.o
+__Ltext19 0 0 ABS 0 text19 dist/default/production/BH1415v2.production.o
+__Ltext20 0 0 ABS 0 text20 dist/default/production/BH1415v2.production.o
+__Ltext21 0 0 ABS 0 text21 dist/default/production/BH1415v2.production.o
+__Ltext22 0 0 ABS 0 text22 dist/default/production/BH1415v2.production.o
+__Ltext23 0 0 ABS 0 text23 dist/default/production/BH1415v2.production.o
+__Ltext24 0 0 ABS 0 text24 dist/default/production/BH1415v2.production.o
+__Ltext25 0 0 ABS 0 text25 dist/default/production/BH1415v2.production.o
+__Ltext26 0 0 ABS 0 text26 dist/default/production/BH1415v2.production.o
+__Ltext27 0 0 ABS 0 text27 dist/default/production/BH1415v2.production.o
+__Ltext28 0 0 ABS 0 text28 dist/default/production/BH1415v2.production.o
+__Ltext29 0 0 ABS 0 text29 dist/default/production/BH1415v2.production.o
+__Ltext30 0 0 ABS 0 text30 dist/default/production/BH1415v2.production.o
+__Ltext31 0 0 ABS 0 text31 dist/default/production/BH1415v2.production.o
+__Ltext32 0 0 ABS 0 text32 dist/default/production/BH1415v2.production.o
+__Ltext33 0 0 ABS 0 text33 dist/default/production/BH1415v2.production.o
+__Ltext35 0 0 ABS 0 text35 dist/default/production/BH1415v2.production.o
+__Ltext36 0 0 ABS 0 text36 dist/default/production/BH1415v2.production.o
+__Ltext37 0 0 ABS 0 text37 dist/default/production/BH1415v2.production.o
+__Ltext38 0 0 ABS 0 text38 dist/default/production/BH1415v2.production.o
+__Ltext39 0 0 ABS 0 text39 dist/default/production/BH1415v2.production.o
+__Ltext40 0 0 ABS 0 text40 dist/default/production/BH1415v2.production.o
+__Ltext41 0 0 ABS 0 text41 dist/default/production/BH1415v2.production.o
+__Ltext42 0 0 ABS 0 text42 dist/default/production/BH1415v2.production.o
+__Ltext43 0 0 ABS 0 text43 dist/default/production/BH1415v2.production.o
+__Ltext44 0 0 ABS 0 text44 dist/default/production/BH1415v2.production.o
+__Ltext45 0 0 ABS 0 text45 dist/default/production/BH1415v2.production.o
+__Ltext46 0 0 ABS 0 text46 dist/default/production/BH1415v2.production.o
+__Ltext47 0 0 ABS 0 text47 dist/default/production/BH1415v2.production.o
+__Ltext48 0 0 ABS 0 text48 dist/default/production/BH1415v2.production.o
+__Ltext49 0 0 ABS 0 text49 dist/default/production/BH1415v2.production.o
+__Ltext50 0 0 ABS 0 text50 dist/default/production/BH1415v2.production.o
+__Ltext51 0 0 ABS 0 text51 dist/default/production/BH1415v2.production.o
+__Ltext52 0 0 ABS 0 text52 dist/default/production/BH1415v2.production.o
+__Ltext53 0 0 ABS 0 text53 dist/default/production/BH1415v2.production.o
+__Ltext54 0 0 ABS 0 text54 dist/default/production/BH1415v2.production.o
+__Ltext55 0 0 ABS 0 text55 dist/default/production/BH1415v2.production.o
+__Ltext56 0 0 ABS 0 text56 dist/default/production/BH1415v2.production.o
+__Ltext57 0 0 ABS 0 text57 dist/default/production/BH1415v2.production.o
+__Ltext58 0 0 ABS 0 text58 dist/default/production/BH1415v2.production.o
+__Ltext59 0 0 ABS 0 text59 dist/default/production/BH1415v2.production.o
+__Ltext60 0 0 ABS 0 text60 dist/default/production/BH1415v2.production.o
+__Ltext61 0 0 ABS 0 text61 dist/default/production/BH1415v2.production.o
+__Ltext62 0 0 ABS 0 text62 dist/default/production/BH1415v2.production.o
+__end_ofi2_DelayFor18TCY 2A92 0 CODE 0 text57 dist/default/production/BH1415v2.production.o
+__ramtop 600 0 RAM 0 ramtop /tmp/xcXmURcnO.o
+_sprintf 23EA 0 CODE 0 text4 dist/default/production/BH1415v2.production.o
+__end_of_writeFrequency 1C8E 0 CODE 0 text2 dist/default/production/BH1415v2.production.o
+_vfprintf 2272 0 CODE 0 text5 dist/default/production/BH1415v2.production.o
+i2_dtoa$1027 2E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__Lpowerup A6 0 CODE 0 powerup dist/default/production/BH1415v2.production.o
+__Leeprom_data F00000 0 EEDATA 0 eeprom_data dist/default/production/BH1415v2.production.o
+sprintf@ap E1 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_isdigit 280E 0 CODE 0 text18 dist/default/production/BH1415v2.production.o
+_putsXLCD 2880 0 CODE 0 text54 dist/default/production/BH1415v2.production.o
+_DelayPORXLCD 2A28 0 CODE 0 text32 dist/default/production/BH1415v2.production.o
+i2_BusyXLCD 2A44 0 CODE 0 text55 dist/default/production/BH1415v2.production.o
+_setFrequency 102A 0 CODE 0 text1 dist/default/production/BH1415v2.production.o
+_isspace 2604 0 CODE 0 text17 dist/default/production/BH1415v2.production.o
+__psmallconst 600 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+__end_ofi2_atoi 14AA 0 CODE 0 text49 dist/default/production/BH1415v2.production.o
+__end_ofi2_dtoa 102A 0 CODE 0 text40 dist/default/production/BH1415v2.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/BH1415v2.production.o
+__size_of_WriteCmdXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_writeEEPROM 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2_setData 20C0 0 CODE 0 text61 dist/default/production/BH1415v2.production.o
+__end_of_vfprintf 22D2 0 CODE 0 text5 dist/default/production/BH1415v2.production.o
+__end_ofi2_vfpfcnvrt B52 0 CODE 0 text39 dist/default/production/BH1415v2.production.o
+__end_of_putsXLCD 28B8 0 CODE 0 text54 dist/default/production/BH1415v2.production.o
+___param_bank 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/BH1415v2.production.o
+__end_of__initialization 2264 0 CODE 0 cinit dist/default/production/BH1415v2.production.o
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2SetDDRamAddr@DDaddr 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production/BH1415v2.production.o
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_readEEPROM 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__pidataBANK0 2A9E 0 CODE 0 idataBANK0 dist/default/production/BH1415v2.production.o
+__size_ofi2_writeEEPROM 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production/BH1415v2.production.o
+_isspace$1517 86 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+setData@data0 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+setData@data1 83 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_ofi2_sprintf 2492 0 CODE 0 text37 dist/default/production/BH1415v2.production.o
+__size_ofi2_sprintf 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__end_of_WriteCmdXLCD 25BE 0 CODE 0 text29 dist/default/production/BH1415v2.production.o
+__end_ofi2_isdigit 2880 0 CODE 0 text51 dist/default/production/BH1415v2.production.o
+__end_ofi2_isspace 268E 0 CODE 0 text50 dist/default/production/BH1415v2.production.o
+__size_ofi2_isdigit 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_SendCMDLCD 29D0 0 CODE 0 text27 dist/default/production/BH1415v2.production.o
+_prTmr0H 7A 0 COMRAM 1 dataCOMRAM dist/default/production/BH1415v2.production.o
+_prTmr0L 7B 0 COMRAM 1 dataCOMRAM dist/default/production/BH1415v2.production.o
+_prTmr1H 7C 0 COMRAM 1 dataCOMRAM dist/default/production/BH1415v2.production.o
+_prTmr1L 7D 0 COMRAM 1 dataCOMRAM dist/default/production/BH1415v2.production.o
+__size_ofi2_isspace 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+sprintf@f E3 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+sprintf@s DB 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__size_of_DelayPORXLCD 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+i2_DelayFor18TCY 2A82 0 CODE 0 text57 dist/default/production/BH1415v2.production.o
+__CFG_PWRT$ON 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_setFrequency 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_of_atoi 1344 0 CODE 0 text16 dist/default/production/BH1415v2.production.o
+__end_of_beep 23EA 0 CODE 0 text21 dist/default/production/BH1415v2.production.o
+__end_of_dtoa DBE 0 CODE 0 text7 dist/default/production/BH1415v2.production.o
+__end_of_main 1BC8 0 CODE 0 text0 dist/default/production/BH1415v2.production.o
+__end_of_time 21A0 0 CODE 0 text60 dist/default/production/BH1415v2.production.o
+__pintcode 8 0 CODE 0 intcode dist/default/production/BH1415v2.production.o
+isdigit@c 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+_EEADR FA9 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_of_fputc 1DEA 0 CODE 0 text11 dist/default/production/BH1415v2.production.o
+__end_of_fputs 2604 0 CODE 0 text10 dist/default/production/BH1415v2.production.o
+?_sprintf DB 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_of_inter A6 0 CODE 0 intcode dist/default/production/BH1415v2.production.o
+_PORTB F81 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_PORTD F83 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_T0CON FD5 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_T1CON FCD 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TMR0H FD7 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TMR0L FD6 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TMR1H FCF 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TMR1L FCE 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TRISA F92 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TRISB F93 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TRISC F94 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TRISD F95 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_TRISE F96 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_minutes FC 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
+__end_of_putch 2A98 0 CODE 0 text12 dist/default/production/BH1415v2.production.o
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__HRAM 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production/BH1415v2.production.o
+__Hram 0 0 ABS 0 ram dist/default/production/BH1415v2.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production/BH1415v2.production.o
+__LRAM 1 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production/BH1415v2.production.o
+__Lram 0 0 ABS 0 ram dist/default/production/BH1415v2.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production/BH1415v2.production.o
+__CFG_CP2$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__CFG_CP3$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+atoi@neg 8D 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2_sprintf 2440 0 CODE 0 text37 dist/default/production/BH1415v2.production.o
+_flags F4 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+_fputc 1D3C 0 CODE 0 text11 dist/default/production/BH1415v2.production.o
+_fputs 25BE 0 CODE 0 text10 dist/default/production/BH1415v2.production.o
+_hours FD 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
+_inter 8 0 CODE 0 intcode dist/default/production/BH1415v2.production.o
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+_putch 2A92 0 CODE 0 text12 dist/default/production/BH1415v2.production.o
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+?i2_abs 13 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+?i2_pad 11 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+_width F0 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+?_isdigit 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_ofi2_writeEEPROM 29A6 0 CODE 0 text62 dist/default/production/BH1415v2.production.o
+?_isspace 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+i2_isdigit 2848 0 CODE 0 text51 dist/default/production/BH1415v2.production.o
+__size_of_abs 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__size_of_pad 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
+__end_ofi2_BusyXLCD 2A5C 0 CODE 0 text55 dist/default/production/BH1415v2.production.o
+__HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production/BH1415v2.production.o
+__end_of_FINAL_DAY 602 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+i2isspace@c 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+i2_isspace 264A 0 CODE 0 text50 dist/default/production/BH1415v2.production.o
+atoi@n 94 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+atoi@s 87 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__end_ofi2_fputc 1E96 0 CODE 0 text44 dist/default/production/BH1415v2.production.o
+__end_ofi2_fputs 2714 0 CODE 0 text43 dist/default/production/BH1415v2.production.o
+__end_ofi2_putch 2A9E 0 CODE 0 text45 dist/default/production/BH1415v2.production.o
+__initialization 220A 0 CODE 0 cinit dist/default/production/BH1415v2.production.o
+__pbssBANK0 EE 0 BANK0 1 bssBANK0 dist/default/production/BH1415v2.production.o
+__pbssBANK1 100 0 BANK1 1 bssBANK1 dist/default/production/BH1415v2.production.o
+_cntTmr1 7E 0 COMRAM 1 bssCOMRAM dist/default/production/BH1415v2.production.o
+__pdataCOMRAM 7A 0 COMRAM 1 dataCOMRAM dist/default/production/BH1415v2.production.o
+_codFreq 2A0C 0 CODE 0 text3 dist/default/production/BH1415v2.production.o
+__end_of_DelayPORXLCD 2A44 0 CODE 0 text32 dist/default/production/BH1415v2.production.o
+__end_of_setFrequency 11DA 0 CODE 0 text1 dist/default/production/BH1415v2.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production/BH1415v2.production.o
+___wmul@product 84 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Hsmallconst 64C 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
+dtoa@d 9D 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+dtoa@i BD 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+dtoa@n B5 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+dtoa@p AF 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+dtoa@s B3 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+dtoa@w B1 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production/BH1415v2.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/BH1415v2.production.o
+__Hintcode A6 0 CODE 0 intcode dist/default/production/BH1415v2.production.o
+__end_ofi2_abs 280E 0 CODE 0 text46 dist/default/production/BH1415v2.production.o
+__end_ofi2_pad 1F40 0 CODE 0 text41 dist/default/production/BH1415v2.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text6 0 64C 64C 245B 1
+cstackCOMRAM 1 1 1 7F 1
+cstackBANK0 1 80 80 80 1
+text 0 2AA8 2AA8 2 1
+reset_vec 0 0 0 6 1
+bssBANK1 1 100 100 42 1
+intcode 0 8 8 A2 1
+smallconst 0 600 600 4C 1
+eeprom_data 0 F00000 F00000 28 1
+config 0 300000 300000 E 1

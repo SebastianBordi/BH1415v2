@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/ContBH1415-v2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=ContBH1415-v2.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=contbh1415-v2.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/BH1415v2.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=BH1415v2.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=bh1415v2/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/contbh1415-v2.x/bin
+makeDirectory ${TMPDIR}/bh1415v2/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/contbh1415-v2.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/bh1415v2.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/contbh1415-v2.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/bh1415v2.tar *
 checkReturnCode
 
 # Cleanup

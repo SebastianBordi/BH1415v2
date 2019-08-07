@@ -14,7 +14,7 @@ void main (){
         if(!btnMenu) setFrequency();        // configuracion de frecuencia.
     }
     beep(100);
-    for(i; i < 30; i++){
+    for(i; i < 50; i++){
         sprintf(lineOne,"Fijando Fcia.   ");
         __delay_ms(90);
     }
@@ -26,6 +26,8 @@ void main (){
         }else{
             transEn = 0;
         }
+        writeFrequency(frequency);
+        __delay_ms(10);
     }
 }
 //Subrrutina de configuracion 
@@ -181,5 +183,6 @@ void setFrequency (){
             }
         }
     }
+    writeFrequency(frequency);
     return;
 }
