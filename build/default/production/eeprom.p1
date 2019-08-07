@@ -507,16 +507,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 109 `i `uc
 ]
 "148
-[; ;./hardware.h: 148: unsigned char prTmr0L = 0x84;
+[; ;./hardware.h: 148: unsigned char prTmr0L = 0x68;
 [v _prTmr0L `uc ~T0 @X0 1 e ]
 [i _prTmr0L
--> -> 132 `i `uc
+-> -> 104 `i `uc
 ]
 "149
-[; ;./hardware.h: 149: unsigned char prTmr0H = 0x6D;
+[; ;./hardware.h: 149: unsigned char prTmr0H = 0xC5;
 [v _prTmr0H `uc ~T0 @X0 1 e ]
 [i _prTmr0H
--> -> 109 `i `uc
+-> -> 197 `i `uc
 ]
 "151
 [; ;./hardware.h: 151: unsigned char cntTmr1 = 0;

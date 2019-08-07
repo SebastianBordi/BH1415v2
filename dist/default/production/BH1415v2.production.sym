@@ -691,6 +691,7 @@ __Ltext59 0 0 ABS 0
 __ptext49 1344 0 CODE 0
 _INTCONbits FF2 0 ABS 0
 ?i2___aodiv 1 0 COMRAM 1
+__cntErrataNOP_/tmp/xcXdwQ4o3.o 1 0 ABS 0
 __ptext59 2332 0 CODE 0
 __CFG_CCP2MUX$OFF 0 0 ABS 0
 ___aodiv@divisor 88 0 BANK0 1
@@ -800,7 +801,6 @@ __size_of_isspace 0 0 ABS 0
 ___lwmod@counter 5 0 COMRAM 1
 isspace@c 80 0 BANK0 1
 __CFG_WDT$OFF 0 0 ABS 0
-__cntErrataNOP_/tmp/xcXmURcnO.o 1 0 ABS 0
 __end_of_BLOCKED 605 0 SMALLCONST 0
 i2fputc@c 1 0 COMRAM 1
 __size_of_vfpfcnvrt 0 0 ABS 0
@@ -825,7 +825,7 @@ text 2AA8 2AA9 CODE 2AA8 0
 %locals
 dist/default/production/BH1415v2.production.o
 /opt/microchip/xc8/v2.05/pic/include/pic18f452.h
-/tmp/xcXkXih9m
+/tmp/xcXWzEaKh
 1775 220A 0 CODE 0
 1777 220A 0 CODE 0
 1780 220A 0 CODE 0

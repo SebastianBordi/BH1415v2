@@ -145,8 +145,8 @@ void putrsXLCD(const  char *buffer);
 //Instancias de variables globales
 unsigned char prTmr1L = 0x84;   //Preloads del Timer 1 
 unsigned char prTmr1H = 0x6D;
-unsigned char prTmr0L = 0x84;   //Preloads del Timer 0
-unsigned char prTmr0H = 0x6D;
+unsigned char prTmr0L = 0x68;   //Preloads del Timer 0
+unsigned char prTmr0H = 0xC5;
 
 unsigned char cntTmr1 = 0;      //Registro de postscaler del Timer1
 

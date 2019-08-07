@@ -719,16 +719,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 109 `i `uc
 ]
 "148
-[; ;./hardware.h: 148: unsigned char prTmr0L = 0x84;
+[; ;./hardware.h: 148: unsigned char prTmr0L = 0x68;
 [v _prTmr0L `uc ~T0 @X0 1 e ]
 [i _prTmr0L
--> -> 132 `i `uc
+-> -> 104 `i `uc
 ]
 "149
-[; ;./hardware.h: 149: unsigned char prTmr0H = 0x6D;
+[; ;./hardware.h: 149: unsigned char prTmr0H = 0xC5;
 [v _prTmr0H `uc ~T0 @X0 1 e ]
 [i _prTmr0H
--> -> 109 `i `uc
+-> -> 197 `i `uc
 ]
 "151
 [; ;./hardware.h: 151: unsigned char cntTmr1 = 0;
@@ -1136,8 +1136,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 261 ]
 [e :U 259 ]
 "102
-[; ;main.c: 102:     PORTB = 0xFF80 >> level;
-[e = _PORTB -> >> -> 65408 `ui -> _level `i `uc ]
+[; ;main.c: 102:     PORTB = 0x0100 >> level;
+[e = _PORTB -> >> -> 256 `i -> _level `i `uc ]
 "103
 [; ;main.c: 103:     return;
 [e $UE 257  ]

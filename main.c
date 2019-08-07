@@ -99,7 +99,7 @@ void vumeter (unsigned char vumLevel){
     else if (vumLevel >= 5) level = 2;
     else if (vumLevel >= 1) level = 1; 
 
-    vum = 0xFF80 >> level;
+    vum = 0x0100 >> level;
     return;
 }
 //Conteo de tiempo transcurrido de funcionamiento

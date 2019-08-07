@@ -4099,8 +4099,8 @@ void putrsXLCD(const char *buffer);
 
 unsigned char prTmr1L = 0x84;
 unsigned char prTmr1H = 0x6D;
-unsigned char prTmr0L = 0x84;
-unsigned char prTmr0H = 0x6D;
+unsigned char prTmr0L = 0x68;
+unsigned char prTmr0H = 0xC5;
 
 unsigned char cntTmr1 = 0;
 
@@ -4221,7 +4221,7 @@ void vumeter (unsigned char vumLevel){
     else if (vumLevel >= 5) level = 2;
     else if (vumLevel >= 1) level = 1;
 
-    PORTB = 0xFF80 >> level;
+    PORTB = 0x0100 >> level;
     return;
 }
 

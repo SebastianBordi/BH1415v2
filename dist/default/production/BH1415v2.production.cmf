@@ -88,7 +88,7 @@ eeprom_data EEDATA 0 F00000 F00000 28 1
 dataBANK0 BANK0 1 FB FB 5 1
 dataCOMRAM COMRAM 1 7A 7A 4 1
 bssCOMRAM COMRAM 1 7E 7E 1 1
-$/tmp/xcXmURcnO.o
+$/tmp/xcXdwQ4o3.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 A6 A6 4 1
 text CODE 0 2AA8 2AA8 2 1
@@ -901,57 +901,57 @@ DBA text7 CODE >315:/opt/microchip/xc8/v2.05/pic/sources/c99/common/doprnt.c
 1BA2 text0 CODE >27:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 1BA4 text0 CODE >29:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 1BB2 text0 CODE >30:/home/sebastian/Escritorio/BH1415/BH1415v2/main.c
-220A cinit CODE >1775:/tmp/xcXkXih9m
-220A cinit CODE >1777:/tmp/xcXkXih9m
-220A cinit CODE >1780:/tmp/xcXkXih9m
-220A cinit CODE >1885:/tmp/xcXkXih9m
-220C cinit CODE >1886:/tmp/xcXkXih9m
-220E cinit CODE >1887:/tmp/xcXkXih9m
-2210 cinit CODE >1888:/tmp/xcXkXih9m
-2212 cinit CODE >1889:/tmp/xcXkXih9m
-2214 cinit CODE >1890:/tmp/xcXkXih9m
-2216 cinit CODE >1891:/tmp/xcXkXih9m
-221A cinit CODE >1892:/tmp/xcXkXih9m
-221E cinit CODE >1893:/tmp/xcXkXih9m
-221E cinit CODE >1894:/tmp/xcXkXih9m
-2220 cinit CODE >1895:/tmp/xcXkXih9m
-2224 cinit CODE >1896:/tmp/xcXkXih9m
-2226 cinit CODE >1897:/tmp/xcXkXih9m
-2228 cinit CODE >1898:/tmp/xcXkXih9m
-222A cinit CODE >1902:/tmp/xcXkXih9m
-222C cinit CODE >1903:/tmp/xcXkXih9m
-222E cinit CODE >1904:/tmp/xcXkXih9m
-2230 cinit CODE >1905:/tmp/xcXkXih9m
-2232 cinit CODE >1906:/tmp/xcXkXih9m
-2234 cinit CODE >1907:/tmp/xcXkXih9m
-2236 cinit CODE >1908:/tmp/xcXkXih9m
-223A cinit CODE >1909:/tmp/xcXkXih9m
-223E cinit CODE >1910:/tmp/xcXkXih9m
-223E cinit CODE >1911:/tmp/xcXkXih9m
-2240 cinit CODE >1912:/tmp/xcXkXih9m
-2244 cinit CODE >1913:/tmp/xcXkXih9m
-2246 cinit CODE >1914:/tmp/xcXkXih9m
-2248 cinit CODE >1915:/tmp/xcXkXih9m
-224A cinit CODE >1919:/tmp/xcXkXih9m
-224E cinit CODE >1920:/tmp/xcXkXih9m
-2250 cinit CODE >1921:/tmp/xcXkXih9m
-2250 cinit CODE >1922:/tmp/xcXkXih9m
-2252 cinit CODE >1923:/tmp/xcXkXih9m
-2254 cinit CODE >1924:/tmp/xcXkXih9m
-2256 cinit CODE >1927:/tmp/xcXkXih9m
-225A cinit CODE >1928:/tmp/xcXkXih9m
-225C cinit CODE >1929:/tmp/xcXkXih9m
-225C cinit CODE >1930:/tmp/xcXkXih9m
-225E cinit CODE >1931:/tmp/xcXkXih9m
-2260 cinit CODE >1932:/tmp/xcXkXih9m
-2262 cinit CODE >1935:/tmp/xcXkXih9m
-2264 cinit CODE >1941:/tmp/xcXkXih9m
-2264 cinit CODE >1943:/tmp/xcXkXih9m
-2266 cinit CODE >1944:/tmp/xcXkXih9m
-2268 cinit CODE >1946:/tmp/xcXkXih9m
-226A cinit CODE >1947:/tmp/xcXkXih9m
-226C cinit CODE >1948:/tmp/xcXkXih9m
-226E cinit CODE >1949:/tmp/xcXkXih9m
+220A cinit CODE >1775:/tmp/xcXWzEaKh
+220A cinit CODE >1777:/tmp/xcXWzEaKh
+220A cinit CODE >1780:/tmp/xcXWzEaKh
+220A cinit CODE >1885:/tmp/xcXWzEaKh
+220C cinit CODE >1886:/tmp/xcXWzEaKh
+220E cinit CODE >1887:/tmp/xcXWzEaKh
+2210 cinit CODE >1888:/tmp/xcXWzEaKh
+2212 cinit CODE >1889:/tmp/xcXWzEaKh
+2214 cinit CODE >1890:/tmp/xcXWzEaKh
+2216 cinit CODE >1891:/tmp/xcXWzEaKh
+221A cinit CODE >1892:/tmp/xcXWzEaKh
+221E cinit CODE >1893:/tmp/xcXWzEaKh
+221E cinit CODE >1894:/tmp/xcXWzEaKh
+2220 cinit CODE >1895:/tmp/xcXWzEaKh
+2224 cinit CODE >1896:/tmp/xcXWzEaKh
+2226 cinit CODE >1897:/tmp/xcXWzEaKh
+2228 cinit CODE >1898:/tmp/xcXWzEaKh
+222A cinit CODE >1902:/tmp/xcXWzEaKh
+222C cinit CODE >1903:/tmp/xcXWzEaKh
+222E cinit CODE >1904:/tmp/xcXWzEaKh
+2230 cinit CODE >1905:/tmp/xcXWzEaKh
+2232 cinit CODE >1906:/tmp/xcXWzEaKh
+2234 cinit CODE >1907:/tmp/xcXWzEaKh
+2236 cinit CODE >1908:/tmp/xcXWzEaKh
+223A cinit CODE >1909:/tmp/xcXWzEaKh
+223E cinit CODE >1910:/tmp/xcXWzEaKh
+223E cinit CODE >1911:/tmp/xcXWzEaKh
+2240 cinit CODE >1912:/tmp/xcXWzEaKh
+2244 cinit CODE >1913:/tmp/xcXWzEaKh
+2246 cinit CODE >1914:/tmp/xcXWzEaKh
+2248 cinit CODE >1915:/tmp/xcXWzEaKh
+224A cinit CODE >1919:/tmp/xcXWzEaKh
+224E cinit CODE >1920:/tmp/xcXWzEaKh
+2250 cinit CODE >1921:/tmp/xcXWzEaKh
+2250 cinit CODE >1922:/tmp/xcXWzEaKh
+2252 cinit CODE >1923:/tmp/xcXWzEaKh
+2254 cinit CODE >1924:/tmp/xcXWzEaKh
+2256 cinit CODE >1927:/tmp/xcXWzEaKh
+225A cinit CODE >1928:/tmp/xcXWzEaKh
+225C cinit CODE >1929:/tmp/xcXWzEaKh
+225C cinit CODE >1930:/tmp/xcXWzEaKh
+225E cinit CODE >1931:/tmp/xcXWzEaKh
+2260 cinit CODE >1932:/tmp/xcXWzEaKh
+2262 cinit CODE >1935:/tmp/xcXWzEaKh
+2264 cinit CODE >1941:/tmp/xcXWzEaKh
+2264 cinit CODE >1943:/tmp/xcXWzEaKh
+2266 cinit CODE >1944:/tmp/xcXWzEaKh
+2268 cinit CODE >1946:/tmp/xcXWzEaKh
+226A cinit CODE >1947:/tmp/xcXWzEaKh
+226C cinit CODE >1948:/tmp/xcXWzEaKh
+226E cinit CODE >1949:/tmp/xcXWzEaKh
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -981,7 +981,7 @@ setData@full 84 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.productio
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/BH1415v2.production.o
 i2___aomod@counter 11 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 __end_of_SendCMDLCD 29EE 0 CODE 0 text27 dist/default/production/BH1415v2.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXmURcnO.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXdwQ4o3.o
 SendCMDLCD@CMD 81 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
 __Heeprom_data F00028 0 EEDATA 0 eeprom_data dist/default/production/BH1415v2.production.o
 i2___aodiv@quotient 13 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
@@ -994,7 +994,7 @@ main@i ED 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
 i2___aomod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 __Lsmallconst 600 0 SMALLCONST 0 smallconst dist/default/production/BH1415v2.production.o
 _PIE1 F9D 0 ABS 0 - dist/default/production/BH1415v2.production.o
-___sp 0 0 STACK 2 stack /tmp/xcXmURcnO.o
+___sp 0 0 STACK 2 stack /tmp/xcXdwQ4o3.o
 _atoi 11DA 0 CODE 0 text16 dist/default/production/BH1415v2.production.o
 _beep 2392 0 CODE 0 text21 dist/default/production/BH1415v2.production.o
 _days FE 0 BANK0 1 dataBANK0 dist/default/production/BH1415v2.production.o
@@ -1011,7 +1011,7 @@ pad@i 97 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
 pad@p 94 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
 pad@w 99 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
 __CFG_CCP2MUX$OFF 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
-start A6 0 CODE 0 init /tmp/xcXmURcnO.o
+start A6 0 CODE 0 init /tmp/xcXdwQ4o3.o
 i2sprintf@ap 66 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 ___aomod@counter 90 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
 __size_of___aodiv 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
@@ -1044,11 +1044,11 @@ ttemp6 83 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
 ttemp7 87 0 COMRAM 1 temp dist/default/production/BH1415v2.production.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/BH1415v2.production.o
 __size_of_vfpfcnvrt 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
-__accesstop 80 0 ABS 0 - /tmp/xcXmURcnO.o
-intlevel0 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
-intlevel1 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
-intlevel2 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
-intlevel3 2AA8 0 CODE 0 text /tmp/xcXmURcnO.o
+__accesstop 80 0 ABS 0 - /tmp/xcXdwQ4o3.o
+intlevel0 2AA8 0 CODE 0 text /tmp/xcXdwQ4o3.o
+intlevel1 2AA8 0 CODE 0 text /tmp/xcXdwQ4o3.o
+intlevel2 2AA8 0 CODE 0 text /tmp/xcXdwQ4o3.o
+intlevel3 2AA8 0 CODE 0 text /tmp/xcXdwQ4o3.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/BH1415v2.production.o
 __size_of_setData 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/BH1415v2.production.o
@@ -1079,8 +1079,8 @@ _ADRESH FC4 0 ABS 0 - dist/default/production/BH1415v2.production.o
 updateLCD@decim 6F 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 i2___wmul@multiplier 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 updateLCD@integ 6E 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXmURcnO.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXmURcnO.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXdwQ4o3.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXdwQ4o3.o
 __size_ofi2___wmul 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production/BH1415v2.production.o
 _EECON1bits FA6 0 ABS 0 - dist/default/production/BH1415v2.production.o
@@ -1124,6 +1124,7 @@ ___aomod@dividend 80 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.prod
 i2vfpfcnvrt@ap 44 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 i2vfpfcnvrt@fp 40 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 i2vfpfcnvrt@ll 4A 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
+__cntErrataNOP_/tmp/xcXdwQ4o3.o 1 0 ABS 0 - /tmp/xcXdwQ4o3.o
 ___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production/BH1415v2.production.o
 __size_of_fputc 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
@@ -1175,7 +1176,6 @@ i2isdigit@c 1 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.productio
 __end_of_vumeter 1FD0 0 CODE 0 text35 dist/default/production/BH1415v2.production.o
 __end_of_BusyXLCD 2A0C 0 CODE 0 text33 dist/default/production/BH1415v2.production.o
 writeFrequency@buffer 87 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
-__cntErrataNOP_/tmp/xcXmURcnO.o 1 0 ABS 0 - /tmp/xcXmURcnO.o
 __size_ofi2_strlen 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
 __end_ofi2_vfprintf 2332 0 CODE 0 text38 dist/default/production/BH1415v2.production.o
 fputc@fp 82 0 BANK0 1 cstackBANK0 dist/default/production/BH1415v2.production.o
@@ -1213,7 +1213,7 @@ ___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.prod
 __size_of_codFreq 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/BH1415v2.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production/BH1415v2.production.o
-__smallconst 600 0 SMALLCONST 0 smallconst /tmp/xcXmURcnO.o
+__smallconst 600 0 SMALLCONST 0 smallconst /tmp/xcXdwQ4o3.o
 __end_of_sprintf 2440 0 CODE 0 text4 dist/default/production/BH1415v2.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production/BH1415v2.production.o
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production/BH1415v2.production.o
@@ -1477,8 +1477,8 @@ _strlen 28B8 0 CODE 0 text9 dist/default/production/BH1415v2.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/BH1415v2.production.o
 _writeFrequency 1BC8 0 CODE 0 text2 dist/default/production/BH1415v2.production.o
 __size_of_vfprintf 0 0 ABS 0 - dist/default/production/BH1415v2.production.o
-stackhi 5FF 0 ABS 0 - /tmp/xcXmURcnO.o
-stacklo 142 0 ABS 0 - /tmp/xcXmURcnO.o
+stackhi 5FF 0 ABS 0 - /tmp/xcXdwQ4o3.o
+stacklo 142 0 ABS 0 - /tmp/xcXdwQ4o3.o
 ?i2_atoi 8 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 ?i2_dtoa 1C 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
 i2___aodiv@divisor 9 0 COMRAM 1 cstackCOMRAM dist/default/production/BH1415v2.production.o
@@ -1623,7 +1623,7 @@ __Ltext60 0 0 ABS 0 text60 dist/default/production/BH1415v2.production.o
 __Ltext61 0 0 ABS 0 text61 dist/default/production/BH1415v2.production.o
 __Ltext62 0 0 ABS 0 text62 dist/default/production/BH1415v2.production.o
 __end_ofi2_DelayFor18TCY 2A92 0 CODE 0 text57 dist/default/production/BH1415v2.production.o
-__ramtop 600 0 RAM 0 ramtop /tmp/xcXmURcnO.o
+__ramtop 600 0 RAM 0 ramtop /tmp/xcXdwQ4o3.o
 _sprintf 23EA 0 CODE 0 text4 dist/default/production/BH1415v2.production.o
 __end_of_writeFrequency 1C8E 0 CODE 0 text2 dist/default/production/BH1415v2.production.o
 _vfprintf 2272 0 CODE 0 text5 dist/default/production/BH1415v2.production.o

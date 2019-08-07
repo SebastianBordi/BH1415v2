@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Wed Aug  7 12:36:08 2019
+                                                                                               Wed Aug  7 13:08:57 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	18F452
@@ -142,10 +142,10 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    128                           	opt callstack 0
    129                           
    130                           ;initializer for _prTmr0H
-   131  002AA3  6D                 	db	109
+   131  002AA3  C5                 	db	197
    132                           
    133                           ;initializer for _prTmr0L
-   134  002AA4  84                 	db	132
+   134  002AA4  68                 	db	104
    135                           
    136                           ;initializer for _prTmr1H
    137  002AA5  6D                 	db	109
@@ -6139,17 +6139,17 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   6077  001FA8                     i2l220:
   6078  001FA8  FFFF               	dw	65535	; assembler added errata NOP
   6079                           
-  6080                           ;main.c: 102:     PORTB = 0xFF80 >> level;
+  6080                           ;main.c: 102:     PORTB = 0x0100 >> level;
   6081  001FAA  C004  F001         	movff	vumeter@level,??_vumeter
-  6082  001FAE  0E80               	movlw	128
+  6082  001FAE  0E00               	movlw	0
   6083  001FB0  6E02               	movwf	(??_vumeter+1)& (0+255),c
-  6084  001FB2  0EFF               	movlw	255
+  6084  001FB2  0E01               	movlw	1
   6085  001FB4  6E03               	movwf	(??_vumeter+2)& (0+255),c
   6086  001FB6  2A01               	incf	??_vumeter,f,c
   6087  001FB8  D004               	goto	i2u180_44
   6088  001FBA                     i2u180_45:
   6089  001FBA  FFFF               	dw	65535	; assembler added errata NOP
-  6090  001FBC  90D8               	bcf	status,0,c
+  6090  001FBC  3403               	rlcf	??_vumeter+2,w,c
   6091  001FBE  3203               	rrcf	??_vumeter+2,f,c
   6092  001FC0  3202               	rrcf	??_vumeter+1,f,c
   6093  001FC2                     i2u180_44:
@@ -10208,7 +10208,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Wed Aug  7 12:36:08 2019
+Symbol Table                                                                                   Wed Aug  7 13:08:57 2019
 
                                                  _UN_BLOCKED 0603  
                                                          l58 2942  

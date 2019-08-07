@@ -4099,8 +4099,8 @@ void putrsXLCD(const char *buffer);
 
 unsigned char prTmr1L = 0x84;
 unsigned char prTmr1H = 0x6D;
-unsigned char prTmr0L = 0x84;
-unsigned char prTmr0H = 0x6D;
+unsigned char prTmr0L = 0x68;
+unsigned char prTmr0H = 0xC5;
 
 unsigned char cntTmr1 = 0;
 
