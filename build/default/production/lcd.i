@@ -4073,6 +4073,7 @@ void setFrequency (void);
 void initLCD (void);
 void updateLCD (void);
 void SendCMDLCD (unsigned char CMD);
+void lcdVumeter (unsigned char lvl);
 
 
 unsigned char readEEPROM (unsigned char address);
@@ -4113,7 +4114,7 @@ unsigned char seconds = 0;
 unsigned char hundredMiliSeconds = 0;
 unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
-
+unsigned char isOnConfig = 0;
 unsigned char level;
 
 char lineOne[17];
@@ -4136,17 +4137,34 @@ void initLCD (){
 }
 
 void updateLCD(){
-    unsigned char integ = frequency / 10;
-    unsigned char decim = frequency % 10;
-    sprintf(lineTwo,"Fcia.  %3d.%d MHz",integ, decim);
-
+    if(isOnConfig){
+        unsigned char decim = frequency % 10;
+        unsigned char integ = frequency / 10;
+        sprintf(lineTwo,"Fcia. %3d.%d MHz",integ, decim);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+    }
     SetDDRamAddr(0x00);
     putsXLCD(lineOne);
-    SetDDRamAddr(0x40);
-    putsXLCD(lineTwo);
     return;
 }
+
 void SendCMDLCD (unsigned char CMD){
     while(BusyXLCD())continue;
     WriteCmdXLCD(CMD);
+}
+
+void lcdVumeter(unsigned char lvl){
+    unsigned char decim = frequency % 10;
+    unsigned char integ = frequency / 10;
+
+    sprintf(lineTwo,"%3d.%d           ",integ, decim);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
+    SetDDRamAddr(0x47);
+    for(lvl; lvl > 0; lvl--){
+        WriteDataXLCD(0xFF);
+        while(BusyXLCD())continue;
+    }
+    return;
 }

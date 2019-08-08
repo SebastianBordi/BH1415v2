@@ -4,15 +4,19 @@
 
 void main (){
     char i = 0;
-    transEn = 0;
     __delay_ms(100);
     config();
+    transEn = 0;
+    PORTBbits.RB1 = 1;
     getData();
     beep(10);
     if(!btnMenu){                           //Si al iniciar se encuenta presionado
         __delay_ms(25);                     // el boton de menu. Entra en modo de
         if(!btnMenu) setFrequency();        // configuracion de frecuencia.
     }
+    PORTBbits.RB1 = 0;
+    __delay_ms(100);
+    writeFrequency(frequency);
     beep(100);
     for(i; i < 50; i++){
         sprintf(lineOne,"Fijando Fcia.   ");
@@ -20,6 +24,7 @@ void main (){
     }
     //Bucle de repeticion infinita
     sprintf(lineOne,"AMPRO      EX-FM");
+    transEn = 1;
     while(1){
         if(functionalStat == UN_BLOCKED){
             transEn = 1;
@@ -27,7 +32,9 @@ void main (){
             transEn = 0;
         }
         //writeFrequency(frequency);
+        __delay_ms(100);
         vumeter(ADRESH);
+        writeFrequency(frequency);
     }
 }
 //Subrrutina de configuracion 
@@ -43,6 +50,11 @@ void config(){
     TRISC   = 0b11111111;
     TRISD   = 0b00000000;
     TRISE   = 0b00001000;
+    PORTA   = 0x00;
+    PORTB   = 0x00;
+    PORTC   = 0x00;
+    PORTD   = 0x00;
+    PORTE   = 0x00;
     //Configuracion Timer 1 (100ms)
     T1CON   = 0b10110001;
     //Configuracion Timer 0 (25ms)
@@ -88,17 +100,6 @@ void __interrupt() inter (){
 }
 //Muestreo del vumetro
 void vumeter (unsigned char vumLevel){
-    //Convierte el valor de 0 - 255 a una escala 0 - 8
-//    if      (vumLevel >= 200) level = 8;
-//    else if (vumLevel >= 125) level = 7;
-//    else if (vumLevel >= 75) level = 6;
-//    else if (vumLevel >= 60) level = 5;
-//    else if (vumLevel >= 45) level = 4;
-//    else if (vumLevel >= 15) level = 3;
-//    else if (vumLevel >= 5) level = 2;
-//    else if (vumLevel >= 1) level = 1; 
-    
-//    vumLevel *= 2;
     if      (vumLevel >= 128) level = 8;
     else if (vumLevel >= 64) level = 7;
     else if (vumLevel >= 32) level = 6;
@@ -108,7 +109,8 @@ void vumeter (unsigned char vumLevel){
     else if (vumLevel >= 2) level = 2;
     else if (vumLevel >= 1) level = 1;
     
-    vum = 0x0100 >> level;
+    lcdVumeter(level);
+    
     return;
 }
 //Conteo de tiempo transcurrido de funcionamiento
@@ -154,6 +156,7 @@ void beep (int ms){
 }
 //Seteo de frecuencia 
 void setFrequency (){
+    isOnConfig = 1;
     sprintf(lineOne,"Seleccione Fcia.");
     beep(200);
     while(!btnMenu)continue;           //Espera a que se suelte el boton 
@@ -167,7 +170,7 @@ void setFrequency (){
             while(!btnUp){                              //Detecta si aun se mantiene 
                 if(frequency < 1080)frequency++;        // presionado
                 if(frequency > 1080)frequency = 1080;
-                beep(100);
+                __delay_ms(100);
             }
         }
 
@@ -179,7 +182,7 @@ void setFrequency (){
             while(!btnDown){                            //Detecta si aun se mantiene
                 if(frequency > 880)frequency--;         // presionado
                 if(frequency < 880)frequency = 880;
-                beep(100);
+                __delay_ms(100);
             }
         }
 
@@ -193,5 +196,6 @@ void setFrequency (){
         }
     }
     writeFrequency(frequency);
+    isOnConfig = 0;
     return;
 }

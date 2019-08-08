@@ -4073,6 +4073,7 @@ void setFrequency (void);
 void initLCD (void);
 void updateLCD (void);
 void SendCMDLCD (unsigned char CMD);
+void lcdVumeter (unsigned char lvl);
 
 
 unsigned char readEEPROM (unsigned char address);
@@ -4113,7 +4114,7 @@ unsigned char seconds = 0;
 unsigned char hundredMiliSeconds = 0;
 unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
-
+unsigned char isOnConfig = 0;
 unsigned char level;
 
 char lineOne[17];
@@ -4128,15 +4129,19 @@ const char UN_BLOCKED = 1;
 
 void main (){
     char i = 0;
-    PORTAbits.RA5 = 0;
     _delay((unsigned long)((100)*(12000000/4000.0)));
     config();
+    PORTAbits.RA5 = 0;
+    PORTBbits.RB1 = 1;
     getData();
     beep(10);
     if(!PORTCbits.RC0){
         _delay((unsigned long)((25)*(12000000/4000.0)));
         if(!PORTCbits.RC0) setFrequency();
     }
+    PORTBbits.RB1 = 0;
+    _delay((unsigned long)((100)*(12000000/4000.0)));
+    writeFrequency(frequency);
     beep(100);
     for(i; i < 50; i++){
         sprintf(lineOne,"Fijando Fcia.   ");
@@ -4144,6 +4149,7 @@ void main (){
     }
 
     sprintf(lineOne,"AMPRO      EX-FM");
+    PORTAbits.RA5 = 1;
     while(1){
         if(functionalStat == UN_BLOCKED){
             PORTAbits.RA5 = 1;
@@ -4151,7 +4157,9 @@ void main (){
             PORTAbits.RA5 = 0;
         }
 
+        _delay((unsigned long)((100)*(12000000/4000.0)));
         vumeter(ADRESH);
+        writeFrequency(frequency);
     }
 }
 
@@ -4167,6 +4175,11 @@ void config(){
     TRISC = 0b11111111;
     TRISD = 0b00000000;
     TRISE = 0b00001000;
+    PORTA = 0x00;
+    PORTB = 0x00;
+    PORTC = 0x00;
+    PORTD = 0x00;
+    PORTE = 0x00;
 
     T1CON = 0b10110001;
 
@@ -4212,7 +4225,6 @@ void __attribute__((picinterrupt(("")))) inter (){
 }
 
 void vumeter (unsigned char vumLevel){
-# 102 "main.c"
     if (vumLevel >= 128) level = 8;
     else if (vumLevel >= 64) level = 7;
     else if (vumLevel >= 32) level = 6;
@@ -4222,7 +4234,8 @@ void vumeter (unsigned char vumLevel){
     else if (vumLevel >= 2) level = 2;
     else if (vumLevel >= 1) level = 1;
 
-    PORTB = 0x0100 >> level;
+    lcdVumeter(level);
+
     return;
 }
 
@@ -4268,6 +4281,7 @@ void beep (int ms){
 }
 
 void setFrequency (){
+    isOnConfig = 1;
     sprintf(lineOne,"Seleccione Fcia.");
     beep(200);
     while(!PORTCbits.RC0)continue;
@@ -4281,7 +4295,7 @@ void setFrequency (){
             while(!PORTCbits.RC1){
                 if(frequency < 1080)frequency++;
                 if(frequency > 1080)frequency = 1080;
-                beep(100);
+                _delay((unsigned long)((100)*(12000000/4000.0)));
             }
         }
 
@@ -4293,7 +4307,7 @@ void setFrequency (){
             while(!PORTCbits.RC2){
                 if(frequency > 880)frequency--;
                 if(frequency < 880)frequency = 880;
-                beep(100);
+                _delay((unsigned long)((100)*(12000000/4000.0)));
             }
         }
 
@@ -4307,5 +4321,6 @@ void setFrequency (){
         }
     }
     writeFrequency(frequency);
+    isOnConfig = 0;
     return;
 }

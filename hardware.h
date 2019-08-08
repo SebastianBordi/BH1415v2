@@ -118,7 +118,8 @@ void setFrequency (void);
 //Instancias de subrrutinas de lcd.c
 void initLCD (void);            //Subrrutina que inicializa el LCD
 void updateLCD (void);          //Subrrutina que actualiza el LCD
-void SendCMDLCD (unsigned char CMD);   
+void SendCMDLCD (unsigned char CMD);  
+void lcdVumeter (unsigned char lvl);
 
 //Instancias de subrrutinas de eeprom.c
 unsigned char readEEPROM (unsigned char address);
@@ -159,7 +160,7 @@ unsigned char seconds = 0;           // Segundos de funcionamiento
 unsigned char hundredMiliSeconds = 0;// Decimas de funcionamiento 
 unsigned char functionalStat = 0;    // Estado de funcionamiento (bloqueado o no)
 unsigned char stereoEnable = 1;      // Funcion de codificacion estereo
-
+unsigned char isOnConfig = 0;
 unsigned char level;
 
 char lineOne[17];

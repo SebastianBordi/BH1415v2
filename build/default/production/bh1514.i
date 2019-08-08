@@ -4073,6 +4073,7 @@ void setFrequency (void);
 void initLCD (void);
 void updateLCD (void);
 void SendCMDLCD (unsigned char CMD);
+void lcdVumeter (unsigned char lvl);
 
 
 unsigned char readEEPROM (unsigned char address);
@@ -4113,7 +4114,7 @@ unsigned char seconds = 0;
 unsigned char hundredMiliSeconds = 0;
 unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
-
+unsigned char isOnConfig = 0;
 unsigned char level;
 
 char lineOne[17];
