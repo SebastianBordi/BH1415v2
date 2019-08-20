@@ -6,7 +6,6 @@ void main (){
     char i = 0;
     __delay_ms(100);
     config();
-    transEn = 0;
     PORTBbits.RB1 = 1;
     getData();
     beep(10);
@@ -18,23 +17,29 @@ void main (){
     __delay_ms(100);
     writeFrequency(frequency);
     beep(100);
+    INTCONbits.GIE = 0;
     for(i; i < 50; i++){
-        sprintf(lineOne,"Fijando Fcia.   ");
+        sprintf(lineOne,"LOCKING         ");
+        sprintf(lineTwo,"       FREQUENCY");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
         __delay_ms(90);
     }
+    
+    INTCONbits.GIE = 1;
     //Bucle de repeticion infinita
     sprintf(lineOne,"AMPRO      EX-FM");
-    transEn = 1;
+    updateLCD();
     while(1){
         if(functionalStat == UN_BLOCKED){
-            transEn = 1;
+            setTransStat(1);
         }else{
-            transEn = 0;
+            setTransStat(0);
         }
         //writeFrequency(frequency);
-        __delay_ms(100);
-        vumeter(ADRESH);
-        writeFrequency(frequency);
+        __delay_ms(50);
     }
 }
 //Subrrutina de configuracion 
@@ -42,8 +47,8 @@ void config(){
     //Conf del Oscilador
     OSCCON  = 0b00000000;
     //Conf de interrupciones
-    INTCON  = 0b01100000;
-    PIE1    = 0b00000011;
+    INTCON  = 0b01000000;
+    PIE1    = 0b00000001;
     //Configuracion de los pines
     TRISA   = 0b00011111;
     TRISB   = 0b00000000;
@@ -65,9 +70,10 @@ void config(){
     //Inicializacion del LCD
     initLCD();
     //Inicializacion de procesos 
-    ADCON0bits.GO = 1;      //Inicia primera conversion AD
     T1CONbits.TMR1ON = 1;   //Inicia timer 1
     INTCONbits.GIE = 1;
+    //Bloqueando transmisor 
+    setTransStat(0);
     return;
 }
 //Subrrutina de interruociones 
@@ -80,39 +86,17 @@ void __interrupt() inter (){
         TMR1L   = prTmr1L;
         cntTmr1++;
         time();
+        
         if(cntTmr1 == 10){     //cada 400ms
             cntTmr1 = 0;
             updateLCD();        //actualiza los valores en el display
         }
         PIR1bits.TMR1IF = 0;
-    }
-    //Testea si la interrupcion fue por el timer 0
-    if(INTCONbits.TMR0IF == 1){
-        TMR0H   = prTmr0H;
-        TMR0L   = prTmr0L;
-       // vumeter(ADRESH);    //muestra el valor de entrada en el vumetro
-        ADCON0bits.GO = 1;
-        INTCONbits.TMR0IF = 0;
-    }
-    
+    }    
     INTCONbits.GIE = 1;
     return;
 }
-//Muestreo del vumetro
-void vumeter (unsigned char vumLevel){
-    if      (vumLevel >= 128) level = 8;
-    else if (vumLevel >= 64) level = 7;
-    else if (vumLevel >= 32) level = 6;
-    else if (vumLevel >= 16) level = 5;
-    else if (vumLevel >= 8) level = 4;
-    else if (vumLevel >= 4) level = 3;
-    else if (vumLevel >= 2) level = 2;
-    else if (vumLevel >= 1) level = 1;
-    
-    lcdVumeter(level);
-    
-    return;
-}
+
 //Conteo de tiempo transcurrido de funcionamiento
 void time (){
     hundredMiliSeconds++;
@@ -157,7 +141,7 @@ void beep (int ms){
 //Seteo de frecuencia 
 void setFrequency (){
     isOnConfig = 1;
-    sprintf(lineOne,"Seleccione Fcia.");
+    sprintf(lineOne,"SET   FREQUENCY ");
     beep(200);
     while(!btnMenu)continue;           //Espera a que se suelte el boton 
 
@@ -198,4 +182,22 @@ void setFrequency (){
     writeFrequency(frequency);
     isOnConfig = 0;
     return;
+}
+
+void setTransStat (int stat){
+    if(stat == 1){
+        transEn0 = 1;
+        transEn1 = 1;
+        pllEn0 = 0;
+        pllEn1 = 0;
+        __delay_ms(2);
+        writeFrequency(frequency);
+    }else{
+        transEn0 = 0;
+        transEn1 = 0;
+        pllEn0 = 1;
+        pllEn1 = 1;
+        __delay_ms(2);
+        writeFrequency(730);
+    }
 }

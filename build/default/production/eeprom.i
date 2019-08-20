@@ -4057,7 +4057,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 
 #pragma config EBTRB = OFF
-# 107 "./hardware.h"
+# 109 "./hardware.h"
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
@@ -4068,6 +4068,7 @@ void vumeter (unsigned char val);
 void time (void);
 void beep (int ms);
 void setFrequency (void);
+void setTransStat (int stat);
 
 
 void initLCD (void);

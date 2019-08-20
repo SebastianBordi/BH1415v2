@@ -66,9 +66,11 @@
 //Definiciones de hardware
 #define _XTAL_FREQ 12000000        //Oscilador principal 12MHz
 
-#define transEn PORTAbits.RA5
-
-#define vum     PORTB
+#define transEn0 PORTBbits.RB3
+#define transEn1 PORTBbits.RB4
+ 
+#define pllEn0  PORTBbits.RB5
+#define pllEn1  PORTBbits.RB6
 
 #define btnMenu PORTCbits.RC0
 #define btnUp   PORTCbits.RC1
@@ -114,6 +116,7 @@ void vumeter (unsigned char val);   //Subrrutina que muetra el valor en el vumet
 void time (void);
 void beep (int ms);
 void setFrequency (void);
+void setTransStat (int stat);
 
 //Instancias de subrrutinas de lcd.c
 void initLCD (void);            //Subrrutina que inicializa el LCD

@@ -4057,7 +4057,7 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 
 #pragma config EBTRB = OFF
-# 107 "./hardware.h"
+# 109 "./hardware.h"
 __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
@@ -4068,6 +4068,7 @@ void vumeter (unsigned char val);
 void time (void);
 void beep (int ms);
 void setFrequency (void);
+void setTransStat (int stat);
 
 
 void initLCD (void);
@@ -4131,7 +4132,6 @@ void main (){
     char i = 0;
     _delay((unsigned long)((100)*(12000000/4000.0)));
     config();
-    PORTAbits.RA5 = 0;
     PORTBbits.RB1 = 1;
     getData();
     beep(10);
@@ -4143,23 +4143,29 @@ void main (){
     _delay((unsigned long)((100)*(12000000/4000.0)));
     writeFrequency(frequency);
     beep(100);
+    INTCONbits.GIE = 0;
     for(i; i < 50; i++){
-        sprintf(lineOne,"Fijando Fcia.   ");
+        sprintf(lineOne,"LOCKING         ");
+        sprintf(lineTwo,"       FREQUENCY");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
         _delay((unsigned long)((90)*(12000000/4000.0)));
     }
 
+    INTCONbits.GIE = 1;
+
     sprintf(lineOne,"AMPRO      EX-FM");
-    PORTAbits.RA5 = 1;
+    updateLCD();
     while(1){
         if(functionalStat == UN_BLOCKED){
-            PORTAbits.RA5 = 1;
+            setTransStat(1);
         }else{
-            PORTAbits.RA5 = 0;
+            setTransStat(0);
         }
 
-        _delay((unsigned long)((100)*(12000000/4000.0)));
-        vumeter(ADRESH);
-        writeFrequency(frequency);
+        _delay((unsigned long)((50)*(12000000/4000.0)));
     }
 }
 
@@ -4167,8 +4173,8 @@ void config(){
 
     OSCCON = 0b00000000;
 
-    INTCON = 0b01100000;
-    PIE1 = 0b00000011;
+    INTCON = 0b01000000;
+    PIE1 = 0b00000001;
 
     TRISA = 0b00011111;
     TRISB = 0b00000000;
@@ -4190,9 +4196,10 @@ void config(){
 
     initLCD();
 
-    ADCON0bits.GO = 1;
     T1CONbits.TMR1ON = 1;
     INTCONbits.GIE = 1;
+
+    setTransStat(0);
     return;
 }
 
@@ -4205,39 +4212,17 @@ void __attribute__((picinterrupt(("")))) inter (){
         TMR1L = prTmr1L;
         cntTmr1++;
         time();
+
         if(cntTmr1 == 10){
             cntTmr1 = 0;
             updateLCD();
         }
         PIR1bits.TMR1IF = 0;
     }
-
-    if(INTCONbits.TMR0IF == 1){
-        TMR0H = prTmr0H;
-        TMR0L = prTmr0L;
-
-        ADCON0bits.GO = 1;
-        INTCONbits.TMR0IF = 0;
-    }
-
     INTCONbits.GIE = 1;
     return;
 }
 
-void vumeter (unsigned char vumLevel){
-    if (vumLevel >= 128) level = 8;
-    else if (vumLevel >= 64) level = 7;
-    else if (vumLevel >= 32) level = 6;
-    else if (vumLevel >= 16) level = 5;
-    else if (vumLevel >= 8) level = 4;
-    else if (vumLevel >= 4) level = 3;
-    else if (vumLevel >= 2) level = 2;
-    else if (vumLevel >= 1) level = 1;
-
-    lcdVumeter(level);
-
-    return;
-}
 
 void time (){
     hundredMiliSeconds++;
@@ -4282,7 +4267,7 @@ void beep (int ms){
 
 void setFrequency (){
     isOnConfig = 1;
-    sprintf(lineOne,"Seleccione Fcia.");
+    sprintf(lineOne,"SET   FREQUENCY ");
     beep(200);
     while(!PORTCbits.RC0)continue;
 
@@ -4323,4 +4308,22 @@ void setFrequency (){
     writeFrequency(frequency);
     isOnConfig = 0;
     return;
+}
+
+void setTransStat (int stat){
+    if(stat == 1){
+        PORTBbits.RB3 = 1;
+        PORTBbits.RB4 = 1;
+        PORTBbits.RB5 = 0;
+        PORTBbits.RB6 = 0;
+        _delay((unsigned long)((2)*(12000000/4000.0)));
+        writeFrequency(frequency);
+    }else{
+        PORTBbits.RB3 = 0;
+        PORTBbits.RB4 = 0;
+        PORTBbits.RB5 = 1;
+        PORTBbits.RB6 = 1;
+        _delay((unsigned long)((2)*(12000000/4000.0)));
+        writeFrequency(730);
+    }
 }

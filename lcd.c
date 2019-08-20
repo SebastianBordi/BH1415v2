@@ -12,13 +12,13 @@ void initLCD (){
 }
 
 void updateLCD(){
-    if(isOnConfig){
+    //if(isOnConfig){
         unsigned char decim = frequency % 10;
         unsigned char integ = frequency / 10;
-        sprintf(lineTwo,"Fcia. %3d.%d MHz",integ, decim);
+        sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
         SetDDRamAddr(0x40);
         putsXLCD(lineTwo);
-    }
+    //}
     SetDDRamAddr(0x00);
     putsXLCD(lineOne);
     return;
@@ -27,19 +27,4 @@ void updateLCD(){
 void SendCMDLCD (unsigned char CMD){
     while(BusyXLCD())continue;
     WriteCmdXLCD(CMD);
-}
-
-void lcdVumeter(unsigned char lvl){
-    unsigned char decim = frequency % 10;
-    unsigned char integ = frequency / 10;
-    
-    sprintf(lineTwo,"%3d.%d           ",integ, decim);
-    SetDDRamAddr(0x40);
-    putsXLCD(lineTwo);
-    SetDDRamAddr(0x47);
-    for(lvl; lvl > 0; lvl--){
-        WriteDataXLCD(0xFF);
-        while(BusyXLCD())continue;
-    }
-    return;
 }

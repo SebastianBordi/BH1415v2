@@ -1,31 +1,28 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"142 ./hardware.h
-[; ;./hardware.h: 142: void OpenXLCD(unsigned char lcdtype);
+"145 ./hardware.h
+[; ;./hardware.h: 145: void OpenXLCD(unsigned char lcdtype);
 [v _OpenXLCD `(v ~T0 @X0 0 ef1`uc ]
 [v F2107 `(v ~T0 @X0 1 tf1`ul ]
 "183 /opt/microchip/xc8/v2.05/pic/include/pic18.h
 [v __delay `JF2107 ~T0 @X0 0 e ]
 [p i __delay ]
-"121 ./hardware.h
-[; ;./hardware.h: 121: void SendCMDLCD (unsigned char CMD);
+"124 ./hardware.h
+[; ;./hardware.h: 124: void SendCMDLCD (unsigned char CMD);
 [v _SendCMDLCD `(v ~T0 @X0 0 ef1`uc ]
 "115 /opt/microchip/xc8/v2.05/pic/include/c99/stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"140 ./hardware.h
-[; ;./hardware.h: 140: void SetDDRamAddr(unsigned char DDaddr);
+"143 ./hardware.h
+[; ;./hardware.h: 143: void SetDDRamAddr(unsigned char DDaddr);
 [v _SetDDRamAddr `(v ~T0 @X0 0 ef1`uc ]
-"143
-[; ;./hardware.h: 143: void putsXLCD(char *buffer);
+"146
+[; ;./hardware.h: 146: void putsXLCD(char *buffer);
 [v _putsXLCD `(v ~T0 @X0 0 ef1`*uc ]
-"141
-[; ;./hardware.h: 141: unsigned char BusyXLCD(void);
+"144
+[; ;./hardware.h: 144: unsigned char BusyXLCD(void);
 [v _BusyXLCD `(uc ~T0 @X0 0 ef ]
-"139
-[; ;./hardware.h: 139: void WriteCmdXLCD(unsigned char cmd);
+"142
+[; ;./hardware.h: 142: void WriteCmdXLCD(unsigned char cmd);
 [v _WriteCmdXLCD `(v ~T0 @X0 0 ef1`uc ]
-"138
-[; ;./hardware.h: 138: void WriteDataXLCD(char data);
-[v _WriteDataXLCD `(v ~T0 @X0 0 ef1`uc ]
 "54 /opt/microchip/xc8/v2.05/pic/include/pic18f452.h
 [; ;/opt/microchip/xc8/v2.05/pic/include/pic18f452.h: 54: __asm("PORTA equ 0F80h");
 [; <" PORTA equ 0F80h ;# ">
@@ -463,129 +460,129 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3 = OFF ]
 "60
 [p x EBTRB = OFF ]
-"107
-[; ;./hardware.h: 107: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+"109
+[; ;./hardware.h: 109: __asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 [; <" 	psect eeprom_data,class=EEDATA,noexec ;# ">
 [; <" 	db	0x7E,0x03,0x00,0x00,0x00,0x00,0x01,0x00 ;# ">
-"147
-[; ;./hardware.h: 147: unsigned char prTmr1L = 0x84;
+"150
+[; ;./hardware.h: 150: unsigned char prTmr1L = 0x84;
 [v _prTmr1L `uc ~T0 @X0 1 e ]
 [i _prTmr1L
 -> -> 132 `i `uc
 ]
-"148
-[; ;./hardware.h: 148: unsigned char prTmr1H = 0x6D;
+"151
+[; ;./hardware.h: 151: unsigned char prTmr1H = 0x6D;
 [v _prTmr1H `uc ~T0 @X0 1 e ]
 [i _prTmr1H
 -> -> 109 `i `uc
 ]
-"149
-[; ;./hardware.h: 149: unsigned char prTmr0L = 0x68;
+"152
+[; ;./hardware.h: 152: unsigned char prTmr0L = 0x68;
 [v _prTmr0L `uc ~T0 @X0 1 e ]
 [i _prTmr0L
 -> -> 104 `i `uc
 ]
-"150
-[; ;./hardware.h: 150: unsigned char prTmr0H = 0xC5;
+"153
+[; ;./hardware.h: 153: unsigned char prTmr0H = 0xC5;
 [v _prTmr0H `uc ~T0 @X0 1 e ]
 [i _prTmr0H
 -> -> 197 `i `uc
 ]
-"152
-[; ;./hardware.h: 152: unsigned char cntTmr1 = 0;
+"155
+[; ;./hardware.h: 155: unsigned char cntTmr1 = 0;
 [v _cntTmr1 `uc ~T0 @X0 1 e ]
 [i _cntTmr1
 -> -> 0 `i `uc
 ]
-"154
-[; ;./hardware.h: 154: unsigned int frequency = 0;
+"157
+[; ;./hardware.h: 157: unsigned int frequency = 0;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
 -> -> 0 `i `ui
 ]
-"155
-[; ;./hardware.h: 155: unsigned char months = 3;
+"158
+[; ;./hardware.h: 158: unsigned char months = 3;
 [v _months `uc ~T0 @X0 1 e ]
 [i _months
 -> -> 3 `i `uc
 ]
-"156
-[; ;./hardware.h: 156: unsigned char days = 19;
+"159
+[; ;./hardware.h: 159: unsigned char days = 19;
 [v _days `uc ~T0 @X0 1 e ]
 [i _days
 -> -> 19 `i `uc
 ]
-"157
-[; ;./hardware.h: 157: unsigned char hours = 22;
+"160
+[; ;./hardware.h: 160: unsigned char hours = 22;
 [v _hours `uc ~T0 @X0 1 e ]
 [i _hours
 -> -> 22 `i `uc
 ]
-"158
-[; ;./hardware.h: 158: unsigned char minutes = 15;
+"161
+[; ;./hardware.h: 161: unsigned char minutes = 15;
 [v _minutes `uc ~T0 @X0 1 e ]
 [i _minutes
 -> -> 15 `i `uc
 ]
-"159
-[; ;./hardware.h: 159: unsigned char seconds = 0;
+"162
+[; ;./hardware.h: 162: unsigned char seconds = 0;
 [v _seconds `uc ~T0 @X0 1 e ]
 [i _seconds
 -> -> 0 `i `uc
 ]
-"160
-[; ;./hardware.h: 160: unsigned char hundredMiliSeconds = 0;
+"163
+[; ;./hardware.h: 163: unsigned char hundredMiliSeconds = 0;
 [v _hundredMiliSeconds `uc ~T0 @X0 1 e ]
 [i _hundredMiliSeconds
 -> -> 0 `i `uc
 ]
-"161
-[; ;./hardware.h: 161: unsigned char functionalStat = 0;
+"164
+[; ;./hardware.h: 164: unsigned char functionalStat = 0;
 [v _functionalStat `uc ~T0 @X0 1 e ]
 [i _functionalStat
 -> -> 0 `i `uc
 ]
-"162
-[; ;./hardware.h: 162: unsigned char stereoEnable = 1;
+"165
+[; ;./hardware.h: 165: unsigned char stereoEnable = 1;
 [v _stereoEnable `uc ~T0 @X0 1 e ]
 [i _stereoEnable
 -> -> 1 `i `uc
 ]
-"163
-[; ;./hardware.h: 163: unsigned char isOnConfig = 0;
+"166
+[; ;./hardware.h: 166: unsigned char isOnConfig = 0;
 [v _isOnConfig `uc ~T0 @X0 1 e ]
 [i _isOnConfig
 -> -> 0 `i `uc
 ]
-"164
-[; ;./hardware.h: 164: unsigned char level;
-[v _level `uc ~T0 @X0 1 e ]
-"166
-[; ;./hardware.h: 166: char lineOne[17];
-[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
 "167
-[; ;./hardware.h: 167: char lineTwo[17];
-[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+[; ;./hardware.h: 167: unsigned char level;
+[v _level `uc ~T0 @X0 1 e ]
+"169
+[; ;./hardware.h: 169: char lineOne[17];
+[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
 "170
-[; ;./hardware.h: 170: const char FINAL_MONTH = 6;
+[; ;./hardware.h: 170: char lineTwo[17];
+[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+"173
+[; ;./hardware.h: 173: const char FINAL_MONTH = 6;
 [v _FINAL_MONTH `Cuc ~T0 @X0 1 e ]
 [i _FINAL_MONTH
 -> -> 6 `i `uc
 ]
-"171
-[; ;./hardware.h: 171: const char FINAL_DAY = 13;
+"174
+[; ;./hardware.h: 174: const char FINAL_DAY = 13;
 [v _FINAL_DAY `Cuc ~T0 @X0 1 e ]
 [i _FINAL_DAY
 -> -> 13 `i `uc
 ]
-"172
-[; ;./hardware.h: 172: const char BLOCKED = 0;
+"175
+[; ;./hardware.h: 175: const char BLOCKED = 0;
 [v _BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _BLOCKED
 -> -> 0 `i `uc
 ]
-"173
-[; ;./hardware.h: 173: const char UN_BLOCKED = 1;
+"176
+[; ;./hardware.h: 176: const char UN_BLOCKED = 1;
 [v _UN_BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _UN_BLOCKED
 -> -> 1 `i `uc
@@ -624,10 +621,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _updateLCD ]
 [f ]
-"15
-[; ;lcd.c: 15:     if(isOnConfig){
-[e $ ! != -> _isOnConfig `i -> 0 `i 243  ]
-{
 "16
 [; ;lcd.c: 16:         unsigned char decim = frequency % 10;
 [v _decim `uc ~T0 @X0 1 a ]
@@ -637,7 +630,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _integ `uc ~T0 @X0 1 a ]
 [e = _integ -> / _frequency -> -> 10 `i `ui `uc ]
 "18
-[; ;lcd.c: 18:         sprintf(lineTwo,"Fcia. %3d.%d MHz",integ, decim);
+[; ;lcd.c: 18:         sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
 [e ( _sprintf (1 , , (. , &U _lineTwo :s 1C -> _integ `i -> _decim `i ]
 "19
 [; ;lcd.c: 19:         SetDDRamAddr(0x40);
@@ -645,10 +638,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20
 [; ;lcd.c: 20:         putsXLCD(lineTwo);
 [e ( _putsXLCD (1 &U _lineTwo ]
-"21
-[; ;lcd.c: 21:     }
-}
-[e :U 243 ]
 "22
 [; ;lcd.c: 22:     SetDDRamAddr(0x00);
 [e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
@@ -671,79 +660,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "28
 [; ;lcd.c: 28:     while(BusyXLCD())continue;
-[e $U 245  ]
-[e :U 246 ]
-[e $U 245  ]
+[e $U 244  ]
 [e :U 245 ]
-[e $ != -> ( _BusyXLCD ..  `i -> 0 `i 246  ]
-[e :U 247 ]
+[e $U 244  ]
+[e :U 244 ]
+[e $ != -> ( _BusyXLCD ..  `i -> 0 `i 245  ]
+[e :U 246 ]
 "29
 [; ;lcd.c: 29:     WriteCmdXLCD(CMD);
 [e ( _WriteCmdXLCD (1 _CMD ]
 "30
 [; ;lcd.c: 30: }
-[e :UE 244 ]
-}
-"32
-[; ;lcd.c: 32: void lcdVumeter(unsigned char lvl){
-[v _lcdVumeter `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _lcdVumeter ]
-[v _lvl `uc ~T0 @X0 1 r1 ]
-[f ]
-"33
-[; ;lcd.c: 33:     unsigned char decim = frequency % 10;
-[v _decim `uc ~T0 @X0 1 a ]
-[e = _decim -> % _frequency -> -> 10 `i `ui `uc ]
-"34
-[; ;lcd.c: 34:     unsigned char integ = frequency / 10;
-[v _integ `uc ~T0 @X0 1 a ]
-[e = _integ -> / _frequency -> -> 10 `i `ui `uc ]
-"36
-[; ;lcd.c: 36:     sprintf(lineTwo,"%3d.%d           ",integ, decim);
-[e ( _sprintf (1 , , (. , &U _lineTwo :s 2C -> _integ `i -> _decim `i ]
-"37
-[; ;lcd.c: 37:     SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
-"38
-[; ;lcd.c: 38:     putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
-"39
-[; ;lcd.c: 39:     SetDDRamAddr(0x47);
-[e ( _SetDDRamAddr (1 -> -> 71 `i `uc ]
-"40
-[; ;lcd.c: 40:     for(lvl; lvl > 0; lvl--){
-{
-[e _lvl ]
-[e $ > -> _lvl `i -> 0 `i 249  ]
-[e $U 250  ]
-[e :U 249 ]
-{
-"41
-[; ;lcd.c: 41:         WriteDataXLCD(0xFF);
-[e ( _WriteDataXLCD (1 -> -> 255 `i `uc ]
-"42
-[; ;lcd.c: 42:         while(BusyXLCD())continue;
-[e $U 252  ]
-[e :U 253 ]
-[e $U 252  ]
-[e :U 252 ]
-[e $ != -> ( _BusyXLCD ..  `i -> 0 `i 253  ]
-[e :U 254 ]
-"43
-[; ;lcd.c: 43:     }
-}
-[e -- _lvl -> -> 1 `i `uc ]
-[e $ > -> _lvl `i -> 0 `i 249  ]
-[e :U 250 ]
-}
-"44
-[; ;lcd.c: 44:     return;
-[e $UE 248  ]
-"45
-[; ;lcd.c: 45: }
-[e :UE 248 ]
+[e :UE 243 ]
 }
 [p f _sprintf 8421504 ]
-[a 1C 70 99 105 97 46 32 37 51 100 46 37 100 32 77 72 122 0 ]
-[a 2C 37 51 100 46 37 100 32 32 32 32 32 32 32 32 32 32 32 0 ]
+[a 1C 70 82 69 81 46 32 32 37 51 100 46 37 100 32 77 72 122 0 ]
