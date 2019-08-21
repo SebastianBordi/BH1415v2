@@ -6,14 +6,13 @@ void main (){
     char i = 0;
     __delay_ms(100);
     config();
-    PORTBbits.RB1 = 1;
+    beep(100);
     getData();
     beep(10);
     if(!btnMenu){                           //Si al iniciar se encuenta presionado
         __delay_ms(25);                     // el boton de menu. Entra en modo de
         if(!btnMenu) setFrequency();        // configuracion de frecuencia.
     }
-    PORTBbits.RB1 = 0;
     __delay_ms(100);
     writeFrequency(frequency);
     beep(100);
@@ -44,29 +43,23 @@ void main (){
 }
 //Subrrutina de configuracion 
 void config(){
-    //Conf del Oscilador
-    OSCCON  = 0b00000000;
     //Conf de interrupciones
     INTCON  = 0b01000000;
     PIE1    = 0b00000001;
     //Configuracion de los pines
-    TRISA   = 0b00011111;
+    TRISA   = 0b00111000;
     TRISB   = 0b00000000;
-    TRISC   = 0b11111111;
-    TRISD   = 0b00000000;
-    TRISE   = 0b00001000;
+    TRISC   = 0b00000000;
     PORTA   = 0x00;
     PORTB   = 0x00;
     PORTC   = 0x00;
-    PORTD   = 0x00;
-    PORTE   = 0x00;
     //Configuracion Timer 1 (100ms)
-    T1CON   = 0b10110001;
-    //Configuracion Timer 0 (25ms)
-    T0CON   = 0b10000000;
+    T1CON   = 0b00010001;
     //Configuracion del ADC
-    ADCON0  = 0b11000001;
-    ADCON1  = 0b01001101;
+    ADCON0  = 0b00000000;
+    ADCON1  = 0b00000000;
+    ANSEL   = 0b00000000;
+    ANSELH  = 0b00000000;
     //Inicializacion del LCD
     initLCD();
     //Inicializacion de procesos 
@@ -86,9 +79,9 @@ void __interrupt() inter (){
         TMR1L   = prTmr1L;
         cntTmr1++;
         time();
-        
         if(cntTmr1 == 10){     //cada 400ms
             cntTmr1 = 0;
+            //beep(10);
             updateLCD();        //actualiza los valores en el display
         }
         PIR1bits.TMR1IF = 0;
@@ -186,17 +179,13 @@ void setFrequency (){
 
 void setTransStat (int stat){
     if(stat == 1){
-        transEn0 = 1;
-        transEn1 = 1;
-        pllEn0 = 0;
-        pllEn1 = 0;
+        transEn = 1;
+        pllEn = 0;
         __delay_ms(2);
         writeFrequency(frequency);
     }else{
-        transEn0 = 0;
-        transEn1 = 0;
-        pllEn0 = 1;
-        pllEn1 = 1;
+        transEn = 0;
+        pllEn = 1;
         __delay_ms(2);
         writeFrequency(730);
     }

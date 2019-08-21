@@ -19,108 +19,15 @@ extern double __fpnormalize(double);
 
 
 
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/xc8debug.h" 1 3
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 1 3
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/musl_xc8.h" 1 3
-# 5 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
-
-
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/features.h" 1 3
-# 11 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
-# 21 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
-# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long int wchar_t;
-# 127 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef unsigned size_t;
-# 176 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 212 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 22 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 2 3
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-# 52 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-# 65 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-
-
-
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-# 104 "/opt/microchip/xc8/v2.05/pic/include/c99/stdlib.h" 3
-size_t __ctype_get_mb_cur_max(void);
-# 5 "/opt/microchip/xc8/v2.05/pic/include/c99/xc8debug.h" 2 3
-
-
-
-
-
-
-
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/xc8debug.h" 1 3
+# 13 "/opt/microchip/xc8/v2.05/pic/include/c90/xc8debug.h" 3
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 # 24 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
 
 
 
-
-
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 1 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 1 3
 
 
 
@@ -131,15 +38,20 @@ extern void __builtin_software_breakpoint(void);
 
 # 1 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 1 3
 # 5 "/opt/microchip/xc8/v2.05/pic/include/htc.h" 2 3
-# 6 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 2 3
+# 6 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 2 3
 
 
-# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 1 3
-# 604 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 1 3
-# 44 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
+
+
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/pic_chip_select.h" 1 3
+# 2693 "/opt/microchip/xc8/v2.05/pic/include/pic_chip_select.h" 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 1 3
+# 44 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
 # 1 "/opt/microchip/xc8/v2.05/pic/include/__at.h" 1 3
-# 45 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 2 3
+# 45 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 2 3
 
 
 
@@ -147,51 +59,84 @@ extern void __builtin_software_breakpoint(void);
 
 
 
-extern volatile unsigned char PORTA __attribute__((address(0xF80)));
+extern volatile unsigned char INDF __attribute__((address(0x000)));
 
-__asm("PORTA equ 0F80h");
+__asm("INDF equ 00h");
+
+
+
+
+extern volatile unsigned char TMR0 __attribute__((address(0x001)));
+
+__asm("TMR0 equ 01h");
+
+
+
+
+extern volatile unsigned char PCL __attribute__((address(0x002)));
+
+__asm("PCL equ 02h");
+
+
+
+
+extern volatile unsigned char STATUS __attribute__((address(0x003)));
+
+__asm("STATUS equ 03h");
 
 
 typedef union {
     struct {
-        unsigned RA0 :1;
-        unsigned RA1 :1;
-        unsigned RA2 :1;
-        unsigned RA3 :1;
-        unsigned RA4 :1;
-        unsigned RA5 :1;
-        unsigned RA6 :1;
-    };
-    struct {
-        unsigned AN0 :1;
-        unsigned AN1 :1;
-        unsigned AN2 :1;
-        unsigned AN3 :1;
-        unsigned :1;
-        unsigned AN4 :1;
-        unsigned OSC2 :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned VREFM :1;
-        unsigned VREFP :1;
-        unsigned T0CKI :1;
-        unsigned SS :1;
-        unsigned CLKO :1;
+        unsigned C :1;
+        unsigned DC :1;
+        unsigned Z :1;
+        unsigned nPD :1;
+        unsigned nTO :1;
+        unsigned RP :2;
+        unsigned IRP :1;
     };
     struct {
         unsigned :5;
-        unsigned LVDIN :1;
+        unsigned RP0 :1;
+        unsigned RP1 :1;
     };
     struct {
-        unsigned ULPWUIN :1;
+        unsigned CARRY :1;
+        unsigned :1;
+        unsigned ZERO :1;
+    };
+} STATUSbits_t;
+extern volatile STATUSbits_t STATUSbits __attribute__((address(0x003)));
+# 159 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char FSR __attribute__((address(0x004)));
+
+__asm("FSR equ 04h");
+
+
+
+
+extern volatile unsigned char PORTA __attribute__((address(0x005)));
+
+__asm("PORTA equ 05h");
+
+
+typedef union {
+    struct {
+        unsigned RA0 :1;
+        unsigned RA1 :1;
+        unsigned RA2 :1;
+        unsigned RA3 :1;
+        unsigned RA4 :1;
+        unsigned RA5 :1;
+        unsigned RA6 :1;
+        unsigned RA7 :1;
     };
 } PORTAbits_t;
-extern volatile PORTAbits_t PORTAbits __attribute__((address(0xF80)));
-# 197 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PORTB __attribute__((address(0xF81)));
+extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
+# 228 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PORTB __attribute__((address(0x006)));
 
-__asm("PORTB equ 0F81h");
+__asm("PORTB equ 06h");
 
 
 typedef union {
@@ -204,31 +149,13 @@ typedef union {
         unsigned RB5 :1;
         unsigned RB6 :1;
         unsigned RB7 :1;
-    };
-    struct {
-        unsigned INT0 :1;
-        unsigned INT1 :1;
-        unsigned INT2 :1;
-        unsigned CCP2 :1;
-        unsigned :1;
-        unsigned PGM :1;
-        unsigned PGC :1;
-        unsigned PGD :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned CCP2A :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned CCP2_PA2 :1;
     };
 } PORTBbits_t;
-extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
-# 322 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PORTC __attribute__((address(0xF82)));
+extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+# 290 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PORTC __attribute__((address(0x007)));
 
-__asm("PORTC equ 0F82h");
+__asm("PORTC equ 07h");
 
 
 typedef union {
@@ -241,554 +168,58 @@ typedef union {
         unsigned RC5 :1;
         unsigned RC6 :1;
         unsigned RC7 :1;
-    };
-    struct {
-        unsigned T1OSO :1;
-        unsigned T1OSI :1;
-        unsigned :1;
-        unsigned SCK :1;
-        unsigned SDI :1;
-        unsigned SDO :1;
-        unsigned TX :1;
-        unsigned RX :1;
-    };
-    struct {
-        unsigned T1CKI :1;
-        unsigned CCP2 :1;
-        unsigned CCP1 :1;
-        unsigned SCL :1;
-        unsigned SDA :1;
-        unsigned :1;
-        unsigned CK :1;
-        unsigned DT :1;
-    };
-    struct {
-        unsigned :1;
-        unsigned PA2 :1;
-        unsigned PA1 :1;
     };
 } PORTCbits_t;
-extern volatile PORTCbits_t PORTCbits __attribute__((address(0xF82)));
-# 489 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PORTD __attribute__((address(0xF83)));
+extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+# 352 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PORTE __attribute__((address(0x009)));
 
-__asm("PORTD equ 0F83h");
-
-
-typedef union {
-    struct {
-        unsigned RD0 :1;
-        unsigned RD1 :1;
-        unsigned RD2 :1;
-        unsigned RD3 :1;
-        unsigned RD4 :1;
-        unsigned RD5 :1;
-        unsigned RD6 :1;
-        unsigned RD7 :1;
-    };
-    struct {
-        unsigned PSP0 :1;
-        unsigned PSP1 :1;
-        unsigned PSP2 :1;
-        unsigned PSP3 :1;
-        unsigned PSP4 :1;
-        unsigned PSP5 :1;
-        unsigned PSP6 :1;
-        unsigned PSP7 :1;
-    };
-    struct {
-        unsigned :7;
-        unsigned SS2 :1;
-    };
-} PORTDbits_t;
-extern volatile PORTDbits_t PORTDbits __attribute__((address(0xF83)));
-# 610 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PORTE __attribute__((address(0xF84)));
-
-__asm("PORTE equ 0F84h");
+__asm("PORTE equ 09h");
 
 
 typedef union {
     struct {
-        unsigned RE0 :1;
-        unsigned RE1 :1;
-        unsigned RE2 :1;
-    };
-    struct {
-        unsigned AN5 :1;
-        unsigned AN6 :1;
-        unsigned AN7 :1;
-    };
-    struct {
-        unsigned RD :1;
-        unsigned WR :1;
-        unsigned CS :1;
-    };
-    struct {
-        unsigned PD2 :1;
-        unsigned PC2 :1;
-        unsigned CCP10 :1;
-    };
-    struct {
-        unsigned RDE :1;
-        unsigned WRE :1;
-        unsigned PB2 :1;
+        unsigned :3;
+        unsigned RE3 :1;
     };
 } PORTEbits_t;
-extern volatile PORTEbits_t PORTEbits __attribute__((address(0xF84)));
-# 722 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char LATA __attribute__((address(0xF89)));
+extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
+# 373 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PCLATH __attribute__((address(0x00A)));
 
-__asm("LATA equ 0F89h");
+__asm("PCLATH equ 0Ah");
 
 
-typedef union {
-    struct {
-        unsigned LATA0 :1;
-        unsigned LATA1 :1;
-        unsigned LATA2 :1;
-        unsigned LATA3 :1;
-        unsigned LATA4 :1;
-        unsigned LATA5 :1;
-        unsigned LATA6 :1;
-    };
-    struct {
-        unsigned LA0 :1;
-        unsigned LA1 :1;
-        unsigned LA2 :1;
-        unsigned LA3 :1;
-        unsigned LA4 :1;
-        unsigned LA5 :1;
-        unsigned LA6 :1;
-    };
-} LATAbits_t;
-extern volatile LATAbits_t LATAbits __attribute__((address(0xF89)));
-# 822 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char LATB __attribute__((address(0xF8A)));
 
-__asm("LATB equ 0F8Ah");
+
+extern volatile unsigned char INTCON __attribute__((address(0x00B)));
+
+__asm("INTCON equ 0Bh");
 
 
 typedef union {
     struct {
-        unsigned LATB0 :1;
-        unsigned LATB1 :1;
-        unsigned LATB2 :1;
-        unsigned LATB3 :1;
-        unsigned LATB4 :1;
-        unsigned LATB5 :1;
-        unsigned LATB6 :1;
-        unsigned LATB7 :1;
+        unsigned RBIF :1;
+        unsigned INTF :1;
+        unsigned T0IF :1;
+        unsigned RBIE :1;
+        unsigned INTE :1;
+        unsigned T0IE :1;
+        unsigned PEIE :1;
+        unsigned GIE :1;
     };
     struct {
-        unsigned LB0 :1;
-        unsigned LB1 :1;
-        unsigned LB2 :1;
-        unsigned LB3 :1;
-        unsigned LB4 :1;
-        unsigned LB5 :1;
-        unsigned LB6 :1;
-        unsigned LB7 :1;
+        unsigned :2;
+        unsigned TMR0IF :1;
+        unsigned :2;
+        unsigned TMR0IE :1;
     };
-} LATBbits_t;
-extern volatile LATBbits_t LATBbits __attribute__((address(0xF8A)));
-# 934 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char LATC __attribute__((address(0xF8B)));
+} INTCONbits_t;
+extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+# 458 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PIR1 __attribute__((address(0x00C)));
 
-__asm("LATC equ 0F8Bh");
-
-
-typedef union {
-    struct {
-        unsigned LATC0 :1;
-        unsigned LATC1 :1;
-        unsigned LATC2 :1;
-        unsigned LATC3 :1;
-        unsigned LATC4 :1;
-        unsigned LATC5 :1;
-        unsigned LATC6 :1;
-        unsigned LATC7 :1;
-    };
-    struct {
-        unsigned LC0 :1;
-        unsigned LC1 :1;
-        unsigned LC2 :1;
-        unsigned LC3 :1;
-        unsigned LC4 :1;
-        unsigned LC5 :1;
-        unsigned LC6 :1;
-        unsigned LC7 :1;
-    };
-} LATCbits_t;
-extern volatile LATCbits_t LATCbits __attribute__((address(0xF8B)));
-# 1046 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char LATD __attribute__((address(0xF8C)));
-
-__asm("LATD equ 0F8Ch");
-
-
-typedef union {
-    struct {
-        unsigned LATD0 :1;
-        unsigned LATD1 :1;
-        unsigned LATD2 :1;
-        unsigned LATD3 :1;
-        unsigned LATD4 :1;
-        unsigned LATD5 :1;
-        unsigned LATD6 :1;
-        unsigned LATD7 :1;
-    };
-    struct {
-        unsigned LD0 :1;
-        unsigned LD1 :1;
-        unsigned LD2 :1;
-        unsigned LD3 :1;
-        unsigned LD4 :1;
-        unsigned LD5 :1;
-        unsigned LD6 :1;
-        unsigned LD7 :1;
-    };
-} LATDbits_t;
-extern volatile LATDbits_t LATDbits __attribute__((address(0xF8C)));
-# 1158 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char LATE __attribute__((address(0xF8D)));
-
-__asm("LATE equ 0F8Dh");
-
-
-typedef union {
-    struct {
-        unsigned LATE0 :1;
-        unsigned LATE1 :1;
-        unsigned LATE2 :1;
-    };
-    struct {
-        unsigned LE0 :1;
-        unsigned LE1 :1;
-        unsigned LE2 :1;
-    };
-} LATEbits_t;
-extern volatile LATEbits_t LATEbits __attribute__((address(0xF8D)));
-# 1210 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TRISA __attribute__((address(0xF92)));
-
-__asm("TRISA equ 0F92h");
-
-
-extern volatile unsigned char DDRA __attribute__((address(0xF92)));
-
-__asm("DDRA equ 0F92h");
-
-
-typedef union {
-    struct {
-        unsigned TRISA0 :1;
-        unsigned TRISA1 :1;
-        unsigned TRISA2 :1;
-        unsigned TRISA3 :1;
-        unsigned TRISA4 :1;
-        unsigned TRISA5 :1;
-        unsigned TRISA6 :1;
-    };
-    struct {
-        unsigned RA0 :1;
-        unsigned RA1 :1;
-        unsigned RA2 :1;
-        unsigned RA3 :1;
-        unsigned RA4 :1;
-        unsigned RA5 :1;
-        unsigned RA6 :1;
-    };
-} TRISAbits_t;
-extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
-# 1313 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned TRISA0 :1;
-        unsigned TRISA1 :1;
-        unsigned TRISA2 :1;
-        unsigned TRISA3 :1;
-        unsigned TRISA4 :1;
-        unsigned TRISA5 :1;
-        unsigned TRISA6 :1;
-    };
-    struct {
-        unsigned RA0 :1;
-        unsigned RA1 :1;
-        unsigned RA2 :1;
-        unsigned RA3 :1;
-        unsigned RA4 :1;
-        unsigned RA5 :1;
-        unsigned RA6 :1;
-    };
-} DDRAbits_t;
-extern volatile DDRAbits_t DDRAbits __attribute__((address(0xF92)));
-# 1408 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-
-__asm("TRISB equ 0F93h");
-
-
-extern volatile unsigned char DDRB __attribute__((address(0xF93)));
-
-__asm("DDRB equ 0F93h");
-
-
-typedef union {
-    struct {
-        unsigned TRISB0 :1;
-        unsigned TRISB1 :1;
-        unsigned TRISB2 :1;
-        unsigned TRISB3 :1;
-        unsigned TRISB4 :1;
-        unsigned TRISB5 :1;
-        unsigned TRISB6 :1;
-        unsigned TRISB7 :1;
-    };
-    struct {
-        unsigned RB0 :1;
-        unsigned RB1 :1;
-        unsigned RB2 :1;
-        unsigned RB3 :1;
-        unsigned RB4 :1;
-        unsigned RB5 :1;
-        unsigned RB6 :1;
-        unsigned RB7 :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned CCP2 :1;
-    };
-} TRISBbits_t;
-extern volatile TRISBbits_t TRISBbits __attribute__((address(0xF93)));
-# 1532 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned TRISB0 :1;
-        unsigned TRISB1 :1;
-        unsigned TRISB2 :1;
-        unsigned TRISB3 :1;
-        unsigned TRISB4 :1;
-        unsigned TRISB5 :1;
-        unsigned TRISB6 :1;
-        unsigned TRISB7 :1;
-    };
-    struct {
-        unsigned RB0 :1;
-        unsigned RB1 :1;
-        unsigned RB2 :1;
-        unsigned RB3 :1;
-        unsigned RB4 :1;
-        unsigned RB5 :1;
-        unsigned RB6 :1;
-        unsigned RB7 :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned CCP2 :1;
-    };
-} DDRBbits_t;
-extern volatile DDRBbits_t DDRBbits __attribute__((address(0xF93)));
-# 1648 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TRISC __attribute__((address(0xF94)));
-
-__asm("TRISC equ 0F94h");
-
-
-extern volatile unsigned char DDRC __attribute__((address(0xF94)));
-
-__asm("DDRC equ 0F94h");
-
-
-typedef union {
-    struct {
-        unsigned TRISC0 :1;
-        unsigned TRISC1 :1;
-        unsigned TRISC2 :1;
-        unsigned TRISC3 :1;
-        unsigned TRISC4 :1;
-        unsigned TRISC5 :1;
-        unsigned TRISC6 :1;
-        unsigned TRISC7 :1;
-    };
-    struct {
-        unsigned RC0 :1;
-        unsigned RC1 :1;
-        unsigned RC2 :1;
-        unsigned RC3 :1;
-        unsigned RC4 :1;
-        unsigned RC5 :1;
-        unsigned RC6 :1;
-        unsigned RC7 :1;
-    };
-    struct {
-        unsigned :1;
-        unsigned CCP2 :1;
-    };
-} TRISCbits_t;
-extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-# 1772 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned TRISC0 :1;
-        unsigned TRISC1 :1;
-        unsigned TRISC2 :1;
-        unsigned TRISC3 :1;
-        unsigned TRISC4 :1;
-        unsigned TRISC5 :1;
-        unsigned TRISC6 :1;
-        unsigned TRISC7 :1;
-    };
-    struct {
-        unsigned RC0 :1;
-        unsigned RC1 :1;
-        unsigned RC2 :1;
-        unsigned RC3 :1;
-        unsigned RC4 :1;
-        unsigned RC5 :1;
-        unsigned RC6 :1;
-        unsigned RC7 :1;
-    };
-    struct {
-        unsigned :1;
-        unsigned CCP2 :1;
-    };
-} DDRCbits_t;
-extern volatile DDRCbits_t DDRCbits __attribute__((address(0xF94)));
-# 1888 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-
-__asm("TRISD equ 0F95h");
-
-
-extern volatile unsigned char DDRD __attribute__((address(0xF95)));
-
-__asm("DDRD equ 0F95h");
-
-
-typedef union {
-    struct {
-        unsigned TRISD0 :1;
-        unsigned TRISD1 :1;
-        unsigned TRISD2 :1;
-        unsigned TRISD3 :1;
-        unsigned TRISD4 :1;
-        unsigned TRISD5 :1;
-        unsigned TRISD6 :1;
-        unsigned TRISD7 :1;
-    };
-    struct {
-        unsigned RD0 :1;
-        unsigned RD1 :1;
-        unsigned RD2 :1;
-        unsigned RD3 :1;
-        unsigned RD4 :1;
-        unsigned RD5 :1;
-        unsigned RD6 :1;
-        unsigned RD7 :1;
-    };
-} TRISDbits_t;
-extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
-# 2003 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned TRISD0 :1;
-        unsigned TRISD1 :1;
-        unsigned TRISD2 :1;
-        unsigned TRISD3 :1;
-        unsigned TRISD4 :1;
-        unsigned TRISD5 :1;
-        unsigned TRISD6 :1;
-        unsigned TRISD7 :1;
-    };
-    struct {
-        unsigned RD0 :1;
-        unsigned RD1 :1;
-        unsigned RD2 :1;
-        unsigned RD3 :1;
-        unsigned RD4 :1;
-        unsigned RD5 :1;
-        unsigned RD6 :1;
-        unsigned RD7 :1;
-    };
-} DDRDbits_t;
-extern volatile DDRDbits_t DDRDbits __attribute__((address(0xF95)));
-# 2110 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TRISE __attribute__((address(0xF96)));
-
-__asm("TRISE equ 0F96h");
-
-
-extern volatile unsigned char DDRE __attribute__((address(0xF96)));
-
-__asm("DDRE equ 0F96h");
-
-
-typedef union {
-    struct {
-        unsigned TRISE0 :1;
-        unsigned TRISE1 :1;
-        unsigned TRISE2 :1;
-        unsigned :1;
-        unsigned PSPMODE :1;
-        unsigned IBOV :1;
-        unsigned OBF :1;
-        unsigned IBF :1;
-    };
-    struct {
-        unsigned RE0 :1;
-        unsigned RE1 :1;
-        unsigned RE2 :1;
-    };
-} TRISEbits_t;
-extern volatile TRISEbits_t TRISEbits __attribute__((address(0xF96)));
-# 2190 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned TRISE0 :1;
-        unsigned TRISE1 :1;
-        unsigned TRISE2 :1;
-        unsigned :1;
-        unsigned PSPMODE :1;
-        unsigned IBOV :1;
-        unsigned OBF :1;
-        unsigned IBF :1;
-    };
-    struct {
-        unsigned RE0 :1;
-        unsigned RE1 :1;
-        unsigned RE2 :1;
-    };
-} DDREbits_t;
-extern volatile DDREbits_t DDREbits __attribute__((address(0xF96)));
-# 2262 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PIE1 __attribute__((address(0xF9D)));
-
-__asm("PIE1 equ 0F9Dh");
-
-
-typedef union {
-    struct {
-        unsigned TMR1IE :1;
-        unsigned TMR2IE :1;
-        unsigned CCP1IE :1;
-        unsigned SSPIE :1;
-        unsigned TXIE :1;
-        unsigned RCIE :1;
-        unsigned ADIE :1;
-        unsigned PSPIE :1;
-    };
-    struct {
-        unsigned :4;
-        unsigned TX1IE :1;
-        unsigned RC1IE :1;
-    };
-} PIE1bits_t;
-extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
-# 2339 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PIR1 __attribute__((address(0xF9E)));
-
-__asm("PIR1 equ 0F9Eh");
+__asm("PIR1 equ 0Ch");
 
 
 typedef union {
@@ -800,740 +231,91 @@ typedef union {
         unsigned TXIF :1;
         unsigned RCIF :1;
         unsigned ADIF :1;
-        unsigned PSPIF :1;
-    };
-    struct {
-        unsigned :4;
-        unsigned TX1IF :1;
-        unsigned RC1IF :1;
     };
 } PIR1bits_t;
-extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-# 2416 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char IPR1 __attribute__((address(0xF9F)));
+extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+# 514 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PIR2 __attribute__((address(0x00D)));
 
-__asm("IPR1 equ 0F9Fh");
-
-
-typedef union {
-    struct {
-        unsigned TMR1IP :1;
-        unsigned TMR2IP :1;
-        unsigned CCP1IP :1;
-        unsigned SSPIP :1;
-        unsigned TXIP :1;
-        unsigned RCIP :1;
-        unsigned ADIP :1;
-        unsigned PSPIP :1;
-    };
-    struct {
-        unsigned :4;
-        unsigned TX1IP :1;
-        unsigned RC1IP :1;
-    };
-} IPR1bits_t;
-extern volatile IPR1bits_t IPR1bits __attribute__((address(0xF9F)));
-# 2493 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PIE2 __attribute__((address(0xFA0)));
-
-__asm("PIE2 equ 0FA0h");
-
-
-typedef union {
-    struct {
-        unsigned CCP2IE :1;
-        unsigned TMR3IE :1;
-        unsigned LVDIE :1;
-        unsigned BCLIE :1;
-        unsigned EEIE :1;
-    };
-} PIE2bits_t;
-extern volatile PIE2bits_t PIE2bits __attribute__((address(0xFA0)));
-# 2537 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PIR2 __attribute__((address(0xFA1)));
-
-__asm("PIR2 equ 0FA1h");
+__asm("PIR2 equ 0Dh");
 
 
 typedef union {
     struct {
         unsigned CCP2IF :1;
-        unsigned TMR3IF :1;
-        unsigned LVDIF :1;
+        unsigned :1;
+        unsigned ULPWUIF :1;
         unsigned BCLIF :1;
         unsigned EEIF :1;
+        unsigned C1IF :1;
+        unsigned C2IF :1;
+        unsigned OSFIF :1;
     };
 } PIR2bits_t;
-extern volatile PIR2bits_t PIR2bits __attribute__((address(0xFA1)));
-# 2581 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char IPR2 __attribute__((address(0xFA2)));
+extern volatile PIR2bits_t PIR2bits __attribute__((address(0x00D)));
+# 571 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
 
-__asm("IPR2 equ 0FA2h");
+__asm("TMR1 equ 0Eh");
+
+
+
+
+extern volatile unsigned char TMR1L __attribute__((address(0x00E)));
+
+__asm("TMR1L equ 0Eh");
+
+
+
+
+extern volatile unsigned char TMR1H __attribute__((address(0x00F)));
+
+__asm("TMR1H equ 0Fh");
+
+
+
+
+extern volatile unsigned char T1CON __attribute__((address(0x010)));
+
+__asm("T1CON equ 010h");
 
 
 typedef union {
     struct {
-        unsigned CCP2IP :1;
-        unsigned TMR3IP :1;
-        unsigned LVDIP :1;
-        unsigned BCLIP :1;
-        unsigned EEIP :1;
+        unsigned TMR1ON :1;
+        unsigned TMR1CS :1;
+        unsigned nT1SYNC :1;
+        unsigned T1OSCEN :1;
+        unsigned T1CKPS :2;
+        unsigned TMR1GE :1;
+        unsigned T1GINV :1;
     };
-} IPR2bits_t;
-extern volatile IPR2bits_t IPR2bits __attribute__((address(0xFA2)));
-# 2625 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char EECON1 __attribute__((address(0xFA6)));
-
-__asm("EECON1 equ 0FA6h");
-
-
-typedef union {
     struct {
-        unsigned RD :1;
-        unsigned WR :1;
-        unsigned WREN :1;
-        unsigned WRERR :1;
-        unsigned FREE :1;
+        unsigned :2;
+        unsigned T1INSYNC :1;
         unsigned :1;
-        unsigned CFGS :1;
-        unsigned EEPGD :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned EEFS :1;
-    };
-} EECON1bits_t;
-extern volatile EECON1bits_t EECON1bits __attribute__((address(0xFA6)));
-# 2691 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char EECON2 __attribute__((address(0xFA7)));
-
-__asm("EECON2 equ 0FA7h");
-
-
-
-
-extern volatile unsigned char EEDATA __attribute__((address(0xFA8)));
-
-__asm("EEDATA equ 0FA8h");
-
-
-
-
-extern volatile unsigned char EEADR __attribute__((address(0xFA9)));
-
-__asm("EEADR equ 0FA9h");
-
-
-
-
-extern volatile unsigned char RCSTA __attribute__((address(0xFAB)));
-
-__asm("RCSTA equ 0FABh");
-
-
-extern volatile unsigned char RCSTA1 __attribute__((address(0xFAB)));
-
-__asm("RCSTA1 equ 0FABh");
-
-
-typedef union {
-    struct {
-        unsigned RX9D :1;
-        unsigned OERR :1;
-        unsigned FERR :1;
-        unsigned ADDEN :1;
-        unsigned CREN :1;
-        unsigned SREN :1;
-        unsigned RX9 :1;
-        unsigned SPEN :1;
-    };
-    struct {
-        unsigned RCD8 :1;
-        unsigned :5;
-        unsigned RC8_9 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned NOT_RC8 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned nRC8 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned RC9 :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned SRENA :1;
-    };
-} RCSTAbits_t;
-extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0xFAB)));
-# 2828 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned RX9D :1;
-        unsigned OERR :1;
-        unsigned FERR :1;
-        unsigned ADDEN :1;
-        unsigned CREN :1;
-        unsigned SREN :1;
-        unsigned RX9 :1;
-        unsigned SPEN :1;
-    };
-    struct {
-        unsigned RCD8 :1;
-        unsigned :5;
-        unsigned RC8_9 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned NOT_RC8 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned nRC8 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned RC9 :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned SRENA :1;
-    };
-} RCSTA1bits_t;
-extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0xFAB)));
-# 2936 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TXSTA __attribute__((address(0xFAC)));
-
-__asm("TXSTA equ 0FACh");
-
-
-extern volatile unsigned char TXSTA1 __attribute__((address(0xFAC)));
-
-__asm("TXSTA1 equ 0FACh");
-
-
-typedef union {
-    struct {
-        unsigned TX9D :1;
-        unsigned TRMT :1;
-        unsigned BRGH :1;
+        unsigned T1CKPS0 :1;
+        unsigned T1CKPS1 :1;
         unsigned :1;
-        unsigned SYNC :1;
-        unsigned TXEN :1;
-        unsigned TX9 :1;
-        unsigned CSRC :1;
-    };
-    struct {
-        unsigned TXD8 :1;
-        unsigned :5;
-        unsigned TX8_9 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned NOT_TX8 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned nTX8 :1;
-    };
-    struct {
-        unsigned TX9D1 :1;
-        unsigned TRMT1 :1;
-        unsigned BRGH1 :1;
-        unsigned :1;
-        unsigned SYNC1 :1;
-        unsigned TXEN1 :1;
-        unsigned TX91 :1;
-        unsigned CSRC1 :1;
-    };
-} TXSTAbits_t;
-extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0xFAC)));
-# 3074 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned TX9D :1;
-        unsigned TRMT :1;
-        unsigned BRGH :1;
-        unsigned :1;
-        unsigned SYNC :1;
-        unsigned TXEN :1;
-        unsigned TX9 :1;
-        unsigned CSRC :1;
-    };
-    struct {
-        unsigned TXD8 :1;
-        unsigned :5;
-        unsigned TX8_9 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned NOT_TX8 :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned nTX8 :1;
-    };
-    struct {
-        unsigned TX9D1 :1;
-        unsigned TRMT1 :1;
-        unsigned BRGH1 :1;
-        unsigned :1;
-        unsigned SYNC1 :1;
-        unsigned TXEN1 :1;
-        unsigned TX91 :1;
-        unsigned CSRC1 :1;
-    };
-} TXSTA1bits_t;
-extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0xFAC)));
-# 3204 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TXREG __attribute__((address(0xFAD)));
-
-__asm("TXREG equ 0FADh");
-
-
-extern volatile unsigned char TXREG1 __attribute__((address(0xFAD)));
-
-__asm("TXREG1 equ 0FADh");
-
-
-
-
-extern volatile unsigned char RCREG __attribute__((address(0xFAE)));
-
-__asm("RCREG equ 0FAEh");
-
-
-extern volatile unsigned char RCREG1 __attribute__((address(0xFAE)));
-
-__asm("RCREG1 equ 0FAEh");
-
-
-
-
-extern volatile unsigned char SPBRG __attribute__((address(0xFAF)));
-
-__asm("SPBRG equ 0FAFh");
-
-
-extern volatile unsigned char SPBRG1 __attribute__((address(0xFAF)));
-
-__asm("SPBRG1 equ 0FAFh");
-
-
-
-
-extern volatile unsigned char T3CON __attribute__((address(0xFB1)));
-
-__asm("T3CON equ 0FB1h");
-
-
-typedef union {
-    struct {
-        unsigned :2;
-        unsigned NOT_T3SYNC :1;
-    };
-    struct {
-        unsigned TMR3ON :1;
-        unsigned TMR3CS :1;
-        unsigned nT3SYNC :1;
-        unsigned T3CCP1 :1;
-        unsigned T3CKPS :2;
-        unsigned T3CCP2 :1;
-        unsigned RD16 :1;
+        unsigned T1GIV :1;
     };
     struct {
         unsigned :2;
-        unsigned T3SYNC :1;
-        unsigned :1;
-        unsigned T3CKPS0 :1;
-        unsigned T3CKPS1 :1;
+        unsigned T1SYNC :1;
     };
-    struct {
-        unsigned :2;
-        unsigned T3INSYNC :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned SOSCEN3 :1;
-        unsigned :3;
-        unsigned RD163 :1;
-    };
-    struct {
-        unsigned :7;
-        unsigned T3RD16 :1;
-    };
-} T3CONbits_t;
-extern volatile T3CONbits_t T3CONbits __attribute__((address(0xFB1)));
-# 3361 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short TMR3 __attribute__((address(0xFB2)));
+} T1CONbits_t;
+extern volatile T1CONbits_t T1CONbits __attribute__((address(0x010)));
+# 686 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TMR2 __attribute__((address(0x011)));
 
-__asm("TMR3 equ 0FB2h");
+__asm("TMR2 equ 011h");
 
 
 
 
-extern volatile unsigned char TMR3L __attribute__((address(0xFB2)));
+extern volatile unsigned char T2CON __attribute__((address(0x012)));
 
-__asm("TMR3L equ 0FB2h");
-
-
-
-
-extern volatile unsigned char TMR3H __attribute__((address(0xFB3)));
-
-__asm("TMR3H equ 0FB3h");
-
-
-
-
-extern volatile unsigned char CCP2CON __attribute__((address(0xFBA)));
-
-__asm("CCP2CON equ 0FBAh");
-
-
-typedef union {
-    struct {
-        unsigned CCP2M :4;
-        unsigned DC2B :2;
-    };
-    struct {
-        unsigned CCP2M0 :1;
-        unsigned CCP2M1 :1;
-        unsigned CCP2M2 :1;
-        unsigned CCP2M3 :1;
-        unsigned DC2B0 :1;
-        unsigned DC2B1 :1;
-    };
-    struct {
-        unsigned :4;
-        unsigned CCP2Y :1;
-        unsigned CCP2X :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned DCCPX :1;
-    };
-} CCP2CONbits_t;
-extern volatile CCP2CONbits_t CCP2CONbits __attribute__((address(0xFBA)));
-# 3470 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short CCPR2 __attribute__((address(0xFBB)));
-
-__asm("CCPR2 equ 0FBBh");
-
-
-
-
-extern volatile unsigned char CCPR2L __attribute__((address(0xFBB)));
-
-__asm("CCPR2L equ 0FBBh");
-
-
-
-
-extern volatile unsigned char CCPR2H __attribute__((address(0xFBC)));
-
-__asm("CCPR2H equ 0FBCh");
-
-
-
-
-extern volatile unsigned char CCP1CON __attribute__((address(0xFBD)));
-
-__asm("CCP1CON equ 0FBDh");
-
-
-typedef union {
-    struct {
-        unsigned CCP1M :4;
-        unsigned DC1B :2;
-    };
-    struct {
-        unsigned CCP1M0 :1;
-        unsigned CCP1M1 :1;
-        unsigned CCP1M2 :1;
-        unsigned CCP1M3 :1;
-        unsigned DC1B0 :1;
-        unsigned DC1B1 :1;
-    };
-    struct {
-        unsigned :4;
-        unsigned CCP1Y :1;
-        unsigned CCP1X :1;
-    };
-} CCP1CONbits_t;
-extern volatile CCP1CONbits_t CCP1CONbits __attribute__((address(0xFBD)));
-# 3570 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short CCPR1 __attribute__((address(0xFBE)));
-
-__asm("CCPR1 equ 0FBEh");
-
-
-
-
-extern volatile unsigned char CCPR1L __attribute__((address(0xFBE)));
-
-__asm("CCPR1L equ 0FBEh");
-
-
-
-
-extern volatile unsigned char CCPR1H __attribute__((address(0xFBF)));
-
-__asm("CCPR1H equ 0FBFh");
-
-
-
-
-extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
-
-__asm("ADCON1 equ 0FC1h");
-
-
-typedef union {
-    struct {
-        unsigned PCFG :4;
-        unsigned :2;
-        unsigned ADCS2 :1;
-        unsigned ADFM :1;
-    };
-    struct {
-        unsigned PCFG0 :1;
-        unsigned PCFG1 :1;
-        unsigned PCFG2 :1;
-        unsigned PCFG3 :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned CHSN3 :1;
-    };
-} ADCON1bits_t;
-extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
-# 3659 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char ADCON0 __attribute__((address(0xFC2)));
-
-__asm("ADCON0 equ 0FC2h");
-
-
-typedef union {
-    struct {
-        unsigned :2;
-        unsigned GO_NOT_DONE :1;
-    };
-    struct {
-        unsigned ADON :1;
-        unsigned :1;
-        unsigned GO_nDONE :1;
-        unsigned CHS :3;
-        unsigned ADCS :2;
-    };
-    struct {
-        unsigned :2;
-        unsigned GO :1;
-        unsigned CHS0 :1;
-        unsigned CHS1 :1;
-        unsigned CHS2 :1;
-        unsigned ADCS0 :1;
-        unsigned ADCS1 :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned NOT_DONE :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned nDONE :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned DONE :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned GO_DONE :1;
-    };
-    struct {
-        unsigned :7;
-        unsigned ADCAL :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned GODONE :1;
-    };
-} ADCON0bits_t;
-extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
-# 3800 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short ADRES __attribute__((address(0xFC3)));
-
-__asm("ADRES equ 0FC3h");
-
-
-
-
-extern volatile unsigned char ADRESL __attribute__((address(0xFC3)));
-
-__asm("ADRESL equ 0FC3h");
-
-
-
-
-extern volatile unsigned char ADRESH __attribute__((address(0xFC4)));
-
-__asm("ADRESH equ 0FC4h");
-
-
-
-
-extern volatile unsigned char SSPCON2 __attribute__((address(0xFC5)));
-
-__asm("SSPCON2 equ 0FC5h");
-
-
-typedef union {
-    struct {
-        unsigned SEN :1;
-        unsigned RSEN :1;
-        unsigned PEN :1;
-        unsigned RCEN :1;
-        unsigned ACKEN :1;
-        unsigned ACKDT :1;
-        unsigned ACKSTAT :1;
-        unsigned GCEN :1;
-    };
-} SSPCON2bits_t;
-extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0xFC5)));
-# 3883 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char SSPCON1 __attribute__((address(0xFC6)));
-
-__asm("SSPCON1 equ 0FC6h");
-
-
-typedef union {
-    struct {
-        unsigned SSPM :4;
-        unsigned CKP :1;
-        unsigned SSPEN :1;
-        unsigned SSPOV :1;
-        unsigned WCOL :1;
-    };
-    struct {
-        unsigned SSPM0 :1;
-        unsigned SSPM1 :1;
-        unsigned SSPM2 :1;
-        unsigned SSPM3 :1;
-    };
-} SSPCON1bits_t;
-extern volatile SSPCON1bits_t SSPCON1bits __attribute__((address(0xFC6)));
-# 3953 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char SSPSTAT __attribute__((address(0xFC7)));
-
-__asm("SSPSTAT equ 0FC7h");
-
-
-typedef union {
-    struct {
-        unsigned :2;
-        unsigned R_NOT_W :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned D_NOT_A :1;
-    };
-    struct {
-        unsigned BF :1;
-        unsigned UA :1;
-        unsigned R_nW :1;
-        unsigned S :1;
-        unsigned P :1;
-        unsigned D_nA :1;
-        unsigned CKE :1;
-        unsigned SMP :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned I2C_READ :1;
-        unsigned I2C_START :1;
-        unsigned I2C_STOP :1;
-        unsigned I2C_DATA :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned R :1;
-        unsigned :2;
-        unsigned D :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned READ_WRITE :1;
-        unsigned :2;
-        unsigned DATA_ADDRESS :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned NOT_WRITE :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned NOT_ADDRESS :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned nWRITE :1;
-        unsigned :2;
-        unsigned nADDRESS :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned nW :1;
-        unsigned :2;
-        unsigned nA :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned R_W :1;
-        unsigned :2;
-        unsigned D_A :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned I2C_DAT :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned RW :1;
-        unsigned START :1;
-        unsigned STOP :1;
-        unsigned DA :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned NOT_W :1;
-        unsigned :2;
-        unsigned NOT_A :1;
-    };
-} SSPSTATbits_t;
-extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0xFC7)));
-# 4210 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char SSPADD __attribute__((address(0xFC8)));
-
-__asm("SSPADD equ 0FC8h");
-
-
-
-
-extern volatile unsigned char SSPBUF __attribute__((address(0xFC9)));
-
-__asm("SSPBUF equ 0FC9h");
-
-
-
-
-extern volatile unsigned char T2CON __attribute__((address(0xFCA)));
-
-__asm("T2CON equ 0FCAh");
+__asm("T2CON equ 012h");
 
 
 typedef union {
@@ -1552,2250 +334,2029 @@ typedef union {
         unsigned TOUTPS3 :1;
     };
 } T2CONbits_t;
-extern volatile T2CONbits_t T2CONbits __attribute__((address(0xFCA)));
-# 4295 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char PR2 __attribute__((address(0xFCB)));
+extern volatile T2CONbits_t T2CONbits __attribute__((address(0x012)));
+# 764 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 
-__asm("PR2 equ 0FCBh");
+__asm("SSPBUF equ 013h");
 
 
-extern volatile unsigned char MEMCON __attribute__((address(0xFCB)));
 
-__asm("MEMCON equ 0FCBh");
+
+extern volatile unsigned char SSPCON __attribute__((address(0x014)));
+
+__asm("SSPCON equ 014h");
 
 
 typedef union {
     struct {
-        unsigned :7;
-        unsigned EBDIS :1;
+        unsigned SSPM :4;
+        unsigned CKP :1;
+        unsigned SSPEN :1;
+        unsigned SSPOV :1;
+        unsigned WCOL :1;
+    };
+    struct {
+        unsigned SSPM0 :1;
+        unsigned SSPM1 :1;
+        unsigned SSPM2 :1;
+        unsigned SSPM3 :1;
+    };
+} SSPCONbits_t;
+extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0x014)));
+# 841 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned short CCPR1 __attribute__((address(0x015)));
+
+__asm("CCPR1 equ 015h");
+
+
+
+
+extern volatile unsigned char CCPR1L __attribute__((address(0x015)));
+
+__asm("CCPR1L equ 015h");
+
+
+
+
+extern volatile unsigned char CCPR1H __attribute__((address(0x016)));
+
+__asm("CCPR1H equ 016h");
+
+
+
+
+extern volatile unsigned char CCP1CON __attribute__((address(0x017)));
+
+__asm("CCP1CON equ 017h");
+
+
+typedef union {
+    struct {
+        unsigned CCP1M :4;
+        unsigned DC1B :2;
+        unsigned P1M :2;
+    };
+    struct {
+        unsigned CCP1M0 :1;
+        unsigned CCP1M1 :1;
+        unsigned CCP1M2 :1;
+        unsigned CCP1M3 :1;
+        unsigned DC1B0 :1;
+        unsigned DC1B1 :1;
+        unsigned P1M0 :1;
+        unsigned P1M1 :1;
     };
     struct {
         unsigned :4;
-        unsigned WAIT0 :1;
+        unsigned CCP1Y :1;
+        unsigned CCP1X :1;
+    };
+} CCP1CONbits_t;
+extern volatile CCP1CONbits_t CCP1CONbits __attribute__((address(0x017)));
+# 959 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char RCSTA __attribute__((address(0x018)));
+
+__asm("RCSTA equ 018h");
+
+
+typedef union {
+    struct {
+        unsigned RX9D :1;
+        unsigned OERR :1;
+        unsigned FERR :1;
+        unsigned ADDEN :1;
+        unsigned CREN :1;
+        unsigned SREN :1;
+        unsigned RX9 :1;
+        unsigned SPEN :1;
     };
     struct {
+        unsigned RCD8 :1;
         unsigned :5;
-        unsigned WAIT1 :1;
+        unsigned RC9 :1;
     };
     struct {
-        unsigned WM0 :1;
+        unsigned :6;
+        unsigned nRC8 :1;
     };
     struct {
-        unsigned :1;
-        unsigned WM1 :1;
+        unsigned :6;
+        unsigned RC8_9 :1;
     };
-} PR2bits_t;
-extern volatile PR2bits_t PR2bits __attribute__((address(0xFCB)));
-# 4354 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned :7;
-        unsigned EBDIS :1;
-    };
-    struct {
-        unsigned :4;
-        unsigned WAIT0 :1;
-    };
-    struct {
-        unsigned :5;
-        unsigned WAIT1 :1;
-    };
-    struct {
-        unsigned WM0 :1;
-    };
-    struct {
-        unsigned :1;
-        unsigned WM1 :1;
-    };
-} MEMCONbits_t;
-extern volatile MEMCONbits_t MEMCONbits __attribute__((address(0xFCB)));
-# 4405 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char TMR2 __attribute__((address(0xFCC)));
+} RCSTAbits_t;
+extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x018)));
+# 1054 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TXREG __attribute__((address(0x019)));
 
-__asm("TMR2 equ 0FCCh");
+__asm("TXREG equ 019h");
 
 
 
 
-extern volatile unsigned char T1CON __attribute__((address(0xFCD)));
+extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 
-__asm("T1CON equ 0FCDh");
-
-
-typedef union {
-    struct {
-        unsigned :2;
-        unsigned NOT_T1SYNC :1;
-    };
-    struct {
-        unsigned TMR1ON :1;
-        unsigned TMR1CS :1;
-        unsigned nT1SYNC :1;
-        unsigned T1OSCEN :1;
-        unsigned T1CKPS :2;
-        unsigned :1;
-        unsigned RD16 :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned T1SYNC :1;
-        unsigned :1;
-        unsigned T1CKPS0 :1;
-        unsigned T1CKPS1 :1;
-    };
-    struct {
-        unsigned :2;
-        unsigned T1INSYNC :1;
-    };
-    struct {
-        unsigned :3;
-        unsigned SOSCEN :1;
-        unsigned :3;
-        unsigned T1RD16 :1;
-    };
-} T1CONbits_t;
-extern volatile T1CONbits_t T1CONbits __attribute__((address(0xFCD)));
-# 4519 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short TMR1 __attribute__((address(0xFCE)));
-
-__asm("TMR1 equ 0FCEh");
+__asm("RCREG equ 01Ah");
 
 
 
 
-extern volatile unsigned char TMR1L __attribute__((address(0xFCE)));
+extern volatile unsigned short CCPR2 __attribute__((address(0x01B)));
 
-__asm("TMR1L equ 0FCEh");
-
-
-
-
-extern volatile unsigned char TMR1H __attribute__((address(0xFCF)));
-
-__asm("TMR1H equ 0FCFh");
+__asm("CCPR2 equ 01Bh");
 
 
 
 
-extern volatile unsigned char RCON __attribute__((address(0xFD0)));
+extern volatile unsigned char CCPR2L __attribute__((address(0x01B)));
 
-__asm("RCON equ 0FD0h");
+__asm("CCPR2L equ 01Bh");
+
+
+
+
+extern volatile unsigned char CCPR2H __attribute__((address(0x01C)));
+
+__asm("CCPR2H equ 01Ch");
+
+
+
+
+extern volatile unsigned char CCP2CON __attribute__((address(0x01D)));
+
+__asm("CCP2CON equ 01Dh");
 
 
 typedef union {
     struct {
-        unsigned NOT_BOR :1;
+        unsigned CCP2M :4;
+        unsigned DC2B0 :1;
+        unsigned DC2B1 :1;
+    };
+    struct {
+        unsigned CCP2M0 :1;
+        unsigned CCP2M1 :1;
+        unsigned CCP2M2 :1;
+        unsigned CCP2M3 :1;
+        unsigned CCP2Y :1;
+        unsigned CCP2X :1;
+    };
+} CCP2CONbits_t;
+extern volatile CCP2CONbits_t CCP2CONbits __attribute__((address(0x01D)));
+# 1159 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
+
+__asm("ADRESH equ 01Eh");
+
+
+
+
+extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
+
+__asm("ADCON0 equ 01Fh");
+
+
+typedef union {
+    struct {
+        unsigned ADON :1;
+        unsigned GO_nDONE :1;
+        unsigned CHS :4;
+        unsigned ADCS :2;
     };
     struct {
         unsigned :1;
-        unsigned NOT_POR :1;
+        unsigned GO :1;
+        unsigned CHS0 :1;
+        unsigned CHS1 :1;
+        unsigned CHS2 :1;
+        unsigned CHS3 :1;
+        unsigned ADCS0 :1;
+        unsigned ADCS1 :1;
     };
     struct {
-        unsigned :2;
-        unsigned NOT_PD :1;
+        unsigned :1;
+        unsigned nDONE :1;
     };
+    struct {
+        unsigned :1;
+        unsigned GO_DONE :1;
+    };
+} ADCON0bits_t;
+extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
+# 1267 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char OPTION_REG __attribute__((address(0x081)));
+
+__asm("OPTION_REG equ 081h");
+
+
+typedef union {
+    struct {
+        unsigned PS :3;
+        unsigned PSA :1;
+        unsigned T0SE :1;
+        unsigned T0CS :1;
+        unsigned INTEDG :1;
+        unsigned nRBPU :1;
+    };
+    struct {
+        unsigned PS0 :1;
+        unsigned PS1 :1;
+        unsigned PS2 :1;
+    };
+} OPTION_REGbits_t;
+extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
+# 1337 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TRISA __attribute__((address(0x085)));
+
+__asm("TRISA equ 085h");
+
+
+typedef union {
+    struct {
+        unsigned TRISA0 :1;
+        unsigned TRISA1 :1;
+        unsigned TRISA2 :1;
+        unsigned TRISA3 :1;
+        unsigned TRISA4 :1;
+        unsigned TRISA5 :1;
+        unsigned TRISA6 :1;
+        unsigned TRISA7 :1;
+    };
+} TRISAbits_t;
+extern volatile TRISAbits_t TRISAbits __attribute__((address(0x085)));
+# 1399 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TRISB __attribute__((address(0x086)));
+
+__asm("TRISB equ 086h");
+
+
+typedef union {
+    struct {
+        unsigned TRISB0 :1;
+        unsigned TRISB1 :1;
+        unsigned TRISB2 :1;
+        unsigned TRISB3 :1;
+        unsigned TRISB4 :1;
+        unsigned TRISB5 :1;
+        unsigned TRISB6 :1;
+        unsigned TRISB7 :1;
+    };
+} TRISBbits_t;
+extern volatile TRISBbits_t TRISBbits __attribute__((address(0x086)));
+# 1461 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TRISC __attribute__((address(0x087)));
+
+__asm("TRISC equ 087h");
+
+
+typedef union {
+    struct {
+        unsigned TRISC0 :1;
+        unsigned TRISC1 :1;
+        unsigned TRISC2 :1;
+        unsigned TRISC3 :1;
+        unsigned TRISC4 :1;
+        unsigned TRISC5 :1;
+        unsigned TRISC6 :1;
+        unsigned TRISC7 :1;
+    };
+} TRISCbits_t;
+extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+# 1523 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TRISE __attribute__((address(0x089)));
+
+__asm("TRISE equ 089h");
+
+
+typedef union {
     struct {
         unsigned :3;
-        unsigned NOT_TO :1;
+        unsigned TRISE3 :1;
     };
+} TRISEbits_t;
+extern volatile TRISEbits_t TRISEbits __attribute__((address(0x089)));
+# 1544 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PIE1 __attribute__((address(0x08C)));
+
+__asm("PIE1 equ 08Ch");
+
+
+typedef union {
     struct {
-        unsigned :4;
-        unsigned NOT_RI :1;
+        unsigned TMR1IE :1;
+        unsigned TMR2IE :1;
+        unsigned CCP1IE :1;
+        unsigned SSPIE :1;
+        unsigned TXIE :1;
+        unsigned RCIE :1;
+        unsigned ADIE :1;
     };
+} PIE1bits_t;
+extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
+# 1600 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PIE2 __attribute__((address(0x08D)));
+
+__asm("PIE2 equ 08Dh");
+
+
+typedef union {
+    struct {
+        unsigned CCP2IE :1;
+        unsigned :1;
+        unsigned ULPWUIE :1;
+        unsigned BCLIE :1;
+        unsigned EEIE :1;
+        unsigned C1IE :1;
+        unsigned C2IE :1;
+        unsigned OSFIE :1;
+    };
+} PIE2bits_t;
+extern volatile PIE2bits_t PIE2bits __attribute__((address(0x08D)));
+# 1657 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PCON __attribute__((address(0x08E)));
+
+__asm("PCON equ 08Eh");
+
+
+typedef union {
     struct {
         unsigned nBOR :1;
         unsigned nPOR :1;
-        unsigned nPD :1;
-        unsigned nTO :1;
-        unsigned nRI :1;
         unsigned :2;
-        unsigned IPEN :1;
+        unsigned SBOREN :1;
+        unsigned ULPWUE :1;
     };
     struct {
-        unsigned :7;
-        unsigned NOT_IPEN :1;
+        unsigned nBO :1;
     };
-    struct {
-        unsigned BOR :1;
-        unsigned POR :1;
-        unsigned PD :1;
-        unsigned TO :1;
-        unsigned RI :1;
-        unsigned :2;
-        unsigned nIPEN :1;
-    };
-} RCONbits_t;
-extern volatile RCONbits_t RCONbits __attribute__((address(0xFD0)));
-# 4683 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char WDTCON __attribute__((address(0xFD1)));
+} PCONbits_t;
+extern volatile PCONbits_t PCONbits __attribute__((address(0x08E)));
+# 1704 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char OSCCON __attribute__((address(0x08F)));
 
-__asm("WDTCON equ 0FD1h");
-
-
-typedef union {
-    struct {
-        unsigned SWDTEN :1;
-    };
-    struct {
-        unsigned SWDTE :1;
-    };
-} WDTCONbits_t;
-extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0xFD1)));
-# 4711 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char LVDCON __attribute__((address(0xFD2)));
-
-__asm("LVDCON equ 0FD2h");
-
-
-typedef union {
-    struct {
-        unsigned LVDL :4;
-        unsigned LVDEN :1;
-        unsigned IRVST :1;
-    };
-    struct {
-        unsigned LVDL0 :1;
-        unsigned LVDL1 :1;
-        unsigned LVDL2 :1;
-        unsigned LVDL3 :1;
-    };
-} LVDCONbits_t;
-extern volatile LVDCONbits_t LVDCONbits __attribute__((address(0xFD2)));
-# 4769 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
-
-__asm("OSCCON equ 0FD3h");
+__asm("OSCCON equ 08Fh");
 
 
 typedef union {
     struct {
         unsigned SCS :1;
+        unsigned LTS :1;
+        unsigned HTS :1;
+        unsigned OSTS :1;
+        unsigned IRCF :3;
+    };
+    struct {
+        unsigned :4;
+        unsigned IRCF0 :1;
+        unsigned IRCF1 :1;
+        unsigned IRCF2 :1;
     };
 } OSCCONbits_t;
-extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
-# 4789 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
+extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
+# 1769 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char OSCTUNE __attribute__((address(0x090)));
 
-__asm("T0CON equ 0FD5h");
-
-
-typedef union {
-    struct {
-        unsigned T0PS :3;
-        unsigned PSA :1;
-        unsigned T0SE :1;
-        unsigned T0CS :1;
-        unsigned T08BIT :1;
-        unsigned TMR0ON :1;
-    };
-    struct {
-        unsigned T0PS0 :1;
-        unsigned T0PS1 :1;
-        unsigned T0PS2 :1;
-    };
-} T0CONbits_t;
-extern volatile T0CONbits_t T0CONbits __attribute__((address(0xFD5)));
-# 4859 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short TMR0 __attribute__((address(0xFD6)));
-
-__asm("TMR0 equ 0FD6h");
-
-
-
-
-extern volatile unsigned char TMR0L __attribute__((address(0xFD6)));
-
-__asm("TMR0L equ 0FD6h");
-
-
-
-
-extern volatile unsigned char TMR0H __attribute__((address(0xFD7)));
-
-__asm("TMR0H equ 0FD7h");
-
-
-
-
-extern volatile unsigned char STATUS __attribute__((address(0xFD8)));
-
-__asm("STATUS equ 0FD8h");
+__asm("OSCTUNE equ 090h");
 
 
 typedef union {
     struct {
-        unsigned C :1;
-        unsigned DC :1;
-        unsigned Z :1;
-        unsigned OV :1;
-        unsigned N :1;
+        unsigned TUN :5;
     };
     struct {
-        unsigned CARRY :1;
-        unsigned :1;
-        unsigned ZERO :1;
-        unsigned OVERFLOW :1;
-        unsigned NEGATIVE :1;
+        unsigned TUN0 :1;
+        unsigned TUN1 :1;
+        unsigned TUN2 :1;
+        unsigned TUN3 :1;
+        unsigned TUN4 :1;
     };
-} STATUSbits_t;
-extern volatile STATUSbits_t STATUSbits __attribute__((address(0xFD8)));
-# 4951 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short FSR2 __attribute__((address(0xFD9)));
-
-__asm("FSR2 equ 0FD9h");
-
-
-
-
-extern volatile unsigned char FSR2L __attribute__((address(0xFD9)));
-
-__asm("FSR2L equ 0FD9h");
-
-
-
-
-extern volatile unsigned char FSR2H __attribute__((address(0xFDA)));
-
-__asm("FSR2H equ 0FDAh");
-
-
-
-
-extern volatile unsigned char PLUSW2 __attribute__((address(0xFDB)));
-
-__asm("PLUSW2 equ 0FDBh");
-
-
-
-
-extern volatile unsigned char PREINC2 __attribute__((address(0xFDC)));
-
-__asm("PREINC2 equ 0FDCh");
-
-
-
-
-extern volatile unsigned char POSTDEC2 __attribute__((address(0xFDD)));
-
-__asm("POSTDEC2 equ 0FDDh");
-
-
-
-
-extern volatile unsigned char POSTINC2 __attribute__((address(0xFDE)));
-
-__asm("POSTINC2 equ 0FDEh");
-
-
-
-
-extern volatile unsigned char INDF2 __attribute__((address(0xFDF)));
-
-__asm("INDF2 equ 0FDFh");
-
-
-
-
-extern volatile unsigned char BSR __attribute__((address(0xFE0)));
-
-__asm("BSR equ 0FE0h");
-
-
-
-
-extern volatile unsigned short FSR1 __attribute__((address(0xFE1)));
-
-__asm("FSR1 equ 0FE1h");
-
-
-
-
-extern volatile unsigned char FSR1L __attribute__((address(0xFE1)));
-
-__asm("FSR1L equ 0FE1h");
-
-
-
-
-extern volatile unsigned char FSR1H __attribute__((address(0xFE2)));
-
-__asm("FSR1H equ 0FE2h");
-
-
-
-
-extern volatile unsigned char PLUSW1 __attribute__((address(0xFE3)));
-
-__asm("PLUSW1 equ 0FE3h");
-
-
-
-
-extern volatile unsigned char PREINC1 __attribute__((address(0xFE4)));
-
-__asm("PREINC1 equ 0FE4h");
-
-
-
-
-extern volatile unsigned char POSTDEC1 __attribute__((address(0xFE5)));
-
-__asm("POSTDEC1 equ 0FE5h");
-
-
-
-
-extern volatile unsigned char POSTINC1 __attribute__((address(0xFE6)));
-
-__asm("POSTINC1 equ 0FE6h");
-
-
-
-
-extern volatile unsigned char INDF1 __attribute__((address(0xFE7)));
-
-__asm("INDF1 equ 0FE7h");
-
-
-
-
-extern volatile unsigned char WREG __attribute__((address(0xFE8)));
-
-__asm("WREG equ 0FE8h");
-# 5082 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short FSR0 __attribute__((address(0xFE9)));
-
-__asm("FSR0 equ 0FE9h");
-
-
-
-
-extern volatile unsigned char FSR0L __attribute__((address(0xFE9)));
-
-__asm("FSR0L equ 0FE9h");
-
-
-
-
-extern volatile unsigned char FSR0H __attribute__((address(0xFEA)));
-
-__asm("FSR0H equ 0FEAh");
-
-
-
-
-extern volatile unsigned char PLUSW0 __attribute__((address(0xFEB)));
-
-__asm("PLUSW0 equ 0FEBh");
-
-
-
-
-extern volatile unsigned char PREINC0 __attribute__((address(0xFEC)));
-
-__asm("PREINC0 equ 0FECh");
-
-
-
-
-extern volatile unsigned char POSTDEC0 __attribute__((address(0xFED)));
-
-__asm("POSTDEC0 equ 0FEDh");
-
-
-
-
-extern volatile unsigned char POSTINC0 __attribute__((address(0xFEE)));
-
-__asm("POSTINC0 equ 0FEEh");
-
-
-
-
-extern volatile unsigned char INDF0 __attribute__((address(0xFEF)));
-
-__asm("INDF0 equ 0FEFh");
-
-
-
-
-extern volatile unsigned char INTCON3 __attribute__((address(0xFF0)));
-
-__asm("INTCON3 equ 0FF0h");
+} OSCTUNEbits_t;
+extern volatile OSCTUNEbits_t OSCTUNEbits __attribute__((address(0x090)));
+# 1821 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char SSPCON2 __attribute__((address(0x091)));
+
+__asm("SSPCON2 equ 091h");
 
 
 typedef union {
     struct {
-        unsigned INT1IF :1;
-        unsigned INT2IF :1;
-        unsigned :1;
-        unsigned INT1IE :1;
-        unsigned INT2IE :1;
-        unsigned :1;
-        unsigned INT1IP :1;
-        unsigned INT2IP :1;
+        unsigned SEN :1;
+        unsigned RSEN :1;
+        unsigned PEN :1;
+        unsigned RCEN :1;
+        unsigned ACKEN :1;
+        unsigned ACKDT :1;
+        unsigned ACKSTAT :1;
+        unsigned GCEN :1;
     };
-    struct {
-        unsigned INT1F :1;
-        unsigned INT2F :1;
-        unsigned :1;
-        unsigned INT1E :1;
-        unsigned INT2E :1;
-        unsigned :1;
-        unsigned INT1P :1;
-        unsigned INT2P :1;
-    };
-} INTCON3bits_t;
-extern volatile INTCON3bits_t INTCON3bits __attribute__((address(0xFF0)));
-# 5230 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char INTCON2 __attribute__((address(0xFF1)));
+} SSPCON2bits_t;
+extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0x091)));
+# 1883 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PR2 __attribute__((address(0x092)));
 
-__asm("INTCON2 equ 0FF1h");
+__asm("PR2 equ 092h");
+
+
+
+
+extern volatile unsigned char SSPADD __attribute__((address(0x093)));
+
+__asm("SSPADD equ 093h");
+
+
+
+
+extern volatile unsigned char SSPMSK __attribute__((address(0x093)));
+
+__asm("SSPMSK equ 093h");
+
+
+extern volatile unsigned char MSK __attribute__((address(0x093)));
+
+__asm("MSK equ 093h");
 
 
 typedef union {
     struct {
-        unsigned :7;
-        unsigned NOT_RBPU :1;
+        unsigned MSK0 :1;
+        unsigned MSK1 :1;
+        unsigned MSK2 :1;
+        unsigned MSK3 :1;
+        unsigned MSK4 :1;
+        unsigned MSK5 :1;
+        unsigned MSK6 :1;
+        unsigned MSK7 :1;
     };
+} SSPMSKbits_t;
+extern volatile SSPMSKbits_t SSPMSKbits __attribute__((address(0x093)));
+# 1962 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+typedef union {
     struct {
-        unsigned RBIP :1;
-        unsigned :1;
-        unsigned TMR0IP :1;
-        unsigned :1;
-        unsigned INTEDG2 :1;
-        unsigned INTEDG1 :1;
-        unsigned INTEDG0 :1;
-        unsigned nRBPU :1;
+        unsigned MSK0 :1;
+        unsigned MSK1 :1;
+        unsigned MSK2 :1;
+        unsigned MSK3 :1;
+        unsigned MSK4 :1;
+        unsigned MSK5 :1;
+        unsigned MSK6 :1;
+        unsigned MSK7 :1;
+    };
+} MSKbits_t;
+extern volatile MSKbits_t MSKbits __attribute__((address(0x093)));
+# 2019 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char SSPSTAT __attribute__((address(0x094)));
+
+__asm("SSPSTAT equ 094h");
+
+
+typedef union {
+    struct {
+        unsigned BF :1;
+        unsigned UA :1;
+        unsigned R_nW :1;
+        unsigned S :1;
+        unsigned P :1;
+        unsigned D_nA :1;
+        unsigned CKE :1;
+        unsigned SMP :1;
     };
     struct {
         unsigned :2;
-        unsigned T0IP :1;
+        unsigned R :1;
+        unsigned :2;
+        unsigned D :1;
+    };
+    struct {
+        unsigned :2;
+        unsigned I2C_READ :1;
+        unsigned I2C_START :1;
+        unsigned I2C_STOP :1;
+        unsigned I2C_DATA :1;
+    };
+    struct {
+        unsigned :2;
+        unsigned nW :1;
+        unsigned :2;
+        unsigned nA :1;
+    };
+    struct {
+        unsigned :2;
+        unsigned nWRITE :1;
+        unsigned :2;
+        unsigned nADDRESS :1;
+    };
+    struct {
+        unsigned :2;
+        unsigned R_W :1;
+        unsigned :2;
+        unsigned D_A :1;
+    };
+    struct {
+        unsigned :2;
+        unsigned READ_WRITE :1;
+        unsigned :2;
+        unsigned DATA_ADDRESS :1;
+    };
+} SSPSTATbits_t;
+extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x094)));
+# 2188 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char WPUB __attribute__((address(0x095)));
+
+__asm("WPUB equ 095h");
+
+
+typedef union {
+    struct {
+        unsigned WPUB :8;
+    };
+    struct {
+        unsigned WPUB0 :1;
+        unsigned WPUB1 :1;
+        unsigned WPUB2 :1;
+        unsigned WPUB3 :1;
+        unsigned WPUB4 :1;
+        unsigned WPUB5 :1;
+        unsigned WPUB6 :1;
+        unsigned WPUB7 :1;
+    };
+} WPUBbits_t;
+extern volatile WPUBbits_t WPUBbits __attribute__((address(0x095)));
+# 2258 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char IOCB __attribute__((address(0x096)));
+
+__asm("IOCB equ 096h");
+
+
+typedef union {
+    struct {
+        unsigned IOCB :8;
+    };
+    struct {
+        unsigned IOCB0 :1;
+        unsigned IOCB1 :1;
+        unsigned IOCB2 :1;
+        unsigned IOCB3 :1;
+        unsigned IOCB4 :1;
+        unsigned IOCB5 :1;
+        unsigned IOCB6 :1;
+        unsigned IOCB7 :1;
+    };
+} IOCBbits_t;
+extern volatile IOCBbits_t IOCBbits __attribute__((address(0x096)));
+# 2328 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char VRCON __attribute__((address(0x097)));
+
+__asm("VRCON equ 097h");
+
+
+typedef union {
+    struct {
+        unsigned VR :4;
+        unsigned VRSS :1;
+        unsigned VRR :1;
+        unsigned VROE :1;
+        unsigned VREN :1;
+    };
+    struct {
+        unsigned VR0 :1;
+        unsigned VR1 :1;
+        unsigned VR2 :1;
+        unsigned VR3 :1;
+    };
+} VRCONbits_t;
+extern volatile VRCONbits_t VRCONbits __attribute__((address(0x097)));
+# 2398 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char TXSTA __attribute__((address(0x098)));
+
+__asm("TXSTA equ 098h");
+
+
+typedef union {
+    struct {
+        unsigned TX9D :1;
+        unsigned TRMT :1;
+        unsigned BRGH :1;
+        unsigned SENDB :1;
+        unsigned SYNC :1;
+        unsigned TXEN :1;
+        unsigned TX9 :1;
+        unsigned CSRC :1;
+    };
+    struct {
+        unsigned TXD8 :1;
+        unsigned :5;
+        unsigned nTX8 :1;
+    };
+    struct {
+        unsigned :6;
+        unsigned TX8_9 :1;
+    };
+} TXSTAbits_t;
+extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x098)));
+# 2484 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char SPBRG __attribute__((address(0x099)));
+
+__asm("SPBRG equ 099h");
+
+
+typedef union {
+    struct {
+        unsigned BRG0 :1;
+        unsigned BRG1 :1;
+        unsigned BRG2 :1;
+        unsigned BRG3 :1;
+        unsigned BRG4 :1;
+        unsigned BRG5 :1;
+        unsigned BRG6 :1;
+        unsigned BRG7 :1;
+    };
+} SPBRGbits_t;
+extern volatile SPBRGbits_t SPBRGbits __attribute__((address(0x099)));
+# 2546 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char SPBRGH __attribute__((address(0x09A)));
+
+__asm("SPBRGH equ 09Ah");
+
+
+typedef union {
+    struct {
+        unsigned SPBRGH :8;
+    };
+    struct {
+        unsigned BRG8 :1;
+        unsigned BRG9 :1;
+        unsigned BRG10 :1;
+        unsigned BRG11 :1;
+        unsigned BRG12 :1;
+        unsigned BRG13 :1;
+        unsigned BRG14 :1;
+        unsigned BRG15 :1;
+    };
+} SPBRGHbits_t;
+extern volatile SPBRGHbits_t SPBRGHbits __attribute__((address(0x09A)));
+# 2616 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PWM1CON __attribute__((address(0x09B)));
+
+__asm("PWM1CON equ 09Bh");
+
+
+typedef union {
+    struct {
+        unsigned PDC :7;
+        unsigned PRSEN :1;
+    };
+    struct {
+        unsigned PDC0 :1;
+        unsigned PDC1 :1;
+        unsigned PDC2 :1;
+        unsigned PDC3 :1;
+        unsigned PDC4 :1;
+        unsigned PDC5 :1;
+        unsigned PDC6 :1;
+    };
+} PWM1CONbits_t;
+extern volatile PWM1CONbits_t PWM1CONbits __attribute__((address(0x09B)));
+# 2686 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char ECCPAS __attribute__((address(0x09C)));
+
+__asm("ECCPAS equ 09Ch");
+
+
+typedef union {
+    struct {
+        unsigned PSSBD :2;
+        unsigned PSSAC :2;
+        unsigned ECCPAS :3;
+        unsigned ECCPASE :1;
+    };
+    struct {
+        unsigned PSSBD0 :1;
+        unsigned PSSBD1 :1;
+        unsigned PSSAC0 :1;
+        unsigned PSSAC1 :1;
+        unsigned ECCPAS0 :1;
+        unsigned ECCPAS1 :1;
+        unsigned ECCPAS2 :1;
+    };
+} ECCPASbits_t;
+extern volatile ECCPASbits_t ECCPASbits __attribute__((address(0x09C)));
+# 2768 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char PSTRCON __attribute__((address(0x09D)));
+
+__asm("PSTRCON equ 09Dh");
+
+
+typedef union {
+    struct {
+        unsigned STRA :1;
+        unsigned STRB :1;
+        unsigned STRC :1;
+        unsigned STRD :1;
+        unsigned STRSYNC :1;
+    };
+} PSTRCONbits_t;
+extern volatile PSTRCONbits_t PSTRCONbits __attribute__((address(0x09D)));
+# 2812 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char ADRESL __attribute__((address(0x09E)));
+
+__asm("ADRESL equ 09Eh");
+
+
+
+
+extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
+
+__asm("ADCON1 equ 09Fh");
+
+
+typedef union {
+    struct {
         unsigned :4;
-        unsigned RBPU :1;
+        unsigned VCFG0 :1;
+        unsigned VCFG1 :1;
+        unsigned :1;
+        unsigned ADFM :1;
     };
-} INTCON2bits_t;
-extern volatile INTCON2bits_t INTCON2bits __attribute__((address(0xFF1)));
-# 5307 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned char INTCON __attribute__((address(0xFF2)));
+} ADCON1bits_t;
+extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09F)));
+# 2853 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char WDTCON __attribute__((address(0x105)));
 
-__asm("INTCON equ 0FF2h");
-
-
-extern volatile unsigned char INTCON1 __attribute__((address(0xFF2)));
-
-__asm("INTCON1 equ 0FF2h");
+__asm("WDTCON equ 0105h");
 
 
 typedef union {
     struct {
-        unsigned RBIF :1;
-        unsigned INT0IF :1;
-        unsigned TMR0IF :1;
-        unsigned RBIE :1;
-        unsigned INT0IE :1;
-        unsigned TMR0IE :1;
-        unsigned PEIE_GIEL :1;
-        unsigned GIE_GIEH :1;
+        unsigned SWDTEN :1;
+        unsigned WDTPS :4;
     };
     struct {
         unsigned :1;
-        unsigned INT0F :1;
-        unsigned T0IF :1;
-        unsigned :1;
-        unsigned INT0E :1;
-        unsigned T0IE :1;
-        unsigned PEIE :1;
-        unsigned GIE :1;
+        unsigned WDTPS0 :1;
+        unsigned WDTPS1 :1;
+        unsigned WDTPS2 :1;
+        unsigned WDTPS3 :1;
     };
-    struct {
-        unsigned :6;
-        unsigned GIEL :1;
-        unsigned GIEH :1;
-    };
-} INTCONbits_t;
-extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-# 5427 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-typedef union {
-    struct {
-        unsigned RBIF :1;
-        unsigned INT0IF :1;
-        unsigned TMR0IF :1;
-        unsigned RBIE :1;
-        unsigned INT0IE :1;
-        unsigned TMR0IE :1;
-        unsigned PEIE_GIEL :1;
-        unsigned GIE_GIEH :1;
-    };
-    struct {
-        unsigned :1;
-        unsigned INT0F :1;
-        unsigned T0IF :1;
-        unsigned :1;
-        unsigned INT0E :1;
-        unsigned T0IE :1;
-        unsigned PEIE :1;
-        unsigned GIE :1;
-    };
-    struct {
-        unsigned :6;
-        unsigned GIEL :1;
-        unsigned GIEH :1;
-    };
-} INTCON1bits_t;
-extern volatile INTCON1bits_t INTCON1bits __attribute__((address(0xFF2)));
-# 5539 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile unsigned short PROD __attribute__((address(0xFF3)));
-
-__asm("PROD equ 0FF3h");
-
-
-
-
-extern volatile unsigned char PRODL __attribute__((address(0xFF3)));
-
-__asm("PRODL equ 0FF3h");
-
-
-
-
-extern volatile unsigned char PRODH __attribute__((address(0xFF4)));
-
-__asm("PRODH equ 0FF4h");
-
-
-
-
-extern volatile unsigned char TABLAT __attribute__((address(0xFF5)));
-
-__asm("TABLAT equ 0FF5h");
-
-
-
-
-
-extern volatile __uint24 TBLPTR __attribute__((address(0xFF6)));
-
-
-__asm("TBLPTR equ 0FF6h");
-
-
-
-
-extern volatile unsigned char TBLPTRL __attribute__((address(0xFF6)));
-
-__asm("TBLPTRL equ 0FF6h");
-
-
-
-
-extern volatile unsigned char TBLPTRH __attribute__((address(0xFF7)));
-
-__asm("TBLPTRH equ 0FF7h");
-
-
-
-
-extern volatile unsigned char TBLPTRU __attribute__((address(0xFF8)));
-
-__asm("TBLPTRU equ 0FF8h");
-
-
-
-
-
-extern volatile __uint24 PCLAT __attribute__((address(0xFF9)));
-
-
-__asm("PCLAT equ 0FF9h");
-
-
-
-extern volatile __uint24 PC __attribute__((address(0xFF9)));
-
-
-__asm("PC equ 0FF9h");
-
-
-
-
-extern volatile unsigned char PCL __attribute__((address(0xFF9)));
-
-__asm("PCL equ 0FF9h");
-
-
-
-
-extern volatile unsigned char PCLATH __attribute__((address(0xFFA)));
-
-__asm("PCLATH equ 0FFAh");
-
-
-
-
-extern volatile unsigned char PCLATU __attribute__((address(0xFFB)));
-
-__asm("PCLATU equ 0FFBh");
-
-
-
-
-extern volatile unsigned char STKPTR __attribute__((address(0xFFC)));
-
-__asm("STKPTR equ 0FFCh");
+} WDTCONbits_t;
+extern volatile WDTCONbits_t WDTCONbits __attribute__((address(0x105)));
+# 2906 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char CM1CON0 __attribute__((address(0x107)));
+
+__asm("CM1CON0 equ 0107h");
 
 
 typedef union {
     struct {
-        unsigned STKPTR :5;
+        unsigned C1CH :2;
+        unsigned C1R :1;
         unsigned :1;
-        unsigned STKUNF :1;
-        unsigned STKFUL :1;
+        unsigned C1POL :1;
+        unsigned C1OE :1;
+        unsigned C1OUT :1;
+        unsigned C1ON :1;
     };
     struct {
-        unsigned STKPTR0 :1;
-        unsigned STKPTR1 :1;
-        unsigned STKPTR2 :1;
-        unsigned STKPTR3 :1;
-        unsigned STKPTR4 :1;
+        unsigned C1CH0 :1;
+        unsigned C1CH1 :1;
+    };
+} CM1CON0bits_t;
+extern volatile CM1CON0bits_t CM1CON0bits __attribute__((address(0x107)));
+# 2971 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char CM2CON0 __attribute__((address(0x108)));
+
+__asm("CM2CON0 equ 0108h");
+
+
+typedef union {
+    struct {
+        unsigned C2CH :2;
+        unsigned C2R :1;
+        unsigned :1;
+        unsigned C2POL :1;
+        unsigned C2OE :1;
+        unsigned C2OUT :1;
+        unsigned C2ON :1;
+    };
+    struct {
+        unsigned C2CH0 :1;
+        unsigned C2CH1 :1;
+    };
+} CM2CON0bits_t;
+extern volatile CM2CON0bits_t CM2CON0bits __attribute__((address(0x108)));
+# 3036 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char CM2CON1 __attribute__((address(0x109)));
+
+__asm("CM2CON1 equ 0109h");
+
+
+typedef union {
+    struct {
+        unsigned C2SYNC :1;
+        unsigned T1GSS :1;
         unsigned :2;
-        unsigned STKOVF :1;
+        unsigned C2RSEL :1;
+        unsigned C1RSEL :1;
+        unsigned MC2OUT :1;
+        unsigned MC1OUT :1;
     };
+} CM2CON1bits_t;
+extern volatile CM2CON1bits_t CM2CON1bits __attribute__((address(0x109)));
+# 3087 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char EEDATA __attribute__((address(0x10C)));
+
+__asm("EEDATA equ 010Ch");
+
+
+extern volatile unsigned char EEDAT __attribute__((address(0x10C)));
+
+__asm("EEDAT equ 010Ch");
+
+
+
+
+extern volatile unsigned char EEADR __attribute__((address(0x10D)));
+
+__asm("EEADR equ 010Dh");
+
+
+
+
+extern volatile unsigned char EEDATH __attribute__((address(0x10E)));
+
+__asm("EEDATH equ 010Eh");
+
+
+
+
+extern volatile unsigned char EEADRH __attribute__((address(0x10F)));
+
+__asm("EEADRH equ 010Fh");
+
+
+
+
+extern volatile unsigned char SRCON __attribute__((address(0x185)));
+
+__asm("SRCON equ 0185h");
+
+
+typedef union {
     struct {
-        unsigned SP0 :1;
-        unsigned SP1 :1;
-        unsigned SP2 :1;
-        unsigned SP3 :1;
-        unsigned SP4 :1;
+        unsigned FVREN :1;
+        unsigned :1;
+        unsigned PULSR :1;
+        unsigned PULSS :1;
+        unsigned C2REN :1;
+        unsigned C1SEN :1;
+        unsigned SR0 :1;
+        unsigned SR1 :1;
     };
-} STKPTRbits_t;
-extern volatile STKPTRbits_t STKPTRbits __attribute__((address(0xFFC)));
-# 5739 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile __uint24 TOS __attribute__((address(0xFFD)));
+} SRCONbits_t;
+extern volatile SRCONbits_t SRCONbits __attribute__((address(0x185)));
+# 3177 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char BAUDCTL __attribute__((address(0x187)));
 
+__asm("BAUDCTL equ 0187h");
 
-__asm("TOS equ 0FFDh");
 
+typedef union {
+    struct {
+        unsigned ABDEN :1;
+        unsigned WUE :1;
+        unsigned :1;
+        unsigned BRG16 :1;
+        unsigned SCKP :1;
+        unsigned :1;
+        unsigned RCIDL :1;
+        unsigned ABDOVF :1;
+    };
+} BAUDCTLbits_t;
+extern volatile BAUDCTLbits_t BAUDCTLbits __attribute__((address(0x187)));
+# 3229 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 
+__asm("ANSEL equ 0188h");
 
 
-extern volatile unsigned char TOSL __attribute__((address(0xFFD)));
+typedef union {
+    struct {
+        unsigned ANS0 :1;
+        unsigned ANS1 :1;
+        unsigned ANS2 :1;
+        unsigned ANS3 :1;
+        unsigned ANS4 :1;
+    };
+} ANSELbits_t;
+extern volatile ANSELbits_t ANSELbits __attribute__((address(0x188)));
+# 3273 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 
-__asm("TOSL equ 0FFDh");
+__asm("ANSELH equ 0189h");
 
 
+typedef union {
+    struct {
+        unsigned ANS8 :1;
+        unsigned ANS9 :1;
+        unsigned ANS10 :1;
+        unsigned ANS11 :1;
+        unsigned ANS12 :1;
+        unsigned ANS13 :1;
+    };
+} ANSELHbits_t;
+extern volatile ANSELHbits_t ANSELHbits __attribute__((address(0x189)));
+# 3323 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char EECON1 __attribute__((address(0x18C)));
 
+__asm("EECON1 equ 018Ch");
 
-extern volatile unsigned char TOSH __attribute__((address(0xFFE)));
 
-__asm("TOSH equ 0FFEh");
+typedef union {
+    struct {
+        unsigned RD :1;
+        unsigned WR :1;
+        unsigned WREN :1;
+        unsigned WRERR :1;
+        unsigned :3;
+        unsigned EEPGD :1;
+    };
+} EECON1bits_t;
+extern volatile EECON1bits_t EECON1bits __attribute__((address(0x18C)));
+# 3368 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile unsigned char EECON2 __attribute__((address(0x18D)));
 
+__asm("EECON2 equ 018Dh");
+# 3381 "/opt/microchip/xc8/v2.05/pic/include/pic16f886.h" 3
+extern volatile __bit ABDEN __attribute__((address(0xC38)));
 
 
+extern volatile __bit ABDOVF __attribute__((address(0xC3F)));
 
-extern volatile unsigned char TOSU __attribute__((address(0xFFF)));
 
-__asm("TOSU equ 0FFFh");
-# 5774 "/opt/microchip/xc8/v2.05/pic/include/pic18f452.h" 3
-extern volatile __bit ACKDT __attribute__((address(0x7E2D)));
+extern volatile __bit ACKDT __attribute__((address(0x48D)));
 
 
-extern volatile __bit ACKEN __attribute__((address(0x7E2C)));
+extern volatile __bit ACKEN __attribute__((address(0x48C)));
 
 
-extern volatile __bit ACKSTAT __attribute__((address(0x7E2E)));
+extern volatile __bit ACKSTAT __attribute__((address(0x48E)));
 
 
-extern volatile __bit ADCAL __attribute__((address(0x7E17)));
+extern volatile __bit ADCS0 __attribute__((address(0xFE)));
 
 
-extern volatile __bit ADCS0 __attribute__((address(0x7E16)));
+extern volatile __bit ADCS1 __attribute__((address(0xFF)));
 
 
-extern volatile __bit ADCS1 __attribute__((address(0x7E17)));
+extern volatile __bit ADDEN __attribute__((address(0xC3)));
 
 
-extern volatile __bit ADCS2 __attribute__((address(0x7E0E)));
+extern volatile __bit ADFM __attribute__((address(0x4FF)));
 
 
-extern volatile __bit ADDEN __attribute__((address(0x7D5B)));
+extern volatile __bit ADIE __attribute__((address(0x466)));
 
 
-extern volatile __bit ADFM __attribute__((address(0x7E0F)));
+extern volatile __bit ADIF __attribute__((address(0x66)));
 
 
-extern volatile __bit ADIE __attribute__((address(0x7CEE)));
+extern volatile __bit ADON __attribute__((address(0xF8)));
 
 
-extern volatile __bit ADIF __attribute__((address(0x7CF6)));
+extern volatile __bit ANS0 __attribute__((address(0xC40)));
 
 
-extern volatile __bit ADIP __attribute__((address(0x7CFE)));
+extern volatile __bit ANS1 __attribute__((address(0xC41)));
 
 
-extern volatile __bit ADON __attribute__((address(0x7E10)));
+extern volatile __bit ANS10 __attribute__((address(0xC4A)));
 
 
-extern volatile __bit AN0 __attribute__((address(0x7C00)));
+extern volatile __bit ANS11 __attribute__((address(0xC4B)));
 
 
-extern volatile __bit AN1 __attribute__((address(0x7C01)));
+extern volatile __bit ANS12 __attribute__((address(0xC4C)));
 
 
-extern volatile __bit AN2 __attribute__((address(0x7C02)));
+extern volatile __bit ANS13 __attribute__((address(0xC4D)));
 
 
-extern volatile __bit AN3 __attribute__((address(0x7C03)));
+extern volatile __bit ANS2 __attribute__((address(0xC42)));
 
 
-extern volatile __bit AN4 __attribute__((address(0x7C05)));
+extern volatile __bit ANS3 __attribute__((address(0xC43)));
 
 
-extern volatile __bit AN5 __attribute__((address(0x7C20)));
+extern volatile __bit ANS4 __attribute__((address(0xC44)));
 
 
-extern volatile __bit AN6 __attribute__((address(0x7C21)));
+extern volatile __bit ANS8 __attribute__((address(0xC48)));
 
 
-extern volatile __bit AN7 __attribute__((address(0x7C22)));
+extern volatile __bit ANS9 __attribute__((address(0xC49)));
 
 
-extern volatile __bit BCLIE __attribute__((address(0x7D03)));
+extern volatile __bit BCLIE __attribute__((address(0x46B)));
 
 
-extern volatile __bit BCLIF __attribute__((address(0x7D0B)));
+extern volatile __bit BCLIF __attribute__((address(0x6B)));
 
 
-extern volatile __bit BCLIP __attribute__((address(0x7D13)));
+extern volatile __bit BF __attribute__((address(0x4A0)));
 
 
-extern volatile __bit BF __attribute__((address(0x7E38)));
+extern volatile __bit BRG0 __attribute__((address(0x4C8)));
 
 
-extern volatile __bit BOR __attribute__((address(0x7E80)));
+extern volatile __bit BRG1 __attribute__((address(0x4C9)));
 
 
-extern volatile __bit BRGH __attribute__((address(0x7D62)));
+extern volatile __bit BRG10 __attribute__((address(0x4D2)));
 
 
-extern volatile __bit BRGH1 __attribute__((address(0x7D62)));
+extern volatile __bit BRG11 __attribute__((address(0x4D3)));
 
 
-extern volatile __bit CARRY __attribute__((address(0x7EC0)));
+extern volatile __bit BRG12 __attribute__((address(0x4D4)));
 
 
-extern volatile __bit CCP1 __attribute__((address(0x7C12)));
+extern volatile __bit BRG13 __attribute__((address(0x4D5)));
 
 
-extern volatile __bit CCP10 __attribute__((address(0x7C22)));
+extern volatile __bit BRG14 __attribute__((address(0x4D6)));
 
 
-extern volatile __bit CCP1IE __attribute__((address(0x7CEA)));
+extern volatile __bit BRG15 __attribute__((address(0x4D7)));
 
 
-extern volatile __bit CCP1IF __attribute__((address(0x7CF2)));
+extern volatile __bit BRG16 __attribute__((address(0xC3B)));
 
 
-extern volatile __bit CCP1IP __attribute__((address(0x7CFA)));
+extern volatile __bit BRG2 __attribute__((address(0x4CA)));
 
 
-extern volatile __bit CCP1M0 __attribute__((address(0x7DE8)));
+extern volatile __bit BRG3 __attribute__((address(0x4CB)));
 
 
-extern volatile __bit CCP1M1 __attribute__((address(0x7DE9)));
+extern volatile __bit BRG4 __attribute__((address(0x4CC)));
 
 
-extern volatile __bit CCP1M2 __attribute__((address(0x7DEA)));
+extern volatile __bit BRG5 __attribute__((address(0x4CD)));
 
 
-extern volatile __bit CCP1M3 __attribute__((address(0x7DEB)));
+extern volatile __bit BRG6 __attribute__((address(0x4CE)));
 
 
-extern volatile __bit CCP1X __attribute__((address(0x7DED)));
+extern volatile __bit BRG7 __attribute__((address(0x4CF)));
 
 
-extern volatile __bit CCP1Y __attribute__((address(0x7DEC)));
+extern volatile __bit BRG8 __attribute__((address(0x4D0)));
 
 
-extern volatile __bit CCP2A __attribute__((address(0x7C0B)));
+extern volatile __bit BRG9 __attribute__((address(0x4D1)));
 
 
-extern volatile __bit CCP2IE __attribute__((address(0x7D00)));
+extern volatile __bit BRGH __attribute__((address(0x4C2)));
 
 
-extern volatile __bit CCP2IF __attribute__((address(0x7D08)));
+extern volatile __bit C1CH0 __attribute__((address(0x838)));
 
 
-extern volatile __bit CCP2IP __attribute__((address(0x7D10)));
+extern volatile __bit C1CH1 __attribute__((address(0x839)));
 
 
-extern volatile __bit CCP2M0 __attribute__((address(0x7DD0)));
+extern volatile __bit C1IE __attribute__((address(0x46D)));
 
 
-extern volatile __bit CCP2M1 __attribute__((address(0x7DD1)));
+extern volatile __bit C1IF __attribute__((address(0x6D)));
 
 
-extern volatile __bit CCP2M2 __attribute__((address(0x7DD2)));
+extern volatile __bit C1OE __attribute__((address(0x83D)));
 
 
-extern volatile __bit CCP2M3 __attribute__((address(0x7DD3)));
+extern volatile __bit C1ON __attribute__((address(0x83F)));
 
 
-extern volatile __bit CCP2X __attribute__((address(0x7DD5)));
+extern volatile __bit C1OUT __attribute__((address(0x83E)));
 
 
-extern volatile __bit CCP2Y __attribute__((address(0x7DD4)));
+extern volatile __bit C1POL __attribute__((address(0x83C)));
 
 
-extern volatile __bit CCP2_PA2 __attribute__((address(0x7C0B)));
+extern volatile __bit C1R __attribute__((address(0x83A)));
 
 
-extern volatile __bit CFGS __attribute__((address(0x7D36)));
+extern volatile __bit C1RSEL __attribute__((address(0x84D)));
 
 
-extern volatile __bit CHS0 __attribute__((address(0x7E13)));
+extern volatile __bit C1SEN __attribute__((address(0xC2D)));
 
 
-extern volatile __bit CHS1 __attribute__((address(0x7E14)));
+extern volatile __bit C2CH0 __attribute__((address(0x840)));
 
 
-extern volatile __bit CHS2 __attribute__((address(0x7E15)));
+extern volatile __bit C2CH1 __attribute__((address(0x841)));
 
 
-extern volatile __bit CHSN3 __attribute__((address(0x7E0B)));
+extern volatile __bit C2IE __attribute__((address(0x46E)));
 
 
-extern volatile __bit CK __attribute__((address(0x7C16)));
+extern volatile __bit C2IF __attribute__((address(0x6E)));
 
 
-extern volatile __bit CKE __attribute__((address(0x7E3E)));
+extern volatile __bit C2OE __attribute__((address(0x845)));
 
 
-extern volatile __bit CKP __attribute__((address(0x7E34)));
+extern volatile __bit C2ON __attribute__((address(0x847)));
 
 
-extern volatile __bit CLKO __attribute__((address(0x7C06)));
+extern volatile __bit C2OUT __attribute__((address(0x846)));
 
 
-extern volatile __bit CREN __attribute__((address(0x7D5C)));
+extern volatile __bit C2POL __attribute__((address(0x844)));
 
 
-extern volatile __bit CS __attribute__((address(0x7C22)));
+extern volatile __bit C2R __attribute__((address(0x842)));
 
 
-extern volatile __bit CSRC __attribute__((address(0x7D67)));
+extern volatile __bit C2REN __attribute__((address(0xC2C)));
 
 
-extern volatile __bit CSRC1 __attribute__((address(0x7D67)));
+extern volatile __bit C2RSEL __attribute__((address(0x84C)));
 
 
-extern volatile __bit DA __attribute__((address(0x7E3D)));
+extern volatile __bit C2SYNC __attribute__((address(0x848)));
 
 
-extern volatile __bit DATA_ADDRESS __attribute__((address(0x7E3D)));
+extern volatile __bit CARRY __attribute__((address(0x18)));
 
 
-extern volatile __bit DC __attribute__((address(0x7EC1)));
+extern volatile __bit CCP1IE __attribute__((address(0x462)));
 
 
-extern volatile __bit DC1B0 __attribute__((address(0x7DEC)));
+extern volatile __bit CCP1IF __attribute__((address(0x62)));
 
 
-extern volatile __bit DC1B1 __attribute__((address(0x7DED)));
+extern volatile __bit CCP1M0 __attribute__((address(0xB8)));
 
 
-extern volatile __bit DC2B0 __attribute__((address(0x7DD4)));
+extern volatile __bit CCP1M1 __attribute__((address(0xB9)));
 
 
-extern volatile __bit DC2B1 __attribute__((address(0x7DD5)));
+extern volatile __bit CCP1M2 __attribute__((address(0xBA)));
 
 
-extern volatile __bit DCCPX __attribute__((address(0x7DD5)));
+extern volatile __bit CCP1M3 __attribute__((address(0xBB)));
 
 
-extern volatile __bit DONE __attribute__((address(0x7E12)));
+extern volatile __bit CCP1X __attribute__((address(0xBD)));
 
 
-extern volatile __bit DT __attribute__((address(0x7C17)));
+extern volatile __bit CCP1Y __attribute__((address(0xBC)));
 
 
-extern volatile __bit D_A __attribute__((address(0x7E3D)));
+extern volatile __bit CCP2IE __attribute__((address(0x468)));
 
 
-extern volatile __bit D_NOT_A __attribute__((address(0x7E3D)));
+extern volatile __bit CCP2IF __attribute__((address(0x68)));
 
 
-extern volatile __bit D_nA __attribute__((address(0x7E3D)));
+extern volatile __bit CCP2M0 __attribute__((address(0xE8)));
 
 
-extern volatile __bit EBDIS __attribute__((address(0x7E5F)));
+extern volatile __bit CCP2M1 __attribute__((address(0xE9)));
 
 
-extern volatile __bit EEFS __attribute__((address(0x7D36)));
+extern volatile __bit CCP2M2 __attribute__((address(0xEA)));
 
 
-extern volatile __bit EEIE __attribute__((address(0x7D04)));
+extern volatile __bit CCP2M3 __attribute__((address(0xEB)));
 
 
-extern volatile __bit EEIF __attribute__((address(0x7D0C)));
+extern volatile __bit CCP2X __attribute__((address(0xED)));
 
 
-extern volatile __bit EEIP __attribute__((address(0x7D14)));
+extern volatile __bit CCP2Y __attribute__((address(0xEC)));
 
 
-extern volatile __bit EEPGD __attribute__((address(0x7D37)));
+extern volatile __bit CHS0 __attribute__((address(0xFA)));
 
 
-extern volatile __bit FERR __attribute__((address(0x7D5A)));
+extern volatile __bit CHS1 __attribute__((address(0xFB)));
 
 
-extern volatile __bit FREE __attribute__((address(0x7D34)));
+extern volatile __bit CHS2 __attribute__((address(0xFC)));
 
 
-extern volatile __bit GCEN __attribute__((address(0x7E2F)));
+extern volatile __bit CHS3 __attribute__((address(0xFD)));
 
 
-extern volatile __bit GIE __attribute__((address(0x7F97)));
+extern volatile __bit CKE __attribute__((address(0x4A6)));
 
 
-extern volatile __bit GIEH __attribute__((address(0x7F97)));
+extern volatile __bit CKP __attribute__((address(0xA4)));
 
 
-extern volatile __bit GIEL __attribute__((address(0x7F96)));
+extern volatile __bit CREN __attribute__((address(0xC4)));
 
 
-extern volatile __bit GIE_GIEH __attribute__((address(0x7F97)));
+extern volatile __bit CSRC __attribute__((address(0x4C7)));
 
 
-extern volatile __bit GO __attribute__((address(0x7E12)));
+extern volatile __bit DATA_ADDRESS __attribute__((address(0x4A5)));
 
 
-extern volatile __bit GODONE __attribute__((address(0x7E12)));
+extern volatile __bit DC __attribute__((address(0x19)));
 
 
-extern volatile __bit GO_DONE __attribute__((address(0x7E12)));
+extern volatile __bit DC1B0 __attribute__((address(0xBC)));
 
 
-extern volatile __bit GO_NOT_DONE __attribute__((address(0x7E12)));
+extern volatile __bit DC1B1 __attribute__((address(0xBD)));
 
 
-extern volatile __bit GO_nDONE __attribute__((address(0x7E12)));
+extern volatile __bit DC2B0 __attribute__((address(0xEC)));
 
 
-extern volatile __bit I2C_DAT __attribute__((address(0x7E3D)));
+extern volatile __bit DC2B1 __attribute__((address(0xED)));
 
 
-extern volatile __bit I2C_DATA __attribute__((address(0x7E3D)));
+extern volatile __bit D_A __attribute__((address(0x4A5)));
 
 
-extern volatile __bit I2C_READ __attribute__((address(0x7E3A)));
+extern volatile __bit D_nA __attribute__((address(0x4A5)));
 
 
-extern volatile __bit I2C_START __attribute__((address(0x7E3B)));
+extern volatile __bit ECCPAS0 __attribute__((address(0x4E4)));
 
 
-extern volatile __bit I2C_STOP __attribute__((address(0x7E3C)));
+extern volatile __bit ECCPAS1 __attribute__((address(0x4E5)));
 
 
-extern volatile __bit IBF __attribute__((address(0x7CB7)));
+extern volatile __bit ECCPAS2 __attribute__((address(0x4E6)));
 
 
-extern volatile __bit IBOV __attribute__((address(0x7CB5)));
+extern volatile __bit ECCPASE __attribute__((address(0x4E7)));
 
 
-extern volatile __bit INT0 __attribute__((address(0x7C08)));
+extern volatile __bit EEIE __attribute__((address(0x46C)));
 
 
-extern volatile __bit INT0E __attribute__((address(0x7F94)));
+extern volatile __bit EEIF __attribute__((address(0x6C)));
 
 
-extern volatile __bit INT0F __attribute__((address(0x7F91)));
+extern volatile __bit EEPGD __attribute__((address(0xC67)));
 
 
-extern volatile __bit INT0IE __attribute__((address(0x7F94)));
+extern volatile __bit FERR __attribute__((address(0xC2)));
 
 
-extern volatile __bit INT0IF __attribute__((address(0x7F91)));
+extern volatile __bit FVREN __attribute__((address(0xC28)));
 
 
-extern volatile __bit INT1 __attribute__((address(0x7C09)));
+extern volatile __bit GCEN __attribute__((address(0x48F)));
 
 
-extern volatile __bit INT1E __attribute__((address(0x7F83)));
+extern volatile __bit GIE __attribute__((address(0x5F)));
 
 
-extern volatile __bit INT1F __attribute__((address(0x7F80)));
+extern volatile __bit GO __attribute__((address(0xF9)));
 
 
-extern volatile __bit INT1IE __attribute__((address(0x7F83)));
+extern volatile __bit GO_DONE __attribute__((address(0xF9)));
 
 
-extern volatile __bit INT1IF __attribute__((address(0x7F80)));
+extern volatile __bit GO_nDONE __attribute__((address(0xF9)));
 
 
-extern volatile __bit INT1IP __attribute__((address(0x7F86)));
+extern volatile __bit HTS __attribute__((address(0x47A)));
 
 
-extern volatile __bit INT1P __attribute__((address(0x7F86)));
+extern volatile __bit I2C_DATA __attribute__((address(0x4A5)));
 
 
-extern volatile __bit INT2 __attribute__((address(0x7C0A)));
+extern volatile __bit I2C_READ __attribute__((address(0x4A2)));
 
 
-extern volatile __bit INT2E __attribute__((address(0x7F84)));
+extern volatile __bit I2C_START __attribute__((address(0x4A3)));
 
 
-extern volatile __bit INT2F __attribute__((address(0x7F81)));
+extern volatile __bit I2C_STOP __attribute__((address(0x4A4)));
 
 
-extern volatile __bit INT2IE __attribute__((address(0x7F84)));
+extern volatile __bit INTE __attribute__((address(0x5C)));
 
 
-extern volatile __bit INT2IF __attribute__((address(0x7F81)));
+extern volatile __bit INTEDG __attribute__((address(0x40E)));
 
 
-extern volatile __bit INT2IP __attribute__((address(0x7F87)));
+extern volatile __bit INTF __attribute__((address(0x59)));
 
 
-extern volatile __bit INT2P __attribute__((address(0x7F87)));
+extern volatile __bit IOCB0 __attribute__((address(0x4B0)));
 
 
-extern volatile __bit INTEDG0 __attribute__((address(0x7F8E)));
+extern volatile __bit IOCB1 __attribute__((address(0x4B1)));
 
 
-extern volatile __bit INTEDG1 __attribute__((address(0x7F8D)));
+extern volatile __bit IOCB2 __attribute__((address(0x4B2)));
 
 
-extern volatile __bit INTEDG2 __attribute__((address(0x7F8C)));
+extern volatile __bit IOCB3 __attribute__((address(0x4B3)));
 
 
-extern volatile __bit IPEN __attribute__((address(0x7E87)));
+extern volatile __bit IOCB4 __attribute__((address(0x4B4)));
 
 
-extern volatile __bit IRVST __attribute__((address(0x7E95)));
+extern volatile __bit IOCB5 __attribute__((address(0x4B5)));
 
 
-extern volatile __bit LA0 __attribute__((address(0x7C48)));
+extern volatile __bit IOCB6 __attribute__((address(0x4B6)));
 
 
-extern volatile __bit LA1 __attribute__((address(0x7C49)));
+extern volatile __bit IOCB7 __attribute__((address(0x4B7)));
 
 
-extern volatile __bit LA2 __attribute__((address(0x7C4A)));
+extern volatile __bit IRCF0 __attribute__((address(0x47C)));
 
 
-extern volatile __bit LA3 __attribute__((address(0x7C4B)));
+extern volatile __bit IRCF1 __attribute__((address(0x47D)));
 
 
-extern volatile __bit LA4 __attribute__((address(0x7C4C)));
+extern volatile __bit IRCF2 __attribute__((address(0x47E)));
 
 
-extern volatile __bit LA5 __attribute__((address(0x7C4D)));
+extern volatile __bit IRP __attribute__((address(0x1F)));
 
 
-extern volatile __bit LA6 __attribute__((address(0x7C4E)));
+extern volatile __bit LTS __attribute__((address(0x479)));
 
 
-extern volatile __bit LATA0 __attribute__((address(0x7C48)));
+extern volatile __bit MC1OUT __attribute__((address(0x84F)));
 
 
-extern volatile __bit LATA1 __attribute__((address(0x7C49)));
+extern volatile __bit MC2OUT __attribute__((address(0x84E)));
 
 
-extern volatile __bit LATA2 __attribute__((address(0x7C4A)));
+extern volatile __bit MSK0 __attribute__((address(0x498)));
 
 
-extern volatile __bit LATA3 __attribute__((address(0x7C4B)));
+extern volatile __bit MSK1 __attribute__((address(0x499)));
 
 
-extern volatile __bit LATA4 __attribute__((address(0x7C4C)));
+extern volatile __bit MSK2 __attribute__((address(0x49A)));
 
 
-extern volatile __bit LATA5 __attribute__((address(0x7C4D)));
+extern volatile __bit MSK3 __attribute__((address(0x49B)));
 
 
-extern volatile __bit LATA6 __attribute__((address(0x7C4E)));
+extern volatile __bit MSK4 __attribute__((address(0x49C)));
 
 
-extern volatile __bit LATB0 __attribute__((address(0x7C50)));
+extern volatile __bit MSK5 __attribute__((address(0x49D)));
 
 
-extern volatile __bit LATB1 __attribute__((address(0x7C51)));
+extern volatile __bit MSK6 __attribute__((address(0x49E)));
 
 
-extern volatile __bit LATB2 __attribute__((address(0x7C52)));
+extern volatile __bit MSK7 __attribute__((address(0x49F)));
 
 
-extern volatile __bit LATB3 __attribute__((address(0x7C53)));
+extern volatile __bit OERR __attribute__((address(0xC1)));
 
 
-extern volatile __bit LATB4 __attribute__((address(0x7C54)));
+extern volatile __bit OSFIE __attribute__((address(0x46F)));
 
 
-extern volatile __bit LATB5 __attribute__((address(0x7C55)));
+extern volatile __bit OSFIF __attribute__((address(0x6F)));
 
 
-extern volatile __bit LATB6 __attribute__((address(0x7C56)));
+extern volatile __bit OSTS __attribute__((address(0x47B)));
 
 
-extern volatile __bit LATB7 __attribute__((address(0x7C57)));
+extern volatile __bit P1M0 __attribute__((address(0xBE)));
 
 
-extern volatile __bit LATC0 __attribute__((address(0x7C58)));
+extern volatile __bit P1M1 __attribute__((address(0xBF)));
 
 
-extern volatile __bit LATC1 __attribute__((address(0x7C59)));
+extern volatile __bit PDC0 __attribute__((address(0x4D8)));
 
 
-extern volatile __bit LATC2 __attribute__((address(0x7C5A)));
+extern volatile __bit PDC1 __attribute__((address(0x4D9)));
 
 
-extern volatile __bit LATC3 __attribute__((address(0x7C5B)));
+extern volatile __bit PDC2 __attribute__((address(0x4DA)));
 
 
-extern volatile __bit LATC4 __attribute__((address(0x7C5C)));
+extern volatile __bit PDC3 __attribute__((address(0x4DB)));
 
 
-extern volatile __bit LATC5 __attribute__((address(0x7C5D)));
+extern volatile __bit PDC4 __attribute__((address(0x4DC)));
 
 
-extern volatile __bit LATC6 __attribute__((address(0x7C5E)));
+extern volatile __bit PDC5 __attribute__((address(0x4DD)));
 
 
-extern volatile __bit LATC7 __attribute__((address(0x7C5F)));
+extern volatile __bit PDC6 __attribute__((address(0x4DE)));
 
 
-extern volatile __bit LATD0 __attribute__((address(0x7C60)));
+extern volatile __bit PEIE __attribute__((address(0x5E)));
 
 
-extern volatile __bit LATD1 __attribute__((address(0x7C61)));
+extern volatile __bit PEN __attribute__((address(0x48A)));
 
 
-extern volatile __bit LATD2 __attribute__((address(0x7C62)));
+extern volatile __bit PRSEN __attribute__((address(0x4DF)));
 
 
-extern volatile __bit LATD3 __attribute__((address(0x7C63)));
+extern volatile __bit PS0 __attribute__((address(0x408)));
 
 
-extern volatile __bit LATD4 __attribute__((address(0x7C64)));
+extern volatile __bit PS1 __attribute__((address(0x409)));
 
 
-extern volatile __bit LATD5 __attribute__((address(0x7C65)));
+extern volatile __bit PS2 __attribute__((address(0x40A)));
 
 
-extern volatile __bit LATD6 __attribute__((address(0x7C66)));
+extern volatile __bit PSA __attribute__((address(0x40B)));
 
 
-extern volatile __bit LATD7 __attribute__((address(0x7C67)));
+extern volatile __bit PSSAC0 __attribute__((address(0x4E2)));
 
 
-extern volatile __bit LATE0 __attribute__((address(0x7C68)));
+extern volatile __bit PSSAC1 __attribute__((address(0x4E3)));
 
 
-extern volatile __bit LATE1 __attribute__((address(0x7C69)));
+extern volatile __bit PSSBD0 __attribute__((address(0x4E0)));
 
 
-extern volatile __bit LATE2 __attribute__((address(0x7C6A)));
+extern volatile __bit PSSBD1 __attribute__((address(0x4E1)));
 
 
-extern volatile __bit LB0 __attribute__((address(0x7C50)));
+extern volatile __bit PULSR __attribute__((address(0xC2A)));
 
 
-extern volatile __bit LB1 __attribute__((address(0x7C51)));
+extern volatile __bit PULSS __attribute__((address(0xC2B)));
 
 
-extern volatile __bit LB2 __attribute__((address(0x7C52)));
+extern volatile __bit RA0 __attribute__((address(0x28)));
 
 
-extern volatile __bit LB3 __attribute__((address(0x7C53)));
+extern volatile __bit RA1 __attribute__((address(0x29)));
 
 
-extern volatile __bit LB4 __attribute__((address(0x7C54)));
+extern volatile __bit RA2 __attribute__((address(0x2A)));
 
 
-extern volatile __bit LB5 __attribute__((address(0x7C55)));
+extern volatile __bit RA3 __attribute__((address(0x2B)));
 
 
-extern volatile __bit LB6 __attribute__((address(0x7C56)));
+extern volatile __bit RA4 __attribute__((address(0x2C)));
 
 
-extern volatile __bit LB7 __attribute__((address(0x7C57)));
+extern volatile __bit RA5 __attribute__((address(0x2D)));
 
 
-extern volatile __bit LC0 __attribute__((address(0x7C58)));
+extern volatile __bit RA6 __attribute__((address(0x2E)));
 
 
-extern volatile __bit LC1 __attribute__((address(0x7C59)));
+extern volatile __bit RA7 __attribute__((address(0x2F)));
 
 
-extern volatile __bit LC2 __attribute__((address(0x7C5A)));
+extern volatile __bit RB0 __attribute__((address(0x30)));
 
 
-extern volatile __bit LC3 __attribute__((address(0x7C5B)));
+extern volatile __bit RB1 __attribute__((address(0x31)));
 
 
-extern volatile __bit LC4 __attribute__((address(0x7C5C)));
+extern volatile __bit RB2 __attribute__((address(0x32)));
 
 
-extern volatile __bit LC5 __attribute__((address(0x7C5D)));
+extern volatile __bit RB3 __attribute__((address(0x33)));
 
 
-extern volatile __bit LC6 __attribute__((address(0x7C5E)));
+extern volatile __bit RB4 __attribute__((address(0x34)));
 
 
-extern volatile __bit LC7 __attribute__((address(0x7C5F)));
+extern volatile __bit RB5 __attribute__((address(0x35)));
 
 
-extern volatile __bit LD0 __attribute__((address(0x7C60)));
+extern volatile __bit RB6 __attribute__((address(0x36)));
 
 
-extern volatile __bit LD1 __attribute__((address(0x7C61)));
+extern volatile __bit RB7 __attribute__((address(0x37)));
 
 
-extern volatile __bit LD2 __attribute__((address(0x7C62)));
+extern volatile __bit RBIE __attribute__((address(0x5B)));
 
 
-extern volatile __bit LD3 __attribute__((address(0x7C63)));
+extern volatile __bit RBIF __attribute__((address(0x58)));
 
 
-extern volatile __bit LD4 __attribute__((address(0x7C64)));
+extern volatile __bit RC0 __attribute__((address(0x38)));
 
 
-extern volatile __bit LD5 __attribute__((address(0x7C65)));
+extern volatile __bit RC1 __attribute__((address(0x39)));
 
 
-extern volatile __bit LD6 __attribute__((address(0x7C66)));
+extern volatile __bit RC2 __attribute__((address(0x3A)));
 
 
-extern volatile __bit LD7 __attribute__((address(0x7C67)));
+extern volatile __bit RC3 __attribute__((address(0x3B)));
 
 
-extern volatile __bit LE0 __attribute__((address(0x7C68)));
+extern volatile __bit RC4 __attribute__((address(0x3C)));
 
 
-extern volatile __bit LE1 __attribute__((address(0x7C69)));
+extern volatile __bit RC5 __attribute__((address(0x3D)));
 
 
-extern volatile __bit LE2 __attribute__((address(0x7C6A)));
+extern volatile __bit RC6 __attribute__((address(0x3E)));
 
 
-extern volatile __bit LVDEN __attribute__((address(0x7E94)));
+extern volatile __bit RC7 __attribute__((address(0x3F)));
 
 
-extern volatile __bit LVDIE __attribute__((address(0x7D02)));
+extern volatile __bit RC8_9 __attribute__((address(0xC6)));
 
 
-extern volatile __bit LVDIF __attribute__((address(0x7D0A)));
+extern volatile __bit RC9 __attribute__((address(0xC6)));
 
 
-extern volatile __bit LVDIN __attribute__((address(0x7C05)));
+extern volatile __bit RCD8 __attribute__((address(0xC0)));
 
 
-extern volatile __bit LVDIP __attribute__((address(0x7D12)));
+extern volatile __bit RCEN __attribute__((address(0x48B)));
 
 
-extern volatile __bit LVDL0 __attribute__((address(0x7E90)));
+extern volatile __bit RCIDL __attribute__((address(0xC3E)));
 
 
-extern volatile __bit LVDL1 __attribute__((address(0x7E91)));
+extern volatile __bit RCIE __attribute__((address(0x465)));
 
 
-extern volatile __bit LVDL2 __attribute__((address(0x7E92)));
+extern volatile __bit RCIF __attribute__((address(0x65)));
 
 
-extern volatile __bit LVDL3 __attribute__((address(0x7E93)));
+extern volatile __bit RD __attribute__((address(0xC60)));
 
 
-extern volatile __bit NEGATIVE __attribute__((address(0x7EC4)));
+extern volatile __bit RE3 __attribute__((address(0x4B)));
 
 
-extern volatile __bit NOT_A __attribute__((address(0x7E3D)));
+extern volatile __bit READ_WRITE __attribute__((address(0x4A2)));
 
 
-extern volatile __bit NOT_ADDRESS __attribute__((address(0x7E3D)));
+extern volatile __bit RP0 __attribute__((address(0x1D)));
 
 
-extern volatile __bit NOT_BOR __attribute__((address(0x7E80)));
+extern volatile __bit RP1 __attribute__((address(0x1E)));
 
 
-extern volatile __bit NOT_DONE __attribute__((address(0x7E12)));
+extern volatile __bit RSEN __attribute__((address(0x489)));
 
 
-extern volatile __bit NOT_IPEN __attribute__((address(0x7E87)));
+extern volatile __bit RX9 __attribute__((address(0xC6)));
 
 
-extern volatile __bit NOT_PD __attribute__((address(0x7E82)));
+extern volatile __bit RX9D __attribute__((address(0xC0)));
 
 
-extern volatile __bit NOT_POR __attribute__((address(0x7E81)));
+extern volatile __bit R_W __attribute__((address(0x4A2)));
 
 
-extern volatile __bit NOT_RBPU __attribute__((address(0x7F8F)));
+extern volatile __bit R_nW __attribute__((address(0x4A2)));
 
 
-extern volatile __bit NOT_RC8 __attribute__((address(0x7D5E)));
+extern volatile __bit SBOREN __attribute__((address(0x474)));
 
 
-extern volatile __bit NOT_RI __attribute__((address(0x7E84)));
+extern volatile __bit SCKP __attribute__((address(0xC3C)));
 
 
-extern volatile __bit NOT_T1SYNC __attribute__((address(0x7E6A)));
+extern volatile __bit SCS __attribute__((address(0x478)));
 
 
-extern volatile __bit NOT_T3SYNC __attribute__((address(0x7D8A)));
+extern volatile __bit SEN __attribute__((address(0x488)));
 
 
-extern volatile __bit NOT_TO __attribute__((address(0x7E83)));
+extern volatile __bit SENDB __attribute__((address(0x4C3)));
 
 
-extern volatile __bit NOT_TX8 __attribute__((address(0x7D66)));
+extern volatile __bit SMP __attribute__((address(0x4A7)));
 
 
-extern volatile __bit NOT_W __attribute__((address(0x7E3A)));
+extern volatile __bit SPEN __attribute__((address(0xC7)));
 
 
-extern volatile __bit NOT_WRITE __attribute__((address(0x7E3A)));
+extern volatile __bit SR0 __attribute__((address(0xC2E)));
 
 
-extern volatile __bit OBF __attribute__((address(0x7CB6)));
+extern volatile __bit SR1 __attribute__((address(0xC2F)));
 
 
-extern volatile __bit OERR __attribute__((address(0x7D59)));
+extern volatile __bit SREN __attribute__((address(0xC5)));
 
 
-extern volatile __bit OSC2 __attribute__((address(0x7C06)));
+extern volatile __bit SSPEN __attribute__((address(0xA5)));
 
 
-extern volatile __bit OV __attribute__((address(0x7EC3)));
+extern volatile __bit SSPIE __attribute__((address(0x463)));
 
 
-extern volatile __bit OVERFLOW __attribute__((address(0x7EC3)));
+extern volatile __bit SSPIF __attribute__((address(0x63)));
 
 
-extern volatile __bit PA1 __attribute__((address(0x7C12)));
+extern volatile __bit SSPM0 __attribute__((address(0xA0)));
 
 
-extern volatile __bit PA2 __attribute__((address(0x7C11)));
+extern volatile __bit SSPM1 __attribute__((address(0xA1)));
 
 
-extern volatile __bit PB2 __attribute__((address(0x7C22)));
+extern volatile __bit SSPM2 __attribute__((address(0xA2)));
 
 
-extern volatile __bit PC2 __attribute__((address(0x7C21)));
+extern volatile __bit SSPM3 __attribute__((address(0xA3)));
 
 
-extern volatile __bit PCFG0 __attribute__((address(0x7E08)));
+extern volatile __bit SSPOV __attribute__((address(0xA6)));
 
 
-extern volatile __bit PCFG1 __attribute__((address(0x7E09)));
+extern volatile __bit STRA __attribute__((address(0x4E8)));
 
 
-extern volatile __bit PCFG2 __attribute__((address(0x7E0A)));
+extern volatile __bit STRB __attribute__((address(0x4E9)));
 
 
-extern volatile __bit PCFG3 __attribute__((address(0x7E0B)));
+extern volatile __bit STRC __attribute__((address(0x4EA)));
 
 
-extern volatile __bit PD __attribute__((address(0x7E82)));
+extern volatile __bit STRD __attribute__((address(0x4EB)));
 
 
-extern volatile __bit PD2 __attribute__((address(0x7C20)));
+extern volatile __bit STRSYNC __attribute__((address(0x4EC)));
 
 
-extern volatile __bit PEIE __attribute__((address(0x7F96)));
+extern volatile __bit SWDTEN __attribute__((address(0x828)));
 
 
-extern volatile __bit PEIE_GIEL __attribute__((address(0x7F96)));
+extern volatile __bit SYNC __attribute__((address(0x4C4)));
 
 
-extern volatile __bit PEN __attribute__((address(0x7E2A)));
+extern volatile __bit T0CS __attribute__((address(0x40D)));
 
 
-extern volatile __bit PGC __attribute__((address(0x7C0E)));
+extern volatile __bit T0IE __attribute__((address(0x5D)));
 
 
-extern volatile __bit PGD __attribute__((address(0x7C0F)));
+extern volatile __bit T0IF __attribute__((address(0x5A)));
 
 
-extern volatile __bit PGM __attribute__((address(0x7C0D)));
+extern volatile __bit T0SE __attribute__((address(0x40C)));
 
 
-extern volatile __bit POR __attribute__((address(0x7E81)));
+extern volatile __bit T1CKPS0 __attribute__((address(0x84)));
 
 
-extern volatile __bit PSA __attribute__((address(0x7EAB)));
+extern volatile __bit T1CKPS1 __attribute__((address(0x85)));
 
 
-extern volatile __bit PSP0 __attribute__((address(0x7C18)));
+extern volatile __bit T1GINV __attribute__((address(0x87)));
 
 
-extern volatile __bit PSP1 __attribute__((address(0x7C19)));
+extern volatile __bit T1GIV __attribute__((address(0x87)));
 
 
-extern volatile __bit PSP2 __attribute__((address(0x7C1A)));
+extern volatile __bit T1GSS __attribute__((address(0x849)));
 
 
-extern volatile __bit PSP3 __attribute__((address(0x7C1B)));
+extern volatile __bit T1INSYNC __attribute__((address(0x82)));
 
 
-extern volatile __bit PSP4 __attribute__((address(0x7C1C)));
+extern volatile __bit T1OSCEN __attribute__((address(0x83)));
 
 
-extern volatile __bit PSP5 __attribute__((address(0x7C1D)));
+extern volatile __bit T1SYNC __attribute__((address(0x82)));
 
 
-extern volatile __bit PSP6 __attribute__((address(0x7C1E)));
+extern volatile __bit T2CKPS0 __attribute__((address(0x90)));
 
 
-extern volatile __bit PSP7 __attribute__((address(0x7C1F)));
+extern volatile __bit T2CKPS1 __attribute__((address(0x91)));
 
 
-extern volatile __bit PSPIE __attribute__((address(0x7CEF)));
+extern volatile __bit TMR0IE __attribute__((address(0x5D)));
 
 
-extern volatile __bit PSPIF __attribute__((address(0x7CF7)));
+extern volatile __bit TMR0IF __attribute__((address(0x5A)));
 
 
-extern volatile __bit PSPIP __attribute__((address(0x7CFF)));
+extern volatile __bit TMR1CS __attribute__((address(0x81)));
 
 
-extern volatile __bit PSPMODE __attribute__((address(0x7CB4)));
+extern volatile __bit TMR1GE __attribute__((address(0x86)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA0 __attribute__((address(0x7C00)));
+extern volatile __bit TMR1IE __attribute__((address(0x460)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA1 __attribute__((address(0x7C01)));
+extern volatile __bit TMR1IF __attribute__((address(0x60)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA2 __attribute__((address(0x7C02)));
+extern volatile __bit TMR1ON __attribute__((address(0x80)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA3 __attribute__((address(0x7C03)));
+extern volatile __bit TMR2IE __attribute__((address(0x461)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA4 __attribute__((address(0x7C04)));
+extern volatile __bit TMR2IF __attribute__((address(0x61)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA5 __attribute__((address(0x7C05)));
+extern volatile __bit TMR2ON __attribute__((address(0x92)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RA6 __attribute__((address(0x7C06)));
+extern volatile __bit TOUTPS0 __attribute__((address(0x93)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB0 __attribute__((address(0x7C08)));
+extern volatile __bit TOUTPS1 __attribute__((address(0x94)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB1 __attribute__((address(0x7C09)));
+extern volatile __bit TOUTPS2 __attribute__((address(0x95)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB2 __attribute__((address(0x7C0A)));
+extern volatile __bit TOUTPS3 __attribute__((address(0x96)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB3 __attribute__((address(0x7C0B)));
+extern volatile __bit TRISA0 __attribute__((address(0x428)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB4 __attribute__((address(0x7C0C)));
+extern volatile __bit TRISA1 __attribute__((address(0x429)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB5 __attribute__((address(0x7C0D)));
+extern volatile __bit TRISA2 __attribute__((address(0x42A)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB6 __attribute__((address(0x7C0E)));
+extern volatile __bit TRISA3 __attribute__((address(0x42B)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RB7 __attribute__((address(0x7C0F)));
+extern volatile __bit TRISA4 __attribute__((address(0x42C)));
 
 
-extern volatile __bit RBIE __attribute__((address(0x7F93)));
+extern volatile __bit TRISA5 __attribute__((address(0x42D)));
 
 
-extern volatile __bit RBIF __attribute__((address(0x7F90)));
+extern volatile __bit TRISA6 __attribute__((address(0x42E)));
 
 
-extern volatile __bit RBIP __attribute__((address(0x7F88)));
+extern volatile __bit TRISA7 __attribute__((address(0x42F)));
 
 
-extern volatile __bit RBPU __attribute__((address(0x7F8F)));
+extern volatile __bit TRISB0 __attribute__((address(0x430)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC0 __attribute__((address(0x7C10)));
+extern volatile __bit TRISB1 __attribute__((address(0x431)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC1 __attribute__((address(0x7C11)));
+extern volatile __bit TRISB2 __attribute__((address(0x432)));
 
 
-extern volatile __bit RC1IE __attribute__((address(0x7CED)));
+extern volatile __bit TRISB3 __attribute__((address(0x433)));
 
 
-extern volatile __bit RC1IF __attribute__((address(0x7CF5)));
+extern volatile __bit TRISB4 __attribute__((address(0x434)));
 
 
-extern volatile __bit RC1IP __attribute__((address(0x7CFD)));
+extern volatile __bit TRISB5 __attribute__((address(0x435)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC2 __attribute__((address(0x7C12)));
+extern volatile __bit TRISB6 __attribute__((address(0x436)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC3 __attribute__((address(0x7C13)));
+extern volatile __bit TRISB7 __attribute__((address(0x437)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC4 __attribute__((address(0x7C14)));
+extern volatile __bit TRISC0 __attribute__((address(0x438)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC5 __attribute__((address(0x7C15)));
+extern volatile __bit TRISC1 __attribute__((address(0x439)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC6 __attribute__((address(0x7C16)));
+extern volatile __bit TRISC2 __attribute__((address(0x43A)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RC7 __attribute__((address(0x7C17)));
+extern volatile __bit TRISC3 __attribute__((address(0x43B)));
 
 
-extern volatile __bit RC8_9 __attribute__((address(0x7D5E)));
+extern volatile __bit TRISC4 __attribute__((address(0x43C)));
 
 
-extern volatile __bit RC9 __attribute__((address(0x7D5E)));
+extern volatile __bit TRISC5 __attribute__((address(0x43D)));
 
 
-extern volatile __bit RCD8 __attribute__((address(0x7D58)));
+extern volatile __bit TRISC6 __attribute__((address(0x43E)));
 
 
-extern volatile __bit RCEN __attribute__((address(0x7E2B)));
+extern volatile __bit TRISC7 __attribute__((address(0x43F)));
 
 
-extern volatile __bit RCIE __attribute__((address(0x7CED)));
+extern volatile __bit TRISE3 __attribute__((address(0x44B)));
 
 
-extern volatile __bit RCIF __attribute__((address(0x7CF5)));
+extern volatile __bit TRMT __attribute__((address(0x4C1)));
 
 
-extern volatile __bit RCIP __attribute__((address(0x7CFD)));
+extern volatile __bit TUN0 __attribute__((address(0x480)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD __attribute__((address(0x7D30)));
+extern volatile __bit TUN1 __attribute__((address(0x481)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD0 __attribute__((address(0x7C18)));
+extern volatile __bit TUN2 __attribute__((address(0x482)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD1 __attribute__((address(0x7C19)));
+extern volatile __bit TUN3 __attribute__((address(0x483)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD16 __attribute__((address(0x7E6F)));
+extern volatile __bit TUN4 __attribute__((address(0x484)));
 
 
-extern volatile __bit RD163 __attribute__((address(0x7D8F)));
+extern volatile __bit TX8_9 __attribute__((address(0x4C6)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD2 __attribute__((address(0x7C1A)));
+extern volatile __bit TX9 __attribute__((address(0x4C6)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD3 __attribute__((address(0x7C1B)));
+extern volatile __bit TX9D __attribute__((address(0x4C0)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD4 __attribute__((address(0x7C1C)));
+extern volatile __bit TXD8 __attribute__((address(0x4C0)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD5 __attribute__((address(0x7C1D)));
+extern volatile __bit TXEN __attribute__((address(0x4C5)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD6 __attribute__((address(0x7C1E)));
+extern volatile __bit TXIE __attribute__((address(0x464)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RD7 __attribute__((address(0x7C1F)));
+extern volatile __bit TXIF __attribute__((address(0x64)));
 
 
-extern volatile __bit RDE __attribute__((address(0x7C20)));
+extern volatile __bit UA __attribute__((address(0x4A1)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RE0 __attribute__((address(0x7C20)));
+extern volatile __bit ULPWUE __attribute__((address(0x475)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RE1 __attribute__((address(0x7C21)));
+extern volatile __bit ULPWUIE __attribute__((address(0x46A)));
 
 
-extern volatile __bit __attribute__((__deprecated__)) RE2 __attribute__((address(0x7C22)));
+extern volatile __bit ULPWUIF __attribute__((address(0x6A)));
 
 
-extern volatile __bit READ_WRITE __attribute__((address(0x7E3A)));
+extern volatile __bit VCFG0 __attribute__((address(0x4FC)));
 
 
-extern volatile __bit RI __attribute__((address(0x7E84)));
+extern volatile __bit VCFG1 __attribute__((address(0x4FD)));
 
 
-extern volatile __bit RSEN __attribute__((address(0x7E29)));
+extern volatile __bit VR0 __attribute__((address(0x4B8)));
 
 
-extern volatile __bit RW __attribute__((address(0x7E3A)));
+extern volatile __bit VR1 __attribute__((address(0x4B9)));
 
 
-extern volatile __bit RX __attribute__((address(0x7C17)));
+extern volatile __bit VR2 __attribute__((address(0x4BA)));
 
 
-extern volatile __bit RX9 __attribute__((address(0x7D5E)));
+extern volatile __bit VR3 __attribute__((address(0x4BB)));
 
 
-extern volatile __bit RX9D __attribute__((address(0x7D58)));
+extern volatile __bit VREN __attribute__((address(0x4BF)));
 
 
-extern volatile __bit R_NOT_W __attribute__((address(0x7E3A)));
+extern volatile __bit VROE __attribute__((address(0x4BE)));
 
 
-extern volatile __bit R_W __attribute__((address(0x7E3A)));
+extern volatile __bit VRR __attribute__((address(0x4BD)));
 
 
-extern volatile __bit R_nW __attribute__((address(0x7E3A)));
+extern volatile __bit VRSS __attribute__((address(0x4BC)));
 
 
-extern volatile __bit SCK __attribute__((address(0x7C13)));
+extern volatile __bit WCOL __attribute__((address(0xA7)));
 
 
-extern volatile __bit SCL __attribute__((address(0x7C13)));
+extern volatile __bit WDTPS0 __attribute__((address(0x829)));
 
 
-extern volatile __bit SCS __attribute__((address(0x7E98)));
+extern volatile __bit WDTPS1 __attribute__((address(0x82A)));
 
 
-extern volatile __bit SDA __attribute__((address(0x7C14)));
+extern volatile __bit WDTPS2 __attribute__((address(0x82B)));
 
 
-extern volatile __bit SDI __attribute__((address(0x7C14)));
+extern volatile __bit WDTPS3 __attribute__((address(0x82C)));
 
 
-extern volatile __bit SDO __attribute__((address(0x7C15)));
+extern volatile __bit WPUB0 __attribute__((address(0x4A8)));
 
 
-extern volatile __bit SEN __attribute__((address(0x7E28)));
+extern volatile __bit WPUB1 __attribute__((address(0x4A9)));
 
 
-extern volatile __bit SMP __attribute__((address(0x7E3F)));
+extern volatile __bit WPUB2 __attribute__((address(0x4AA)));
 
 
-extern volatile __bit SOSCEN __attribute__((address(0x7E6B)));
+extern volatile __bit WPUB3 __attribute__((address(0x4AB)));
 
 
-extern volatile __bit SOSCEN3 __attribute__((address(0x7D8B)));
+extern volatile __bit WPUB4 __attribute__((address(0x4AC)));
 
 
-extern volatile __bit SP0 __attribute__((address(0x7FE0)));
+extern volatile __bit WPUB5 __attribute__((address(0x4AD)));
 
 
-extern volatile __bit SP1 __attribute__((address(0x7FE1)));
+extern volatile __bit WPUB6 __attribute__((address(0x4AE)));
 
 
-extern volatile __bit SP2 __attribute__((address(0x7FE2)));
+extern volatile __bit WPUB7 __attribute__((address(0x4AF)));
 
 
-extern volatile __bit SP3 __attribute__((address(0x7FE3)));
+extern volatile __bit WR __attribute__((address(0xC61)));
 
 
-extern volatile __bit SP4 __attribute__((address(0x7FE4)));
+extern volatile __bit WREN __attribute__((address(0xC62)));
 
 
-extern volatile __bit SPEN __attribute__((address(0x7D5F)));
+extern volatile __bit WRERR __attribute__((address(0xC63)));
 
 
-extern volatile __bit SREN __attribute__((address(0x7D5D)));
+extern volatile __bit WUE __attribute__((address(0xC39)));
 
 
-extern volatile __bit SRENA __attribute__((address(0x7D5D)));
+extern volatile __bit ZERO __attribute__((address(0x1A)));
 
 
-extern volatile __bit SS __attribute__((address(0x7C05)));
+extern volatile __bit nA __attribute__((address(0x4A5)));
 
 
-extern volatile __bit SS2 __attribute__((address(0x7C1F)));
+extern volatile __bit nADDRESS __attribute__((address(0x4A5)));
 
 
-extern volatile __bit SSPEN __attribute__((address(0x7E35)));
+extern volatile __bit nBO __attribute__((address(0x470)));
 
 
-extern volatile __bit SSPIE __attribute__((address(0x7CEB)));
+extern volatile __bit nBOR __attribute__((address(0x470)));
 
 
-extern volatile __bit SSPIF __attribute__((address(0x7CF3)));
+extern volatile __bit nDONE __attribute__((address(0xF9)));
 
 
-extern volatile __bit SSPIP __attribute__((address(0x7CFB)));
+extern volatile __bit nPD __attribute__((address(0x1B)));
 
 
-extern volatile __bit SSPM0 __attribute__((address(0x7E30)));
+extern volatile __bit nPOR __attribute__((address(0x471)));
 
 
-extern volatile __bit SSPM1 __attribute__((address(0x7E31)));
+extern volatile __bit nRBPU __attribute__((address(0x40F)));
 
 
-extern volatile __bit SSPM2 __attribute__((address(0x7E32)));
+extern volatile __bit nRC8 __attribute__((address(0xC6)));
 
 
-extern volatile __bit SSPM3 __attribute__((address(0x7E33)));
+extern volatile __bit nT1SYNC __attribute__((address(0x82)));
 
 
-extern volatile __bit SSPOV __attribute__((address(0x7E36)));
+extern volatile __bit nTO __attribute__((address(0x1C)));
 
 
-extern volatile __bit START __attribute__((address(0x7E3B)));
+extern volatile __bit nTX8 __attribute__((address(0x4C6)));
 
 
-extern volatile __bit STKFUL __attribute__((address(0x7FE7)));
+extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
-extern volatile __bit STKOVF __attribute__((address(0x7FE7)));
-
-
-extern volatile __bit STKPTR0 __attribute__((address(0x7FE0)));
-
-
-extern volatile __bit STKPTR1 __attribute__((address(0x7FE1)));
-
-
-extern volatile __bit STKPTR2 __attribute__((address(0x7FE2)));
-
-
-extern volatile __bit STKPTR3 __attribute__((address(0x7FE3)));
-
-
-extern volatile __bit STKPTR4 __attribute__((address(0x7FE4)));
-
-
-extern volatile __bit STKUNF __attribute__((address(0x7FE6)));
-
-
-extern volatile __bit STOP __attribute__((address(0x7E3C)));
-
-
-extern volatile __bit SWDTE __attribute__((address(0x7E88)));
-
-
-extern volatile __bit SWDTEN __attribute__((address(0x7E88)));
-
-
-extern volatile __bit SYNC __attribute__((address(0x7D64)));
-
-
-extern volatile __bit SYNC1 __attribute__((address(0x7D64)));
-
-
-extern volatile __bit T08BIT __attribute__((address(0x7EAE)));
-
-
-extern volatile __bit T0CKI __attribute__((address(0x7C04)));
-
-
-extern volatile __bit T0CS __attribute__((address(0x7EAD)));
-
-
-extern volatile __bit T0IE __attribute__((address(0x7F95)));
-
-
-extern volatile __bit T0IF __attribute__((address(0x7F92)));
-
-
-extern volatile __bit T0IP __attribute__((address(0x7F8A)));
-
-
-extern volatile __bit T0PS0 __attribute__((address(0x7EA8)));
-
-
-extern volatile __bit T0PS1 __attribute__((address(0x7EA9)));
-
-
-extern volatile __bit T0PS2 __attribute__((address(0x7EAA)));
-
-
-extern volatile __bit T0SE __attribute__((address(0x7EAC)));
-
-
-extern volatile __bit T1CKI __attribute__((address(0x7C10)));
-
-
-extern volatile __bit T1CKPS0 __attribute__((address(0x7E6C)));
-
-
-extern volatile __bit T1CKPS1 __attribute__((address(0x7E6D)));
-
-
-extern volatile __bit T1INSYNC __attribute__((address(0x7E6A)));
-
-
-extern volatile __bit T1OSCEN __attribute__((address(0x7E6B)));
-
-
-extern volatile __bit T1OSI __attribute__((address(0x7C11)));
-
-
-extern volatile __bit T1OSO __attribute__((address(0x7C10)));
-
-
-extern volatile __bit T1RD16 __attribute__((address(0x7E6F)));
-
-
-extern volatile __bit T1SYNC __attribute__((address(0x7E6A)));
-
-
-extern volatile __bit T2CKPS0 __attribute__((address(0x7E50)));
-
-
-extern volatile __bit T2CKPS1 __attribute__((address(0x7E51)));
-
-
-extern volatile __bit T3CCP1 __attribute__((address(0x7D8B)));
-
-
-extern volatile __bit T3CCP2 __attribute__((address(0x7D8E)));
-
-
-extern volatile __bit T3CKPS0 __attribute__((address(0x7D8C)));
-
-
-extern volatile __bit T3CKPS1 __attribute__((address(0x7D8D)));
-
-
-extern volatile __bit T3INSYNC __attribute__((address(0x7D8A)));
-
-
-extern volatile __bit T3RD16 __attribute__((address(0x7D8F)));
-
-
-extern volatile __bit T3SYNC __attribute__((address(0x7D8A)));
-
-
-extern volatile __bit TMR0IE __attribute__((address(0x7F95)));
-
-
-extern volatile __bit TMR0IF __attribute__((address(0x7F92)));
-
-
-extern volatile __bit TMR0IP __attribute__((address(0x7F8A)));
-
-
-extern volatile __bit TMR0ON __attribute__((address(0x7EAF)));
-
-
-extern volatile __bit TMR1CS __attribute__((address(0x7E69)));
-
-
-extern volatile __bit TMR1IE __attribute__((address(0x7CE8)));
-
-
-extern volatile __bit TMR1IF __attribute__((address(0x7CF0)));
-
-
-extern volatile __bit TMR1IP __attribute__((address(0x7CF8)));
-
-
-extern volatile __bit TMR1ON __attribute__((address(0x7E68)));
-
-
-extern volatile __bit TMR2IE __attribute__((address(0x7CE9)));
-
-
-extern volatile __bit TMR2IF __attribute__((address(0x7CF1)));
-
-
-extern volatile __bit TMR2IP __attribute__((address(0x7CF9)));
-
-
-extern volatile __bit TMR2ON __attribute__((address(0x7E52)));
-
-
-extern volatile __bit TMR3CS __attribute__((address(0x7D89)));
-
-
-extern volatile __bit TMR3IE __attribute__((address(0x7D01)));
-
-
-extern volatile __bit TMR3IF __attribute__((address(0x7D09)));
-
-
-extern volatile __bit TMR3IP __attribute__((address(0x7D11)));
-
-
-extern volatile __bit TMR3ON __attribute__((address(0x7D88)));
-
-
-extern volatile __bit TO __attribute__((address(0x7E83)));
-
-
-extern volatile __bit TOUTPS0 __attribute__((address(0x7E53)));
-
-
-extern volatile __bit TOUTPS1 __attribute__((address(0x7E54)));
-
-
-extern volatile __bit TOUTPS2 __attribute__((address(0x7E55)));
-
-
-extern volatile __bit TOUTPS3 __attribute__((address(0x7E56)));
-
-
-extern volatile __bit TRISA0 __attribute__((address(0x7C90)));
-
-
-extern volatile __bit TRISA1 __attribute__((address(0x7C91)));
-
-
-extern volatile __bit TRISA2 __attribute__((address(0x7C92)));
-
-
-extern volatile __bit TRISA3 __attribute__((address(0x7C93)));
-
-
-extern volatile __bit TRISA4 __attribute__((address(0x7C94)));
-
-
-extern volatile __bit TRISA5 __attribute__((address(0x7C95)));
-
-
-extern volatile __bit TRISA6 __attribute__((address(0x7C96)));
-
-
-extern volatile __bit TRISB0 __attribute__((address(0x7C98)));
-
-
-extern volatile __bit TRISB1 __attribute__((address(0x7C99)));
-
-
-extern volatile __bit TRISB2 __attribute__((address(0x7C9A)));
-
-
-extern volatile __bit TRISB3 __attribute__((address(0x7C9B)));
-
-
-extern volatile __bit TRISB4 __attribute__((address(0x7C9C)));
-
-
-extern volatile __bit TRISB5 __attribute__((address(0x7C9D)));
-
-
-extern volatile __bit TRISB6 __attribute__((address(0x7C9E)));
-
-
-extern volatile __bit TRISB7 __attribute__((address(0x7C9F)));
-
-
-extern volatile __bit TRISC0 __attribute__((address(0x7CA0)));
-
-
-extern volatile __bit TRISC1 __attribute__((address(0x7CA1)));
-
-
-extern volatile __bit TRISC2 __attribute__((address(0x7CA2)));
-
-
-extern volatile __bit TRISC3 __attribute__((address(0x7CA3)));
-
-
-extern volatile __bit TRISC4 __attribute__((address(0x7CA4)));
-
-
-extern volatile __bit TRISC5 __attribute__((address(0x7CA5)));
-
-
-extern volatile __bit TRISC6 __attribute__((address(0x7CA6)));
-
-
-extern volatile __bit TRISC7 __attribute__((address(0x7CA7)));
-
-
-extern volatile __bit TRISD0 __attribute__((address(0x7CA8)));
-
-
-extern volatile __bit TRISD1 __attribute__((address(0x7CA9)));
-
-
-extern volatile __bit TRISD2 __attribute__((address(0x7CAA)));
-
-
-extern volatile __bit TRISD3 __attribute__((address(0x7CAB)));
-
-
-extern volatile __bit TRISD4 __attribute__((address(0x7CAC)));
-
-
-extern volatile __bit TRISD5 __attribute__((address(0x7CAD)));
-
-
-extern volatile __bit TRISD6 __attribute__((address(0x7CAE)));
-
-
-extern volatile __bit TRISD7 __attribute__((address(0x7CAF)));
-
-
-extern volatile __bit TRISE0 __attribute__((address(0x7CB0)));
-
-
-extern volatile __bit TRISE1 __attribute__((address(0x7CB1)));
-
-
-extern volatile __bit TRISE2 __attribute__((address(0x7CB2)));
-
-
-extern volatile __bit TRMT __attribute__((address(0x7D61)));
-
-
-extern volatile __bit TRMT1 __attribute__((address(0x7D61)));
-
-
-extern volatile __bit TX __attribute__((address(0x7C16)));
-
-
-extern volatile __bit TX1IE __attribute__((address(0x7CEC)));
-
-
-extern volatile __bit TX1IF __attribute__((address(0x7CF4)));
-
-
-extern volatile __bit TX1IP __attribute__((address(0x7CFC)));
-
-
-extern volatile __bit TX8_9 __attribute__((address(0x7D66)));
-
-
-extern volatile __bit TX9 __attribute__((address(0x7D66)));
-
-
-extern volatile __bit TX91 __attribute__((address(0x7D66)));
-
-
-extern volatile __bit TX9D __attribute__((address(0x7D60)));
-
-
-extern volatile __bit TX9D1 __attribute__((address(0x7D60)));
-
-
-extern volatile __bit TXD8 __attribute__((address(0x7D60)));
-
-
-extern volatile __bit TXEN __attribute__((address(0x7D65)));
-
-
-extern volatile __bit TXEN1 __attribute__((address(0x7D65)));
-
-
-extern volatile __bit TXIE __attribute__((address(0x7CEC)));
-
-
-extern volatile __bit TXIF __attribute__((address(0x7CF4)));
-
-
-extern volatile __bit TXIP __attribute__((address(0x7CFC)));
-
-
-extern volatile __bit UA __attribute__((address(0x7E39)));
-
-
-extern volatile __bit ULPWUIN __attribute__((address(0x7C00)));
-
-
-extern volatile __bit VREFM __attribute__((address(0x7C02)));
-
-
-extern volatile __bit VREFP __attribute__((address(0x7C03)));
-
-
-extern volatile __bit WAIT0 __attribute__((address(0x7E5C)));
-
-
-extern volatile __bit WAIT1 __attribute__((address(0x7E5D)));
-
-
-extern volatile __bit WCOL __attribute__((address(0x7E37)));
-
-
-extern volatile __bit WM0 __attribute__((address(0x7E58)));
-
-
-extern volatile __bit WM1 __attribute__((address(0x7E59)));
-
-
-extern volatile __bit __attribute__((__deprecated__)) WR __attribute__((address(0x7D31)));
-
-
-extern volatile __bit WRE __attribute__((address(0x7C21)));
-
-
-extern volatile __bit WREN __attribute__((address(0x7D32)));
-
-
-extern volatile __bit WRERR __attribute__((address(0x7D33)));
-
-
-extern volatile __bit ZERO __attribute__((address(0x7EC2)));
-
-
-extern volatile __bit nA __attribute__((address(0x7E3D)));
-
-
-extern volatile __bit nADDRESS __attribute__((address(0x7E3D)));
-
-
-extern volatile __bit nBOR __attribute__((address(0x7E80)));
-
-
-extern volatile __bit nDONE __attribute__((address(0x7E12)));
-
-
-extern volatile __bit nIPEN __attribute__((address(0x7E87)));
-
-
-extern volatile __bit nPD __attribute__((address(0x7E82)));
-
-
-extern volatile __bit nPOR __attribute__((address(0x7E81)));
-
-
-extern volatile __bit nRBPU __attribute__((address(0x7F8F)));
-
-
-extern volatile __bit nRC8 __attribute__((address(0x7D5E)));
-
-
-extern volatile __bit nRI __attribute__((address(0x7E84)));
-
-
-extern volatile __bit nT1SYNC __attribute__((address(0x7E6A)));
-
-
-extern volatile __bit nT3SYNC __attribute__((address(0x7D8A)));
-
-
-extern volatile __bit nTO __attribute__((address(0x7E83)));
-
-
-extern volatile __bit nTX8 __attribute__((address(0x7D66)));
-
-
-extern volatile __bit nW __attribute__((address(0x7E3A)));
-
-
-extern volatile __bit nWRITE __attribute__((address(0x7E3A)));
-# 605 "/opt/microchip/xc8/v2.05/pic/include/pic18_chip_select.h" 2 3
-# 9 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 2 3
-# 18 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 3
-__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
-
-
-
-
-
-
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/errata.h" 1 3
-# 27 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 2 3
-# 49 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 3
+extern volatile __bit nWRITE __attribute__((address(0x4A2)));
+# 2694 "/opt/microchip/xc8/v2.05/pic/include/pic_chip_select.h" 2 3
+# 14 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 2 3
+# 30 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 3
 #pragma intrinsic(__nop)
 extern void __nop(void);
-# 154 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 3
-__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
-__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
-__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
-# 174 "/opt/microchip/xc8/v2.05/pic/include/pic18.h" 3
-unsigned char __t1rd16on(void);
-unsigned char __t3rd16on(void);
+# 78 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 3
+__attribute__((__unsupported__("The " "FLASH_READ" " macro function is no longer supported. Please use the MPLAB X MCC."))) unsigned char __flash_read(unsigned short addr);
 
+__attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_write(unsigned short addr, unsigned short data);
+
+__attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_erase(unsigned short addr);
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/eeprom_routines.h" 1 3
+# 114 "/opt/microchip/xc8/v2.05/pic/include/eeprom_routines.h" 3
+extern void eeprom_write(unsigned char addr, unsigned char value);
+extern unsigned char eeprom_read(unsigned char addr);
+# 86 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 2 3
 
 
 
@@ -3805,202 +2366,221 @@ unsigned char __t3rd16on(void);
 extern __attribute__((nonreentrant)) void _delay(unsigned long);
 #pragma intrinsic(_delaywdt)
 extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
-#pragma intrinsic(_delay3)
-extern __attribute__((nonreentrant)) void _delay3(unsigned char);
-# 33 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
+# 137 "/opt/microchip/xc8/v2.05/pic/include/pic.h" 3
+extern __bank0 unsigned char __resetbits;
+extern __bank0 __bit __powerdown;
+extern __bank0 __bit __timeout;
+# 28 "/opt/microchip/xc8/v2.05/pic/include/xc.h" 2 3
 # 3 "./hardware.h" 2
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/stdio.h" 1 3
-# 24 "/opt/microchip/xc8/v2.05/pic/include/c99/stdio.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
-# 10 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 1 3
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/__size_t.h" 1 3
+
+
+
+typedef unsigned size_t;
+# 5 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 2 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/__null.h" 1 3
+# 6 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 2 3
+
+
+
+
+
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/stdarg.h" 1 3
+
+
+
+
+
+
 typedef void * va_list[1];
 
+#pragma intrinsic(__va_start)
+extern void * __va_start(void);
 
-
-
-typedef void * __isoc_va_list[1];
-# 145 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long ssize_t;
-# 254 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef long long off_t;
-# 407 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 25 "/opt/microchip/xc8/v2.05/pic/include/c99/stdio.h" 2 3
-# 52 "/opt/microchip/xc8/v2.05/pic/include/c99/stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
+#pragma intrinsic(__va_arg)
+extern void * __va_arg(void *, ...);
+# 12 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 2 3
+# 43 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 3
+struct __prbuf
+{
+ char * ptr;
+ void (* func)(char);
+};
+# 85 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 3
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/conio.h" 1 3
 
 
 
 
 
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
 
 
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/errno.h" 1 3
+# 29 "/opt/microchip/xc8/v2.05/pic/include/c90/errno.h" 3
+extern int errno;
+# 9 "/opt/microchip/xc8/v2.05/pic/include/c90/conio.h" 2 3
 
+
+
+extern void init_uart(void);
+
+extern char getch(void);
+extern char getche(void);
+extern void putch(char);
+extern void ungetch(char);
+
+extern __bit kbhit(void);
+
+
+
+extern char * cgets(char *);
+extern void cputs(const char *);
+# 86 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 2 3
+
+
+extern int cprintf(char *, ...);
+#pragma printf_check(cprintf)
+
+
+
+extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+# 180 "/opt/microchip/xc8/v2.05/pic/include/c90/stdio.h" 3
+#pragma printf_check(vprintf) const
+#pragma printf_check(vsprintf) const
+
+extern char * gets(char *);
+extern int puts(const char *);
+extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
 
 #pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
 #pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
+extern int sprintf(char *, const char *, ...);
+extern int printf(const char *, ...);
 # 4 "./hardware.h" 2
-
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/string.h" 1 3
-# 25 "/opt/microchip/xc8/v2.05/pic/include/c99/string.h" 3
-# 1 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 1 3
-# 419 "/opt/microchip/xc8/v2.05/pic/include/c99/bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 26 "/opt/microchip/xc8/v2.05/pic/include/c99/string.h" 2 3
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-# 65 "/opt/microchip/xc8/v2.05/pic/include/c99/string.h" 3
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/stdlib.h" 1 3
 
 
 
 
-void *memccpy (void *restrict, const void *restrict, int, size_t);
+
+
+typedef unsigned short wchar_t;
+
+
+
+
+
+
+
+typedef struct {
+ int rem;
+ int quot;
+} div_t;
+typedef struct {
+ unsigned rem;
+ unsigned quot;
+} udiv_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ unsigned long quot;
+ unsigned long rem;
+} uldiv_t;
+# 65 "/opt/microchip/xc8/v2.05/pic/include/c90/stdlib.h" 3
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+
+
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+
+
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+# 104 "/opt/microchip/xc8/v2.05/pic/include/c90/stdlib.h" 3
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+# 5 "./hardware.h" 2
+# 1 "/opt/microchip/xc8/v2.05/pic/include/c90/string.h" 1 3
+# 14 "/opt/microchip/xc8/v2.05/pic/include/c90/string.h" 3
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
+# 36 "/opt/microchip/xc8/v2.05/pic/include/c90/string.h" 3
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
+
+
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
 # 6 "./hardware.h" 2
 
 
@@ -4009,56 +2589,22 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 
 
 
-#pragma config OSC = HS
-#pragma config OSCS = OFF
-
-
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 20
-
-
-#pragma config WDT = OFF
-#pragma config WDTPS = 128
-
-
-#pragma config CCP2MUX = OFF
-
-
-#pragma config STVR = ON
+#pragma config FOSC = XT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = ON
+#pragma config CP = ON
+#pragma config CPD = ON
+#pragma config BOREN = OFF
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
 #pragma config LVP = OFF
 
 
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-
-#pragma config EBTRB = OFF
-# 109 "./hardware.h"
-__asm("\tpsect eeprom_data,class=EEDATA,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+# 71 "./hardware.h"
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
@@ -4099,10 +2645,8 @@ void putsXLCD(char *buffer);
 void putrsXLCD(const char *buffer);
 
 
-unsigned char prTmr1L = 0x84;
-unsigned char prTmr1H = 0x6D;
-unsigned char prTmr0L = 0x68;
-unsigned char prTmr0H = 0xC5;
+unsigned char prTmr1L = 0xB0;
+unsigned char prTmr1H = 0x3C;
 
 unsigned char cntTmr1 = 0;
 
@@ -4130,10 +2674,10 @@ const char UN_BLOCKED = 1;
 
 void initLCD (){
     OpenXLCD(0b00101100 & 0b00111000);
-    _delay((unsigned long)((100)*(12000000/4000.0)));
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     SendCMDLCD(0b00001101);
     SendCMDLCD(0b00000110);
-    _delay((unsigned long)((50)*(12000000/4000.0)));
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     return;
 }
 

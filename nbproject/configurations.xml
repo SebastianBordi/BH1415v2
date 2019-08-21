@@ -33,7 +33,7 @@
     <conf name="default" type="2">
       <toolsSet>
         <developmentServer>localhost</developmentServer>
-        <targetDevice>PIC16F873A</targetDevice>
+        <targetDevice>PIC16F886</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
@@ -188,13 +188,13 @@
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
-        <property key="programoptions.ledbrightness" value="5"/>
+        <property key="programoptions.ledbrightness" value="10"/>
         <property key="programoptions.pgcconfig" value="pull down"/>
         <property key="programoptions.pgcresistor.value" value="4.7"/>
         <property key="programoptions.pgdconfig" value="pull down"/>
         <property key="programoptions.pgdresistor.value" value="4.7"/>
         <property key="programoptions.pgmentry.voltage" value="high"/>
-        <property key="programoptions.pgmspeed" value="Med"/>
+        <property key="programoptions.pgmspeed" value="Min"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value="0-ff"/>

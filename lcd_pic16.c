@@ -7,16 +7,16 @@
 
 #define UPPER
 
-#define DATA_PORT PORTD
-#define TRIS_DATA_PORT  TRISD
+#define DATA_PORT PORTB
+#define TRIS_DATA_PORT  TRISB
 
-#define TRIS_RW TRISDbits.TRISD2
-#define TRIS_RS TRISDbits.TRISD3
-#define TRIS_E  TRISDbits.TRISD1
+#define TRIS_RS TRISBbits.TRISB1
+#define TRIS_RW TRISBbits.TRISB2
+#define TRIS_E  TRISBbits.TRISB3
 
-#define RW_PIN  PORTDbits.RD2
-#define RS_PIN  PORTDbits.RD3
-#define E_PIN   PORTDbits.RD1
+#define RS_PIN  PORTBbits.RB1
+#define RW_PIN  PORTBbits.RB2
+#define E_PIN   PORTBbits.RB3
 
 
 void DelayFor18TCY(void) 

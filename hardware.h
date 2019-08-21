@@ -5,82 +5,44 @@
 #include <string.h>
 
 
-// PIC18F452 Configuration Bit Settings
+// PIC16F886 Configuration Bit Settings
 
 // 'C' source line config statements
 
-// CONFIG1H
-#pragma config OSC = HS
-#pragma config OSCS = OFF
+// CONFIG1
+#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
+#pragma config MCLRE = ON       // RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
+#pragma config CP = ON          // Code Protection bit (Program memory code protection is enabled)
+#pragma config CPD = ON         // Data Code Protection bit (Data memory code protection is enabled)
+#pragma config BOREN = OFF      // Brown Out Reset Selection bits (BOR disabled)
+#pragma config IESO = OFF       // Internal External Switchover bit (Internal/External Switchover mode is disabled)
+#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enabled bit (Fail-Safe Clock Monitor is disabled)
+#pragma config LVP = OFF        // Low Voltage Programming Enable bit (RB3 pin has digital I/O, HV on MCLR must be used for programming)
 
-// CONFIG2L
-#pragma config PWRT = ON
-#pragma config BOR = OFF
-#pragma config BORV = 20
-
-// CONFIG2H
-#pragma config WDT = OFF
-#pragma config WDTPS = 128
-
-// CONFIG3H
-#pragma config CCP2MUX = OFF
-
-// CONFIG4L
-#pragma config STVR = ON
-#pragma config LVP = OFF
-
-// CONFIG5L
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-#pragma config CP2 = OFF
-#pragma config CP3 = OFF
-
-// CONFIG5H
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-// CONFIG6L
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-#pragma config WRT2 = OFF
-#pragma config WRT3 = OFF
-
-// CONFIG6H
-#pragma config WRTC = OFF   
-#pragma config WRTB = OFF   
-#pragma config WRTD = OFF 
-
-// CONFIG7L
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-#pragma config EBTR2 = OFF
-#pragma config EBTR3 = OFF
-
-// CONFIG7H
-#pragma config EBTRB = OFF      
+// CONFIG2
+#pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
+#pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
 
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
-
-
 //Definiciones de hardware
-#define _XTAL_FREQ 12000000        //Oscilador principal 12MHz
+#define _XTAL_FREQ 4000000        //Oscilador principal 12MHz
 
-#define transEn0 PORTBbits.RB3
-#define transEn1 PORTBbits.RB4
+#define transEn PORTCbits.RC0
  
-#define pllEn0  PORTBbits.RB5
-#define pllEn1  PORTBbits.RB6
+#define pllEn  PORTCbits.RC1
 
-#define btnMenu PORTCbits.RC0
-#define btnUp   PORTCbits.RC1
-#define btnDown PORTCbits.RC2
+#define btnMenu PORTAbits.RA4
+#define btnUp   PORTAbits.RA5
+#define btnDown PORTAbits.RA3
 
-#define outBuzz PORTDbits.RD0
+#define outBuzz PORTBbits.RB0
 
-#define bhEnab  PORTEbits.RE0
-#define bhClock PORTEbits.RE1
-#define bhData  PORTEbits.RE2
+#define bhEnab  PORTCbits.RC2
+#define bhClock PORTCbits.RC3
+#define bhData  PORTCbits.RC4
 
 
 /* Display ON/OFF Control defines */
@@ -147,10 +109,8 @@ void putsXLCD(char *buffer);
 void putrsXLCD(const  char *buffer);
 
 //Instancias de variables globales
-unsigned char prTmr1L = 0x84;   //Preloads del Timer 1 
-unsigned char prTmr1H = 0x6D;
-unsigned char prTmr0L = 0x68;   //Preloads del Timer 0
-unsigned char prTmr0H = 0xC5;
+unsigned char prTmr1L = 0xB0;   //Preloads del Timer 1 
+unsigned char prTmr1H = 0x3C;
 
 unsigned char cntTmr1 = 0;      //Registro de postscaler del Timer1
 

@@ -7,7 +7,6 @@
 unsigned char readEEPROM (unsigned char address){
     EEADR = address;
     EECON1bits.EEPGD = 0;
-    EECON1bits.CFGS = 0;
     EECON1bits.RD = 1;
     return EEDATA;
 }
@@ -17,7 +16,6 @@ void writeEEPROM(unsigned char data, unsigned char address){
     EEDATA = data;
 
     EECON1bits.EEPGD = 0;
-    EECON1bits.CFGS = 0;
     EECON1bits.WREN = 1;
 
     INTCONbits.GIE = 0;
