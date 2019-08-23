@@ -32,17 +32,22 @@
 
 #define transEn PORTCbits.RC0
  
-#define pllEn  PORTCbits.RC1
+#define pllEn   PORTCbits.RC4
+
 
 #define btnMenu PORTAbits.RA4
-#define btnUp   PORTAbits.RA5
-#define btnDown PORTAbits.RA3
+#define btnUp   PORTAbits.RA3
+#define btnDown PORTAbits.RA5
 
 #define outBuzz PORTBbits.RB0
 
-#define bhEnab  PORTCbits.RC2
-#define bhClock PORTCbits.RC3
-#define bhData  PORTCbits.RC4
+#define LED3    PORTCbits.RC2
+#define LED2    PORTCbits.RC3
+#define LED1    PORTCbits.RC1
+
+#define bhEnab  PORTCbits.RC5
+#define bhClock PORTCbits.RC6
+#define bhData  PORTCbits.RC7
 
 
 /* Display ON/OFF Control defines */
@@ -72,6 +77,7 @@ __EEPROM_DATA(0x7E, 0x03, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00);
 
 //Instancias de subrrutinas de main.c
 void main (void);                   //Subrrutina principal
+void start (void);
 void config (void);                 //Subrrutina de configuracion del hardware
 void __interrupt() inter (void);     //Subrrutina de interrupciones
 void vumeter (unsigned char val);   //Subrrutina que muetra el valor en el vumetro
@@ -125,6 +131,7 @@ unsigned char functionalStat = 0;    // Estado de funcionamiento (bloqueado o no
 unsigned char stereoEnable = 1;      // Funcion de codificacion estereo
 unsigned char isOnConfig = 0;
 unsigned char level;
+unsigned char i;
 
 char lineOne[17];
 char lineTwo[17];

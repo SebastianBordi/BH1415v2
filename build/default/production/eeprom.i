@@ -2603,11 +2603,12 @@ extern char * strrichr(const char *, int);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 71 "./hardware.h"
+# 76 "./hardware.h"
 __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
+void start (void);
 void config (void);
 void __attribute__((picinterrupt(("")))) inter (void);
 void vumeter (unsigned char val);
@@ -2661,6 +2662,7 @@ unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
 unsigned char isOnConfig = 0;
 unsigned char level;
+unsigned char i;
 
 char lineOne[17];
 char lineTwo[17];

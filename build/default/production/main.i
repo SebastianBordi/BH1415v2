@@ -2603,11 +2603,12 @@ extern char * strrichr(const char *, int);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 71 "./hardware.h"
+# 76 "./hardware.h"
 __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
+void start (void);
 void config (void);
 void __attribute__((picinterrupt(("")))) inter (void);
 void vumeter (unsigned char val);
@@ -2661,6 +2662,7 @@ unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
 unsigned char isOnConfig = 0;
 unsigned char level;
+unsigned char i;
 
 char lineOne[17];
 char lineTwo[17];
@@ -2673,7 +2675,7 @@ const char UN_BLOCKED = 1;
 # 4 "main.c" 2
 
 void main (){
-    char i = 0;
+    unsigned char index;
     _delay((unsigned long)((100)*(4000000/4000.0)));
     config();
     beep(100);
@@ -2685,30 +2687,37 @@ void main (){
     }
     _delay((unsigned long)((100)*(4000000/4000.0)));
     writeFrequency(frequency);
-    beep(100);
-    INTCONbits.GIE = 0;
-    for(i; i < 50; i++){
-        sprintf(lineOne,"LOCKING         ");
-        sprintf(lineTwo,"       FREQUENCY");
-        SetDDRamAddr(0x00);
-        putsXLCD(lineOne);
-        SetDDRamAddr(0x40);
-        putsXLCD(lineTwo);
-        _delay((unsigned long)((90)*(4000000/4000.0)));
-    }
+    start();
 
-    INTCONbits.GIE = 1;
+    SetDDRamAddr(0x00);
+    putrsXLCD("AMPRO      EX-FM");
+    unsigned char decim = frequency % 10;
+    unsigned char integ = frequency / 10;
+    sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
 
-    sprintf(lineOne,"AMPRO      EX-FM");
-    updateLCD();
+    writeFrequency(frequency);
     while(1){
         if(functionalStat == UN_BLOCKED){
             setTransStat(1);
         }else{
             setTransStat(0);
         }
-
-        _delay((unsigned long)((50)*(4000000/4000.0)));
+        if(!PORTAbits.RA4){
+            _delay((unsigned long)((25)*(4000000/4000.0)));
+            while(1){
+                for(i = 0; i>100; i++){
+                    if(PORTAbits.RA4){
+                        _delay((unsigned long)((25)*(4000000/4000.0)));
+                        if(PORTAbits.RA4)break;
+                    }
+                }
+                INTCONbits.GIE = 0;
+                setFrequency();
+                INTCONbits.GIE = 1;
+            }
+        }
     }
 }
 
@@ -2722,7 +2731,7 @@ void config(){
     TRISC = 0b00000000;
     PORTA = 0x00;
     PORTB = 0x00;
-    PORTC = 0x00;
+    PORTC = 0x0E;
 
     T1CON = 0b00010001;
 
@@ -2740,6 +2749,55 @@ void config(){
     return;
 }
 
+void start (){
+    char i = 0;
+    INTCONbits.GIE = 0;
+
+
+    for(i = 0; i < 10; i++){
+        PORTCbits.RC1 = !PORTCbits.RC1;
+        sprintf(lineOne,"TESTING         ");
+        sprintf(lineTwo,"          SUPPLY");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+    }
+    PORTCbits.RC1 = 0;
+
+    for(i = 0; i < 18; i++){
+        PORTCbits.RC3 = !PORTCbits.RC3;
+        sprintf(lineOne,"TESTING         ");
+        sprintf(lineTwo,"     TEMPERATURE");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+    }
+    PORTCbits.RC3 = 0;
+
+    for(i = 0; i < 15; i++){
+        PORTCbits.RC2 = !PORTCbits.RC2;
+        sprintf(lineOne,"TESTING         ");
+        sprintf(lineTwo,"             SWR");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+    }
+    PORTCbits.RC2 = 0;
+    beep(250);
+    INTCONbits.GIE = 1;
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    PORTCbits.RC1 = 1;
+    PORTCbits.RC3 = 1;
+    PORTCbits.RC2 = 1;
+    INTCONbits.GIE = 1;
+}
+
 void __attribute__((picinterrupt(("")))) inter (){
 
     INTCONbits.GIE = 0;
@@ -2749,11 +2807,7 @@ void __attribute__((picinterrupt(("")))) inter (){
         TMR1L = prTmr1L;
         cntTmr1++;
         time();
-        if(cntTmr1 == 10){
-            cntTmr1 = 0;
-
-            updateLCD();
-        }
+        updateLCD();
         PIR1bits.TMR1IF = 0;
     }
     INTCONbits.GIE = 1;
@@ -2809,24 +2863,24 @@ void setFrequency (){
     while(!PORTAbits.RA4)continue;
 
     while(1){
-        if(!PORTAbits.RA5){
+        if(!PORTAbits.RA3){
             if(frequency < 1080)frequency++;
             if(frequency > 1080)frequency = 1080;
             beep(100);
             _delay((unsigned long)((500)*(4000000/4000.0)));
-            while(!PORTAbits.RA5){
+            while(!PORTAbits.RA3){
                 if(frequency < 1080)frequency++;
                 if(frequency > 1080)frequency = 1080;
                 _delay((unsigned long)((100)*(4000000/4000.0)));
             }
         }
 
-        if(!PORTAbits.RA3){
+        if(!PORTAbits.RA5){
             if(frequency > 880)frequency--;
             if(frequency < 880)frequency = 880;
             beep(100);
             _delay((unsigned long)((500)*(4000000/4000.0)));
-            while(!PORTAbits.RA3){
+            while(!PORTAbits.RA5){
                 if(frequency > 880)frequency--;
                 if(frequency < 880)frequency = 880;
                 _delay((unsigned long)((100)*(4000000/4000.0)));
@@ -2844,18 +2898,28 @@ void setFrequency (){
     }
     writeFrequency(frequency);
     isOnConfig = 0;
+
+    for(i; i < 25; i++){
+        sprintf(lineOne,"LOCKING         ");
+        sprintf(lineTwo,"       FREQUENCY");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        _delay((unsigned long)((90)*(4000000/4000.0)));
+    }
     return;
 }
 
 void setTransStat (int stat){
     if(stat == 1){
         PORTCbits.RC0 = 1;
-        PORTCbits.RC1 = 0;
+        PORTCbits.RC4 = 0;
         _delay((unsigned long)((2)*(4000000/4000.0)));
         writeFrequency(frequency);
     }else{
         PORTCbits.RC0 = 0;
-        PORTCbits.RC1 = 1;
+        PORTCbits.RC4 = 1;
         _delay((unsigned long)((2)*(4000000/4000.0)));
         writeFrequency(730);
     }

@@ -266,117 +266,120 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V = BOR40V ]
 "26
 [p x WRT = OFF ]
-"71
-[; ;./hardware.h: 71: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+"76
+[; ;./hardware.h: 76: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 [; <" 	psect eeprom_data,class=EEDATA,delta=2,space=3,noexec ;# ">
 [; <" 	db	0x7E,0x03,0x00,0x00,0x00,0x00,0x01,0x00 ;# ">
-"112
-[; ;./hardware.h: 112: unsigned char prTmr1L = 0xB0;
+"118
+[; ;./hardware.h: 118: unsigned char prTmr1L = 0xB0;
 [v _prTmr1L `uc ~T0 @X0 1 e ]
 [i _prTmr1L
 -> -> 176 `i `uc
 ]
-"113
-[; ;./hardware.h: 113: unsigned char prTmr1H = 0x3C;
+"119
+[; ;./hardware.h: 119: unsigned char prTmr1H = 0x3C;
 [v _prTmr1H `uc ~T0 @X0 1 e ]
 [i _prTmr1H
 -> -> 60 `i `uc
 ]
-"115
-[; ;./hardware.h: 115: unsigned char cntTmr1 = 0;
+"121
+[; ;./hardware.h: 121: unsigned char cntTmr1 = 0;
 [v _cntTmr1 `uc ~T0 @X0 1 e ]
 [i _cntTmr1
 -> -> 0 `i `uc
 ]
-"117
-[; ;./hardware.h: 117: unsigned int frequency = 0;
+"123
+[; ;./hardware.h: 123: unsigned int frequency = 0;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
 -> -> 0 `i `ui
 ]
-"118
-[; ;./hardware.h: 118: unsigned char months = 3;
+"124
+[; ;./hardware.h: 124: unsigned char months = 3;
 [v _months `uc ~T0 @X0 1 e ]
 [i _months
 -> -> 3 `i `uc
 ]
-"119
-[; ;./hardware.h: 119: unsigned char days = 19;
+"125
+[; ;./hardware.h: 125: unsigned char days = 19;
 [v _days `uc ~T0 @X0 1 e ]
 [i _days
 -> -> 19 `i `uc
 ]
-"120
-[; ;./hardware.h: 120: unsigned char hours = 22;
+"126
+[; ;./hardware.h: 126: unsigned char hours = 22;
 [v _hours `uc ~T0 @X0 1 e ]
 [i _hours
 -> -> 22 `i `uc
 ]
-"121
-[; ;./hardware.h: 121: unsigned char minutes = 15;
+"127
+[; ;./hardware.h: 127: unsigned char minutes = 15;
 [v _minutes `uc ~T0 @X0 1 e ]
 [i _minutes
 -> -> 15 `i `uc
 ]
-"122
-[; ;./hardware.h: 122: unsigned char seconds = 0;
+"128
+[; ;./hardware.h: 128: unsigned char seconds = 0;
 [v _seconds `uc ~T0 @X0 1 e ]
 [i _seconds
 -> -> 0 `i `uc
 ]
-"123
-[; ;./hardware.h: 123: unsigned char hundredMiliSeconds = 0;
+"129
+[; ;./hardware.h: 129: unsigned char hundredMiliSeconds = 0;
 [v _hundredMiliSeconds `uc ~T0 @X0 1 e ]
 [i _hundredMiliSeconds
 -> -> 0 `i `uc
 ]
-"124
-[; ;./hardware.h: 124: unsigned char functionalStat = 0;
+"130
+[; ;./hardware.h: 130: unsigned char functionalStat = 0;
 [v _functionalStat `uc ~T0 @X0 1 e ]
 [i _functionalStat
 -> -> 0 `i `uc
 ]
-"125
-[; ;./hardware.h: 125: unsigned char stereoEnable = 1;
+"131
+[; ;./hardware.h: 131: unsigned char stereoEnable = 1;
 [v _stereoEnable `uc ~T0 @X0 1 e ]
 [i _stereoEnable
 -> -> 1 `i `uc
 ]
-"126
-[; ;./hardware.h: 126: unsigned char isOnConfig = 0;
+"132
+[; ;./hardware.h: 132: unsigned char isOnConfig = 0;
 [v _isOnConfig `uc ~T0 @X0 1 e ]
 [i _isOnConfig
 -> -> 0 `i `uc
 ]
-"127
-[; ;./hardware.h: 127: unsigned char level;
-[v _level `uc ~T0 @X0 1 e ]
-"129
-[; ;./hardware.h: 129: char lineOne[17];
-[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
-"130
-[; ;./hardware.h: 130: char lineTwo[17];
-[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
 "133
-[; ;./hardware.h: 133: const char FINAL_MONTH = 6;
+[; ;./hardware.h: 133: unsigned char level;
+[v _level `uc ~T0 @X0 1 e ]
+"134
+[; ;./hardware.h: 134: unsigned char i;
+[v _i `uc ~T0 @X0 1 e ]
+"136
+[; ;./hardware.h: 136: char lineOne[17];
+[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
+"137
+[; ;./hardware.h: 137: char lineTwo[17];
+[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+"140
+[; ;./hardware.h: 140: const char FINAL_MONTH = 6;
 [v _FINAL_MONTH `Cuc ~T0 @X0 1 e ]
 [i _FINAL_MONTH
 -> -> 6 `i `uc
 ]
-"134
-[; ;./hardware.h: 134: const char FINAL_DAY = 13;
+"141
+[; ;./hardware.h: 141: const char FINAL_DAY = 13;
 [v _FINAL_DAY `Cuc ~T0 @X0 1 e ]
 [i _FINAL_DAY
 -> -> 13 `i `uc
 ]
-"135
-[; ;./hardware.h: 135: const char BLOCKED = 0;
+"142
+[; ;./hardware.h: 142: const char BLOCKED = 0;
 [v _BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _BLOCKED
 -> -> 0 `i `uc
 ]
-"136
-[; ;./hardware.h: 136: const char UN_BLOCKED = 1;
+"143
+[; ;./hardware.h: 143: const char UN_BLOCKED = 1;
 [v _UN_BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _UN_BLOCKED
 -> -> 1 `i `uc
@@ -436,8 +439,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;bh1514.c: 20:     buffer = codFreq(f);
 [e = _buffer ( _codFreq (1 _f ]
 "22
-[; ;bh1514.c: 22:     PORTCbits.RC2 = 1;
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
+[; ;bh1514.c: 22:     PORTCbits.RC5 = 1;
+[e = . . _PORTCbits 0 5 -> -> 1 `i `uc ]
 "23
 [; ;bh1514.c: 23:     _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
@@ -457,8 +460,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == _r -> -> 1 `i `ui 146  ]
 {
 "27
-[; ;bh1514.c: 27:             PORTCbits.RC4 = 1;
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;bh1514.c: 27:             PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
 "28
 [; ;bh1514.c: 28:         }else{
 }
@@ -466,8 +469,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 146 ]
 {
 "29
-[; ;bh1514.c: 29:             PORTCbits.RC4 = 0;
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;bh1514.c: 29:             PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
 "30
 [; ;bh1514.c: 30:         }
 }
@@ -476,14 +479,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;bh1514.c: 31:         _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "32
-[; ;bh1514.c: 32:         PORTCbits.RC3 = 1;
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+[; ;bh1514.c: 32:         PORTCbits.RC6 = 1;
+[e = . . _PORTCbits 0 6 -> -> 1 `i `uc ]
 "33
 [; ;bh1514.c: 33:         _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "34
-[; ;bh1514.c: 34:         PORTCbits.RC3 = 0;
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
+[; ;bh1514.c: 34:         PORTCbits.RC6 = 0;
+[e = . . _PORTCbits 0 6 -> -> 0 `i `uc ]
 "35
 [; ;bh1514.c: 35:     }
 }
@@ -495,8 +498,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;bh1514.c: 36:     _delay((unsigned long)((1)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "37
-[; ;bh1514.c: 37:     PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
+[; ;bh1514.c: 37:     PORTCbits.RC5 = 0;
+[e = . . _PORTCbits 0 5 -> -> 0 `i `uc ]
 "38
 [; ;bh1514.c: 38:     return;
 [e $UE 142  ]

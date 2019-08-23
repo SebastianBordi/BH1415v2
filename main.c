@@ -3,7 +3,7 @@
 #include "hardware.h"
 
 void main (){
-    char i = 0;
+    unsigned char index;
     __delay_ms(100);
     config();
     beep(100);
@@ -15,30 +15,37 @@ void main (){
     }
     __delay_ms(100);
     writeFrequency(frequency);
-    beep(100);
-    INTCONbits.GIE = 0;
-    for(i; i < 50; i++){
-        sprintf(lineOne,"LOCKING         ");
-        sprintf(lineTwo,"       FREQUENCY");
-        SetDDRamAddr(0x00);
-        putsXLCD(lineOne);
-        SetDDRamAddr(0x40);
-        putsXLCD(lineTwo);
-        __delay_ms(90);
-    }
+    start();
     
-    INTCONbits.GIE = 1;
+    SetDDRamAddr(0x00);
+    putrsXLCD("AMPRO      EX-FM");
+    unsigned char decim = frequency % 10;
+    unsigned char integ = frequency / 10;
+    sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
     //Bucle de repeticion infinita
-    sprintf(lineOne,"AMPRO      EX-FM");
-    updateLCD();
+    writeFrequency(frequency);
     while(1){
         if(functionalStat == UN_BLOCKED){
             setTransStat(1);
         }else{
             setTransStat(0);
         }
-        //writeFrequency(frequency);
-        __delay_ms(50);
+        if(!btnMenu){                           //Si al iniciar se encuenta presionado
+            __delay_ms(25);
+            while(1){
+                for(i = 0; i>100; i++){
+                    if(btnMenu){
+                        __delay_ms(25);
+                        if(btnMenu)break;
+                    }                   
+                }
+                INTCONbits.GIE = 0;
+                setFrequency();
+                INTCONbits.GIE = 1;
+            }
+        }
     }
 }
 //Subrrutina de configuracion 
@@ -52,7 +59,7 @@ void config(){
     TRISC   = 0b00000000;
     PORTA   = 0x00;
     PORTB   = 0x00;
-    PORTC   = 0x00;
+    PORTC   = 0x0E;
     //Configuracion Timer 1 (100ms)
     T1CON   = 0b00010001;
     //Configuracion del ADC
@@ -69,6 +76,55 @@ void config(){
     setTransStat(0);
     return;
 }
+//Subrrutina de configuracion 
+void start (){
+    char i = 0;
+    INTCONbits.GIE = 0;
+
+    /////////////////////////       TESTING SUPPLY
+    for(i = 0; i < 10; i++){
+        LED1 = !LED1;
+        sprintf(lineOne,"TESTING         ");
+        sprintf(lineTwo,"          SUPPLY");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        __delay_ms(100);
+    }
+    LED1 = 0;
+    /////////////////////////       TESTING TEMPERATURE
+    for(i = 0; i < 18; i++){
+        LED2 = !LED2;
+        sprintf(lineOne,"TESTING         ");
+        sprintf(lineTwo,"     TEMPERATURE");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        __delay_ms(100);
+    }
+    LED2 = 0;
+    /////////////////////////       TESTING SWR
+    for(i = 0; i < 15; i++){
+        LED3 = !LED3;
+        sprintf(lineOne,"TESTING         ");
+        sprintf(lineTwo,"             SWR");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        __delay_ms(100);
+    }
+    LED3 = 0;
+    beep(250);
+    INTCONbits.GIE = 1;
+    __delay_ms(500);
+    LED1 = 1;
+    LED2 = 1;
+    LED3 = 1;
+    INTCONbits.GIE = 1;
+}
 //Subrrutina de interruociones 
 void __interrupt() inter (){
     //Deshabilita interrupciones
@@ -79,11 +135,7 @@ void __interrupt() inter (){
         TMR1L   = prTmr1L;
         cntTmr1++;
         time();
-        if(cntTmr1 == 10){     //cada 400ms
-            cntTmr1 = 0;
-            //beep(10);
-            updateLCD();        //actualiza los valores en el display
-        }
+        updateLCD();
         PIR1bits.TMR1IF = 0;
     }    
     INTCONbits.GIE = 1;
@@ -174,6 +226,16 @@ void setFrequency (){
     }
     writeFrequency(frequency);
     isOnConfig = 0;
+     
+    for(i; i < 25; i++){
+        sprintf(lineOne,"LOCKING         ");
+        sprintf(lineTwo,"       FREQUENCY");
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+        SetDDRamAddr(0x40);
+        putsXLCD(lineTwo);
+        __delay_ms(90);
+    }
     return;
 }
 

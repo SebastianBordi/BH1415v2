@@ -2603,11 +2603,12 @@ extern char * strrichr(const char *, int);
 
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
-# 71 "./hardware.h"
+# 76 "./hardware.h"
 __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
+void start (void);
 void config (void);
 void __attribute__((picinterrupt(("")))) inter (void);
 void vumeter (unsigned char val);
@@ -2661,6 +2662,7 @@ unsigned char functionalStat = 0;
 unsigned char stereoEnable = 1;
 unsigned char isOnConfig = 0;
 unsigned char level;
+unsigned char i;
 
 char lineOne[17];
 char lineTwo[17];
@@ -2689,21 +2691,21 @@ void writeFrequency (unsigned int f){
 
     buffer = codFreq(f);
 
-    PORTCbits.RC2 = 1;
+    PORTCbits.RC5 = 1;
     _delay((unsigned long)((1)*(4000000/4000.0)));
     for(i = 0; i < 16; i++){
         r = (buffer >> i) & 0x0001;
         if(r == 1){
-            PORTCbits.RC4 = 1;
+            PORTCbits.RC7 = 1;
         }else{
-            PORTCbits.RC4 = 0;
+            PORTCbits.RC7 = 0;
         }
         _delay((unsigned long)((1)*(4000000/4000.0)));
-        PORTCbits.RC3 = 1;
+        PORTCbits.RC6 = 1;
         _delay((unsigned long)((1)*(4000000/4000.0)));
-        PORTCbits.RC3 = 0;
+        PORTCbits.RC6 = 0;
     }
     _delay((unsigned long)((1)*(4000000/4000.0)));
-    PORTCbits.RC2 = 0;
+    PORTCbits.RC5 = 0;
     return;
 }

@@ -12,15 +12,15 @@ void initLCD (){
 }
 
 void updateLCD(){
-    //if(isOnConfig){
+    if(isOnConfig){
         unsigned char decim = frequency % 10;
         unsigned char integ = frequency / 10;
         sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
         SetDDRamAddr(0x40);
         putsXLCD(lineTwo);
-    //}
-    SetDDRamAddr(0x00);
-    putsXLCD(lineOne);
+        SetDDRamAddr(0x00);
+        putsXLCD(lineOne);
+    }
     return;
 }
 
