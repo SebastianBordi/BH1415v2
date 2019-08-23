@@ -320,10 +320,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "125
-[; ;./hardware.h: 125: unsigned int frequency = 0;
+[; ;./hardware.h: 125: unsigned int frequency = 111;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
--> -> 0 `i `ui
+-> -> 111 `i `ui
 ]
 "126
 [; ;./hardware.h: 126: unsigned char months = 3;
@@ -547,15 +547,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _data1 `uc ~T0 @X0 1 a ]
 [e = _data1 -> >> _frequency -> 8 `i `uc ]
 "47
-[; ;eeprom.c: 47:     if(full)writeEEPROM(data0 ,0);
-[e $ ! != -> _full `i -> 0 `i 146  ]
+[; ;eeprom.c: 47:     writeEEPROM(data0 ,0);
 [e ( _writeEEPROM (2 , _data0 -> -> 0 `i `uc ]
-[e :U 146 ]
 "48
-[; ;eeprom.c: 48:     if(full)writeEEPROM(data1 ,1);
-[e $ ! != -> _full `i -> 0 `i 147  ]
+[; ;eeprom.c: 48:     writeEEPROM(data1 ,1);
 [e ( _writeEEPROM (2 , _data1 -> -> 1 `i `uc ]
-[e :U 147 ]
 "49
 [; ;eeprom.c: 49:     writeEEPROM(months ,2);
 [e ( _writeEEPROM (2 , _months -> -> 2 `i `uc ]
@@ -566,10 +562,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eeprom.c: 51:     writeEEPROM(hours ,4);
 [e ( _writeEEPROM (2 , _hours -> -> 4 `i `uc ]
 "52
-[; ;eeprom.c: 52:     if(full)writeEEPROM(minutes ,5);
-[e $ ! != -> _full `i -> 0 `i 148  ]
+[; ;eeprom.c: 52:     writeEEPROM(minutes ,5);
 [e ( _writeEEPROM (2 , _minutes -> -> 5 `i `uc ]
-[e :U 148 ]
 "53
 [; ;eeprom.c: 53:     writeEEPROM(functionalStat ,6);
 [e ( _writeEEPROM (2 , _functionalStat -> -> 6 `i `uc ]

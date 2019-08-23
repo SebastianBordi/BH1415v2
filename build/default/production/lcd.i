@@ -2653,7 +2653,7 @@ unsigned char prTmr1H = 0x3C;
 
 unsigned char cntTmr1 = 0;
 
-unsigned int frequency = 0;
+unsigned int frequency = 111;
 unsigned char months = 3;
 unsigned char days = 19;
 unsigned char hours = 22;

@@ -2653,7 +2653,7 @@ unsigned char prTmr1H = 0x3C;
 
 unsigned char cntTmr1 = 0;
 
-unsigned int frequency = 0;
+unsigned int frequency = 111;
 unsigned char months = 3;
 unsigned char days = 19;
 unsigned char hours = 22;
@@ -2680,6 +2680,7 @@ void main (){
     unsigned char index;
     _delay((unsigned long)((100)*(4000000/4000.0)));
     config();
+    _delay((unsigned long)((100)*(4000000/4000.0)));
     beep(100);
     getData();
     beep(10);
@@ -2694,11 +2695,11 @@ void main (){
 
     principalScreen();
     while(1){
-        if(functionalStat == UN_BLOCKED){
-            setTransStat(1);
-        }else{
-            setTransStat(1);
-        }
+
+
+
+
+
         if(!PORTAbits.RA4){
             _delay((unsigned long)((500)*(4000000/4000.0)));
             for(i = 0; i < 10; i++){
@@ -2706,7 +2707,6 @@ void main (){
             }
             if(!PORTAbits.RA4){
                 setFrequency();
-                writeFrequency(frequency);
                 principalScreen();
             }
         }
@@ -2733,7 +2733,7 @@ void config(){
     ANSELH = 0b00000000;
 
     PORTCbits.RC0 = 0;
-    PORTCbits.RC4 = 0;
+    PORTCbits.RC4 = 1;
 
     initLCD();
 

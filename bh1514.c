@@ -42,11 +42,10 @@ void writeFrequency (unsigned int f){
     __delay_ms(500);
     beep(20);
     __delay_ms(500);
-    for(i = 0; i < 40; i++){
+    for(i = 0; i < 100; i++){
         __delay_ms(100);
     }
     
-    pllEn = 0;
     transEn = 1;
     
     return;

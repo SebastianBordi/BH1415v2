@@ -44,12 +44,12 @@ void getData (){
 void setData(unsigned char full){
     unsigned char data0 = frequency & 0x00FF;
     unsigned char data1 = frequency >> 8;
-    if(full)writeEEPROM(data0 ,0);
-    if(full)writeEEPROM(data1 ,1);
+    writeEEPROM(data0 ,0);
+    writeEEPROM(data1 ,1);
     writeEEPROM(months ,2);
     writeEEPROM(days ,3);
     writeEEPROM(hours ,4);
-    if(full)writeEEPROM(minutes ,5);
+    writeEEPROM(minutes ,5);
     writeEEPROM(functionalStat ,6);
     return;
 }

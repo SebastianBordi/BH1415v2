@@ -2653,7 +2653,7 @@ unsigned char prTmr1H = 0x3C;
 
 unsigned char cntTmr1 = 0;
 
-unsigned int frequency = 0;
+unsigned int frequency = 111;
 unsigned char months = 3;
 unsigned char days = 19;
 unsigned char hours = 22;
@@ -2716,11 +2716,10 @@ void writeFrequency (unsigned int f){
     _delay((unsigned long)((500)*(4000000/4000.0)));
     beep(20);
     _delay((unsigned long)((500)*(4000000/4000.0)));
-    for(i = 0; i < 40; i++){
+    for(i = 0; i < 100; i++){
         _delay((unsigned long)((100)*(4000000/4000.0)));
     }
 
-    PORTCbits.RC4 = 0;
     PORTCbits.RC0 = 1;
 
     return;

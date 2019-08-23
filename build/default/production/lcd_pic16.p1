@@ -315,10 +315,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "125
-[; ;./hardware.h: 125: unsigned int frequency = 0;
+[; ;./hardware.h: 125: unsigned int frequency = 111;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
--> -> 0 `i `ui
+-> -> 111 `i `ui
 ]
 "126
 [; ;./hardware.h: 126: unsigned char months = 3;

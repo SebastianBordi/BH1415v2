@@ -292,10 +292,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "125
-[; ;./hardware.h: 125: unsigned int frequency = 0;
+[; ;./hardware.h: 125: unsigned int frequency = 111;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
--> -> 0 `i `ui
+-> -> 111 `i `ui
 ]
 "126
 [; ;./hardware.h: 126: unsigned char months = 3;
@@ -511,10 +511,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;bh1514.c: 44:     _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "45
-[; ;bh1514.c: 45:     for(i = 0; i < 40; i++){
+[; ;bh1514.c: 45:     for(i = 0; i < 100; i++){
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 40 `i 146  ]
+[e $ < -> _i `i -> 100 `i 146  ]
 [e $U 147  ]
 [e :U 146 ]
 {
@@ -525,19 +525,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;bh1514.c: 47:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 40 `i 146  ]
+[e $ < -> _i `i -> 100 `i 146  ]
 [e :U 147 ]
 }
 "49
-[; ;bh1514.c: 49:     PORTCbits.RC4 = 0;
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
-"50
-[; ;bh1514.c: 50:     PORTCbits.RC0 = 1;
+[; ;bh1514.c: 49:     PORTCbits.RC0 = 1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"52
-[; ;bh1514.c: 52:     return;
+"51
+[; ;bh1514.c: 51:     return;
 [e $UE 140  ]
-"53
-[; ;bh1514.c: 53: }
+"52
+[; ;bh1514.c: 52: }
 [e :UE 140 ]
 }

@@ -122,7 +122,7 @@ unsigned char prTmr1H = 0x3C;
 
 unsigned char cntTmr1 = 0;      //Registro de postscaler del Timer1
 
-unsigned int frequency = 0;     //Frecuencia a programar en el BH1514
+unsigned int frequency = 111;     //Frecuencia a programar en el BH1514
 unsigned char months = 3;            // Meses de funcionamiento
 unsigned char days = 19;             // Dias de funcionamiento
 unsigned char hours = 22;            // Horas de funcionamiento

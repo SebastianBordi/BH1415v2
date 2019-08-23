@@ -6,6 +6,7 @@ void main (){
     unsigned char index;
     __delay_ms(100);
     config();
+    __delay_ms(100);
     beep(100);
     getData();
     beep(10);
@@ -20,11 +21,11 @@ void main (){
     //Muestra el mensaje por defecto
     principalScreen();
     while(1){
-        if(functionalStat == UN_BLOCKED){
-            setTransStat(1);
-        }else{
-            setTransStat(1);
-        }
+//        if(functionalStat == UN_BLOCKED){
+//            setTransStat(1);
+//        }else{
+//            setTransStat(1);
+//        }
         if(!btnMenu){                           
             __delay_ms(500);
             for(i = 0; i < 10; i++){
@@ -32,7 +33,6 @@ void main (){
             }
             if(!btnMenu){
                 setFrequency();
-                writeFrequency(frequency);
                 principalScreen();                    
             }
         }
@@ -59,7 +59,7 @@ void config(){
     ANSELH  = 0b00000000;
     //Apaga el transmisor 
     transEn = 0;
-    pllEn = 0;
+    pllEn = 1;
     //Inicializacion del LCD
     initLCD();
     //Inicializacion de procesos 
