@@ -71,19 +71,19 @@
 [v i1_BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 "5 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _main main `(v  1 e 1 0 ]
-"52
+"53
 [v _config config `(v  1 e 1 0 ]
-"80
+"81
 [v _start start `(v  1 e 1 0 ]
-"129
+"130
 [v _inter inter `II(v  1 e 1 0 ]
-"146
+"147
 [v _time time `(v  1 e 1 0 ]
-"176
+"177
 [v _beep beep `(v  1 e 1 0 ]
-"187
+"188
 [v _setFrequency setFrequency `(v  1 e 1 0 ]
-"242
+"243
 [v _setTransStat setTransStat `(v  1 e 1 0 ]
 "118 /home/sebastian/Escritorio/BH1415/BH1415v2/hardware.h
 [v _prTmr1L prTmr1L `uc  1 e 1 0 ]
@@ -280,19 +280,19 @@
 [v main@integ integ `uc  1 a 1 34 ]
 "22
 [v main@decim decim `uc  1 a 1 33 ]
-"50
+"51
 } 0
-"80
+"81
 [v _start start `(v  1 e 1 0 ]
 {
-"81
+"82
 [v start@i i `uc  1 a 1 27 ]
-"127
+"128
 } 0
-"187
+"188
 [v _setFrequency setFrequency `(v  1 e 1 0 ]
 {
-"240
+"241
 } 0
 "500 /opt/microchip/xc8/v2.05/pic/sources/c90/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -378,11 +378,11 @@
 [v putsXLCD@buffer buffer `*.4uc  1 a 1 34 ]
 "428
 } 0
-"176 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"177 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _beep beep `(v  1 e 1 0 ]
 {
 [v beep@ms ms `i  1 p 2 0 ]
-"185
+"186
 } 0
 "15 /opt/microchip/xc8/v2.05/pic/sources/c90/common/Umul16.c
 [v ___wmul __wmul `(ui  1 e 2 0 ]
@@ -428,16 +428,16 @@
 [v readEEPROM@address address `uc  1 a 1 29 ]
 "12
 } 0
-"52 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"53 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _config config `(v  1 e 1 0 ]
 {
-"78
+"79
 } 0
-"242
+"243
 [v _setTransStat setTransStat `(v  1 e 1 0 ]
 {
 [v setTransStat@stat stat `i  1 p 2 5 ]
-"254
+"255
 } 0
 "15 /home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
 [v _writeFrequency writeFrequency `(v  1 e 1 0 ]
@@ -513,10 +513,10 @@
 {
 "508
 } 0
-"129 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"130 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _inter inter `II(v  1 e 1 0 ]
 {
-"143
+"144
 } 0
 "14 /home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
 [v _updateLCD updateLCD `(v  1 e 1 0 ]
@@ -613,10 +613,10 @@
 {
 "25
 } 0
-"146 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"147 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _time time `(v  1 e 1 0 ]
 {
-"174
+"175
 } 0
 "44 /home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
 [v i1_setData setData `(v  1 e 1 0 ]

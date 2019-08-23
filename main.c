@@ -43,6 +43,7 @@ void main (){
                 }
                 INTCONbits.GIE = 0;
                 setFrequency();
+                writeFrequency(frequency);
                 INTCONbits.GIE = 1;
             }
         }

@@ -692,709 +692,712 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 45:                 setFrequency();
 [e ( _setFrequency ..  ]
 "46
-[; ;main.c: 46:                 INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 46:                 writeFrequency(frequency);
+[e ( _writeFrequency (1 _frequency ]
 "47
-[; ;main.c: 47:             }
+[; ;main.c: 47:                 INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"48
+[; ;main.c: 48:             }
 }
 [e :U 148 ]
 [e $U 149  ]
 [e :U 150 ]
-"48
-[; ;main.c: 48:         }
+"49
+[; ;main.c: 49:         }
 }
 [e :U 147 ]
-"49
-[; ;main.c: 49:     }
+"50
+[; ;main.c: 50:     }
 }
 [e :U 142 ]
 [e $U 143  ]
 [e :U 144 ]
-"50
-[; ;main.c: 50: }
+"51
+[; ;main.c: 51: }
 [e :UE 139 ]
 }
-"52
-[; ;main.c: 52: void config(){
+"53
+[; ;main.c: 53: void config(){
 [v _config `(v ~T0 @X0 1 ef ]
 {
 [e :U _config ]
 [f ]
-"54
-[; ;main.c: 54:     INTCON = 0b01000000;
-[e = _INTCON -> -> 64 `i `uc ]
 "55
-[; ;main.c: 55:     PIE1 = 0b00000001;
+[; ;main.c: 55:     INTCON = 0b01000000;
+[e = _INTCON -> -> 64 `i `uc ]
+"56
+[; ;main.c: 56:     PIE1 = 0b00000001;
 [e = _PIE1 -> -> 1 `i `uc ]
-"57
-[; ;main.c: 57:     TRISA = 0b00111000;
-[e = _TRISA -> -> 56 `i `uc ]
 "58
-[; ;main.c: 58:     TRISB = 0b00000000;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 58:     TRISA = 0b00111000;
+[e = _TRISA -> -> 56 `i `uc ]
 "59
-[; ;main.c: 59:     TRISC = 0b00000000;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;main.c: 59:     TRISB = 0b00000000;
+[e = _TRISB -> -> 0 `i `uc ]
 "60
-[; ;main.c: 60:     PORTA = 0x00;
-[e = _PORTA -> -> 0 `i `uc ]
+[; ;main.c: 60:     TRISC = 0b00000000;
+[e = _TRISC -> -> 0 `i `uc ]
 "61
-[; ;main.c: 61:     PORTB = 0x00;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 61:     PORTA = 0x00;
+[e = _PORTA -> -> 0 `i `uc ]
 "62
-[; ;main.c: 62:     PORTC = 0x0E;
+[; ;main.c: 62:     PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"63
+[; ;main.c: 63:     PORTC = 0x0E;
 [e = _PORTC -> -> 14 `i `uc ]
-"64
-[; ;main.c: 64:     T1CON = 0b00010001;
+"65
+[; ;main.c: 65:     T1CON = 0b00010001;
 [e = _T1CON -> -> 17 `i `uc ]
-"66
-[; ;main.c: 66:     ADCON0 = 0b00000000;
-[e = _ADCON0 -> -> 0 `i `uc ]
 "67
-[; ;main.c: 67:     ADCON1 = 0b00000000;
-[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;main.c: 67:     ADCON0 = 0b00000000;
+[e = _ADCON0 -> -> 0 `i `uc ]
 "68
-[; ;main.c: 68:     ANSEL = 0b00000000;
-[e = _ANSEL -> -> 0 `i `uc ]
+[; ;main.c: 68:     ADCON1 = 0b00000000;
+[e = _ADCON1 -> -> 0 `i `uc ]
 "69
-[; ;main.c: 69:     ANSELH = 0b00000000;
+[; ;main.c: 69:     ANSEL = 0b00000000;
+[e = _ANSEL -> -> 0 `i `uc ]
+"70
+[; ;main.c: 70:     ANSELH = 0b00000000;
 [e = _ANSELH -> -> 0 `i `uc ]
-"71
-[; ;main.c: 71:     initLCD();
+"72
+[; ;main.c: 72:     initLCD();
 [e ( _initLCD ..  ]
-"73
-[; ;main.c: 73:     T1CONbits.TMR1ON = 1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
 "74
-[; ;main.c: 74:     INTCONbits.GIE = 1;
+[; ;main.c: 74:     T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"75
+[; ;main.c: 75:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"76
-[; ;main.c: 76:     setTransStat(0);
-[e ( _setTransStat (1 -> 0 `i ]
 "77
-[; ;main.c: 77:     return;
-[e $UE 156  ]
+[; ;main.c: 77:     setTransStat(0);
+[e ( _setTransStat (1 -> 0 `i ]
 "78
-[; ;main.c: 78: }
+[; ;main.c: 78:     return;
+[e $UE 156  ]
+"79
+[; ;main.c: 79: }
 [e :UE 156 ]
 }
-"80
-[; ;main.c: 80: void start (){
+"81
+[; ;main.c: 81: void start (){
 [v _start `(v ~T0 @X0 1 ef ]
 {
 [e :U _start ]
 [f ]
-"81
-[; ;main.c: 81:     char i = 0;
+"82
+[; ;main.c: 82:     char i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"82
-[; ;main.c: 82:     INTCONbits.GIE = 0;
+"83
+[; ;main.c: 83:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"85
-[; ;main.c: 85:     for(i = 0; i < 10; i++){
+"86
+[; ;main.c: 86:     for(i = 0; i < 10; i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 10 `i 158  ]
 [e $U 159  ]
 [e :U 158 ]
 {
-"86
-[; ;main.c: 86:         PORTCbits.RC1 = !PORTCbits.RC1;
-[e = . . _PORTCbits 0 1 -> -> ! != -> . . _PORTCbits 0 1 `i -> 0 `i `i `uc ]
 "87
-[; ;main.c: 87:         sprintf(lineOne,"TESTING         ");
-[e ( _sprintf (1 , &U _lineOne :s 3C ]
+[; ;main.c: 87:         PORTCbits.RC1 = !PORTCbits.RC1;
+[e = . . _PORTCbits 0 1 -> -> ! != -> . . _PORTCbits 0 1 `i -> 0 `i `i `uc ]
 "88
-[; ;main.c: 88:         sprintf(lineTwo,"          SUPPLY");
-[e ( _sprintf (1 , &U _lineTwo :s 4C ]
+[; ;main.c: 88:         sprintf(lineOne,"TESTING         ");
+[e ( _sprintf (1 , &U _lineOne :s 3C ]
 "89
-[; ;main.c: 89:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
+[; ;main.c: 89:         sprintf(lineTwo,"          SUPPLY");
+[e ( _sprintf (1 , &U _lineTwo :s 4C ]
 "90
-[; ;main.c: 90:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
+[; ;main.c: 90:         SetDDRamAddr(0x00);
+[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
 "91
-[; ;main.c: 91:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+[; ;main.c: 91:         putsXLCD(lineOne);
+[e ( _putsXLCD (1 &U _lineOne ]
 "92
-[; ;main.c: 92:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
+[; ;main.c: 92:         SetDDRamAddr(0x40);
+[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
 "93
-[; ;main.c: 93:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 93:         putsXLCD(lineTwo);
+[e ( _putsXLCD (1 &U _lineTwo ]
 "94
-[; ;main.c: 94:     }
+[; ;main.c: 94:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"95
+[; ;main.c: 95:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 10 `i 158  ]
 [e :U 159 ]
 }
-"95
-[; ;main.c: 95:     PORTCbits.RC1 = 0;
+"96
+[; ;main.c: 96:     PORTCbits.RC1 = 0;
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-"97
-[; ;main.c: 97:     for(i = 0; i < 18; i++){
+"98
+[; ;main.c: 98:     for(i = 0; i < 18; i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 18 `i 161  ]
 [e $U 162  ]
 [e :U 161 ]
 {
-"98
-[; ;main.c: 98:         PORTCbits.RC3 = !PORTCbits.RC3;
-[e = . . _PORTCbits 0 3 -> -> ! != -> . . _PORTCbits 0 3 `i -> 0 `i `i `uc ]
 "99
-[; ;main.c: 99:         sprintf(lineOne,"TESTING         ");
-[e ( _sprintf (1 , &U _lineOne :s 5C ]
+[; ;main.c: 99:         PORTCbits.RC3 = !PORTCbits.RC3;
+[e = . . _PORTCbits 0 3 -> -> ! != -> . . _PORTCbits 0 3 `i -> 0 `i `i `uc ]
 "100
-[; ;main.c: 100:         sprintf(lineTwo,"     TEMPERATURE");
-[e ( _sprintf (1 , &U _lineTwo :s 6C ]
+[; ;main.c: 100:         sprintf(lineOne,"TESTING         ");
+[e ( _sprintf (1 , &U _lineOne :s 5C ]
 "101
-[; ;main.c: 101:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
+[; ;main.c: 101:         sprintf(lineTwo,"     TEMPERATURE");
+[e ( _sprintf (1 , &U _lineTwo :s 6C ]
 "102
-[; ;main.c: 102:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
+[; ;main.c: 102:         SetDDRamAddr(0x00);
+[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
 "103
-[; ;main.c: 103:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+[; ;main.c: 103:         putsXLCD(lineOne);
+[e ( _putsXLCD (1 &U _lineOne ]
 "104
-[; ;main.c: 104:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
+[; ;main.c: 104:         SetDDRamAddr(0x40);
+[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
 "105
-[; ;main.c: 105:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 105:         putsXLCD(lineTwo);
+[e ( _putsXLCD (1 &U _lineTwo ]
 "106
-[; ;main.c: 106:     }
+[; ;main.c: 106:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"107
+[; ;main.c: 107:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 18 `i 161  ]
 [e :U 162 ]
 }
-"107
-[; ;main.c: 107:     PORTCbits.RC3 = 0;
+"108
+[; ;main.c: 108:     PORTCbits.RC3 = 0;
 [e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-"109
-[; ;main.c: 109:     for(i = 0; i < 15; i++){
+"110
+[; ;main.c: 110:     for(i = 0; i < 15; i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 15 `i 164  ]
 [e $U 165  ]
 [e :U 164 ]
 {
-"110
-[; ;main.c: 110:         PORTCbits.RC2 = !PORTCbits.RC2;
-[e = . . _PORTCbits 0 2 -> -> ! != -> . . _PORTCbits 0 2 `i -> 0 `i `i `uc ]
 "111
-[; ;main.c: 111:         sprintf(lineOne,"TESTING         ");
-[e ( _sprintf (1 , &U _lineOne :s 7C ]
+[; ;main.c: 111:         PORTCbits.RC2 = !PORTCbits.RC2;
+[e = . . _PORTCbits 0 2 -> -> ! != -> . . _PORTCbits 0 2 `i -> 0 `i `i `uc ]
 "112
-[; ;main.c: 112:         sprintf(lineTwo,"             SWR");
-[e ( _sprintf (1 , &U _lineTwo :s 8C ]
+[; ;main.c: 112:         sprintf(lineOne,"TESTING         ");
+[e ( _sprintf (1 , &U _lineOne :s 7C ]
 "113
-[; ;main.c: 113:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
+[; ;main.c: 113:         sprintf(lineTwo,"             SWR");
+[e ( _sprintf (1 , &U _lineTwo :s 8C ]
 "114
-[; ;main.c: 114:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
+[; ;main.c: 114:         SetDDRamAddr(0x00);
+[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
 "115
-[; ;main.c: 115:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+[; ;main.c: 115:         putsXLCD(lineOne);
+[e ( _putsXLCD (1 &U _lineOne ]
 "116
-[; ;main.c: 116:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
+[; ;main.c: 116:         SetDDRamAddr(0x40);
+[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
 "117
-[; ;main.c: 117:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 117:         putsXLCD(lineTwo);
+[e ( _putsXLCD (1 &U _lineTwo ]
 "118
-[; ;main.c: 118:     }
+[; ;main.c: 118:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"119
+[; ;main.c: 119:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 15 `i 164  ]
 [e :U 165 ]
 }
-"119
-[; ;main.c: 119:     PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
 "120
-[; ;main.c: 120:     beep(250);
-[e ( _beep (1 -> 250 `i ]
+[; ;main.c: 120:     PORTCbits.RC2 = 0;
+[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
 "121
-[; ;main.c: 121:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 121:     beep(250);
+[e ( _beep (1 -> 250 `i ]
 "122
-[; ;main.c: 122:     _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"123
-[; ;main.c: 123:     PORTCbits.RC1 = 1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-"124
-[; ;main.c: 124:     PORTCbits.RC3 = 1;
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-"125
-[; ;main.c: 125:     PORTCbits.RC2 = 1;
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"126
-[; ;main.c: 126:     INTCONbits.GIE = 1;
+[; ;main.c: 122:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"123
+[; ;main.c: 123:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"124
+[; ;main.c: 124:     PORTCbits.RC1 = 1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"125
+[; ;main.c: 125:     PORTCbits.RC3 = 1;
+[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
+"126
+[; ;main.c: 126:     PORTCbits.RC2 = 1;
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
 "127
-[; ;main.c: 127: }
+[; ;main.c: 127:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"128
+[; ;main.c: 128: }
 [e :UE 157 ]
 }
 [v $root$_inter `(v ~T0 @X0 0 e ]
-"129
-[; ;main.c: 129: void __attribute__((picinterrupt(("")))) inter (){
+"130
+[; ;main.c: 130: void __attribute__((picinterrupt(("")))) inter (){
 [v _inter `(v ~T2 @X0 1 ef ]
 {
 [e :U _inter ]
 [f ]
-"131
-[; ;main.c: 131:     INTCONbits.GIE = 0;
+"132
+[; ;main.c: 132:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"133
-[; ;main.c: 133:     if(PIR1bits.TMR1IF == 1){
+"134
+[; ;main.c: 134:     if(PIR1bits.TMR1IF == 1){
 [e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 168  ]
 {
-"134
-[; ;main.c: 134:         TMR1H = prTmr1H;
-[e = _TMR1H _prTmr1H ]
 "135
-[; ;main.c: 135:         TMR1L = prTmr1L;
-[e = _TMR1L _prTmr1L ]
+[; ;main.c: 135:         TMR1H = prTmr1H;
+[e = _TMR1H _prTmr1H ]
 "136
-[; ;main.c: 136:         cntTmr1++;
-[e ++ _cntTmr1 -> -> 1 `i `uc ]
+[; ;main.c: 136:         TMR1L = prTmr1L;
+[e = _TMR1L _prTmr1L ]
 "137
-[; ;main.c: 137:         time();
-[e ( _time ..  ]
+[; ;main.c: 137:         cntTmr1++;
+[e ++ _cntTmr1 -> -> 1 `i `uc ]
 "138
-[; ;main.c: 138:         updateLCD();
-[e ( _updateLCD ..  ]
+[; ;main.c: 138:         time();
+[e ( _time ..  ]
 "139
-[; ;main.c: 139:         PIR1bits.TMR1IF = 0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 139:         updateLCD();
+[e ( _updateLCD ..  ]
 "140
-[; ;main.c: 140:     }
+[; ;main.c: 140:         PIR1bits.TMR1IF = 0;
+[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+"141
+[; ;main.c: 141:     }
 }
 [e :U 168 ]
-"141
-[; ;main.c: 141:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "142
-[; ;main.c: 142:     return;
-[e $UE 167  ]
+[; ;main.c: 142:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "143
-[; ;main.c: 143: }
+[; ;main.c: 143:     return;
+[e $UE 167  ]
+"144
+[; ;main.c: 144: }
 [e :UE 167 ]
 }
-"146
-[; ;main.c: 146: void time (){
+"147
+[; ;main.c: 147: void time (){
 [v _time `(v ~T0 @X0 1 ef ]
 {
 [e :U _time ]
 [f ]
-"147
-[; ;main.c: 147:     hundredMiliSeconds++;
-[e ++ _hundredMiliSeconds -> -> 1 `i `uc ]
 "148
-[; ;main.c: 148:     if(hundredMiliSeconds >= 10){
+[; ;main.c: 148:     hundredMiliSeconds++;
+[e ++ _hundredMiliSeconds -> -> 1 `i `uc ]
+"149
+[; ;main.c: 149:     if(hundredMiliSeconds >= 10){
 [e $ ! >= -> _hundredMiliSeconds `i -> 10 `i 170  ]
 {
-"149
-[; ;main.c: 149:         hundredMiliSeconds = 0;
-[e = _hundredMiliSeconds -> -> 0 `i `uc ]
 "150
-[; ;main.c: 150:         seconds++;
-[e ++ _seconds -> -> 1 `i `uc ]
+[; ;main.c: 150:         hundredMiliSeconds = 0;
+[e = _hundredMiliSeconds -> -> 0 `i `uc ]
 "151
-[; ;main.c: 151:         if(seconds >= 60){
+[; ;main.c: 151:         seconds++;
+[e ++ _seconds -> -> 1 `i `uc ]
+"152
+[; ;main.c: 152:         if(seconds >= 60){
 [e $ ! >= -> _seconds `i -> 60 `i 171  ]
 {
-"152
-[; ;main.c: 152:             seconds = 0;
-[e = _seconds -> -> 0 `i `uc ]
 "153
-[; ;main.c: 153:             minutes++;
-[e ++ _minutes -> -> 1 `i `uc ]
+[; ;main.c: 153:             seconds = 0;
+[e = _seconds -> -> 0 `i `uc ]
 "154
-[; ;main.c: 154:             setData(0);
-[e ( _setData (1 -> -> 0 `i `uc ]
+[; ;main.c: 154:             minutes++;
+[e ++ _minutes -> -> 1 `i `uc ]
 "155
-[; ;main.c: 155:             if(minutes >= 60){
+[; ;main.c: 155:             setData(0);
+[e ( _setData (1 -> -> 0 `i `uc ]
+"156
+[; ;main.c: 156:             if(minutes >= 60){
 [e $ ! >= -> _minutes `i -> 60 `i 172  ]
 {
-"156
-[; ;main.c: 156:                 minutes = 0;
-[e = _minutes -> -> 0 `i `uc ]
 "157
-[; ;main.c: 157:                 hours++;
-[e ++ _hours -> -> 1 `i `uc ]
+[; ;main.c: 157:                 minutes = 0;
+[e = _minutes -> -> 0 `i `uc ]
 "158
-[; ;main.c: 158:                 if(hours >= 24){
+[; ;main.c: 158:                 hours++;
+[e ++ _hours -> -> 1 `i `uc ]
+"159
+[; ;main.c: 159:                 if(hours >= 24){
 [e $ ! >= -> _hours `i -> 24 `i 173  ]
 {
-"159
-[; ;main.c: 159:                     hours = 0;
-[e = _hours -> -> 0 `i `uc ]
 "160
-[; ;main.c: 160:                     days++;
-[e ++ _days -> -> 1 `i `uc ]
+[; ;main.c: 160:                     hours = 0;
+[e = _hours -> -> 0 `i `uc ]
 "161
-[; ;main.c: 161:                     if(days >= 30){
+[; ;main.c: 161:                     days++;
+[e ++ _days -> -> 1 `i `uc ]
+"162
+[; ;main.c: 162:                     if(days >= 30){
 [e $ ! >= -> _days `i -> 30 `i 174  ]
 {
-"162
-[; ;main.c: 162:                         days = 0;
-[e = _days -> -> 0 `i `uc ]
 "163
-[; ;main.c: 163:                         months++;
-[e ++ _months -> -> 1 `i `uc ]
+[; ;main.c: 163:                         days = 0;
+[e = _days -> -> 0 `i `uc ]
 "164
-[; ;main.c: 164:                     }
+[; ;main.c: 164:                         months++;
+[e ++ _months -> -> 1 `i `uc ]
+"165
+[; ;main.c: 165:                     }
 }
 [e :U 174 ]
-"165
-[; ;main.c: 165:                     if(days == FINAL_DAY && months == FINAL_MONTH){
+"166
+[; ;main.c: 166:                     if(days == FINAL_DAY && months == FINAL_MONTH){
 [e $ ! && == -> _days `i -> _FINAL_DAY `i == -> _months `i -> _FINAL_MONTH `i 175  ]
 {
-"166
-[; ;main.c: 166:                         functionalStat = BLOCKED;
-[e = _functionalStat -> _BLOCKED `uc ]
 "167
-[; ;main.c: 167:                     }else{
+[; ;main.c: 167:                         functionalStat = BLOCKED;
+[e = _functionalStat -> _BLOCKED `uc ]
+"168
+[; ;main.c: 168:                     }else{
 }
 [e $U 176  ]
 [e :U 175 ]
 {
-"168
-[; ;main.c: 168:                         functionalStat = UN_BLOCKED;
-[e = _functionalStat -> _UN_BLOCKED `uc ]
 "169
-[; ;main.c: 169:                     }
+[; ;main.c: 169:                         functionalStat = UN_BLOCKED;
+[e = _functionalStat -> _UN_BLOCKED `uc ]
+"170
+[; ;main.c: 170:                     }
 }
 [e :U 176 ]
-"170
-[; ;main.c: 170:                 }
+"171
+[; ;main.c: 171:                 }
 }
 [e :U 173 ]
-"171
-[; ;main.c: 171:             }
+"172
+[; ;main.c: 172:             }
 }
 [e :U 172 ]
-"172
-[; ;main.c: 172:         }
+"173
+[; ;main.c: 173:         }
 }
 [e :U 171 ]
-"173
-[; ;main.c: 173:     }
+"174
+[; ;main.c: 174:     }
 }
 [e :U 170 ]
-"174
-[; ;main.c: 174: }
+"175
+[; ;main.c: 175: }
 [e :UE 169 ]
 }
-"176
-[; ;main.c: 176: void beep (int ms){
+"177
+[; ;main.c: 177: void beep (int ms){
 [v _beep `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _beep ]
 [v _ms `i ~T0 @X0 1 r1 ]
 [f ]
-"177
-[; ;main.c: 177:     ms *= 5;
-[e =* _ms -> 5 `i ]
 "178
-[; ;main.c: 178:     for(ms; ms > 0; ms--){
+[; ;main.c: 178:     ms *= 5;
+[e =* _ms -> 5 `i ]
+"179
+[; ;main.c: 179:     for(ms; ms > 0; ms--){
 {
 [e _ms ]
 [e $ > _ms -> 0 `i 178  ]
 [e $U 179  ]
 [e :U 178 ]
 {
-"179
-[; ;main.c: 179:         PORTBbits.RB0 = 1;
-[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
 "180
-[; ;main.c: 180:         _delay((unsigned long)((100)*(4000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 180:         PORTBbits.RB0 = 1;
+[e = . . _PORTBbits 0 0 -> -> 1 `i `uc ]
 "181
-[; ;main.c: 181:         PORTBbits.RB0 = 0;
-[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
-"182
-[; ;main.c: 182:         _delay((unsigned long)((100)*(4000000/4000000.0)));
+[; ;main.c: 181:         _delay((unsigned long)((100)*(4000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"182
+[; ;main.c: 182:         PORTBbits.RB0 = 0;
+[e = . . _PORTBbits 0 0 -> -> 0 `i `uc ]
 "183
-[; ;main.c: 183:     }
+[; ;main.c: 183:         _delay((unsigned long)((100)*(4000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
+"184
+[; ;main.c: 184:     }
 }
 [e -- _ms -> 1 `i ]
 [e $ > _ms -> 0 `i 178  ]
 [e :U 179 ]
 }
-"184
-[; ;main.c: 184:     return;
-[e $UE 177  ]
 "185
-[; ;main.c: 185: }
+[; ;main.c: 185:     return;
+[e $UE 177  ]
+"186
+[; ;main.c: 186: }
 [e :UE 177 ]
 }
-"187
-[; ;main.c: 187: void setFrequency (){
+"188
+[; ;main.c: 188: void setFrequency (){
 [v _setFrequency `(v ~T0 @X0 1 ef ]
 {
 [e :U _setFrequency ]
 [f ]
-"188
-[; ;main.c: 188:     isOnConfig = 1;
-[e = _isOnConfig -> -> 1 `i `uc ]
 "189
-[; ;main.c: 189:     sprintf(lineOne,"SET   FREQUENCY ");
-[e ( _sprintf (1 , &U _lineOne :s 9C ]
+[; ;main.c: 189:     isOnConfig = 1;
+[e = _isOnConfig -> -> 1 `i `uc ]
 "190
-[; ;main.c: 190:     beep(200);
-[e ( _beep (1 -> 200 `i ]
+[; ;main.c: 190:     sprintf(lineOne,"SET   FREQUENCY ");
+[e ( _sprintf (1 , &U _lineOne :s 9C ]
 "191
-[; ;main.c: 191:     while(!PORTAbits.RA4)continue;
+[; ;main.c: 191:     beep(200);
+[e ( _beep (1 -> 200 `i ]
+"192
+[; ;main.c: 192:     while(!PORTAbits.RA4)continue;
 [e $U 182  ]
 [e :U 183 ]
 [e $U 182  ]
 [e :U 182 ]
 [e $ ! != -> . . _PORTAbits 0 4 `i -> 0 `i 183  ]
 [e :U 184 ]
-"193
-[; ;main.c: 193:     while(1){
+"194
+[; ;main.c: 194:     while(1){
 [e :U 186 ]
 {
-"194
-[; ;main.c: 194:         if(!PORTAbits.RA3){
+"195
+[; ;main.c: 195:         if(!PORTAbits.RA3){
 [e $ ! ! != -> . . _PORTAbits 0 3 `i -> 0 `i 188  ]
 {
-"195
-[; ;main.c: 195:             if(frequency < 1080)frequency++;
+"196
+[; ;main.c: 196:             if(frequency < 1080)frequency++;
 [e $ ! < _frequency -> -> 1080 `i `ui 189  ]
 [e ++ _frequency -> -> 1 `i `ui ]
 [e :U 189 ]
-"196
-[; ;main.c: 196:             if(frequency > 1080)frequency = 1080;
+"197
+[; ;main.c: 197:             if(frequency > 1080)frequency = 1080;
 [e $ ! > _frequency -> -> 1080 `i `ui 190  ]
 [e = _frequency -> -> 1080 `i `ui ]
 [e :U 190 ]
-"197
-[; ;main.c: 197:             beep(100);
-[e ( _beep (1 -> 100 `i ]
 "198
-[; ;main.c: 198:             _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 198:             beep(100);
+[e ( _beep (1 -> 100 `i ]
 "199
-[; ;main.c: 199:             while(!PORTAbits.RA3){
+[; ;main.c: 199:             _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"200
+[; ;main.c: 200:             while(!PORTAbits.RA3){
 [e $U 191  ]
 [e :U 192 ]
 {
-"200
-[; ;main.c: 200:                 if(frequency < 1080)frequency++;
+"201
+[; ;main.c: 201:                 if(frequency < 1080)frequency++;
 [e $ ! < _frequency -> -> 1080 `i `ui 194  ]
 [e ++ _frequency -> -> 1 `i `ui ]
 [e :U 194 ]
-"201
-[; ;main.c: 201:                 if(frequency > 1080)frequency = 1080;
+"202
+[; ;main.c: 202:                 if(frequency > 1080)frequency = 1080;
 [e $ ! > _frequency -> -> 1080 `i `ui 195  ]
 [e = _frequency -> -> 1080 `i `ui ]
 [e :U 195 ]
-"202
-[; ;main.c: 202:                 _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "203
-[; ;main.c: 203:             }
+[; ;main.c: 203:                 _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"204
+[; ;main.c: 204:             }
 }
 [e :U 191 ]
-"199
-[; ;main.c: 199:             while(!PORTAbits.RA3){
+"200
+[; ;main.c: 200:             while(!PORTAbits.RA3){
 [e $ ! != -> . . _PORTAbits 0 3 `i -> 0 `i 192  ]
 [e :U 193 ]
-"204
-[; ;main.c: 204:         }
+"205
+[; ;main.c: 205:         }
 }
 [e :U 188 ]
-"206
-[; ;main.c: 206:         if(!PORTAbits.RA5){
+"207
+[; ;main.c: 207:         if(!PORTAbits.RA5){
 [e $ ! ! != -> . . _PORTAbits 0 5 `i -> 0 `i 196  ]
 {
-"207
-[; ;main.c: 207:             if(frequency > 880)frequency--;
+"208
+[; ;main.c: 208:             if(frequency > 880)frequency--;
 [e $ ! > _frequency -> -> 880 `i `ui 197  ]
 [e -- _frequency -> -> 1 `i `ui ]
 [e :U 197 ]
-"208
-[; ;main.c: 208:             if(frequency < 880)frequency = 880;
+"209
+[; ;main.c: 209:             if(frequency < 880)frequency = 880;
 [e $ ! < _frequency -> -> 880 `i `ui 198  ]
 [e = _frequency -> -> 880 `i `ui ]
 [e :U 198 ]
-"209
-[; ;main.c: 209:             beep(100);
-[e ( _beep (1 -> 100 `i ]
 "210
-[; ;main.c: 210:             _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 210:             beep(100);
+[e ( _beep (1 -> 100 `i ]
 "211
-[; ;main.c: 211:             while(!PORTAbits.RA5){
+[; ;main.c: 211:             _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"212
+[; ;main.c: 212:             while(!PORTAbits.RA5){
 [e $U 199  ]
 [e :U 200 ]
 {
-"212
-[; ;main.c: 212:                 if(frequency > 880)frequency--;
+"213
+[; ;main.c: 213:                 if(frequency > 880)frequency--;
 [e $ ! > _frequency -> -> 880 `i `ui 202  ]
 [e -- _frequency -> -> 1 `i `ui ]
 [e :U 202 ]
-"213
-[; ;main.c: 213:                 if(frequency < 880)frequency = 880;
+"214
+[; ;main.c: 214:                 if(frequency < 880)frequency = 880;
 [e $ ! < _frequency -> -> 880 `i `ui 203  ]
 [e = _frequency -> -> 880 `i `ui ]
 [e :U 203 ]
-"214
-[; ;main.c: 214:                 _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "215
-[; ;main.c: 215:             }
+[; ;main.c: 215:                 _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"216
+[; ;main.c: 216:             }
 }
 [e :U 199 ]
-"211
-[; ;main.c: 211:             while(!PORTAbits.RA5){
+"212
+[; ;main.c: 212:             while(!PORTAbits.RA5){
 [e $ ! != -> . . _PORTAbits 0 5 `i -> 0 `i 200  ]
 [e :U 201 ]
-"216
-[; ;main.c: 216:         }
+"217
+[; ;main.c: 217:         }
 }
 [e :U 196 ]
-"218
-[; ;main.c: 218:         if(!PORTAbits.RA4){
+"219
+[; ;main.c: 219:         if(!PORTAbits.RA4){
 [e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 204  ]
 {
-"219
-[; ;main.c: 219:             _delay((unsigned long)((500)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "220
-[; ;main.c: 220:             if(!PORTAbits.RA4){
+[; ;main.c: 220:             _delay((unsigned long)((500)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"221
+[; ;main.c: 221:             if(!PORTAbits.RA4){
 [e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 205  ]
 {
-"221
-[; ;main.c: 221:                 setData(1);
-[e ( _setData (1 -> -> 1 `i `uc ]
 "222
-[; ;main.c: 222:                 beep(1000);
-[e ( _beep (1 -> 1000 `i ]
+[; ;main.c: 222:                 setData(1);
+[e ( _setData (1 -> -> 1 `i `uc ]
 "223
-[; ;main.c: 223:                 break;
-[e $U 187  ]
+[; ;main.c: 223:                 beep(1000);
+[e ( _beep (1 -> 1000 `i ]
 "224
-[; ;main.c: 224:             }
+[; ;main.c: 224:                 break;
+[e $U 187  ]
+"225
+[; ;main.c: 225:             }
 }
 [e :U 205 ]
-"225
-[; ;main.c: 225:         }
+"226
+[; ;main.c: 226:         }
 }
 [e :U 204 ]
-"226
-[; ;main.c: 226:     }
+"227
+[; ;main.c: 227:     }
 }
 [e :U 185 ]
 [e $U 186  ]
 [e :U 187 ]
-"227
-[; ;main.c: 227:     writeFrequency(frequency);
-[e ( _writeFrequency (1 _frequency ]
 "228
-[; ;main.c: 228:     isOnConfig = 0;
+[; ;main.c: 228:     writeFrequency(frequency);
+[e ( _writeFrequency (1 _frequency ]
+"229
+[; ;main.c: 229:     isOnConfig = 0;
 [e = _isOnConfig -> -> 0 `i `uc ]
-"230
-[; ;main.c: 230:     for(i; i < 25; i++){
+"231
+[; ;main.c: 231:     for(i; i < 25; i++){
 {
 [e _i ]
 [e $U 209  ]
 [e :U 206 ]
 {
-"231
-[; ;main.c: 231:         sprintf(lineOne,"LOCKING         ");
-[e ( _sprintf (1 , &U _lineOne :s 10C ]
 "232
-[; ;main.c: 232:         sprintf(lineTwo,"       FREQUENCY");
-[e ( _sprintf (1 , &U _lineTwo :s 11C ]
+[; ;main.c: 232:         sprintf(lineOne,"LOCKING         ");
+[e ( _sprintf (1 , &U _lineOne :s 10C ]
 "233
-[; ;main.c: 233:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
+[; ;main.c: 233:         sprintf(lineTwo,"       FREQUENCY");
+[e ( _sprintf (1 , &U _lineTwo :s 11C ]
 "234
-[; ;main.c: 234:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
+[; ;main.c: 234:         SetDDRamAddr(0x00);
+[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
 "235
-[; ;main.c: 235:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+[; ;main.c: 235:         putsXLCD(lineOne);
+[e ( _putsXLCD (1 &U _lineOne ]
 "236
-[; ;main.c: 236:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
+[; ;main.c: 236:         SetDDRamAddr(0x40);
+[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
 "237
-[; ;main.c: 237:         _delay((unsigned long)((90)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 90 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 237:         putsXLCD(lineTwo);
+[e ( _putsXLCD (1 &U _lineTwo ]
 "238
-[; ;main.c: 238:     }
+[; ;main.c: 238:         _delay((unsigned long)((90)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 90 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"239
+[; ;main.c: 239:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 209 ]
 [e $ < -> _i `i -> 25 `i 206  ]
 [e :U 207 ]
 }
-"239
-[; ;main.c: 239:     return;
-[e $UE 181  ]
 "240
-[; ;main.c: 240: }
+[; ;main.c: 240:     return;
+[e $UE 181  ]
+"241
+[; ;main.c: 241: }
 [e :UE 181 ]
 }
-"242
-[; ;main.c: 242: void setTransStat (int stat){
+"243
+[; ;main.c: 243: void setTransStat (int stat){
 [v _setTransStat `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _setTransStat ]
 [v _stat `i ~T0 @X0 1 r1 ]
 [f ]
-"243
-[; ;main.c: 243:     if(stat == 1){
+"244
+[; ;main.c: 244:     if(stat == 1){
 [e $ ! == _stat -> 1 `i 211  ]
 {
-"244
-[; ;main.c: 244:         PORTCbits.RC0 = 1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "245
-[; ;main.c: 245:         PORTCbits.RC4 = 0;
-[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 245:         PORTCbits.RC0 = 1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
 "246
-[; ;main.c: 246:         _delay((unsigned long)((2)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 246:         PORTCbits.RC4 = 0;
+[e = . . _PORTCbits 0 4 -> -> 0 `i `uc ]
 "247
-[; ;main.c: 247:         writeFrequency(frequency);
-[e ( _writeFrequency (1 _frequency ]
+[; ;main.c: 247:         _delay((unsigned long)((2)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "248
-[; ;main.c: 248:     }else{
+[; ;main.c: 248:         writeFrequency(frequency);
+[e ( _writeFrequency (1 _frequency ]
+"249
+[; ;main.c: 249:     }else{
 }
 [e $U 212  ]
 [e :U 211 ]
 {
-"249
-[; ;main.c: 249:         PORTCbits.RC0 = 0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "250
-[; ;main.c: 250:         PORTCbits.RC4 = 1;
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 250:         PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "251
-[; ;main.c: 251:         _delay((unsigned long)((2)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 251:         PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
 "252
-[; ;main.c: 252:         writeFrequency(730);
-[e ( _writeFrequency (1 -> -> 730 `i `ui ]
+[; ;main.c: 252:         _delay((unsigned long)((2)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "253
-[; ;main.c: 253:     }
+[; ;main.c: 253:         writeFrequency(730);
+[e ( _writeFrequency (1 -> -> 730 `i `ui ]
+"254
+[; ;main.c: 254:     }
 }
 [e :U 212 ]
-"254
-[; ;main.c: 254: }
+"255
+[; ;main.c: 255: }
 [e :UE 210 ]
 }
 [p f _sprintf 8421504 ]
