@@ -28,7 +28,7 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "6 /home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
 [v _codFreq codFreq `(ui  1 e 2 0 ]
-"15
+"12
 [v _writeFrequency writeFrequency `(v  1 e 1 0 ]
 "7 /home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
 [v _readEEPROM readEEPROM `(uc  1 e 1 0 ]
@@ -71,49 +71,53 @@
 [v i1_BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
 "5 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _main main `(v  1 e 1 0 ]
-"53
+"42
 [v _config config `(v  1 e 1 0 ]
-"81
+"73
 [v _start start `(v  1 e 1 0 ]
-"130
+"122
 [v _inter inter `II(v  1 e 1 0 ]
-"147
+"138
 [v _time time `(v  1 e 1 0 ]
-"177
+"168
 [v _beep beep `(v  1 e 1 0 ]
-"188
+"179
 [v _setFrequency setFrequency `(v  1 e 1 0 ]
-"243
+"228
 [v _setTransStat setTransStat `(v  1 e 1 0 ]
-"118 /home/sebastian/Escritorio/BH1415/BH1415v2/hardware.h
+"240
+[v _principalScreen principalScreen `(v  1 e 1 0 ]
+"250
+[v _lockingScreen lockingScreen `(v  1 e 1 0 ]
+"120 /home/sebastian/Escritorio/BH1415/BH1415v2/hardware.h
 [v _prTmr1L prTmr1L `uc  1 e 1 0 ]
-"119
-[v _prTmr1H prTmr1H `uc  1 e 1 0 ]
 "121
-[v _cntTmr1 cntTmr1 `uc  1 e 1 0 ]
+[v _prTmr1H prTmr1H `uc  1 e 1 0 ]
 "123
-[v _frequency frequency `ui  1 e 2 0 ]
-"124
-[v _months months `uc  1 e 1 0 ]
+[v _cntTmr1 cntTmr1 `uc  1 e 1 0 ]
 "125
-[v _days days `uc  1 e 1 0 ]
+[v _frequency frequency `ui  1 e 2 0 ]
 "126
-[v _hours hours `uc  1 e 1 0 ]
+[v _months months `uc  1 e 1 0 ]
 "127
-[v _minutes minutes `uc  1 e 1 0 ]
+[v _days days `uc  1 e 1 0 ]
 "128
-[v _seconds seconds `uc  1 e 1 0 ]
+[v _hours hours `uc  1 e 1 0 ]
 "129
-[v _hundredMiliSeconds hundredMiliSeconds `uc  1 e 1 0 ]
+[v _minutes minutes `uc  1 e 1 0 ]
 "130
-[v _functionalStat functionalStat `uc  1 e 1 0 ]
+[v _seconds seconds `uc  1 e 1 0 ]
+"131
+[v _hundredMiliSeconds hundredMiliSeconds `uc  1 e 1 0 ]
 "132
-[v _isOnConfig isOnConfig `uc  1 e 1 0 ]
+[v _functionalStat functionalStat `uc  1 e 1 0 ]
 "134
-[v _i i `uc  1 e 1 0 ]
+[v _isOnConfig isOnConfig `uc  1 e 1 0 ]
 "136
+[v _i i `uc  1 e 1 0 ]
+"138
 [v _lineOne lineOne `[17]uc  1 e 17 0 ]
-"137
+"139
 [v _lineTwo lineTwo `[17]uc  1 e 17 0 ]
 "166 /opt/microchip/xc8/v2.05/pic/include/pic16f886.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -131,7 +135,7 @@
 [v _PORTAbits PORTAbits `VES177  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S357 . 1 `uc 1 RB0 1 0 :1:0 
+[s S360 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -141,11 +145,11 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S366 . 1 `S357 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES366  1 e 1 @6 ]
+[u S369 . 1 `S360 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES369  1 e 1 @6 ]
 "290
 [v _PORTC PORTC `VEuc  1 e 1 @7 ]
-[s S306 . 1 `uc 1 RC0 1 0 :1:0 
+[s S228 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -155,8 +159,8 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "307
-[u S315 . 1 `S306 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES315  1 e 1 @7 ]
+[u S237 . 1 `S228 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES237  1 e 1 @7 ]
 "380
 [v _INTCON INTCON `VEuc  1 e 1 @11 ]
 [s S41 . 1 `uc 1 RBIF 1 0 :1:0 
@@ -176,7 +180,7 @@
 ]
 [u S55 . 1 `S41 1 . 1 0 `S50 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES55  1 e 1 @11 ]
-[s S327 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S330 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -185,8 +189,8 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "474
-[u S335 . 1 `S327 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES335  1 e 1 @12 ]
+[u S338 . 1 `S330 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES338  1 e 1 @12 ]
 [s S74 . 1 `uc 1 CCP2IF 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ULPWUIF 1 0 :1:2 
@@ -205,7 +209,7 @@
 [v _TMR1H TMR1H `VEuc  1 e 1 @15 ]
 "592
 [v _T1CON T1CON `VEuc  1 e 1 @16 ]
-[s S263 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S253 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 TMR1CS 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -214,7 +218,7 @@
 `uc 1 T1GINV 1 0 :1:7 
 ]
 "621
-[s S271 . 1 `uc 1 . 1 0 :2:0 
+[s S261 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1INSYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T1CKPS0 1 0 :1:4 
@@ -222,18 +226,18 @@
 `uc 1 . 1 0 :1:6 
 `uc 1 T1GIV 1 0 :1:7 
 ]
-[s S279 . 1 `uc 1 . 1 0 :2:0 
+[s S269 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T1SYNC 1 0 :1:2 
 ]
-[u S282 . 1 `S263 1 . 1 0 `S271 1 . 1 0 `S279 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES282  1 e 1 @16 ]
+[u S272 . 1 `S253 1 . 1 0 `S261 1 . 1 0 `S269 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES272  1 e 1 @16 ]
 "1166
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
 "1337
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1399
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S476 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S486 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -243,8 +247,8 @@
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1416
-[u S485 . 1 `S476 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES485  1 e 1 @134 ]
+[u S495 . 1 `S486 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES495  1 e 1 @134 ]
 "1461
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1544
@@ -276,23 +280,81 @@
 "5 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"23
-[v main@integ integ `uc  1 a 1 34 ]
-"22
-[v main@decim decim `uc  1 a 1 33 ]
-"51
+"40
 } 0
-"81
+"73
 [v _start start `(v  1 e 1 0 ]
 {
-"82
+"74
 [v start@i i `uc  1 a 1 27 ]
-"128
+"120
 } 0
-"188
+"179
 [v _setFrequency setFrequency `(v  1 e 1 0 ]
 {
-"241
+"226
+} 0
+"12 /home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
+[v _writeFrequency writeFrequency `(v  1 e 1 0 ]
+{
+"14
+[v writeFrequency@r r `ui  1 a 2 9 ]
+"13
+[v writeFrequency@buffer buffer `ui  1 a 2 7 ]
+"12
+[v writeFrequency@f f `ui  1 p 2 2 ]
+"53
+} 0
+"6
+[v _codFreq codFreq `(ui  1 e 2 0 ]
+{
+"7
+[v codFreq@fr fr `ui  1 a 2 31 ]
+"6
+[v codFreq@f f `ui  1 p 2 29 ]
+"10
+} 0
+"168 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+[v _beep beep `(v  1 e 1 0 ]
+{
+[v beep@ms ms `i  1 p 2 0 ]
+"177
+} 0
+"44 /home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
+[v _setData setData `(v  1 e 1 0 ]
+{
+[v setData@full full `uc  1 a 1 wreg ]
+"46
+[v setData@data1 data1 `uc  1 a 1 33 ]
+"45
+[v setData@data0 data0 `uc  1 a 1 32 ]
+"44
+[v setData@full full `uc  1 a 1 wreg ]
+[v setData@full full `uc  1 a 1 34 ]
+"55
+} 0
+"14
+[v _writeEEPROM writeEEPROM `(v  1 e 1 0 ]
+{
+[v writeEEPROM@data data `uc  1 a 1 wreg ]
+[v writeEEPROM@data data `uc  1 a 1 wreg ]
+[v writeEEPROM@address address `uc  1 p 1 29 ]
+[v writeEEPROM@data data `uc  1 a 1 30 ]
+"29
+} 0
+"250 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+[v _lockingScreen lockingScreen `(v  1 e 1 0 ]
+{
+"259
+} 0
+"240
+[v _principalScreen principalScreen `(v  1 e 1 0 ]
+{
+"244
+[v principalScreen@integ integ `uc  1 a 1 30 ]
+"243
+[v principalScreen@decim decim `uc  1 a 1 29 ]
+"248
 } 0
 "500 /opt/microchip/xc8/v2.05/pic/sources/c90/common/doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -326,6 +388,16 @@
 [v isdigit@c c `uc  1 a 1 30 ]
 "15
 } 0
+"15 /opt/microchip/xc8/v2.05/pic/sources/c90/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 33 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 29 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 31 ]
+"53
+} 0
 "5 /opt/microchip/xc8/v2.05/pic/sources/c90/common/lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
@@ -348,28 +420,6 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 31 ]
 "30
 } 0
-"44 /home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
-[v _setData setData `(v  1 e 1 0 ]
-{
-[v setData@full full `uc  1 a 1 wreg ]
-"46
-[v setData@data1 data1 `uc  1 a 1 33 ]
-"45
-[v setData@data0 data0 `uc  1 a 1 32 ]
-"44
-[v setData@full full `uc  1 a 1 wreg ]
-[v setData@full full `uc  1 a 1 34 ]
-"55
-} 0
-"14
-[v _writeEEPROM writeEEPROM `(v  1 e 1 0 ]
-{
-[v writeEEPROM@data data `uc  1 a 1 wreg ]
-[v writeEEPROM@data data `uc  1 a 1 wreg ]
-[v writeEEPROM@address address `uc  1 p 1 29 ]
-[v writeEEPROM@data data `uc  1 a 1 30 ]
-"29
-} 0
 "419 /home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
 [v _putsXLCD putsXLCD `(v  1 e 1 0 ]
 {
@@ -378,23 +428,7 @@
 [v putsXLCD@buffer buffer `*.4uc  1 a 1 34 ]
 "428
 } 0
-"177 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
-[v _beep beep `(v  1 e 1 0 ]
-{
-[v beep@ms ms `i  1 p 2 0 ]
-"186
-} 0
-"15 /opt/microchip/xc8/v2.05/pic/sources/c90/common/Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 33 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 29 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 31 ]
-"53
-} 0
-"435 /home/sebastian/Escritorio/BH1415/BH1415v2/lcd_pic16.c
+"435
 [v _putrsXLCD putrsXLCD `(v  1 e 1 0 ]
 {
 [v putrsXLCD@buffer buffer `*.24DCuc  1 a 1 wreg ]
@@ -428,35 +462,16 @@
 [v readEEPROM@address address `uc  1 a 1 29 ]
 "12
 } 0
-"53 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"42 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _config config `(v  1 e 1 0 ]
 {
-"79
+"71
 } 0
-"243
+"228
 [v _setTransStat setTransStat `(v  1 e 1 0 ]
 {
-[v setTransStat@stat stat `i  1 p 2 5 ]
-"255
-} 0
-"15 /home/sebastian/Escritorio/BH1415/BH1415v2/bh1514.c
-[v _writeFrequency writeFrequency `(v  1 e 1 0 ]
-{
-"17
-[v writeFrequency@r r `ui  1 a 2 2 ]
-"16
-[v writeFrequency@buffer buffer `ui  1 a 2 0 ]
-"18
-[v writeFrequency@i i `uc  1 a 1 4 ]
-"15
-[v writeFrequency@f f `ui  1 p 2 31 ]
-"39
-} 0
-"6
-[v _codFreq codFreq `(ui  1 e 2 0 ]
-{
-[v codFreq@f f `ui  1 p 2 29 ]
-"13
+[v setTransStat@stat stat `i  1 p 2 29 ]
+"238
 } 0
 "5 /home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
 [v _initLCD initLCD `(v  1 e 1 0 ]
@@ -513,10 +528,10 @@
 {
 "508
 } 0
-"130 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"122 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _inter inter `II(v  1 e 1 0 ]
 {
-"144
+"136
 } 0
 "14 /home/sebastian/Escritorio/BH1415/BH1415v2/lcd.c
 [v _updateLCD updateLCD `(v  1 e 1 0 ]
@@ -613,10 +628,10 @@
 {
 "25
 } 0
-"147 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
+"138 /home/sebastian/Escritorio/BH1415/BH1415v2/main.c
 [v _time time `(v  1 e 1 0 ]
 {
-"175
+"166
 } 0
 "44 /home/sebastian/Escritorio/BH1415/BH1415v2/eeprom.c
 [v i1_setData setData `(v  1 e 1 0 ]

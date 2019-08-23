@@ -13,38 +13,27 @@ void main (){
         __delay_ms(25);                     // el boton de menu. Entra en modo de
         if(!btnMenu) setFrequency();        // configuracion de frecuencia.
     }
-    __delay_ms(100);
-    writeFrequency(frequency);
     start();
+    lockingScreen();
+    writeFrequency(frequency);  //Se esccribe la frecuencia y se espera 
     
-    SetDDRamAddr(0x00);
-    putrsXLCD("AMPRO      EX-FM");
-    unsigned char decim = frequency % 10;
-    unsigned char integ = frequency / 10;
-    sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
-    SetDDRamAddr(0x40);
-    putsXLCD(lineTwo);
-    //Bucle de repeticion infinita
-    writeFrequency(frequency);
+    //Muestra el mensaje por defecto
+    principalScreen();
     while(1){
         if(functionalStat == UN_BLOCKED){
             setTransStat(1);
         }else{
-            setTransStat(0);
+            setTransStat(1);
         }
-        if(!btnMenu){                           //Si al iniciar se encuenta presionado
-            __delay_ms(25);
-            while(1){
-                for(i = 0; i>100; i++){
-                    if(btnMenu){
-                        __delay_ms(25);
-                        if(btnMenu)break;
-                    }                   
-                }
-                INTCONbits.GIE = 0;
+        if(!btnMenu){                           
+            __delay_ms(500);
+            for(i = 0; i < 10; i++){
+                __delay_ms(100);
+            }
+            if(!btnMenu){
                 setFrequency();
                 writeFrequency(frequency);
-                INTCONbits.GIE = 1;
+                principalScreen();                    
             }
         }
     }
@@ -68,6 +57,9 @@ void config(){
     ADCON1  = 0b00000000;
     ANSEL   = 0b00000000;
     ANSELH  = 0b00000000;
+    //Apaga el transmisor 
+    transEn = 0;
+    pllEn = 0;
     //Inicializacion del LCD
     initLCD();
     //Inicializacion de procesos 
@@ -142,7 +134,6 @@ void __interrupt() inter (){
     INTCONbits.GIE = 1;
     return;
 }
-
 //Conteo de tiempo transcurrido de funcionamiento
 void time (){
     hundredMiliSeconds++;
@@ -152,10 +143,10 @@ void time (){
         if(seconds >= 60){
             seconds = 0;
             minutes++;
-            setData(0);
             if(minutes >= 60){
                 minutes = 0;
                 hours++;
+                setData(0);
                 if(hours >= 24){
                     hours = 0;
                     days++;
@@ -188,6 +179,8 @@ void beep (int ms){
 void setFrequency (){
     isOnConfig = 1;
     sprintf(lineOne,"SET   FREQUENCY ");
+    SetDDRamAddr(0x00);
+    putsXLCD(lineOne);
     beep(200);
     while(!btnMenu)continue;           //Espera a que se suelte el boton 
 
@@ -196,11 +189,11 @@ void setFrequency (){
             if(frequency < 1080)frequency++;
             if(frequency > 1080)frequency = 1080;
             beep(100);
-            __delay_ms(500);
+            __delay_ms(150);
             while(!btnUp){                              //Detecta si aun se mantiene 
                 if(frequency < 1080)frequency++;        // presionado
                 if(frequency > 1080)frequency = 1080;
-                __delay_ms(100);
+                __delay_ms(50);
             }
         }
 
@@ -208,11 +201,11 @@ void setFrequency (){
             if(frequency > 880)frequency--;
             if(frequency < 880)frequency = 880;
             beep(100);
-            __delay_ms(500);
+            __delay_ms(150);
             while(!btnDown){                            //Detecta si aun se mantiene
                 if(frequency > 880)frequency--;         // presionado
                 if(frequency < 880)frequency = 880;
-                __delay_ms(100);
+                __delay_ms(50);
             }
         }
 
@@ -225,18 +218,10 @@ void setFrequency (){
             }
         }
     }
-    writeFrequency(frequency);
+
     isOnConfig = 0;
-     
-    for(i; i < 25; i++){
-        sprintf(lineOne,"LOCKING         ");
-        sprintf(lineTwo,"       FREQUENCY");
-        SetDDRamAddr(0x00);
-        putsXLCD(lineOne);
-        SetDDRamAddr(0x40);
-        putsXLCD(lineTwo);
-        __delay_ms(90);
-    }
+    lockingScreen();
+    writeFrequency(frequency);  //Se esccribe la frecuencia y se espera 
     return;
 }
 
@@ -245,11 +230,30 @@ void setTransStat (int stat){
         transEn = 1;
         pllEn = 0;
         __delay_ms(2);
-        writeFrequency(frequency);
     }else{
         transEn = 0;
         pllEn = 1;
         __delay_ms(2);
-        writeFrequency(730);
     }
+}
+
+void principalScreen(){
+    SetDDRamAddr(0x00);
+    putrsXLCD("AMPRO      EX-FM");
+    unsigned char decim = frequency % 10;
+    unsigned char integ = frequency / 10;
+    sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
+}
+
+void lockingScreen(){
+    //Indica en la pantalla que se esta fijando la frecuencia
+    sprintf(lineOne,"LOCKING         ");
+    sprintf(lineTwo,"       FREQUENCY");
+    SetDDRamAddr(0x00);
+    putsXLCD(lineOne);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
+    return;
 }

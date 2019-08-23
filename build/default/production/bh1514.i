@@ -2604,7 +2604,7 @@ extern char * strrichr(const char *, int);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 # 76 "./hardware.h"
-__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
@@ -2616,6 +2616,8 @@ void time (void);
 void beep (int ms);
 void setFrequency (void);
 void setTransStat (int stat);
+void principalScreen(void);
+void lockingScreen(void);
 
 
 void initLCD (void);
@@ -2676,25 +2678,28 @@ const char UN_BLOCKED = 1;
 
 
 unsigned int codFreq (unsigned int f){
-    if(stereoEnable == 1){
-        f = f | 0b0100100000000000;
-    }else{
-        f = f | 0b0100000000000000;
-    }
-    return f;
+    unsigned int fr;
+        fr = f | 0b0100100000000000;
+    return fr;
 }
 
 void writeFrequency (unsigned int f){
     unsigned int buffer;
     unsigned int r;
-    unsigned char i;
+
+    PORTCbits.RC4 = 0;
+    PORTCbits.RC0 = 0;
 
     buffer = codFreq(f);
-
+    PORTCbits.RC6 = 0;
+    PORTCbits.RC7 = 0;
     PORTCbits.RC5 = 1;
     _delay((unsigned long)((1)*(4000000/4000.0)));
+
     for(i = 0; i < 16; i++){
         r = (buffer >> i) & 0x0001;
+        _delay((unsigned long)((1)*(4000000/4000.0)));
+        PORTCbits.RC6 = 0;
         if(r == 1){
             PORTCbits.RC7 = 1;
         }else{
@@ -2702,10 +2707,21 @@ void writeFrequency (unsigned int f){
         }
         _delay((unsigned long)((1)*(4000000/4000.0)));
         PORTCbits.RC6 = 1;
-        _delay((unsigned long)((1)*(4000000/4000.0)));
-        PORTCbits.RC6 = 0;
     }
+
     _delay((unsigned long)((1)*(4000000/4000.0)));
     PORTCbits.RC5 = 0;
+
+    beep(20);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    beep(20);
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    for(i = 0; i < 40; i++){
+        _delay((unsigned long)((100)*(4000000/4000.0)));
+    }
+
+    PORTCbits.RC4 = 0;
+    PORTCbits.RC0 = 1;
+
     return;
 }

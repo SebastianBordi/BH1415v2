@@ -73,7 +73,7 @@
 
 
 //Valores en programacion de la EEPROM 
-__EEPROM_DATA(0x7E, 0x03, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00);
+__EEPROM_DATA(0xD3, 0x03, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00);
 
 //Instancias de subrrutinas de main.c
 void main (void);                   //Subrrutina principal
@@ -85,6 +85,8 @@ void time (void);
 void beep (int ms);
 void setFrequency (void);
 void setTransStat (int stat);
+void principalScreen(void);
+void lockingScreen(void);
 
 //Instancias de subrrutinas de lcd.c
 void initLCD (void);            //Subrrutina que inicializa el LCD

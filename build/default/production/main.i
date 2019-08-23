@@ -2604,7 +2604,7 @@ extern char * strrichr(const char *, int);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 # 76 "./hardware.h"
-__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0x7E" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
@@ -2616,6 +2616,8 @@ void time (void);
 void beep (int ms);
 void setFrequency (void);
 void setTransStat (int stat);
+void principalScreen(void);
+void lockingScreen(void);
 
 
 void initLCD (void);
@@ -2685,38 +2687,27 @@ void main (){
         _delay((unsigned long)((25)*(4000000/4000.0)));
         if(!PORTAbits.RA4) setFrequency();
     }
-    _delay((unsigned long)((100)*(4000000/4000.0)));
-    writeFrequency(frequency);
     start();
-
-    SetDDRamAddr(0x00);
-    putrsXLCD("AMPRO      EX-FM");
-    unsigned char decim = frequency % 10;
-    unsigned char integ = frequency / 10;
-    sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
-    SetDDRamAddr(0x40);
-    putsXLCD(lineTwo);
-
+    lockingScreen();
     writeFrequency(frequency);
+
+
+    principalScreen();
     while(1){
         if(functionalStat == UN_BLOCKED){
             setTransStat(1);
         }else{
-            setTransStat(0);
+            setTransStat(1);
         }
         if(!PORTAbits.RA4){
-            _delay((unsigned long)((25)*(4000000/4000.0)));
-            while(1){
-                for(i = 0; i>100; i++){
-                    if(PORTAbits.RA4){
-                        _delay((unsigned long)((25)*(4000000/4000.0)));
-                        if(PORTAbits.RA4)break;
-                    }
-                }
-                INTCONbits.GIE = 0;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            for(i = 0; i < 10; i++){
+                _delay((unsigned long)((100)*(4000000/4000.0)));
+            }
+            if(!PORTAbits.RA4){
                 setFrequency();
                 writeFrequency(frequency);
-                INTCONbits.GIE = 1;
+                principalScreen();
             }
         }
     }
@@ -2740,6 +2731,9 @@ void config(){
     ADCON1 = 0b00000000;
     ANSEL = 0b00000000;
     ANSELH = 0b00000000;
+
+    PORTCbits.RC0 = 0;
+    PORTCbits.RC4 = 0;
 
     initLCD();
 
@@ -2815,7 +2809,6 @@ void __attribute__((picinterrupt(("")))) inter (){
     return;
 }
 
-
 void time (){
     hundredMiliSeconds++;
     if(hundredMiliSeconds >= 10){
@@ -2824,10 +2817,10 @@ void time (){
         if(seconds >= 60){
             seconds = 0;
             minutes++;
-            setData(0);
             if(minutes >= 60){
                 minutes = 0;
                 hours++;
+                setData(0);
                 if(hours >= 24){
                     hours = 0;
                     days++;
@@ -2860,6 +2853,8 @@ void beep (int ms){
 void setFrequency (){
     isOnConfig = 1;
     sprintf(lineOne,"SET   FREQUENCY ");
+    SetDDRamAddr(0x00);
+    putsXLCD(lineOne);
     beep(200);
     while(!PORTAbits.RA4)continue;
 
@@ -2868,11 +2863,11 @@ void setFrequency (){
             if(frequency < 1080)frequency++;
             if(frequency > 1080)frequency = 1080;
             beep(100);
-            _delay((unsigned long)((500)*(4000000/4000.0)));
+            _delay((unsigned long)((150)*(4000000/4000.0)));
             while(!PORTAbits.RA3){
                 if(frequency < 1080)frequency++;
                 if(frequency > 1080)frequency = 1080;
-                _delay((unsigned long)((100)*(4000000/4000.0)));
+                _delay((unsigned long)((50)*(4000000/4000.0)));
             }
         }
 
@@ -2880,11 +2875,11 @@ void setFrequency (){
             if(frequency > 880)frequency--;
             if(frequency < 880)frequency = 880;
             beep(100);
-            _delay((unsigned long)((500)*(4000000/4000.0)));
+            _delay((unsigned long)((150)*(4000000/4000.0)));
             while(!PORTAbits.RA5){
                 if(frequency > 880)frequency--;
                 if(frequency < 880)frequency = 880;
-                _delay((unsigned long)((100)*(4000000/4000.0)));
+                _delay((unsigned long)((50)*(4000000/4000.0)));
             }
         }
 
@@ -2897,18 +2892,10 @@ void setFrequency (){
             }
         }
     }
-    writeFrequency(frequency);
-    isOnConfig = 0;
 
-    for(i; i < 25; i++){
-        sprintf(lineOne,"LOCKING         ");
-        sprintf(lineTwo,"       FREQUENCY");
-        SetDDRamAddr(0x00);
-        putsXLCD(lineOne);
-        SetDDRamAddr(0x40);
-        putsXLCD(lineTwo);
-        _delay((unsigned long)((90)*(4000000/4000.0)));
-    }
+    isOnConfig = 0;
+    lockingScreen();
+    writeFrequency(frequency);
     return;
 }
 
@@ -2917,11 +2904,30 @@ void setTransStat (int stat){
         PORTCbits.RC0 = 1;
         PORTCbits.RC4 = 0;
         _delay((unsigned long)((2)*(4000000/4000.0)));
-        writeFrequency(frequency);
     }else{
         PORTCbits.RC0 = 0;
         PORTCbits.RC4 = 1;
         _delay((unsigned long)((2)*(4000000/4000.0)));
-        writeFrequency(730);
     }
+}
+
+void principalScreen(){
+    SetDDRamAddr(0x00);
+    putrsXLCD("AMPRO      EX-FM");
+    unsigned char decim = frequency % 10;
+    unsigned char integ = frequency / 10;
+    sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
+}
+
+void lockingScreen(){
+
+    sprintf(lineOne,"LOCKING         ");
+    sprintf(lineTwo,"       FREQUENCY");
+    SetDDRamAddr(0x00);
+    putsXLCD(lineOne);
+    SetDDRamAddr(0x40);
+    putsXLCD(lineTwo);
+    return;
 }

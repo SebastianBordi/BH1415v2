@@ -49,7 +49,7 @@ void setData(unsigned char full){
     writeEEPROM(months ,2);
     writeEEPROM(days ,3);
     writeEEPROM(hours ,4);
-    writeEEPROM(minutes ,5);
+    if(full)writeEEPROM(minutes ,5);
     writeEEPROM(functionalStat ,6);
     return;
 }
