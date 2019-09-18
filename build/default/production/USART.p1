@@ -1,28 +1,21 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"118 ./hardware.h
-[; ;./hardware.h: 118: void OpenXLCD(unsigned char lcdtype);
-[v _OpenXLCD `(v ~T0 @X0 0 ef1`uc ]
-[v F1196 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF1196 ~T0 @X0 0 e ]
-[p i __delay ]
-"94 ./hardware.h
-[; ;./hardware.h: 94: void SendCMDLCD (unsigned char CMD);
-[v _SendCMDLCD `(v ~T0 @X0 0 ef1`uc ]
-"194 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"116 ./hardware.h
-[; ;./hardware.h: 116: void SetDDRamAddr(unsigned char DDaddr);
-[v _SetDDRamAddr `(v ~T0 @X0 0 ef1`uc ]
-"119
-[; ;./hardware.h: 119: void putsXLCD(char *buffer);
-[v _putsXLCD `(v ~T0 @X0 0 ef1`*uc ]
-"117
-[; ;./hardware.h: 117: unsigned char BusyXLCD(void);
-[v _BusyXLCD `(uc ~T0 @X0 0 ef ]
-"115
-[; ;./hardware.h: 115: void WriteCmdXLCD(unsigned char cmd);
-[v _WriteCmdXLCD `(v ~T0 @X0 0 ef1`uc ]
+"108 ./hardware.h
+[; ;./hardware.h: 108: char dataAvailable(void);
+[v _dataAvailable `(uc ~T0 @X0 0 ef ]
+[v F1549 `(uc ~T0 @X0 0 tf ]
+"109
+[; ;./hardware.h: 109: void readUart(char *buff);
+[v _readUart `(v ~T0 @X0 0 ef1`*uc ]
+"67 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdlib.h: 67: extern int atoi(const char *);
+[v _atoi `(i ~T0 @X0 0 ef1`*Cuc ]
+[v F1552 `(uc ~T0 @X0 0 tf ]
+"4293 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 4293: extern volatile __bit TXIF __attribute__((address(0x64)));
+[v _TXIF `Vb ~T0 @X0 0 e@100 ]
+"1054
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1054: extern volatile unsigned char TXREG __attribute__((address(0x019)));
+[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -393,99 +386,125 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _UN_BLOCKED
 -> -> 1 `i `uc
 ]
-"5 lcd.c
-[; ;lcd.c: 5: void initLCD (){
-[v _initLCD `(v ~T0 @X0 1 ef ]
+"4 USART.c
+[; ;USART.c: 4: void uartMenu (char inst){
+[v _uartMenu `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _initLCD ]
+[e :U _uartMenu ]
+[v _inst `uc ~T0 @X0 1 r1 ]
 [f ]
+"5
+[; ;USART.c: 5:     char buffer[10];
+[v _buffer `uc ~T0 @X0 -> 10 `i a ]
 "6
-[; ;lcd.c: 6:     OpenXLCD(0b00101100 & 0b00111000);
-[e ( _OpenXLCD (1 -> & -> 44 `i -> 56 `i `uc ]
+[; ;USART.c: 6:     int value = 0;
+[v _value `i ~T0 @X0 1 a ]
+[e = _value -> 0 `i ]
 "7
-[; ;lcd.c: 7:     _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;USART.c: 7:     switch(inst){
+[e $U 141  ]
+{
 "8
-[; ;lcd.c: 8:     SendCMDLCD(0b00001101);
-[e ( _SendCMDLCD (1 -> -> 13 `i `uc ]
+[; ;USART.c: 8:         case'd':
+[e :U 142 ]
 "9
-[; ;lcd.c: 9:     SendCMDLCD(0b00000110);
-[e ( _SendCMDLCD (1 -> -> 6 `i `uc ]
-"10
-[; ;lcd.c: 10:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"11
-[; ;lcd.c: 11:     return;
-[e $UE 139  ]
-"12
-[; ;lcd.c: 12: }
-[e :UE 139 ]
-}
-"14
-[; ;lcd.c: 14: void updateLCD(){
-[v _updateLCD `(v ~T0 @X0 1 ef ]
-{
-[e :U _updateLCD ]
-[f ]
-"15
-[; ;lcd.c: 15:     if(isOnConfig){
-[e $ ! != -> _isOnConfig `i -> 0 `i 141  ]
-{
-"16
-[; ;lcd.c: 16:         unsigned char decim = frequency % 10;
-[v _decim `uc ~T0 @X0 1 a ]
-[e = _decim -> % _frequency -> -> 10 `i `ui `uc ]
-"17
-[; ;lcd.c: 17:         unsigned char integ = frequency / 10;
-[v _integ `uc ~T0 @X0 1 a ]
-[e = _integ -> / _frequency -> -> 10 `i `ui `uc ]
-"18
-[; ;lcd.c: 18:         sprintf(lineTwo,"FREQ.  %3d.%d MHz",integ, decim);
-[e ( _sprintf (1 , , (. , &U _lineTwo :s 1C -> _integ `i -> _decim `i ]
-"19
-[; ;lcd.c: 19:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
-"20
-[; ;lcd.c: 20:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
-"21
-[; ;lcd.c: 21:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
-"22
-[; ;lcd.c: 22:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
-"23
-[; ;lcd.c: 23:     }
-}
-[e :U 141 ]
-"24
-[; ;lcd.c: 24:     return;
-[e $UE 140  ]
-"25
-[; ;lcd.c: 25: }
-[e :UE 140 ]
-}
-"27
-[; ;lcd.c: 27: void SendCMDLCD (unsigned char CMD){
-[v _SendCMDLCD `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _SendCMDLCD ]
-[v _CMD `uc ~T0 @X0 1 r1 ]
-[f ]
-"28
-[; ;lcd.c: 28:     while(BusyXLCD())continue;
+[; ;USART.c: 9:             while(!dataAvailable)continue;
 [e $U 143  ]
 [e :U 144 ]
 [e $U 143  ]
 [e :U 143 ]
-[e $ != -> ( _BusyXLCD ..  `i -> 0 `i 144  ]
+[e $ ! != &U _dataAvailable -> -> 0 `i `*F1549 144  ]
 [e :U 145 ]
-"29
-[; ;lcd.c: 29:     WriteCmdXLCD(CMD);
-[e ( _WriteCmdXLCD (1 _CMD ]
-"30
-[; ;lcd.c: 30: }
-[e :UE 142 ]
+"10
+[; ;USART.c: 10:             readUart(buffer);
+[e ( _readUart (1 &U _buffer ]
+"11
+[; ;USART.c: 11:             value = atoi(buffer);
+[e = _value ( _atoi (1 -> &U _buffer `*Cuc ]
+"12
+[; ;USART.c: 12:             break;
+[e $U 140  ]
+"14
+[; ;USART.c: 14:         case 'f':
+[e :U 146 ]
+"15
+[; ;USART.c: 15:             while(!dataAvailable)continue;
+[e $U 147  ]
+[e :U 148 ]
+[e $U 147  ]
+[e :U 147 ]
+[e $ ! != &U _dataAvailable -> -> 0 `i `*F1552 148  ]
+[e :U 149 ]
+"16
+[; ;USART.c: 16:             readUart(buffer);
+[e ( _readUart (1 &U _buffer ]
+"17
+[; ;USART.c: 17:             value = atoi(buffer);
+[e = _value ( _atoi (1 -> &U _buffer `*Cuc ]
+"18
+[; ;USART.c: 18:             break;
+[e $U 140  ]
+"20
+[; ;USART.c: 20:     }
 }
-[p f _sprintf 8421504 ]
-[a 1C 70 82 69 81 46 32 32 37 51 100 46 37 100 32 77 72 122 0 ]
+[e $U 140  ]
+[e :U 141 ]
+[e [\ -> _inst `i , $ -> -> 100 `ui `i 142
+ , $ -> -> 102 `ui `i 146
+ 140 ]
+[e :U 140 ]
+"21
+[; ;USART.c: 21: }
+[e :UE 139 ]
+}
+"23
+[; ;USART.c: 23: void putch(char data) {
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _putch ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+"24
+[; ;USART.c: 24:     while( ! TXIF)
+[e $U 151  ]
+[e :U 152 ]
+"25
+[; ;USART.c: 25:         continue;
+[e $U 151  ]
+[e :U 151 ]
+"24
+[; ;USART.c: 24:     while( ! TXIF)
+[e $ ! _TXIF 152  ]
+[e :U 153 ]
+"26
+[; ;USART.c: 26:     TXREG = data;
+[e = _TXREG -> _data `uc ]
+"27
+[; ;USART.c: 27: }
+[e :UE 150 ]
+}
+"29
+[; ;USART.c: 29: char dataAvailable(void){
+[v _dataAvailable `(uc ~T0 @X0 1 ef ]
+{
+[e :U _dataAvailable ]
+[f ]
+"30
+[; ;USART.c: 30:     return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 154  ]
+"31
+[; ;USART.c: 31: }
+[e :UE 154 ]
+}
+"33
+[; ;USART.c: 33: void readUart(char *buff){
+[v _readUart `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _readUart ]
+[v _buff `*uc ~T0 @X0 1 r1 ]
+[f ]
+"35
+[; ;USART.c: 35: }
+[e :UE 155 ]
+}
