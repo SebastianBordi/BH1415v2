@@ -1,0 +1,7 @@
+
+
+Se da por solucionado el problema de cambio de frecuencia 
+debido a que no volvio a ocurrir. Se estipula que la falla 
+era debido a un problema en la memoria EEPROM del 
+microcontrolador. 
+			18 de Septiembre de 2019
