@@ -41,13 +41,13 @@
 
 #define outBuzz PORTBbits.RB0
 
-#define LED3    PORTCbits.RC2
-#define LED2    PORTCbits.RC3
-#define LED1    PORTCbits.RC1
+//#define LED3    PORTCbits.RC2
+//#define LED2    PORTCbits.RC3
+//#define LED1    PORTCbits.RC1
 
-#define bhEnab  PORTCbits.RC5
-#define bhClock PORTCbits.RC6
-#define bhData  PORTCbits.RC7
+#define bhEnab  PORTCbits.RC1
+#define bhClock PORTCbits.RC2
+#define bhData  PORTCbits.RC3
 
 
 /* Display ON/OFF Control defines */
@@ -73,7 +73,7 @@
 
 
 //Valores en programacion de la EEPROM 
-__EEPROM_DATA(0xD3, 0x03, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00);
+__EEPROM_DATA(0xD1, 0x03, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00);
 
 //Instancias de subrrutinas de main.c
 void main (void);                   //Subrrutina principal
@@ -103,7 +103,10 @@ void setData (unsigned char full);
 //Instancias de subrrutinas de bh1415.c
 unsigned int codFreq (unsigned int f);
 void writeFrequency (unsigned int f);
-
+//Instancias de subrrutinas de puerto serie
+void uartMenu(char inst);
+char dataAvailable(void);
+void readUart(char *buff);
 
 void DelayFor18TCY(void);
 void DelayPORXLCD(void);

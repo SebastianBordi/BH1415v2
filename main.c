@@ -42,11 +42,11 @@ void main (){
 void config(){
     //Conf de interrupciones
     INTCON  = 0b01000000;
-    PIE1    = 0b00000001;
+    PIE1    = 0b00100001;   //Interrupcion por timer y por recepcion 
     //Configuracion de los pines
     TRISA   = 0b00111000;
     TRISB   = 0b00000000;
-    TRISC   = 0b00000000;
+    TRISC   = 0b10000000;
     PORTA   = 0x00;
     PORTB   = 0x00;
     PORTC   = 0x0E;
@@ -57,6 +57,11 @@ void config(){
     ADCON1  = 0b00000000;
     ANSEL   = 0b00000000;
     ANSELH  = 0b00000000;
+    //Configuracion del puerto serie
+    TXSTA   = 0b00100100;   //Transmision y recepcion habilitadas
+    RCSTA   = 0b10010000;   // 9600 bd 8N1
+    BAUDCTL = 0b00001000;
+    SPBRG   = 0b00011001;
     //Apaga el transmisor 
     transEn = 0;
     pllEn = 1;
@@ -76,7 +81,6 @@ void start (){
 
     /////////////////////////       TESTING SUPPLY
     for(i = 0; i < 10; i++){
-        LED1 = !LED1;
         sprintf(lineOne,"TESTING         ");
         sprintf(lineTwo,"          SUPPLY");
         SetDDRamAddr(0x00);
@@ -85,10 +89,8 @@ void start (){
         putsXLCD(lineTwo);
         __delay_ms(100);
     }
-    LED1 = 0;
     /////////////////////////       TESTING TEMPERATURE
     for(i = 0; i < 18; i++){
-        LED2 = !LED2;
         sprintf(lineOne,"TESTING         ");
         sprintf(lineTwo,"     TEMPERATURE");
         SetDDRamAddr(0x00);
@@ -97,10 +99,8 @@ void start (){
         putsXLCD(lineTwo);
         __delay_ms(100);
     }
-    LED2 = 0;
     /////////////////////////       TESTING SWR
     for(i = 0; i < 15; i++){
-        LED3 = !LED3;
         sprintf(lineOne,"TESTING         ");
         sprintf(lineTwo,"             SWR");
         SetDDRamAddr(0x00);
@@ -109,13 +109,9 @@ void start (){
         putsXLCD(lineTwo);
         __delay_ms(100);
     }
-    LED3 = 0;
     beep(250);
     INTCONbits.GIE = 1;
     __delay_ms(500);
-    LED1 = 1;
-    LED2 = 1;
-    LED3 = 1;
     INTCONbits.GIE = 1;
 }
 //Subrrutina de interruociones 
@@ -131,6 +127,10 @@ void __interrupt() inter (){
         updateLCD();
         PIR1bits.TMR1IF = 0;
     }    
+    if(PIR1bits.RCIF == 1)
+        if(RCREG == '$'){
+            
+        }
     INTCONbits.GIE = 1;
     return;
 }
@@ -186,25 +186,25 @@ void setFrequency (){
 
     while(1){
         if(!btnUp){                                     //Detecta boton de subir
-            if(frequency < 1080)frequency++;
-            if(frequency > 1080)frequency = 1080;
+            if(frequency <= 1081)frequency++;
+            if(frequency > 1081)frequency = 875;
             beep(100);
             __delay_ms(150);
             while(!btnUp){                              //Detecta si aun se mantiene 
-                if(frequency < 1080)frequency++;        // presionado
-                if(frequency > 1080)frequency = 1080;
+                if(frequency <= 1081)frequency++;        // presionado
+                if(frequency > 1081)frequency = 875;
                 __delay_ms(50);
             }
         }
 
         if(!btnDown){                                   //Detecta boton de bajar
-            if(frequency > 880)frequency--;
-            if(frequency < 880)frequency = 880;
+            if(frequency >= 875)frequency--;
+            if(frequency < 875)frequency = 1081;
             beep(100);
             __delay_ms(150);
             while(!btnDown){                            //Detecta si aun se mantiene
-                if(frequency > 880)frequency--;         // presionado
-                if(frequency < 880)frequency = 880;
+                if(frequency >= 875)frequency--;         // presionado
+                if(frequency < 875)frequency = 1081;
                 __delay_ms(50);
             }
         }
