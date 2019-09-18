@@ -2616,7 +2616,7 @@ extern char * strrichr(const char *, int);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 # 76 "./hardware.h"
-__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD1" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
@@ -2647,6 +2647,9 @@ void setData (unsigned char full);
 unsigned int codFreq (unsigned int f);
 void writeFrequency (unsigned int f);
 
+void uartMenu(char inst);
+char dataAvailable(void);
+void readUart(char *buff);
 
 void DelayFor18TCY(void);
 void DelayPORXLCD(void);
@@ -2704,26 +2707,26 @@ void writeFrequency (unsigned int f){
     PORTCbits.RC0 = 0;
 
     buffer = codFreq(f);
-    PORTCbits.RC6 = 0;
-    PORTCbits.RC7 = 0;
-    PORTCbits.RC5 = 1;
+    PORTCbits.RC2 = 0;
+    PORTCbits.RC3 = 0;
+    PORTCbits.RC1 = 1;
     _delay((unsigned long)((1)*(4000000/4000.0)));
 
     for(i = 0; i < 16; i++){
         r = (buffer >> i) & 0x0001;
         _delay((unsigned long)((1)*(4000000/4000.0)));
-        PORTCbits.RC6 = 0;
+        PORTCbits.RC2 = 0;
         if(r == 1){
-            PORTCbits.RC7 = 1;
+            PORTCbits.RC3 = 1;
         }else{
-            PORTCbits.RC7 = 0;
+            PORTCbits.RC3 = 0;
         }
         _delay((unsigned long)((1)*(4000000/4000.0)));
-        PORTCbits.RC6 = 1;
+        PORTCbits.RC2 = 1;
     }
 
     _delay((unsigned long)((1)*(4000000/4000.0)));
-    PORTCbits.RC5 = 0;
+    PORTCbits.RC1 = 0;
 
     beep(20);
     _delay((unsigned long)((500)*(4000000/4000.0)));

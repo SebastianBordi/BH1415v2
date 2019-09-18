@@ -2616,7 +2616,7 @@ extern char * strrichr(const char *, int);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 # 76 "./hardware.h"
-__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD1" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
@@ -2647,6 +2647,9 @@ void setData (unsigned char full);
 unsigned int codFreq (unsigned int f);
 void writeFrequency (unsigned int f);
 
+void uartMenu(char inst);
+char dataAvailable(void);
+void readUart(char *buff);
 
 void DelayFor18TCY(void);
 void DelayPORXLCD(void);
@@ -2729,11 +2732,11 @@ void main (){
 void config(){
 
     INTCON = 0b01000000;
-    PIE1 = 0b00000001;
+    PIE1 = 0b00100001;
 
     TRISA = 0b00111000;
     TRISB = 0b00000000;
-    TRISC = 0b00000000;
+    TRISC = 0b10000000;
     PORTA = 0x00;
     PORTB = 0x00;
     PORTC = 0x0E;
@@ -2744,6 +2747,11 @@ void config(){
     ADCON1 = 0b00000000;
     ANSEL = 0b00000000;
     ANSELH = 0b00000000;
+
+    TXSTA = 0b00100100;
+    RCSTA = 0b10010000;
+    BAUDCTL = 0b00001000;
+    SPBRG = 0b00011001;
 
     PORTCbits.RC0 = 0;
     PORTCbits.RC4 = 1;
@@ -2763,7 +2771,6 @@ void start (){
 
 
     for(i = 0; i < 10; i++){
-        PORTCbits.RC1 = !PORTCbits.RC1;
         sprintf(lineOne,"TESTING         ");
         sprintf(lineTwo,"          SUPPLY");
         SetDDRamAddr(0x00);
@@ -2772,10 +2779,8 @@ void start (){
         putsXLCD(lineTwo);
         _delay((unsigned long)((100)*(4000000/4000.0)));
     }
-    PORTCbits.RC1 = 0;
 
     for(i = 0; i < 18; i++){
-        PORTCbits.RC3 = !PORTCbits.RC3;
         sprintf(lineOne,"TESTING         ");
         sprintf(lineTwo,"     TEMPERATURE");
         SetDDRamAddr(0x00);
@@ -2784,10 +2789,8 @@ void start (){
         putsXLCD(lineTwo);
         _delay((unsigned long)((100)*(4000000/4000.0)));
     }
-    PORTCbits.RC3 = 0;
 
     for(i = 0; i < 15; i++){
-        PORTCbits.RC2 = !PORTCbits.RC2;
         sprintf(lineOne,"TESTING         ");
         sprintf(lineTwo,"             SWR");
         SetDDRamAddr(0x00);
@@ -2796,13 +2799,9 @@ void start (){
         putsXLCD(lineTwo);
         _delay((unsigned long)((100)*(4000000/4000.0)));
     }
-    PORTCbits.RC2 = 0;
     beep(250);
     INTCONbits.GIE = 1;
     _delay((unsigned long)((500)*(4000000/4000.0)));
-    PORTCbits.RC1 = 1;
-    PORTCbits.RC3 = 1;
-    PORTCbits.RC2 = 1;
     INTCONbits.GIE = 1;
 }
 
@@ -2818,6 +2817,10 @@ void __attribute__((picinterrupt(("")))) inter (){
         updateLCD();
         PIR1bits.TMR1IF = 0;
     }
+    if(PIR1bits.RCIF == 1)
+        if(RCREG == '$'){
+
+        }
     INTCONbits.GIE = 1;
     return;
 }
@@ -2873,25 +2876,25 @@ void setFrequency (){
 
     while(1){
         if(!PORTAbits.RA3){
-            if(frequency < 1080)frequency++;
-            if(frequency > 1080)frequency = 1080;
+            if(frequency <= 1081)frequency++;
+            if(frequency > 1081)frequency = 875;
             beep(100);
             _delay((unsigned long)((150)*(4000000/4000.0)));
             while(!PORTAbits.RA3){
-                if(frequency < 1080)frequency++;
-                if(frequency > 1080)frequency = 1080;
+                if(frequency <= 1081)frequency++;
+                if(frequency > 1081)frequency = 875;
                 _delay((unsigned long)((50)*(4000000/4000.0)));
             }
         }
 
         if(!PORTAbits.RA5){
-            if(frequency > 880)frequency--;
-            if(frequency < 880)frequency = 880;
+            if(frequency >= 875)frequency--;
+            if(frequency < 875)frequency = 1081;
             beep(100);
             _delay((unsigned long)((150)*(4000000/4000.0)));
             while(!PORTAbits.RA5){
-                if(frequency > 880)frequency--;
-                if(frequency < 880)frequency = 880;
+                if(frequency >= 875)frequency--;
+                if(frequency < 875)frequency = 1081;
                 _delay((unsigned long)((50)*(4000000/4000.0)));
             }
         }

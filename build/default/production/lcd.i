@@ -2616,7 +2616,7 @@ extern char * strrichr(const char *, int);
 #pragma config BOR4V = BOR40V
 #pragma config WRT = OFF
 # 76 "./hardware.h"
-__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+__asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD1" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 
 
 void main (void);
@@ -2647,6 +2647,9 @@ void setData (unsigned char full);
 unsigned int codFreq (unsigned int f);
 void writeFrequency (unsigned int f);
 
+void uartMenu(char inst);
+char dataAvailable(void);
+void readUart(char *buff);
 
 void DelayFor18TCY(void);
 void DelayPORXLCD(void);

@@ -298,119 +298,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 "26
 [p x WRT = OFF ]
 "76
-[; ;./hardware.h: 76: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+[; ;./hardware.h: 76: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD1" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 [; <" 	psect eeprom_data,class=EEDATA,delta=2,space=3,noexec ;# ">
-[; <" 	db	0xD3,0x03,0x00,0x00,0x00,0x00,0x01,0x00 ;# ">
-"120
-[; ;./hardware.h: 120: unsigned char prTmr1L = 0xB0;
+[; <" 	db	0xD1,0x03,0x00,0x00,0x00,0x00,0x01,0x00 ;# ">
+"123
+[; ;./hardware.h: 123: unsigned char prTmr1L = 0xB0;
 [v _prTmr1L `uc ~T0 @X0 1 e ]
 [i _prTmr1L
 -> -> 176 `i `uc
 ]
-"121
-[; ;./hardware.h: 121: unsigned char prTmr1H = 0x3C;
+"124
+[; ;./hardware.h: 124: unsigned char prTmr1H = 0x3C;
 [v _prTmr1H `uc ~T0 @X0 1 e ]
 [i _prTmr1H
 -> -> 60 `i `uc
 ]
-"123
-[; ;./hardware.h: 123: unsigned char cntTmr1 = 0;
+"126
+[; ;./hardware.h: 126: unsigned char cntTmr1 = 0;
 [v _cntTmr1 `uc ~T0 @X0 1 e ]
 [i _cntTmr1
 -> -> 0 `i `uc
 ]
-"125
-[; ;./hardware.h: 125: unsigned int frequency = 111;
+"128
+[; ;./hardware.h: 128: unsigned int frequency = 111;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
 -> -> 111 `i `ui
 ]
-"126
-[; ;./hardware.h: 126: unsigned char months = 3;
+"129
+[; ;./hardware.h: 129: unsigned char months = 3;
 [v _months `uc ~T0 @X0 1 e ]
 [i _months
 -> -> 3 `i `uc
 ]
-"127
-[; ;./hardware.h: 127: unsigned char days = 19;
+"130
+[; ;./hardware.h: 130: unsigned char days = 19;
 [v _days `uc ~T0 @X0 1 e ]
 [i _days
 -> -> 19 `i `uc
 ]
-"128
-[; ;./hardware.h: 128: unsigned char hours = 22;
+"131
+[; ;./hardware.h: 131: unsigned char hours = 22;
 [v _hours `uc ~T0 @X0 1 e ]
 [i _hours
 -> -> 22 `i `uc
 ]
-"129
-[; ;./hardware.h: 129: unsigned char minutes = 15;
+"132
+[; ;./hardware.h: 132: unsigned char minutes = 15;
 [v _minutes `uc ~T0 @X0 1 e ]
 [i _minutes
 -> -> 15 `i `uc
 ]
-"130
-[; ;./hardware.h: 130: unsigned char seconds = 0;
+"133
+[; ;./hardware.h: 133: unsigned char seconds = 0;
 [v _seconds `uc ~T0 @X0 1 e ]
 [i _seconds
 -> -> 0 `i `uc
 ]
-"131
-[; ;./hardware.h: 131: unsigned char hundredMiliSeconds = 0;
+"134
+[; ;./hardware.h: 134: unsigned char hundredMiliSeconds = 0;
 [v _hundredMiliSeconds `uc ~T0 @X0 1 e ]
 [i _hundredMiliSeconds
 -> -> 0 `i `uc
 ]
-"132
-[; ;./hardware.h: 132: unsigned char functionalStat = 0;
+"135
+[; ;./hardware.h: 135: unsigned char functionalStat = 0;
 [v _functionalStat `uc ~T0 @X0 1 e ]
 [i _functionalStat
 -> -> 0 `i `uc
 ]
-"133
-[; ;./hardware.h: 133: unsigned char stereoEnable = 1;
+"136
+[; ;./hardware.h: 136: unsigned char stereoEnable = 1;
 [v _stereoEnable `uc ~T0 @X0 1 e ]
 [i _stereoEnable
 -> -> 1 `i `uc
 ]
-"134
-[; ;./hardware.h: 134: unsigned char isOnConfig = 0;
+"137
+[; ;./hardware.h: 137: unsigned char isOnConfig = 0;
 [v _isOnConfig `uc ~T0 @X0 1 e ]
 [i _isOnConfig
 -> -> 0 `i `uc
 ]
-"135
-[; ;./hardware.h: 135: unsigned char level;
-[v _level `uc ~T0 @X0 1 e ]
-"136
-[; ;./hardware.h: 136: unsigned char i;
-[v _i `uc ~T0 @X0 1 e ]
 "138
-[; ;./hardware.h: 138: char lineOne[17];
-[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
+[; ;./hardware.h: 138: unsigned char level;
+[v _level `uc ~T0 @X0 1 e ]
 "139
-[; ;./hardware.h: 139: char lineTwo[17];
-[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+[; ;./hardware.h: 139: unsigned char i;
+[v _i `uc ~T0 @X0 1 e ]
+"141
+[; ;./hardware.h: 141: char lineOne[17];
+[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
 "142
-[; ;./hardware.h: 142: const char FINAL_MONTH = 6;
+[; ;./hardware.h: 142: char lineTwo[17];
+[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+"145
+[; ;./hardware.h: 145: const char FINAL_MONTH = 6;
 [v _FINAL_MONTH `Cuc ~T0 @X0 1 e ]
 [i _FINAL_MONTH
 -> -> 6 `i `uc
 ]
-"143
-[; ;./hardware.h: 143: const char FINAL_DAY = 13;
+"146
+[; ;./hardware.h: 146: const char FINAL_DAY = 13;
 [v _FINAL_DAY `Cuc ~T0 @X0 1 e ]
 [i _FINAL_DAY
 -> -> 13 `i `uc
 ]
-"144
-[; ;./hardware.h: 144: const char BLOCKED = 0;
+"147
+[; ;./hardware.h: 147: const char BLOCKED = 0;
 [v _BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _BLOCKED
 -> -> 0 `i `uc
 ]
-"145
-[; ;./hardware.h: 145: const char UN_BLOCKED = 1;
+"148
+[; ;./hardware.h: 148: const char UN_BLOCKED = 1;
 [v _UN_BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _UN_BLOCKED
 -> -> 1 `i `uc

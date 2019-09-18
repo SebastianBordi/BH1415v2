@@ -1,4 +1,4 @@
-# 1 "eeprom.c"
+# 1 "USART.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "eeprom.c" 2
-
+# 1 "USART.c" 2
 
 # 1 "./hardware.h" 1
 
@@ -2689,57 +2688,38 @@ const char FINAL_MONTH = 6;
 const char FINAL_DAY = 13;
 const char BLOCKED = 0;
 const char UN_BLOCKED = 1;
-# 3 "eeprom.c" 2
+# 2 "USART.c" 2
 
 
+void uartMenu (char inst){
+    char buffer[10];
+    int value = 0;
+    switch(inst){
+        case'd':
+            while(!dataAvailable)continue;
+            readUart(buffer);
+            value = atoi(buffer);
+            break;
 
+        case 'f':
+            while(!dataAvailable)continue;
+            readUart(buffer);
+            value = atoi(buffer);
+            break;
 
-unsigned char readEEPROM (unsigned char address){
-    EEADR = address;
-    EECON1bits.EEPGD = 0;
-    EECON1bits.RD = 1;
-    return EEDATA;
+    }
 }
 
-void writeEEPROM(unsigned char data, unsigned char address){
-    EEADR = address;
-    EEDATA = data;
-
-    EECON1bits.EEPGD = 0;
-    EECON1bits.WREN = 1;
-
-    INTCONbits.GIE = 0;
-    EECON2 = 0x55;
-    EECON2 = 0xAA;
-    EECON1bits.WR = 1;
-    INTCONbits.GIE = 1;
-
-    while(PIR2bits.EEIF == 0) continue;
-    return;
+void putch(char data) {
+    while( ! TXIF)
+        continue;
+    TXREG = data;
 }
 
-void getData (){
-    unsigned char aux0 = readEEPROM(0);
-    unsigned char aux1 = readEEPROM(1);
-    frequency = 0;
-    frequency = (aux1 << 8) | aux0;
-    months = readEEPROM(2);
-    days = readEEPROM(3);
-    hours = readEEPROM(4);
-    minutes = readEEPROM(5);
-    functionalStat = readEEPROM(6);
-    return;
+char dataAvailable(void){
+    return 1;
 }
 
-void setData(unsigned char full){
-    unsigned char data0 = frequency & 0x00FF;
-    unsigned char data1 = frequency >> 8;
-    writeEEPROM(data0 ,0);
-    writeEEPROM(data1 ,1);
-    writeEEPROM(months ,2);
-    writeEEPROM(days ,3);
-    writeEEPROM(hours ,4);
-    writeEEPROM(minutes ,5);
-    writeEEPROM(functionalStat ,6);
-    return;
+void readUart(char *buff){
+
 }

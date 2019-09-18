@@ -78,6 +78,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3273
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3273: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"2398
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2398: extern volatile unsigned char TXSTA __attribute__((address(0x098)));
+[v _TXSTA `Vuc ~T0 @X0 0 e@152 ]
+"959
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 959: extern volatile unsigned char RCSTA __attribute__((address(0x018)));
+[v _RCSTA `Vuc ~T0 @X0 0 e@24 ]
+"3177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3177: extern volatile unsigned char BAUDCTL __attribute__((address(0x187)));
+[v _BAUDCTL `Vuc ~T0 @X0 0 e@391 ]
+"2484
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2484: extern volatile unsigned char SPBRG __attribute__((address(0x099)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
 "296
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 296:     struct {
 [s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -131,11 +143,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _setTransStat `(v ~T0 @X0 0 ef1`i ]
 "194 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\stdio.h
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"113 ./hardware.h
-[; ;./hardware.h: 113: void SetDDRamAddr(unsigned char DDaddr);
+"116 ./hardware.h
+[; ;./hardware.h: 116: void SetDDRamAddr(unsigned char DDaddr);
 [v _SetDDRamAddr `(v ~T0 @X0 0 ef1`uc ]
-"116
-[; ;./hardware.h: 116: void putsXLCD(char *buffer);
+"119
+[; ;./hardware.h: 119: void putsXLCD(char *buffer);
 [v _putsXLCD `(v ~T0 @X0 0 ef1`*uc ]
 [t ~ __interrupt . k ]
 [t T2 __interrupt ]
@@ -162,7 +174,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "93
 [; ;./hardware.h: 93: void updateLCD (void);
 [v _updateLCD `(v ~T0 @X0 0 ef ]
-"101
+"1061 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1061: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
+[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+"101 ./hardware.h
 [; ;./hardware.h: 101: void setData (unsigned char full);
 [v _setData `(v ~T0 @X0 0 ef1`uc ]
 "234 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
@@ -176,8 +191,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "245
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
-"117 ./hardware.h
-[; ;./hardware.h: 117: void putrsXLCD(const char *buffer);
+"120 ./hardware.h
+[; ;./hardware.h: 120: void putrsXLCD(const char *buffer);
 [v _putrsXLCD `(v ~T0 @X0 0 ef1`*Cuc ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 54: __asm("INDF equ 00h");
@@ -432,119 +447,119 @@ Version 4.0 HI-TECH Software Intermediate Code
 "26
 [p x WRT = OFF ]
 "76
-[; ;./hardware.h: 76: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD3" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
+[; ;./hardware.h: 76: __asm("\tpsect eeprom_data,class=EEDATA,delta=2,space=3,noexec"); __asm("\tdb\t" "0xD1" "," "0x03" "," "0x00" "," "0x00" "," "0x00" "," "0x00" "," "0x01" "," "0x00");
 [; <" 	psect eeprom_data,class=EEDATA,delta=2,space=3,noexec ;# ">
-[; <" 	db	0xD3,0x03,0x00,0x00,0x00,0x00,0x01,0x00 ;# ">
-"120
-[; ;./hardware.h: 120: unsigned char prTmr1L = 0xB0;
+[; <" 	db	0xD1,0x03,0x00,0x00,0x00,0x00,0x01,0x00 ;# ">
+"123
+[; ;./hardware.h: 123: unsigned char prTmr1L = 0xB0;
 [v _prTmr1L `uc ~T0 @X0 1 e ]
 [i _prTmr1L
 -> -> 176 `i `uc
 ]
-"121
-[; ;./hardware.h: 121: unsigned char prTmr1H = 0x3C;
+"124
+[; ;./hardware.h: 124: unsigned char prTmr1H = 0x3C;
 [v _prTmr1H `uc ~T0 @X0 1 e ]
 [i _prTmr1H
 -> -> 60 `i `uc
 ]
-"123
-[; ;./hardware.h: 123: unsigned char cntTmr1 = 0;
+"126
+[; ;./hardware.h: 126: unsigned char cntTmr1 = 0;
 [v _cntTmr1 `uc ~T0 @X0 1 e ]
 [i _cntTmr1
 -> -> 0 `i `uc
 ]
-"125
-[; ;./hardware.h: 125: unsigned int frequency = 111;
+"128
+[; ;./hardware.h: 128: unsigned int frequency = 111;
 [v _frequency `ui ~T0 @X0 1 e ]
 [i _frequency
 -> -> 111 `i `ui
 ]
-"126
-[; ;./hardware.h: 126: unsigned char months = 3;
+"129
+[; ;./hardware.h: 129: unsigned char months = 3;
 [v _months `uc ~T0 @X0 1 e ]
 [i _months
 -> -> 3 `i `uc
 ]
-"127
-[; ;./hardware.h: 127: unsigned char days = 19;
+"130
+[; ;./hardware.h: 130: unsigned char days = 19;
 [v _days `uc ~T0 @X0 1 e ]
 [i _days
 -> -> 19 `i `uc
 ]
-"128
-[; ;./hardware.h: 128: unsigned char hours = 22;
+"131
+[; ;./hardware.h: 131: unsigned char hours = 22;
 [v _hours `uc ~T0 @X0 1 e ]
 [i _hours
 -> -> 22 `i `uc
 ]
-"129
-[; ;./hardware.h: 129: unsigned char minutes = 15;
+"132
+[; ;./hardware.h: 132: unsigned char minutes = 15;
 [v _minutes `uc ~T0 @X0 1 e ]
 [i _minutes
 -> -> 15 `i `uc
 ]
-"130
-[; ;./hardware.h: 130: unsigned char seconds = 0;
+"133
+[; ;./hardware.h: 133: unsigned char seconds = 0;
 [v _seconds `uc ~T0 @X0 1 e ]
 [i _seconds
 -> -> 0 `i `uc
 ]
-"131
-[; ;./hardware.h: 131: unsigned char hundredMiliSeconds = 0;
+"134
+[; ;./hardware.h: 134: unsigned char hundredMiliSeconds = 0;
 [v _hundredMiliSeconds `uc ~T0 @X0 1 e ]
 [i _hundredMiliSeconds
 -> -> 0 `i `uc
 ]
-"132
-[; ;./hardware.h: 132: unsigned char functionalStat = 0;
+"135
+[; ;./hardware.h: 135: unsigned char functionalStat = 0;
 [v _functionalStat `uc ~T0 @X0 1 e ]
 [i _functionalStat
 -> -> 0 `i `uc
 ]
-"133
-[; ;./hardware.h: 133: unsigned char stereoEnable = 1;
+"136
+[; ;./hardware.h: 136: unsigned char stereoEnable = 1;
 [v _stereoEnable `uc ~T0 @X0 1 e ]
 [i _stereoEnable
 -> -> 1 `i `uc
 ]
-"134
-[; ;./hardware.h: 134: unsigned char isOnConfig = 0;
+"137
+[; ;./hardware.h: 137: unsigned char isOnConfig = 0;
 [v _isOnConfig `uc ~T0 @X0 1 e ]
 [i _isOnConfig
 -> -> 0 `i `uc
 ]
-"135
-[; ;./hardware.h: 135: unsigned char level;
-[v _level `uc ~T0 @X0 1 e ]
-"136
-[; ;./hardware.h: 136: unsigned char i;
-[v _i `uc ~T0 @X0 1 e ]
 "138
-[; ;./hardware.h: 138: char lineOne[17];
-[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
+[; ;./hardware.h: 138: unsigned char level;
+[v _level `uc ~T0 @X0 1 e ]
 "139
-[; ;./hardware.h: 139: char lineTwo[17];
-[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+[; ;./hardware.h: 139: unsigned char i;
+[v _i `uc ~T0 @X0 1 e ]
+"141
+[; ;./hardware.h: 141: char lineOne[17];
+[v _lineOne `uc ~T0 @X0 -> 17 `i e ]
 "142
-[; ;./hardware.h: 142: const char FINAL_MONTH = 6;
+[; ;./hardware.h: 142: char lineTwo[17];
+[v _lineTwo `uc ~T0 @X0 -> 17 `i e ]
+"145
+[; ;./hardware.h: 145: const char FINAL_MONTH = 6;
 [v _FINAL_MONTH `Cuc ~T0 @X0 1 e ]
 [i _FINAL_MONTH
 -> -> 6 `i `uc
 ]
-"143
-[; ;./hardware.h: 143: const char FINAL_DAY = 13;
+"146
+[; ;./hardware.h: 146: const char FINAL_DAY = 13;
 [v _FINAL_DAY `Cuc ~T0 @X0 1 e ]
 [i _FINAL_DAY
 -> -> 13 `i `uc
 ]
-"144
-[; ;./hardware.h: 144: const char BLOCKED = 0;
+"147
+[; ;./hardware.h: 147: const char BLOCKED = 0;
 [v _BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _BLOCKED
 -> -> 0 `i `uc
 ]
-"145
-[; ;./hardware.h: 145: const char UN_BLOCKED = 1;
+"148
+[; ;./hardware.h: 148: const char UN_BLOCKED = 1;
 [v _UN_BLOCKED `Cuc ~T0 @X0 1 e ]
 [i _UN_BLOCKED
 -> -> 1 `i `uc
@@ -672,8 +687,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 44:     INTCON = 0b01000000;
 [e = _INTCON -> -> 64 `i `uc ]
 "45
-[; ;main.c: 45:     PIE1 = 0b00000001;
-[e = _PIE1 -> -> 1 `i `uc ]
+[; ;main.c: 45:     PIE1 = 0b00100001;
+[e = _PIE1 -> -> 33 `i `uc ]
 "47
 [; ;main.c: 47:     TRISA = 0b00111000;
 [e = _TRISA -> -> 56 `i `uc ]
@@ -681,8 +696,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 48:     TRISB = 0b00000000;
 [e = _TRISB -> -> 0 `i `uc ]
 "49
-[; ;main.c: 49:     TRISC = 0b00000000;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;main.c: 49:     TRISC = 0b10000000;
+[e = _TRISC -> -> 128 `i `uc ]
 "50
 [; ;main.c: 50:     PORTA = 0x00;
 [e = _PORTA -> -> 0 `i `uc ]
@@ -708,138 +723,135 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 59:     ANSELH = 0b00000000;
 [e = _ANSELH -> -> 0 `i `uc ]
 "61
-[; ;main.c: 61:     PORTCbits.RC0 = 0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 61:     TXSTA = 0b00100100;
+[e = _TXSTA -> -> 36 `i `uc ]
 "62
-[; ;main.c: 62:     PORTCbits.RC4 = 1;
-[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 62:     RCSTA = 0b10010000;
+[e = _RCSTA -> -> 144 `i `uc ]
+"63
+[; ;main.c: 63:     BAUDCTL = 0b00001000;
+[e = _BAUDCTL -> -> 8 `i `uc ]
 "64
-[; ;main.c: 64:     initLCD();
-[e ( _initLCD ..  ]
+[; ;main.c: 64:     SPBRG = 0b00011001;
+[e = _SPBRG -> -> 25 `i `uc ]
 "66
-[; ;main.c: 66:     T1CONbits.TMR1ON = 1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 66:     PORTCbits.RC0 = 0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "67
-[; ;main.c: 67:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 67:     PORTCbits.RC4 = 1;
+[e = . . _PORTCbits 0 4 -> -> 1 `i `uc ]
 "69
-[; ;main.c: 69:     setTransStat(0);
-[e ( _setTransStat (1 -> 0 `i ]
-"70
-[; ;main.c: 70:     return;
-[e $UE 150  ]
+[; ;main.c: 69:     initLCD();
+[e ( _initLCD ..  ]
 "71
-[; ;main.c: 71: }
+[; ;main.c: 71:     T1CONbits.TMR1ON = 1;
+[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
+"72
+[; ;main.c: 72:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"74
+[; ;main.c: 74:     setTransStat(0);
+[e ( _setTransStat (1 -> 0 `i ]
+"75
+[; ;main.c: 75:     return;
+[e $UE 150  ]
+"76
+[; ;main.c: 76: }
 [e :UE 150 ]
 }
-"73
-[; ;main.c: 73: void start (){
+"78
+[; ;main.c: 78: void start (){
 [v _start `(v ~T0 @X0 1 ef ]
 {
 [e :U _start ]
 [f ]
-"74
-[; ;main.c: 74:     char i = 0;
+"79
+[; ;main.c: 79:     char i = 0;
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-"75
-[; ;main.c: 75:     INTCONbits.GIE = 0;
+"80
+[; ;main.c: 80:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"78
-[; ;main.c: 78:     for(i = 0; i < 10; i++){
+"83
+[; ;main.c: 83:     for(i = 0; i < 10; i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 10 `i 152  ]
 [e $U 153  ]
 [e :U 152 ]
 {
-"79
-[; ;main.c: 79:         PORTCbits.RC1 = !PORTCbits.RC1;
-[e = . . _PORTCbits 0 1 -> -> ! != -> . . _PORTCbits 0 1 `i -> 0 `i `i `uc ]
-"80
-[; ;main.c: 80:         sprintf(lineOne,"TESTING         ");
-[e ( _sprintf (1 , &U _lineOne :s 1C ]
-"81
-[; ;main.c: 81:         sprintf(lineTwo,"          SUPPLY");
-[e ( _sprintf (1 , &U _lineTwo :s 2C ]
-"82
-[; ;main.c: 82:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
-"83
-[; ;main.c: 83:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
 "84
-[; ;main.c: 84:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+[; ;main.c: 84:         sprintf(lineOne,"TESTING         ");
+[e ( _sprintf (1 , &U _lineOne :s 1C ]
 "85
-[; ;main.c: 85:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
+[; ;main.c: 85:         sprintf(lineTwo,"          SUPPLY");
+[e ( _sprintf (1 , &U _lineTwo :s 2C ]
 "86
-[; ;main.c: 86:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 86:         SetDDRamAddr(0x00);
+[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
 "87
-[; ;main.c: 87:     }
+[; ;main.c: 87:         putsXLCD(lineOne);
+[e ( _putsXLCD (1 &U _lineOne ]
+"88
+[; ;main.c: 88:         SetDDRamAddr(0x40);
+[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+"89
+[; ;main.c: 89:         putsXLCD(lineTwo);
+[e ( _putsXLCD (1 &U _lineTwo ]
+"90
+[; ;main.c: 90:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"91
+[; ;main.c: 91:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 10 `i 152  ]
 [e :U 153 ]
 }
-"88
-[; ;main.c: 88:     PORTCbits.RC1 = 0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-"90
-[; ;main.c: 90:     for(i = 0; i < 18; i++){
+"93
+[; ;main.c: 93:     for(i = 0; i < 18; i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 18 `i 155  ]
 [e $U 156  ]
 [e :U 155 ]
 {
-"91
-[; ;main.c: 91:         PORTCbits.RC3 = !PORTCbits.RC3;
-[e = . . _PORTCbits 0 3 -> -> ! != -> . . _PORTCbits 0 3 `i -> 0 `i `i `uc ]
-"92
-[; ;main.c: 92:         sprintf(lineOne,"TESTING         ");
-[e ( _sprintf (1 , &U _lineOne :s 3C ]
-"93
-[; ;main.c: 93:         sprintf(lineTwo,"     TEMPERATURE");
-[e ( _sprintf (1 , &U _lineTwo :s 4C ]
 "94
-[; ;main.c: 94:         SetDDRamAddr(0x00);
-[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
+[; ;main.c: 94:         sprintf(lineOne,"TESTING         ");
+[e ( _sprintf (1 , &U _lineOne :s 3C ]
 "95
-[; ;main.c: 95:         putsXLCD(lineOne);
-[e ( _putsXLCD (1 &U _lineOne ]
+[; ;main.c: 95:         sprintf(lineTwo,"     TEMPERATURE");
+[e ( _sprintf (1 , &U _lineTwo :s 4C ]
 "96
-[; ;main.c: 96:         SetDDRamAddr(0x40);
-[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
+[; ;main.c: 96:         SetDDRamAddr(0x00);
+[e ( _SetDDRamAddr (1 -> -> 0 `i `uc ]
 "97
-[; ;main.c: 97:         putsXLCD(lineTwo);
-[e ( _putsXLCD (1 &U _lineTwo ]
+[; ;main.c: 97:         putsXLCD(lineOne);
+[e ( _putsXLCD (1 &U _lineOne ]
 "98
-[; ;main.c: 98:         _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 98:         SetDDRamAddr(0x40);
+[e ( _SetDDRamAddr (1 -> -> 64 `i `uc ]
 "99
-[; ;main.c: 99:     }
+[; ;main.c: 99:         putsXLCD(lineTwo);
+[e ( _putsXLCD (1 &U _lineTwo ]
+"100
+[; ;main.c: 100:         _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"101
+[; ;main.c: 101:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> 18 `i 155  ]
 [e :U 156 ]
 }
-"100
-[; ;main.c: 100:     PORTCbits.RC3 = 0;
-[e = . . _PORTCbits 0 3 -> -> 0 `i `uc ]
-"102
-[; ;main.c: 102:     for(i = 0; i < 15; i++){
+"103
+[; ;main.c: 103:     for(i = 0; i < 15; i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 15 `i 158  ]
 [e $U 159  ]
 [e :U 158 ]
 {
-"103
-[; ;main.c: 103:         PORTCbits.RC2 = !PORTCbits.RC2;
-[e = . . _PORTCbits 0 2 -> -> ! != -> . . _PORTCbits 0 2 `i -> 0 `i `i `uc ]
 "104
 [; ;main.c: 104:         sprintf(lineOne,"TESTING         ");
 [e ( _sprintf (1 , &U _lineOne :s 5C ]
@@ -869,69 +881,69 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 159 ]
 }
 "112
-[; ;main.c: 112:     PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"113
-[; ;main.c: 113:     beep(250);
+[; ;main.c: 112:     beep(250);
 [e ( _beep (1 -> 250 `i ]
+"113
+[; ;main.c: 113:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "114
-[; ;main.c: 114:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"115
-[; ;main.c: 115:     _delay((unsigned long)((500)*(4000000/4000.0)));
+[; ;main.c: 114:     _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"116
-[; ;main.c: 116:     PORTCbits.RC1 = 1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-"117
-[; ;main.c: 117:     PORTCbits.RC3 = 1;
-[e = . . _PORTCbits 0 3 -> -> 1 `i `uc ]
-"118
-[; ;main.c: 118:     PORTCbits.RC2 = 1;
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"119
-[; ;main.c: 119:     INTCONbits.GIE = 1;
+"115
+[; ;main.c: 115:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"120
-[; ;main.c: 120: }
+"116
+[; ;main.c: 116: }
 [e :UE 151 ]
 }
 [v $root$_inter `(v ~T0 @X0 0 e ]
-"122
-[; ;main.c: 122: void __attribute__((picinterrupt(("")))) inter (){
+"118
+[; ;main.c: 118: void __attribute__((picinterrupt(("")))) inter (){
 [v _inter `(v ~T2 @X0 1 ef ]
 {
 [e :U _inter ]
 [f ]
-"124
-[; ;main.c: 124:     INTCONbits.GIE = 0;
+"120
+[; ;main.c: 120:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"126
-[; ;main.c: 126:     if(PIR1bits.TMR1IF == 1){
+"122
+[; ;main.c: 122:     if(PIR1bits.TMR1IF == 1){
 [e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 162  ]
 {
-"127
-[; ;main.c: 127:         TMR1H = prTmr1H;
+"123
+[; ;main.c: 123:         TMR1H = prTmr1H;
 [e = _TMR1H _prTmr1H ]
-"128
-[; ;main.c: 128:         TMR1L = prTmr1L;
+"124
+[; ;main.c: 124:         TMR1L = prTmr1L;
 [e = _TMR1L _prTmr1L ]
-"129
-[; ;main.c: 129:         cntTmr1++;
+"125
+[; ;main.c: 125:         cntTmr1++;
 [e ++ _cntTmr1 -> -> 1 `i `uc ]
-"130
-[; ;main.c: 130:         time();
+"126
+[; ;main.c: 126:         time();
 [e ( _time ..  ]
-"131
-[; ;main.c: 131:         updateLCD();
+"127
+[; ;main.c: 127:         updateLCD();
 [e ( _updateLCD ..  ]
-"132
-[; ;main.c: 132:         PIR1bits.TMR1IF = 0;
+"128
+[; ;main.c: 128:         PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"133
-[; ;main.c: 133:     }
+"129
+[; ;main.c: 129:     }
 }
 [e :U 162 ]
+"130
+[; ;main.c: 130:     if(PIR1bits.RCIF == 1)
+[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 163  ]
+"131
+[; ;main.c: 131:         if(RCREG == '$'){
+[e $ ! == -> _RCREG `ui -> 36 `ui 164  ]
+{
+"133
+[; ;main.c: 133:         }
+}
+[e :U 164 ]
+[e :U 163 ]
 "134
 [; ;main.c: 134:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
@@ -953,7 +965,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _hundredMiliSeconds -> -> 1 `i `uc ]
 "140
 [; ;main.c: 140:     if(hundredMiliSeconds >= 10){
-[e $ ! >= -> _hundredMiliSeconds `i -> 10 `i 164  ]
+[e $ ! >= -> _hundredMiliSeconds `i -> 10 `i 166  ]
 {
 "141
 [; ;main.c: 141:         hundredMiliSeconds = 0;
@@ -963,7 +975,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _seconds -> -> 1 `i `uc ]
 "143
 [; ;main.c: 143:         if(seconds >= 60){
-[e $ ! >= -> _seconds `i -> 60 `i 165  ]
+[e $ ! >= -> _seconds `i -> 60 `i 167  ]
 {
 "144
 [; ;main.c: 144:             seconds = 0;
@@ -973,7 +985,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _minutes -> -> 1 `i `uc ]
 "146
 [; ;main.c: 146:             if(minutes >= 60){
-[e $ ! >= -> _minutes `i -> 60 `i 166  ]
+[e $ ! >= -> _minutes `i -> 60 `i 168  ]
 {
 "147
 [; ;main.c: 147:                 minutes = 0;
@@ -986,7 +998,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _setData (1 -> -> 0 `i `uc ]
 "150
 [; ;main.c: 150:                 if(hours >= 24){
-[e $ ! >= -> _hours `i -> 24 `i 167  ]
+[e $ ! >= -> _hours `i -> 24 `i 169  ]
 {
 "151
 [; ;main.c: 151:                     hours = 0;
@@ -996,7 +1008,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _days -> -> 1 `i `uc ]
 "153
 [; ;main.c: 153:                     if(days >= 30){
-[e $ ! >= -> _days `i -> 30 `i 168  ]
+[e $ ! >= -> _days `i -> 30 `i 170  ]
 {
 "154
 [; ;main.c: 154:                         days = 0;
@@ -1007,10 +1019,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "156
 [; ;main.c: 156:                     }
 }
-[e :U 168 ]
+[e :U 170 ]
 "157
 [; ;main.c: 157:                     if(days == FINAL_DAY && months == FINAL_MONTH){
-[e $ ! && == -> _days `i -> _FINAL_DAY `i == -> _months `i -> _FINAL_MONTH `i 169  ]
+[e $ ! && == -> _days `i -> _FINAL_DAY `i == -> _months `i -> _FINAL_MONTH `i 171  ]
 {
 "158
 [; ;main.c: 158:                         functionalStat = BLOCKED;
@@ -1018,8 +1030,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "159
 [; ;main.c: 159:                     }else{
 }
-[e $U 170  ]
-[e :U 169 ]
+[e $U 172  ]
+[e :U 171 ]
 {
 "160
 [; ;main.c: 160:                         functionalStat = UN_BLOCKED;
@@ -1027,26 +1039,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 "161
 [; ;main.c: 161:                     }
 }
-[e :U 170 ]
+[e :U 172 ]
 "162
 [; ;main.c: 162:                 }
 }
-[e :U 167 ]
+[e :U 169 ]
 "163
 [; ;main.c: 163:             }
 }
-[e :U 166 ]
+[e :U 168 ]
 "164
 [; ;main.c: 164:         }
 }
-[e :U 165 ]
+[e :U 167 ]
 "165
 [; ;main.c: 165:     }
 }
-[e :U 164 ]
+[e :U 166 ]
 "166
 [; ;main.c: 166: }
-[e :UE 163 ]
+[e :UE 165 ]
 }
 "168
 [; ;main.c: 168: void beep (int ms){
@@ -1062,9 +1074,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 170:     for(ms; ms > 0; ms--){
 {
 [e _ms ]
-[e $ > _ms -> 0 `i 172  ]
-[e $U 173  ]
-[e :U 172 ]
+[e $ > _ms -> 0 `i 174  ]
+[e $U 175  ]
+[e :U 174 ]
 {
 "171
 [; ;main.c: 171:         PORTBbits.RB0 = 1;
@@ -1082,15 +1094,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 175:     }
 }
 [e -- _ms -> 1 `i ]
-[e $ > _ms -> 0 `i 172  ]
-[e :U 173 ]
+[e $ > _ms -> 0 `i 174  ]
+[e :U 175 ]
 }
 "176
 [; ;main.c: 176:     return;
-[e $UE 171  ]
+[e $UE 173  ]
 "177
 [; ;main.c: 177: }
-[e :UE 171 ]
+[e :UE 173 ]
 }
 "179
 [; ;main.c: 179: void setFrequency (){
@@ -1115,30 +1127,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _beep (1 -> 200 `i ]
 "185
 [; ;main.c: 185:     while(!PORTAbits.RA4)continue;
-[e $U 176  ]
-[e :U 177 ]
-[e $U 176  ]
-[e :U 176 ]
-[e $ ! != -> . . _PORTAbits 0 4 `i -> 0 `i 177  ]
+[e $U 178  ]
+[e :U 179 ]
+[e $U 178  ]
 [e :U 178 ]
+[e $ ! != -> . . _PORTAbits 0 4 `i -> 0 `i 179  ]
+[e :U 180 ]
 "187
 [; ;main.c: 187:     while(1){
-[e :U 180 ]
+[e :U 182 ]
 {
 "188
 [; ;main.c: 188:         if(!PORTAbits.RA3){
-[e $ ! ! != -> . . _PORTAbits 0 3 `i -> 0 `i 182  ]
+[e $ ! ! != -> . . _PORTAbits 0 3 `i -> 0 `i 184  ]
 {
 "189
-[; ;main.c: 189:             if(frequency < 1080)frequency++;
-[e $ ! < _frequency -> -> 1080 `i `ui 183  ]
+[; ;main.c: 189:             if(frequency <= 1081)frequency++;
+[e $ ! <= _frequency -> -> 1081 `i `ui 185  ]
 [e ++ _frequency -> -> 1 `i `ui ]
-[e :U 183 ]
+[e :U 185 ]
 "190
-[; ;main.c: 190:             if(frequency > 1080)frequency = 1080;
-[e $ ! > _frequency -> -> 1080 `i `ui 184  ]
-[e = _frequency -> -> 1080 `i `ui ]
-[e :U 184 ]
+[; ;main.c: 190:             if(frequency > 1081)frequency = 875;
+[e $ ! > _frequency -> -> 1081 `i `ui 186  ]
+[e = _frequency -> -> 875 `i `ui ]
+[e :U 186 ]
 "191
 [; ;main.c: 191:             beep(100);
 [e ( _beep (1 -> 100 `i ]
@@ -1147,48 +1159,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "193
 [; ;main.c: 193:             while(!PORTAbits.RA3){
-[e $U 185  ]
-[e :U 186 ]
+[e $U 187  ]
+[e :U 188 ]
 {
 "194
-[; ;main.c: 194:                 if(frequency < 1080)frequency++;
-[e $ ! < _frequency -> -> 1080 `i `ui 188  ]
+[; ;main.c: 194:                 if(frequency <= 1081)frequency++;
+[e $ ! <= _frequency -> -> 1081 `i `ui 190  ]
 [e ++ _frequency -> -> 1 `i `ui ]
-[e :U 188 ]
+[e :U 190 ]
 "195
-[; ;main.c: 195:                 if(frequency > 1080)frequency = 1080;
-[e $ ! > _frequency -> -> 1080 `i `ui 189  ]
-[e = _frequency -> -> 1080 `i `ui ]
-[e :U 189 ]
+[; ;main.c: 195:                 if(frequency > 1081)frequency = 875;
+[e $ ! > _frequency -> -> 1081 `i `ui 191  ]
+[e = _frequency -> -> 875 `i `ui ]
+[e :U 191 ]
 "196
 [; ;main.c: 196:                 _delay((unsigned long)((50)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "197
 [; ;main.c: 197:             }
 }
-[e :U 185 ]
+[e :U 187 ]
 "193
 [; ;main.c: 193:             while(!PORTAbits.RA3){
-[e $ ! != -> . . _PORTAbits 0 3 `i -> 0 `i 186  ]
-[e :U 187 ]
+[e $ ! != -> . . _PORTAbits 0 3 `i -> 0 `i 188  ]
+[e :U 189 ]
 "198
 [; ;main.c: 198:         }
 }
-[e :U 182 ]
+[e :U 184 ]
 "200
 [; ;main.c: 200:         if(!PORTAbits.RA5){
-[e $ ! ! != -> . . _PORTAbits 0 5 `i -> 0 `i 190  ]
+[e $ ! ! != -> . . _PORTAbits 0 5 `i -> 0 `i 192  ]
 {
 "201
-[; ;main.c: 201:             if(frequency > 880)frequency--;
-[e $ ! > _frequency -> -> 880 `i `ui 191  ]
+[; ;main.c: 201:             if(frequency >= 875)frequency--;
+[e $ ! >= _frequency -> -> 875 `i `ui 193  ]
 [e -- _frequency -> -> 1 `i `ui ]
-[e :U 191 ]
+[e :U 193 ]
 "202
-[; ;main.c: 202:             if(frequency < 880)frequency = 880;
-[e $ ! < _frequency -> -> 880 `i `ui 192  ]
-[e = _frequency -> -> 880 `i `ui ]
-[e :U 192 ]
+[; ;main.c: 202:             if(frequency < 875)frequency = 1081;
+[e $ ! < _frequency -> -> 875 `i `ui 194  ]
+[e = _frequency -> -> 1081 `i `ui ]
+[e :U 194 ]
 "203
 [; ;main.c: 203:             beep(100);
 [e ( _beep (1 -> 100 `i ]
@@ -1197,44 +1209,44 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( __delay (1 -> * -> -> 150 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "205
 [; ;main.c: 205:             while(!PORTAbits.RA5){
-[e $U 193  ]
-[e :U 194 ]
+[e $U 195  ]
+[e :U 196 ]
 {
 "206
-[; ;main.c: 206:                 if(frequency > 880)frequency--;
-[e $ ! > _frequency -> -> 880 `i `ui 196  ]
+[; ;main.c: 206:                 if(frequency >= 875)frequency--;
+[e $ ! >= _frequency -> -> 875 `i `ui 198  ]
 [e -- _frequency -> -> 1 `i `ui ]
-[e :U 196 ]
+[e :U 198 ]
 "207
-[; ;main.c: 207:                 if(frequency < 880)frequency = 880;
-[e $ ! < _frequency -> -> 880 `i `ui 197  ]
-[e = _frequency -> -> 880 `i `ui ]
-[e :U 197 ]
+[; ;main.c: 207:                 if(frequency < 875)frequency = 1081;
+[e $ ! < _frequency -> -> 875 `i `ui 199  ]
+[e = _frequency -> -> 1081 `i `ui ]
+[e :U 199 ]
 "208
 [; ;main.c: 208:                 _delay((unsigned long)((50)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "209
 [; ;main.c: 209:             }
 }
-[e :U 193 ]
+[e :U 195 ]
 "205
 [; ;main.c: 205:             while(!PORTAbits.RA5){
-[e $ ! != -> . . _PORTAbits 0 5 `i -> 0 `i 194  ]
-[e :U 195 ]
+[e $ ! != -> . . _PORTAbits 0 5 `i -> 0 `i 196  ]
+[e :U 197 ]
 "210
 [; ;main.c: 210:         }
 }
-[e :U 190 ]
+[e :U 192 ]
 "212
 [; ;main.c: 212:         if(!PORTAbits.RA4){
-[e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 198  ]
+[e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 200  ]
 {
 "213
 [; ;main.c: 213:             _delay((unsigned long)((500)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "214
 [; ;main.c: 214:             if(!PORTAbits.RA4){
-[e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 199  ]
+[e $ ! ! != -> . . _PORTAbits 0 4 `i -> 0 `i 201  ]
 {
 "215
 [; ;main.c: 215:                 setData(1);
@@ -1244,21 +1256,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _beep (1 -> 1000 `i ]
 "217
 [; ;main.c: 217:                 break;
-[e $U 181  ]
+[e $U 183  ]
 "218
 [; ;main.c: 218:             }
 }
-[e :U 199 ]
+[e :U 201 ]
 "219
 [; ;main.c: 219:         }
 }
-[e :U 198 ]
+[e :U 200 ]
 "220
 [; ;main.c: 220:     }
 }
-[e :U 179 ]
-[e $U 180  ]
 [e :U 181 ]
+[e $U 182  ]
+[e :U 183 ]
 "222
 [; ;main.c: 222:     isOnConfig = 0;
 [e = _isOnConfig -> -> 0 `i `uc ]
@@ -1270,10 +1282,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _writeFrequency (1 _frequency ]
 "225
 [; ;main.c: 225:     return;
-[e $UE 175  ]
+[e $UE 177  ]
 "226
 [; ;main.c: 226: }
-[e :UE 175 ]
+[e :UE 177 ]
 }
 "228
 [; ;main.c: 228: void setTransStat (int stat){
@@ -1284,7 +1296,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "229
 [; ;main.c: 229:     if(stat == 1){
-[e $ ! == _stat -> 1 `i 201  ]
+[e $ ! == _stat -> 1 `i 203  ]
 {
 "230
 [; ;main.c: 230:         PORTCbits.RC0 = 1;
@@ -1298,8 +1310,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "233
 [; ;main.c: 233:     }else{
 }
-[e $U 202  ]
-[e :U 201 ]
+[e $U 204  ]
+[e :U 203 ]
 {
 "234
 [; ;main.c: 234:         PORTCbits.RC0 = 0;
@@ -1313,10 +1325,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "237
 [; ;main.c: 237:     }
 }
-[e :U 202 ]
+[e :U 204 ]
 "238
 [; ;main.c: 238: }
-[e :UE 200 ]
+[e :UE 202 ]
 }
 "240
 [; ;main.c: 240: void principalScreen(){
@@ -1349,7 +1361,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _putsXLCD (1 &U _lineTwo ]
 "248
 [; ;main.c: 248: }
-[e :UE 203 ]
+[e :UE 205 ]
 }
 "250
 [; ;main.c: 250: void lockingScreen(){
@@ -1377,10 +1389,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _putsXLCD (1 &U _lineTwo ]
 "258
 [; ;main.c: 258:     return;
-[e $UE 204  ]
+[e $UE 206  ]
 "259
 [; ;main.c: 259: }
-[e :UE 204 ]
+[e :UE 206 ]
 }
 [p f _sprintf 8421504 ]
 [a 9C 70 82 69 81 46 32 32 37 51 100 46 37 100 32 77 72 122 0 ]
